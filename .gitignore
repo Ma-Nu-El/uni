@@ -1,0 +1,9 @@
+*.html
+*.tex
+*.txt
+*.pdf
+*.el
+*.lof
+*.lot
+*.toc
+*.dvi
