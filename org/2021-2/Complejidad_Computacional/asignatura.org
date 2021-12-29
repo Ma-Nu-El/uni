@@ -1,0 +1,187 @@
+#+INCLUDE: "~/org/uni/org/config.org"
+#+FILETAGS: :university:
+#+TITLE: Complejidad Computacional
+#+SUBTITLE: ICC366
+
+* TOC :TOC_2:noexport:
+- [[#programa][Programa]]
+  - [[#horario][Horario]]
+- [[#calendario][Calendario]]
+- [[#evaluación][Evaluación]]
+  - [[#relacionado][Relacionado]]
+  - [[#teórico-35][Teórico 35%]]
+  - [[#práctico-65][Práctico 65%]]
+- [[#links][Links]]
+- [[#recursos][Recursos]]
+- [[#contacto][Contacto]]
+- [[#apuntes][Apuntes]]
+  - [[#relacionado-1][Relacionado]]
+  - [[#clases][Clases]]
+  - [[#ayudantías][Ayudantías]]
+- [[#preguntas-primera-clase][Preguntas primera clase]]
+
+* Programa
+- link to subject's sillabus.
+  + must be located in ~/myDrive/uni/202x-x/SUBJECT/programa.pdf
+** Horario
+- los viernes no tenemos clases
+* Calendario
+|  <c>  |       <c>        |  <c>   | <l>                                     |  <c>   |  <c>   |   <c>    |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+| Clase |      Fecha       | Semana | Tópico                                  | Prueba | Taller | Visitado |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+|   1   | [2021-04-08 Thu] |   1    | Introducción                            |   1    |   x    |    *     |
+|   2   | [2021-04-13 Tue] |   2    | Introduccion                            |   1    |   x    |    *     |
+|   3   | [2021-04-15 Thu] |   3    | Introduccion                            |   1    |   1    |    *     |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+|   4   | [2021-04-20 Tue] |   3    | Cargas Internas                         |   1    |   x    |    *     |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+|   5   | [2021-04-22 Thu] |   4    | Esfuerzo                                |   1    |   x    |    *     |
+|   6   | [2021-04-27 Tue] |   4    | Esfuerzo                                |   1    |   x    |    *     |
+|   7   | [2021-04-29 Thu] |   5    | Esfuerzo                                |   1    |   x    |    *     |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+|   8   | [2021-05-04 Tue] |   5    | Deformación                             |   2    |   x    |    *     |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+|   9   | [2021-05-06 Thu] |   6    | Propiedades Mecánicas de los Materiales |   2    |   2    |    *     |
+|  10   | [2021-05-11 Tue] |   7    | Propiedades Mecánicas de los Materiales |   2    |   2    |    *     |
+|  11   | [2021-05-13 Thu] |   7    | Propiedades Mecánicas de los Materiales |   2    |   2    |    *     |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+|  12   | [2021-05-18 Tue] |   8    | Carga Axial                             |   2    |   x    |    *     |
+|  13   | [2021-05-20 Thu] |   8    | Carga Axial                             |   2    |   x    |    *     |
+|  14   | [2021-06-01 Tue] |   9    | Carga Axial                             |   2    |   x    |    *     |
+|  15   | [2021-06-03 Thu] |   9    | Carga Axial                             |   2    |   x    |    *     |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+|  16   | [2021-06-08 Tue] |   10   | Torsión                                 |   3    |        |    *     |
+|  17   | [2021-06-10 Thu] |   10   | Torsión                                 |   3    |        |    *     |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+* Evaluación :evaluation:
+** Relacionado
+En campus las fechas son distintas de las del google drive.
+Guiarse por las de campus.
+** Teórico 35%
+*** DONE Evaluación global 100%
+CLOSED: [2021-12-07 Tue 17:43] SCHEDULED: <2021-12-07 Tue 14:30-16:30>
+:LOGBOOK:
+- State "DONE"       from              [2021-12-07 Tue 17:43]
+:END:
+**** arbol de materia
+:PROPERTIES:
+:ID:       9b751424-e52e-4f17-9105-cd9e29e56b7e
+:END:
+- Unidades
+  - 1
+    - [[id:90231ba4-05d5-4f72-a2cb-783a63c421d4][Introducción a la Complejidad Computacional]]
+    - [[id:8471a337-b6ff-46b6-b8ec-46d6ec353cc5][Arreglos --- Ordenamiento Simple]]
+    - [[id:1b681435-f0ab-49cd-bb6b-f88927d28a66][Ordenamiento Avanzado]]
+  - 2
+    - [[id:f4d1f4fc-7c42-439b-b4bb-39054b2bf088][Pilas]]
+    - [[id:d272cb9f-1fc5-43ed-8d80-36a2bd75bc4b][Colas]]
+    - [[id:08df7762-4f09-4ec3-860a-eb118d7836eb][Listas enlazadas]]
+  - 3
+    - [[id:b8514d2d-bdc9-4e37-850e-3192abaf8255][Arboles binarios]]
+    - [[id:b1631fb1-ef3f-437d-a17b-454ac161c8eb][Tablas hash]]
+    - [[id:0d2ac797-3d6b-4975-bde6-742a01055706][Grafos]]
+**** temario
+- Unidad 1: [[id:2eb36b79-8785-4de0-a6e2-d3bd43c37f21][entera]]
+- Unidad 2: [[id:e3cc2b5a-f167-47a8-9d5e-802fc7d2965c][entera]]
+- Unidad 3: [[id:b8514d2d-bdc9-4e37-850e-3192abaf8255][solo arboles binarios]]
+**** DONE Computational complexity meeting :uni:
+SCHEDULED: <2021-12-01 Wed 14:30>
+- Tuesday 7 14:30-16:30
+- [X] Ask difference between global and theoric exam?
+  - They are the same.
+
+
+- Limit for quicksort to simpleSort?
+  - "by the code/by the book"
+- QuickSort what happens when 2 equals with pivot?
+
+
+Included:
+- Quick Sort
+- Pilas
+- Colas
+- Listas Enlazadas
+- Arboles Binarios
+  - Main function: ~search~
+Not included: Graphs, HashTables
+
+** Práctico 65%
+*** DONE taller1 30%
+SCHEDULED: <2021-10-25 Mon 23:59>
+*** DONE taller2 30%
+CLOSED: [2021-11-26 Fri 17:54] SCHEDULED: <2021-11-26 Fri 23:59>
+:LOGBOOK:
+- State "DONE"       from              [2021-11-26 Fri 17:54]
+:END:
+*** Proyecto Semestral 40%
+**** CANCELED entrega
+CLOSED: [2021-12-03 Fri 12:59] SCHEDULED: <2021-11-26 Fri 23:59>
+:LOGBOOK:
+- State "CANCELED"   from              [2021-12-03 Fri 12:59]
+:END:
+**** DONE entrega
+CLOSED: [2021-12-16 Thu 09:42] SCHEDULED: <2021-12-15 Wed 23:59>
+:LOGBOOK:
+- State "DONE"       from              [2021-12-16 Thu 09:42]
+:END:
+* Links
+- Complejidad Computacional
+  + https://reuna.zoom.us/j/81474576366?pwd=SUZMU3BkbGVEL1Z1Vm04bENKSnpHQT09
+* Recursos
+- links a libros, videos, etc.
+* Contacto
+|----------+------|
+| Nombre   |      |
+| E-mail   |      |
+| Teléfono | +569 |
+|----------+------|
+* Apuntes
+** Relacionado
+- no hay clases los viernes
+** Clases :lecture:
+*** DONE Clase 1
+SCHEDULED: <2021-09-07 Tue 14:30-16:40>
+:PROPERTIES:
+:ID:       6e08ece4-a878-4771-bb70-e716a86392c4
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-09-07 Tue 14:39]--[2021-09-07 Tue 15:28] =>  0:49
+:END:
+- [[id:3d83ecfa-acf2-4cc4-82c0-137e022bbc1b][apuntes.org]]
+*** Clase 2
+*** Clase 3
+*** Clase 4
+*** Clase 5
+*** Clase 6
+*** Clase 7
+*** Clase 8
+*** Clase 9
+*** Clase 10
+*** Clase 11
+*** Clase 12
+*** Clase 13
+*** Clase 14
+*** Clase 15
+** Ayudantías :assistantship:
+* Preguntas primera clase
+- Pruebas
+  + [X] sincrónicas o asincrónicas?
+  + [X] lápiz y papel o alguna otra forma?
+  + [X] formulario o memoria?
+  + [X] fechas de las pruebas?
+- [-] Clases
+  + [X] sincrónicas o asincrónicas?
+  + [X] grabaciones de las clases?
+  + [X] principal libro de apoyo?
+  + [ ] horario de las clases?
+- [ ] Email y horario de consultas del profesor.
+- Ayudantías
+  + [ ] Quién?
+    - Nombre
+    - Mail
+  + [ ] Horario?
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:

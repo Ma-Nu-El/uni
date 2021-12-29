@@ -1,0 +1,459 @@
+#+TITLE: Proyecto Final
+#+SUBTITLE: Gestión Comercial
+#+DATE: 2021-2
+#+INCLUDE: "~/org/uni/org/config.org"
+#+FILETAGS: :university:
+
+* Índice :TOC_2:noexport:
+- [[#reunión-inicial-gestión][Reunión inicial Gestión]]
+- [[#integrantes-y-contacto][Integrantes y contacto]]
+- [[#fechas][Fechas]]
+- [[#objetivo-general][Objetivo general]]
+- [[#contenidos-aplicados-al-emprendimiento-seleccionado][Contenidos aplicados al emprendimiento seleccionado:]]
+  - [[#7-pasos-para-un-plan-de-marketing-exitoso][7 pasos para un plan de marketing exitoso]]
+  - [[#formación-de-grupo][Formación de grupo]]
+  - [[#bitacora][Bitacora]]
+- [[#grupos][Grupos]]
+- [[#video-a-presentar][Video a presentar]]
+- [[#aspectos-a-evaluar][Aspectos a evaluar]]
+- [[#apuntes][Apuntes]]
+  - [[#clase-2021-10-05-tue][clase [2021-10-05 Tue]]]
+  - [[#clase-2021-10-12-tue][clase [2021-10-12 Tue]]]
+  - [[#clase-2021-10-26-tue][clase [2021-10-26 Tue]]]
+  - [[#clase-2021-10-28-thu][clase [2021-10-28 Thu]]]
+  - [[#clase-2021-11-09-tue][clase [2021-11-09 Tue]]]
+  - [[#clase-2021-11-11-thu][clase [2021-11-11 Thu]]]
+  - [[#clase-2021-11-16-tue-plan-de-marketing][clase [2021-11-16 Tue]: Plan de Marketing]]
+  - [[#canceled-clase-2021-11-23-tue][CANCELED clase [2021-11-23 Tue]]]
+
+* DONE Reunión inicial Gestión
+CLOSED: [2021-12-06 Mon 11:41] SCHEDULED: <2021-12-05 Sun 19:00>
+:LOGBOOK:
+- State "DONE"       from              [2021-12-06 Mon 11:41]
+:END:
+- Domingo 05 dic, tarde noche
+* DONE Integrantes y contacto
+- Nicolas Hernández López
+- Diego Jara Moreno
+- Javier Medina Carrasco
+- Manuel Fuica Morales
+  - [[mailto:m.fuica01@ufromail.cl][m.fuica01@ufromail.cl]]
+
+
+- Profesor
+  - [[mailto:liliana.oberg@ufrontera.cl][liliana.oberg@ufrontera.cl]]
+* Fechas
+
+| 01/dic | Entrega de descripción del trabajo a       |
+|        | desarrollar (campus virtual y zoom)        |
+|--------+--------------------------------------------|
+| 02/dic | Registro de grupo en campus virtual        |
+|--------+--------------------------------------------|
+| 03/dic | Asignación directa de quienes              |
+|        | no tengan grupo inscrito.                  |
+|--------+--------------------------------------------|
+| 09/dic | Clase zoom de consultas en la que cada     |
+|        | grupo debe exponer el nombre del  negocio  |
+|        | seleccionado,  programación  del  trabajo, |
+|        | asignación  de tareas de cada integrante   |
+|        | y avance hasta ese momento señalando el    |
+|        | aporte de cada persona.                    |
+|--------+--------------------------------------------|
+| 16/dic | Clase de consultas (30 minutos)            |
+|--------+--------------------------------------------|
+| 21/dic | Enviar los videos y Bitácoras por correo   |
+|--------+--------------------------------------------|
+| 23/dic | Entrega de notas en Sistema de             |
+|        | Notas Parciales de Intranet.               |
+
+* Objetivo general
+
+Aplicar los conceptos aprendidos en clases en la creación de
+un video que explique el plan de marketing diseñado por las
+y los estudiantes para un emprendimiento chileno cuyas
+ventas se efectúen mediante la red social Instagram a
+nivel local con o sin despachos fuera de la ciudad.
+
+* Contenidos aplicados al emprendimiento seleccionado:
+
+- Descripción del emprendimiento seleccionado.
+- Análisis del entorno específico y general.
+- Proponer un plan de marketing de acuerdo a los
+  [[id:bc294229-be7a-4e2a-a589-29fbbc4dc2df][7 pasos para un plan de marketing exitoso]].
+- Hacer propuestas de mejora de la gestión comercial.
+
+** 7 pasos para un plan de marketing exitoso
+:PROPERTIES:
+:ID:       bc294229-be7a-4e2a-a589-29fbbc4dc2df
+:END:
+*** Misión
+- Declaración
+*** Audiencia
+- Nicho
+- Público
+*** Producto/Servicio
+- Oferta eficaz
+*** Estrategia
+- Marketing
+- Promoción
+*** Competidores
+- Datos
+*** Objetivos
+- Cuantificables
+*** Resultados
+- Controles
+- Escalamiento
+** DONE Formación de grupo
+
+Para el desarrollo del trabajo deben conformarse grupos
+de 5 estudiantes (mínimo 4). Cada grupo identificará un
+gerente a quien se le entregará la misión de liderar al
+equipo, distribuir las responsabilidades, diseñar y
+acompañar en cada trabajo una bitácora con el aporte de
+cada integrante del grupo al desarrollo del trabajo, etc.
+Si el grupo determina que algún integrante no se ha
+comprometido de manera adecuada con su desempeño grupal,
+podrán despedirle.
+
+Los estudiantes que hayan sido expulsados de los grupos
+tendrán la opción de desarrollar un trabajo específico
+cuyo tema se entregará con posterioridad a la fecha
+programada para la entrega del presente trabajo.
+
+** Bitacora
+
+Las/los gerentes de grupo deberán informar una bitácora
+que contenga la evidencia del aporte de cada persona y,
+como mínimo los siguientes datos para evidenciar la
+capacidad de tomar responsabilidad para avanzar al logro
+de los resultados y participación en el trabajo de equipo
+con interés y compromiso. A continuación se muestra el
+formato de bitácora que podrá ser hecha en formato Word o
+Excel y subida al Campus Virtual en el espacio destinado
+a ello.
+
+| Fecha | Actividad | Nombre       | Aporte de  | Nombre de | Justificación |
+|       |           | de quienes   | cada       | personas  | o resolución  |
+|       |           | participaron | integrante | ausentes  | de grupo      |
+|-------+-----------+--------------+------------+-----------+---------------|
+|       |           |              |            |           |               |
+|       |           |              |            |           |               |
+|       |           |              |            |           |               |
+|       |           |              |            |           |               |
+|       |           |              |            |           |               |
+
+* DONE Grupos
+
+Con fecha máxima del jueves 2 de diciembre a las
+13:00 hrs., cada gerente de grupo debe indicar los
+integrantes en la sección creada para tal efecto en el
+campus virtual. Quienes no sean incorporados en algún
+grupo serán aleatoriamente asignados para conformar otros.
+
+* Video a presentar
+
+Se requiere que al menos durante 1 minuto cada integrante
+exponga (sin leer) una parte del trabajo frente a la cámara.
+
+Se promueve el uso creativo con las herramientas que
+cada grupo estime convenientes, incorporando sonidos e
+imágenes propias mezcladas con pequeños extractos de
+otras fuentes. El video final se debe enviar por correo
+electrónico a [[mailto:liliana.oberg@ufrontera.cl][liliana.oberg@ufrontera.cl]] directamente al
+correo o mediante un vínculo hacia Drive.
+
+El video debe enviarse como máximo el día martes 21 de
+diciembre a las 13:00 hrs.
+
+a) Extensión mínima de 5 minutos y máxima de 10.
+b) Usar lenguaje técnico aprendido en clases.
+c) Cada integrante debe exponer, frente a la cámara
+   sin leer.
+d) Debe incorporar el nombre de los integrantes,
+   una explicación general del trabajo y el detalle.
+
+* Aspectos a evaluar
+
+a. Incorporación de todos los puntos solicitados.
+b. Uso creativo de los contenidos de clases.
+c. Información complementaria de otras fuentes.
+d. Uso correcto de conceptos técnicos.
+e. Pertinencia de las sugerencias.
+f. Respeto por el tiempo solicitado, con equilibrio
+   entre participantes.
+g. Incorporación de una presentación inicial y cierre.
+
+
+No se incorporará como un aspecto a evaluar la calidad de
+la imagen o grabación, teniendo en consideración que los
+dispositivos accesibles para cada persona pueden ser sus
+celulares, cámara del notebook, de computador de
+escritorio u otras cámaras portátiles con diversas
+resoluciones.
+
+* Apuntes
+** DONE clase [2021-10-05 Tue]
+- https://www.youtube.com/watch?v=PWwmOtneXi8&feature=youtu.be
+
+
+*** Mezcla de marketing
+**** Etapas del ciclo del producto
+***** Introducción
+****** Producto
+
+Sujeto a cambios, reactivo al mercado.
+
+****** Precio
+:PROPERTIES:
+:ID:       09392f6e-e2d0-4b41-ba02-9af53b0bd23e
+:END:
+
+Decidido por la empresa.
+- Estrategia de Penetración de mercado : precio bajo.
+- Estrategia de Descremado de mercado : precio alto.
+
+
+Reactivo a la competencia.
+
+****** Comunicación
+
+Informativos, dar a conocer la existencia del producto.
+Luego, las características y su diferencia de la
+competencia.
+
+****** Distribución
+
+Limitada por futura demanda desconocida.
+
+***** Crecimiento/Desarrollo
+****** Producto
+
+Empresa busca mejoras técnicas del producto.
+
+****** Precio
+
+Aún controlado por empresa, pero menos control de
+empresa y más control de competencia.
+
+****** Comunicación
+
+Dar a conocer diferenciación.
+
+****** Distribución
+
+Cambia de exclusiva a intensiva pues ahora la demanda
+es mayor.
+
+***** Madurez
+****** Producto
+
+A punto. No recibe cambios.
+
+****** Precio
+
+Condicionado por competencia.
+
+****** Comunicación
+
+Diferenciación, fácil identificación para el
+consumidor.
+
+****** Distribución
+
+Intensiva a extensiva, para mayor cobertura.
+
+***** Declive/Declinación
+****** Producto
+
+Sin cambios. Ahora empresa solo busca agotar
+existencias.
+
+****** Precio
+
+Precios bajos estimulando compra rápida. Promociones.
+
+****** Comunicación
+
+Apoyar promociones. Asistencia a reducción de
+inventario.
+
+****** Distribución
+
+Extensiva a limitada por pocas existencias.
+
+*** Efecto canibalismo
+
+Fenómeno que ocurre cuando en un mercado hay poco
+margen para crecimiento. El nuevo producto puede
+generar una reducción de ventas para productos
+existentes.
+
+Puede ser planificado o no.
+
+- Planificado: se busca imagen de renovación,
+  innovación.
+- No planificado: produce baja en nivel de ventas.
+
+*** Tipos de productos
+**** De consumo
+
+Comprado por consumidor final para su consumo personal.
+
+***** De conveniencia
+
+Los que están al lado de la caja. Livianos, baratos.
+Ningún análisis o esfuerzo previo.
+
+***** De comparación
+
+Esfuerzo involucrado. Compara entre opciones antes de
+comprar.
+
+***** De especialidad
+
+Diseñado para un segmento.
+
+***** No buscados
+
+Extintores, seguros de todo tipo. Servicios funerarios.
+
+***** Consideraciones de marketing
+- https://youtu.be/PWwmOtneXi8?t=1741
+Tabla de comportamiento de compra, precio, distribución
+y promoción para diferentes tipos de productos de
+consumo.
+
+**** Industriales
+
+Comprado para producir otros bienes.
+
+***** Materiales y piezas
+- Materias primas
+- Materiales y piezas manufacturados
+***** Bienes de capital
+- Incluyen las instalaciones y el equipo accesorio.
+***** Suministros y servicios
+- Incluyen surtido para operación (lubricante, cartón,
+  papel, lápices) y artículos para reparación y
+  mantención, servicios de asesoramiento empresarial.
+*** Líneas de productos
+- Grupo de productos que están estrechamente
+  relacionados porque funcionan de manera similar,
+  se venden a los mismos grupos de cliente, son
+  comercializados a través de los mismos tipos
+  de puntos de venta o caen dentro de un
+  determinado rango de precios.
+- Longitud = número de artículos que abarca.
+**** Relleno de líneas: Razones
+- Alcanzar utilidades adicionales
+- Satisfacer a distribuidores
+- User el exceso de capacidad
+- Liderar mercado
+- Tapar agujeros para dejar fuera a competidores
+
+
+Será excesivo si provoca el canibalismo y confusión
+en el cliente. La empresa se debe asegurar de una
+diferenciación clara de los nuevos productos
+con los existentes.
+
+**** Extensión de líneas
+- Se produce cuando una empresa alarga su linea de
+  productos mas allá de su gama actual.
+- Baja el prestigio, mayores margenes
+- Sube la rivalidad y competencia.
+** DONE clase [2021-10-12 Tue]
+*** Marca
+**** Icono
+***** Logo/Logotipo
+Texto:
+- Cocacola.
+- WaltDisney.
+- Canon.
+***** Isotipo
+Ícono.
+- Apple
+- Volkswagen
+***** Imagotipo
+Texto e ícono separados.
+- Amazon
+- Santander
+***** Isologo
+Texto e ícono inseparables.
+- Nissan
+- NASA
+**** Tagline: "Slogan permanente"
+** DONE clase [2021-10-26 Tue]
+*** Mezcla de marketing: precio
+*** Estrategias de precios
+- Basada en costo/valor
+  - Clasificación de costos
+    - Fijos + Variables
+- Basada en competencia
+- Basada en penetración de mercado
+  - [[id:09392f6e-e2d0-4b41-ba02-9af53b0bd23e][Precio]]
+  - Último IPhone, descreme.
+*** Estretegias de ajuste de precios
+
+** DONE clase [2021-10-28 Thu]
+*** Mezcla de marketing: precio
+** DONE clase [2021-11-09 Tue]
+*** Mezcla de marketing: comunicación/promoción
+** DONE clase [2021-11-11 Thu]
+- Se termina mezcla de marketing
+** DONE clase [2021-11-16 Tue]: Plan de Marketing
+- https://www.youtube.com/watch?v=4-oQP_NgZjw
+*** Qué es?
+
+Método para convertir estrategias de organización
+de actividades de marketing en acciones.
+
+Se centra en la ejecución efectiva de
+dichas actividades.
+
+*** 7 pasos para crear un Plan de Marketing
+**** 1: Define tu Misión
+- Texto que describe brevemente valores y servicios.
+- Auténtico: que sea un reflejo de tus prácticas
+  de negocio.
+**** 2: Define tu audiencia
+- Público objetivo
+  - Crea un personaje e intégralo a tu plan de
+    marketing.
+**** 3: Define tu producto/servicio
+
+- Descripción detallada.
+- Menciona tu oferta actual y esperada para el futuro.
+- Identifica qué necesitas para aumentar la eficiencia
+  en la venta de tu producto/servicio en términos
+  de personal, experiencia y costos.
+  
+**** 4: Define tu promoción
+- Medios? RRSS, TV, etc.
+  + Define a partir de público objetivo y
+    producto/servicio ofrecido.
+- Horarios?
+- Alta retroalimentación/actualización.
+**** 5: Define tu competencia
+- Determina tus puntos fuertes y débiles en
+  comparación a la competencia en términos de
+  valor, precio, productos/servicios y sus
+  combinaciones.
+**** 6: Define objetivos cuantificables
+- Puede incluir cantidad de clientes objetivo,
+  cantidad de clientes nuevos objetivo, cantidad
+  de ingresos objetivo, etc.
+- Se realista.
+**** 7: Controla tus resultados
+- Herramientas de análisis.
+- Actúa acorde a esos resultados.
+- Retroalimentación
+
+** CANCELED clase [2021-11-23 Tue]
+- https://www.youtube.com/watch?v=dcjiU3EMc70
+- Repaso para la prueba final.
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
+

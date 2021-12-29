@@ -1,0 +1,130 @@
+#+INCLUDE: "~/org/uni/org/config.org"
+#+FILETAGS: :university:
+#+title: Contabilidad Financiera
+#+subtitle: Resumen del ramo para estudiantes de Ingeniería Civil Industrial mención Informática.
+
+Escrito en lenguaje medianamente coloquial.
+
+* TOC :TOC_2:noexport:
+- [[#u0-introducción][U0: Introducción]]
+  - [[#qué-es-la-contabilidad][Qué es la contabilidad?]]
+  - [[#elementos-financieros-fundacion-conceptual-de-la-contabilidad][Elementos Financieros: Fundacion Conceptual de la Contabilidad]]
+- [[#u1-asientos-contables-estado-de-situación-financiera-y-estado-de-resultados][U1: Asientos Contables, Estado de Situación Financiera y Estado de Resultados]]
+  - [[#asientos-contables][Asientos Contables]]
+  - [[#estados-financieros-situación-y-resultados][Estados Financieros: Situación y Resultados]]
+- [[#u2-análisis-de-estados-financieros-----indicadores----][U2: Análisis de Estados Financieros --- Indicadores ---]]
+- [[#u3-presupuesto-de-caja-o-flujo-de-caja][U3: Presupuesto de Caja o Flujo de Caja]]
+- [[#footnotes][Footnotes]]
+
+* U0: Introducción
+** Qué es la contabilidad?
+Se discute el problema que soluciona la contabilidad.
+
+Asi como el Test de Esfuerzo o el Test de Navette
+sirven para cuantificar la condición fisica de una
+persona, la contabilidad es un conjunto de métodos
+para establecer la condición financiera de una empresa.
+
+Algunas de las preguntas que responde la práctica de la
+contabilidad son:
+- ¿Me conviene invertir en esta empresa?
+- Esta empresa parece vender harto, pero eso, ¿significa
+  necesariamente que las personas que componen la
+  empresa ganan harto también?
+- Dos empresas que estoy comparando tienen niveles de
+  venta similares, ¿cómo puedo saber cual de las dos
+  administra mejor sus ganancias?
+- Una empresa vende 10 veces más que otra, ¿significa
+  eso que la empresa que vende más, es más responsable
+  financieramente?
+
+
+La contabilidad cuantifica la eficiencia de una empresa
+en la administración de su capital con el objetivo de
+tomar decisiones a partir de dicha cuantificación.
+
+** Elementos Financieros: Fundacion Conceptual de la Contabilidad
+*** Tabla de elementos
+Se presentan los elementos financieros y se discuten
+sus diferencias.
+
+| Aspecto      |            |                                                 |
+| Tratado      | Elemento   | Definición o Descripción                        |
+|--------------+------------+-------------------------------------------------|
+| Recursos     | Activo     | Un recurso económico presente controlado por la |
+| económicos   |            | entidad como resultado de sucesos pasados. Un   |
+|              |            | recurso económico es un derecho que tiene el    |
+|              |            | potencial de producir beneficios económicos.    |
+|--------------+------------+-------------------------------------------------|
+| Derechos     | Pasivo     | Es una obligación presente de la entidad de     |
+| de los       |            | transferir un recurso económico como resultado  |
+| Acreedores   |            | de sucesos pasados.                             |
+|              | Patrimonio | La parte residual de los activos de la entidad, |
+|              |            | una vez deducidos todos sus pasivos.            |
+|--------------+------------+-------------------------------------------------|
+| Cambios en   | Ingresos   | Son incrementos en los activos o disminuciones  |
+| los recursos |            | en los pasivos que dan lugar a incrementos      |
+| económicos y |            | en el patrimonio, distintos de los              |
+| en los       |            | relacionados con aportaciones de los tenedores  |
+| derechos de  |            | de derechos sobre el patrimonio.                |
+| los          | Gastos     | Disminuciones en los activos o incrementos      |
+| acreedores   |            | en los pasivos que dan lugar a disminuciones    |
+| que reflejan |            | en el patrimonio, distintos de los relacionados |
+| el           |            | con distribuciones de los tenedores de          |
+| rendimiento  |            | derechos sobre el patrimonio.                   |
+| financiero   |            |                                                 |
+|--------------+------------+-------------------------------------------------|
+
+*** Probable ejemplo donde un pasivo se disfrasa de activo
+
+Artículos de oficina vs inventario.
+
+* U1: Asientos Contables, Estado de Situación Financiera y Estado de Resultados
+** Asientos Contables
+
+Existe un /plan de cuentas/ predefinido donde diferentes
+/cuentas/ estan contenidas dentro de distintos /rubros/,
+rubros que pertenecen a distintos /elementos/ financieros.
+
+#+name: Elementos financieros con algunos rubros y cuentas de ejemplo
+| Elemento   | Rubro        | Cuenta                 |
+|------------+--------------+------------------------|
+| Activo     | Efectivo y   | Bancoestado            |
+|            | equivalentes | Banco Santander        |
+|            | al efectivo  | Inversiones en valores |
+|            |              |                        |
+|            | Propiedades, | Terrenos               |
+|            | Planta y     | Construcciones         |
+|            | Equipo (PPE) | Articulos de oficina   |
+|------------+--------------+------------------------|
+| Pasivo     |              |                        |
+|            |              |                        |
+|            |              |                        |
+|            |              |                        |
+|------------+--------------+------------------------|
+| Patrimonio |              |                        |
+|            |              |                        |
+|            |              |                        |
+|            |              |                        |
+|------------+--------------+------------------------|
+| Ingreso    |              |                        |
+|            |              |                        |
+|            |              |                        |
+|            |              |                        |
+|            |              |                        |
+|------------+--------------+------------------------|
+| Gasto      |              |                        |
+|            |              |                        |
+|            |              |                        |
+|            |              |                        |
+
+
+
+** Estados Financieros: Situación y Resultados
+* U2: Análisis de Estados Financieros --- Indicadores ---
+* U3: Presupuesto de Caja o Flujo de Caja
+* Footnotes
+
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:

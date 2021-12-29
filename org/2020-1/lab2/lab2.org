@@ -1,0 +1,104 @@
+# Local Variables:
+# ispell-local-dictionary: "español"
+# End:
+
+#+OPTION: toc: 3
+#+LANGUAGE: es
+
+* lab2
+
+** Requerimientos:
+  - Java
+  - POO
+  - UML
+  - Base de Datos
+
+** Se introduce:
+ - Patrón MVC (Model, View, Controller)
+ - Patrón DAO
+ - HTML
+ - CSS
+ - JavaScript
+
+ [[https://getbootstrap.com/][Bootstrap]]: esqueleto para html's y css's.
+ https://getbootstrap.com/
+
+** Proyecto final
+   Demo de sitio web.
+
+   Se integra todo lo del semestre.
+
+** notas clases
+*** [2020-06-12 Fri]
+
+paradigms
+- MVC?
+- OOP?
+filetypes?
+-log
+-svc
+
+patrón DAO 
+
+** contacto
+*** profesor:
+blas.castel@ufrontera.cl 
+
+*** ayudante:
+Geraldine Henriquez
++56985335906
+
+** horario clases
+*** Ayudantía
+mierc 1200 - 1300
+*** Clases
+vier  0900 - ~1030
+
+** evaluaciones
+*** proyecto1
+**** Requerimientos
+
+     Individual. Realizable en una semana.
+
+     Código y UML.
+
+ - 1 herencia
+ - 1 interfaz
+ - 1 ventana
+ - 5 clases
+ - 5 funciones
+
+ Bien documentado.
+ Permitido extracción de código de internet, las fuentes deben ser mencionadas.
+ Comentarios no deben superar 35% del código.
+
+ UML se envía máximo dos días antes de la fecha de entrega del código.
+
+ UML 1.0 y 2.0: para comparación de avance.
+ El 2.0 se envía con el proyecto final.
+
+**** fecha entrega
+     Semana 15 de junio.
+
+     Entrega final, martes 23 de junio a las 2359
+
+     El UML 1.0 se sube como plazo final el domingo previo. El UML final se sube con el proyecto final.
+
+*** proyecto2
+    Integrar:
+
+**** DONE HTML
+     CLOSED: [2020-09-03 Thu 16:44]
+     :LOGBOOK:
+     - State "DONE"       from              [2020-09-03 Thu 16:44] \\
+       Thanks to org mode export to html
+     :END:
+*** prueba lab2
+
+  global
+  - todo lo del semestre
+  - herencia
+  - PMV & DAO
+  - hoy, prox y subsiguiente
+  - preguntas sobre workflow
+  Nexo entre controlador, vistas, bases de datos, etc.

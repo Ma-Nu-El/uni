@@ -1,0 +1,82 @@
+#+INCLUDE: "~/org/uni/org/config.org"
+#+TITLE: Evaluacion 1 - Leyenda
+#+SUBTITLE: Comunicación de Datos - Segundo semestre 2021
+#+DATE: 17 de octubre de 2021
+#+AUTHOR: Manuel Fuica Morales \\
+#+AUTHOR: Matrícula: 18 959 392 9 19 \\
+#+AUTHOR: Ingeniería Civil Industrial mención Informática \\
+#+AUTHOR: [[mailto:m.fuica01@ufromail.cl][m.fuica01@ufromail.cl]]
+#+OPTIONS: toc:2
+#+LATEX_HEADER: \usepackage{enumerate}
+
+* Contexto
+Asumamos los dispositivos permanentemente conectados al /Router/
+de la casa:
+
+#+ATTR_LATEX: :options [(a)]
+a) TV conectada via Wifi (2 TVs)
+b) Laptop conectado por Wifi o Ethernet (1 laptop)
+c) Cámaras para el CCTV (4 camaras)
+
+\clearpage
+
+* Dispositivos de Red
+
+1) ISP(Internet Service Provider): Cualquier empresa que brinda al
+   acceso a Internet vía banda ancha o cable de fibra óptica,
+   conectados desde la vía publica hasta el /Router/ de la casa.
+2) /Modem/: El que recibe la señal de Internet provista por el ISP.
+   El Modem va conectado al Router para habilitar la conexión de
+   varios dispositivos al Modem, y por lo tanto brindando acceso a
+   Internet a multiples dispositivos.
+3) /Router/: puente entre el Modem y los dispositivos de la casa.
+   El Router es el que posee las múltiples conexiones vía Ethernet,
+   además de crear una red Wifi dentro de la casa.
+4) /NIC/ (tarjeta de red): probablemente instalada de fábrica en los dispositivos
+   que son vendidos con la habilidad de conectarse al Internet. En el
+   caso de las TVs, comunmente se conectan via Wifi. Los computadores
+   de escritorio generalmente se conectan al Internet via cable Ethernet.
+   Laptops poseen doble tarjeta generalmente, una para conectarse via
+   Wifi y otra con puerto Ethernet.
+5) /Gateway/: Dado que las cámaras probablemente tienen un protocolo de conexión
+   distinto del de computadores y TVs, entonces es probable que
+   cercano al Router --- y al Modem --- , se encuentre un
+   Gateway para hacer el nexo entre el protocolo de las
+   cámaras y el /Router/ [fn:1].
+6) /Bridge/: dada la baja cantidad de dispositivos conectados, una
+   sobrecarga de red es poco probable, por lo que un /Bridge/ en este
+   caso no es necesario.
+7) /Switch/ y /HUB/: similar a las condiciones del Bridge, dada una
+   baja cantidad de dispositivos es probable que estos dispositivos
+   no sean necesarios[fn:2].
+
+\clearpage
+* Posibles problemas
+
+- Muchos dispositivos conectados al Router: síntoma de esto es
+  que la velocidad de Internet en cada dispositivo es baja: esto
+  solo se puede solucionar apagando momentáneamente algunos, o
+  aumentando la velocidad en el plan de Internet. Existen también
+  otras soluciones que involucran manipular el software del Router
+  para que le dé prioridad a algunos dispositivos en específico, pero
+  eso está fuera del alcance de este documento.
+- La señal llega con poca fuerza a ciertos lugares de la casa:
+  la mejor solución para estos casos es re-ubicar el Router, pero si
+  eso no es una opción, también existen repetidores de Wifi. No
+  son la solucion ideal, pero para la mayoría de los casos sí es una
+  solución aceptable.
+
+
+
+* Footnotes
+
+[fn:1]No conozco cómo es el procedimiento para instalar cámaras de CCTV
+en una casa, por lo que cabe la posibilidad que en realidad no sea
+necesario un /Gateway/.
+
+[fn:2]Nuevamente, las 4 cámaras exteriores es posible que requieran
+de un Switch en caso de exigir mucho del Router.
+
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:

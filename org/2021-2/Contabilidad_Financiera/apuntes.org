@@ -1,0 +1,412 @@
+#+INCLUDE: "~/org/uni/org/config.org"
+#+FILETAGS: :university:
+#+title: Apuntes
+#+subtitle: Contabilidad Financiera 2021-2
+
+
+* TOC :TOC_2:noexport:
+- [[#clases][Clases]]
+  - [[#clase-1][Clase 1]]
+  - [[#clase-2][Clase 2]]
+  - [[#clase-3][Clase 3]]
+  - [[#clase-4][Clase 4]]
+  - [[#clase-6][Clase 6]]
+  - [[#clase-9][Clase 9]]
+  - [[#resumen-del-ramo][Resumen del ramo]]
+- [[#ayudantías][Ayudantías]]
+  - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
+- [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
+- [[#footnotes][Footnotes]]
+
+* Clases
+** Clase 1 :ppt1:
+:PROPERTIES:
+:ID:       38060111-5291-424d-a6d6-97aa75e130d7
+:END:
+- [[id:eb4666a5-1c66-4df2-ae56-2083969cee09][log]]
+- [2021-08-25 Wed 18:04]
+
+
+El ramo tiene 3 partes:
+1. Contabilidad Básica
+2. Análisis de Estado Financiero
+3. Flujo de Caja
+
+
+La contabilidad no da espacio para interpretación, como la filosofía. La
+contabilidad es simple, la ficha esta bien o mal. Son verbos, imperativo.
+No es interpretativa.
+
+
+- *Qué es la contabilidad?*
+  + Es una técnica de registro de hechos económicos mediante la partida doble.
+  + No es arte, porque [el arte] es subjetivo.
+  + No es ciencia, porque no reúne los requisitos del método científico.
+  + No es método, porque no es en si un método, si no que requiere de un
+    conjunto de ellos.
+
+
+
+La contabilidad consiste en registrar transacciones para analizar esos datos
+y tomar decisiones a partir de dicho análisis.
+
+- *Ecuación de Pacioli: partida doble*
+- Todo lo que tiene, a alguien se lo debe. Luca Bartolomeo de Pacioli o
+  Luca di Borgo San Sepolcro en su libro La Summa. 1994. Venecia, Italia.
+  + /Activo/ = /Pasivo/
+- Activo: bienes y derechos.
+- Pasivo: deudas.
+
+
+- Mercaderes de Venecia, método Veneciano. Patentado por Pacioli pero
+  existía previamente.
+
+
+- *¿Para qué sirve la contabilidad?*
+- La contabilidad entrega información para la toma de decisiones
+  de forma oportuna. El proceso se divide en 3 fases:
+  1) Transacción: hecho económico, compra y venta de algo. Recolección de
+     datos. Una acción.
+  2) Registro y proceso: forma en la que se distribuye y ordena la información
+     recolectada. /Asiento Contable/, /Cuentas de Mayor/, /Cuentas Contables/.
+  3) Elaboración de /Estados Financieros/.
+     - "¿Cómo estás?¿Cómo te ha ido?"
+     - Estado de:
+       1) Situación financiera (Activos y pasivo)
+       2) Resultados (Ingresos y gastos)
+       3) Cambios en el Patrimonio
+       4) Flujo de efectivo
+
+** Clase 2 :ppt1:
+:PROPERTIES:
+:ID:       824c2f1b-ceee-4fc8-96b0-4bba64f2dce8
+:END:
+- [[id:6cad0b19-6171-41d3-82f7-90126bc8998b][log]]
+
+*** Resumen de la clase anterior
+**** Hay cuentas/registros/casilleros para cada tipo de gasto:
+- Ej: auto
+  - Vehículo
+  - Combustible
+  - Mantención
+- Ej: ropa
+  + Jeans
+  + Pantalones
+  + Ropa interior
+- Cada item a su correspondiente cuenta
+**** Quién utiliza la información contable?
++ Usuarios externos
+  + Financistas
+  + Clientes
+  + Provedoores
+  + Estado Fiscalizador y Tributario
+  + Mercado
++ Usuarios internos
+  + Accionistas
+  + Directivos
+  + Gerentes
+  + Trabajadores
+**** Para qué?
++ Decidir si invertir o desinvertir
++ Decidir si le prestan dinero a la empresa
++ Decidir si le hacen pedidos a la empresa
++ Decidir si le venden materiales a crédito
++ Recaudar impuestos
++ Compararse con su competidor y mejorar
++ Conocer el impacto de la gestión de la empresa
+
+*** Hoy
+1) Registro: Transacción
+2) Clasificacion: Cuentas Contables/ Asiento Contable
+3) Estados Financieros
+   - Y sus 4 estados
+
+
+**** ¿Cómo tiene que ser la información contable?
++ Objetiva
++ Comprensible
++ Relevante
++ Fiable
++ Integra
++ Comparable
++ Oportuna
+
+**** ¿Cómo lo hace? ¿Cómo cumple su objetivo?
+
+Registro de un hecho económico que tenga un documento de respaldo:
+Mediante una metodología que se llama Asiento Contable.
+
+**** ¿Qué es un asiento contable?
+- Asentar o registrar, un hecho económico en un libro adecuado
+  para tal efecto, mediante cuentas, aplicando la partida doble,
+  y las normas de la disciplina (IFRS: International Finantial
+  Reporting Standards).
+- Asiento -> asentar -> registrar -> asiento = registro.
+- Qué es una cuenta contable?
+  - Agrupador de hechos económicos de distinta naturaleza, es como
+    un clasificador.
+  - ¿Puede entrar un jeans en el cajón de los calcetines?
+    Sí, puede, pero ¿qué hace un jeans en el cajón de los calcetines
+    si el cajón de los jeans esta 1 cajon mas arriba?
+
+**** Las reglas para la estandarización: NIC & NIIF
+- NIIF: Normas Internacionales de Información Financiera
+- IFRS: International Finantial Reporting Standards
+
+
+Cómo esto es un estándar, la idea es que los estados financieros de una
+empresa estén estructurados de la misma forma que los de todas las otras,
+entonces las empresas se pueden comunicar de forma eficiente. Las
+normas recomendadas para hacer estos informes son las NIIF.
+
+"Las NIIF constituyen un conjunto de normas reconocidas mundialmente
+para la preparación de estados financieros por entidades comerciales".
+
+Las NIIF o IFRS describen:
+- Los elementos que deben reconocer como activos, pasivos, ingresos y gastos
+- Cómo medir esos elementos
+- Cómo presentarlos en un conjunto de estados financieros
+- Las divulgaciones relacionadas sobre esos elementos
+
+
+"Estas normas se publican anualmente en un libro rojo y un libro verde de
+un par de capítulos".
+
+"Las Normas Internacionales de Información Financiera (NIIF),
+están compuestas por un grupo de dos normas principales, NIC y NIIF,
+luego se agregan dos normas secundarias que son las interpretaciones
+de estas dos principales, SIC y CINIIF":
+
+
+1) NIC
+   a. SIC
+2) NIIF
+   a) CINIIF
+
+
+
+- NIC: Normas Internacionales de Contabilidad.
+  - SIC: Interpretación de las NIC.
+- NIIF: Normas Internacionales de Información Financiera.
+  - CINIF: Comité de Interpretaciones de las NIIF.
+
+
+- IAS: International Accounting Standards.
+  - IAS: Standard Interpretations Committee.
+- IFRS: International Financial Reporting Standards.
+  - IFRIC: International Financial Reporting Interpretations Committee.
+
+Las NIIF son el reemplazo de las NIC, sin embargo las NIC todavía están
+vigentes: "con el tiempo van a ir desapareciendo las NIC, y por lo tanto
+las SIC, y van a ir quedando únicamente las NIIF y las CINIF".
+
+Las NIIF son como las "normas ISO" del mundo financiero contable.
+
+**** Elementos de los estados financieros
+
+| Aspecto      |            |                                                 |
+| Tratado      | Elemento   | Definición o Descripción                        |
+|--------------+------------+-------------------------------------------------|
+| Recursos     | Activo     | Un recurso económico presente controlado por la |
+| económicos   |            | entidad como resultado de sucesos pasados. Un   |
+|              |            | recurso económico es un derecho que tiene el    |
+|              |            | potencial de producir beneficios económicos.    |
+|--------------+------------+-------------------------------------------------|
+| Derechos     | Pasivo     | Es una obligación presente de la entidad de     |
+| de los       |            | transferir un recurso económico como resultado  |
+| Acreedores   |            | de sucesos pasados.                             |
+|              | Patrimonio | La parte residual de los activos de la entidad, |
+|              |            | una vez deducidos todos sus pasivos.            |
+|--------------+------------+-------------------------------------------------|
+| Cambios en   | Ingresos   | Son incrementos en los activos o disminuciones  |
+| los recursos |            | en los pasivos que dan lugar a incrementos      |
+| económicos y |            | en el patrimonio, distintos de los              |
+| en los       |            | relacionados con aportaciones de los tenedores  |
+| derechos de  |            | de derechos sobre el patrimonio.                |
+| los          | Gastos     | Disminuciones en los activos o incrementos      |
+| acreedores   |            | en los pasivos que dan lugar a disminuciones    |
+| que reflejan |            | en el patrimonio, distintos de los relacionados |
+| el           |            | con distribuciones de los tenedores de          |
+| rendimiento  |            | derechos sobre el patrimonio.                   |
+| financiero   |            |                                                 |
+|--------------+------------+-------------------------------------------------|
+
+**** Ejemplo final para diferenciar elementos de los estados financieros
+- Empresa de picadura y repartición de leña.
+**** Discusión final: un humano puede ser un activo?
+- Una persona no puede ser propiedad de otra persona.
+- Sin embargo, las instituciones progresan con las personas,
+  por lo tanto ahí hay una suerte de activo.
+
+** Clase 3 :ppt1:
+:PROPERTIES:
+:ID:       09f7ae92-5adb-480e-a210-fd847f7c1f33
+:END:
+- [[id:d5fac626-aefa-4215-a438-eb2361ce350a][log]]
+
+*** Resumen clase anterior
+- Concepto de activo
+*** El resto de los elementos de los estados financieros
+- Discusión sobre el concepto de "Ingreso pasivo": no es pasivo para nada.
+  + Pero es buena cuña
+
+
+- Activos y pasivos
+  + Corriente y no corriente
+
+
+- Pasivos
+  + <=12 meses: corto plazo, corriente
+  + >12 meses: largo plazo, no corriente
+
+
+- Gasto = consumo != pago : se gasta un activo
+  + Gastar es consumir, pero no pagar.
+- Ingreso = registro de una venta != registrar de un pago : se gasta un pasivo
+
+*** Bases de medición de los elementos
+- Costo historico
+  - "el valor que se pagó"
+- Valor corriente
+  - razonable
+    - "el valor de acuerdo a una cosa"
+  - en uso
+  - de cumplimiento
+- Costo corriente
+
+*** Tratamiento de los elementos
+**** ejemplos de cuentas
+
+- Cuenta A: deudor
+| /        |    < |     < |
+|          | Debe | Haber |
+|----------+------+-------|
+|          |  510 |   321 |
+|          |   14 |    32 |
+|          |   45 |     0 |
+|----------+------+-------|
+| \(\sum\) |  569 |   353 |
+| Saldo    |      |   216 |
+
+- Cuenta B: acreedor
+| /        |    < |     < |
+|          | Debe | Haber |
+|----------+------+-------|
+|          |   51 |   231 |
+|          |   41 |    23 |
+|          |   45 |     0 |
+|----------+------+-------|
+| \(\sum\) |  137 |   254 |
+| Saldo    |  117 |       |
+
+- Cuenta C: saldada
+| /        |    < |     < |
+|          | Debe | Haber |
+|----------+------+-------|
+|          |  510 |   231 |
+|          |   41 |    23 |
+|          |   45 |   342 |
+|----------+------+-------|
+| \(\sum\) |  596 |   596 |
+| Saldo    |      |       |
+
+**** comportamiento de elementos en cuentas
+
+- La suma del débito (Deber), constituye un saldo deudor
+- La suma del crédito (Haber), constituye un saldo acreedor
+
+
+
+| Elemento | Se registra al Debe | Se registra al Haber | Saldo natural |
+|----------+---------------------+----------------------+---------------|
+| Activo   | cuando aumenta      | cuando disminuye     | Deudor        |
+| Pasivo   | cuando disminuye    | cuando aumenta       | Acreedor      |
+| Ingreso  | cuando disminuye    | cuando aumenta       | Acreedor      |
+| Gasto    | cuando aumenta      | cuando disminuye     | Deudor        |
+
+**** ejemplos
+:PROPERTIES:
+:ID:       43b46a43-04fb-48b8-865a-db1957457457
+:END:
+1. Si la entidad compra una máquina y paga en efectivo, el registro
+   de la maquina será al debe, porque aumenta el activo. En cambio,
+   la salida de dinero que se produce del banco, se registrará en el
+   haber, ya que hay una disminución del activo que es el dinero.
+2. Si la entidad contrae un crédito, el registro de la recepción del
+   dinero por la entidad será en el debe de una cuenta de manejo de
+   efectivo (Banco), porque este aumenta. En otro sentido se
+   registra una obligación con la enditad prestadora (pasivo) al
+   haber, porque este elemento también experimenta un aumento.
+*** Partida doble: Asiento Contable
+
+"Con los ejemplos 1 y 2[fn:1], ya reconocemos que para registrar un hecho
+económico se requiere hacer a lo menos dos registros, uno al debe y
+el otro al haber. Esto materializa el concepto de partida doble.
+También configura el concepto de registro contable denominado “Asiento”."
+
+"Entonces un asiento contable es la forma de registrar un hecho económico
+desde un punto vista de la técnica contable utilizando el tratamiento
+de cada elemento de los estados financieros mediante las cuentas."
+
+*** ¿Entonces qué es una cuenta contable?
+- Las cuentas contables registran transacciones de la misma naturaleza
+  + Básicamente para ser ordenado
+  + El conjunto de cuentas se llama Plan de Cuentas
+
+** Clase 4 :ppt1:
+:PROPERTIES:
+:ID:       5b180faa-5fe0-46e5-96d6-60b7ed5e1229
+:END:
+- [[id:898afd6e-1662-4c30-b485-be7807047aaf][log]]
+
+*** Hoy
+- Perfilar un asiento contable, como se hace
+- Asentar es registrar
+
+
+- Ejercicio de cuenta contable
+  - Identificar los elementos de los estados financieros
+
+
+- Taxonomía NIIF
+  - Un modelo de presentación de estados financieros
+
+** Clase 6
+:PROPERTIES:
+:ID:       05a93132-bb8b-4dfb-a220-a53c854fdfd6
+:END:
+- [[id:88edf805-f957-46eb-b3b7-5ad8485e0069][log]]
+
+
+Preguntas para la próxima clase:
+1. Es la retasación técnica de un bien la contraparte de la depreciación de
+   un bien? Por lo tanto todo hecho financiero tiene su contraparte?
+2. Por qué el interés (el último de la lista) es un gasto en vez de un pasivo?
+3. Y los ítems del medio relacionados con Leasing?
+** Clase 9
+:PROPERTIES:
+:ID:       c4389250-7ade-400e-8999-b1f7ecc05053
+:END:
+- [[id:e20e6f1f-0b73-4e15-b818-b9a760f4b4da][log]]
+** Resumen del ramo
+* Ayudantías :assistantship:
+** inactive-time-stamp clase x
+# - Then =org-clone-subtree-with-time-shift= and repeat
+- =[ link to <subject-name.org> class entry ]=
+- =org-timer-start=
+
+
+< your_notes >
+
+* Resúmenes para evaluaciones
+- link-to-resumen-eval1.org
+- link-to-resumen-eval2.org
+- link-to-resumen-eval3.org
+* Local variables :noexport:
+
+* Footnotes
+
+[fn:1] [[id:43b46a43-04fb-48b8-865a-db1957457457][Clase 3/Tratamiento.../ejemplos]]
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:

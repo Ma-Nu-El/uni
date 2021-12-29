@@ -1,0 +1,254 @@
+:PROPERTIES:
+:ID:       e5c2ee7a-2273-4672-a846-bcfe05c8087a
+:END:
+#+TITLE: Investigación Operacional
+#+FILETAGS: :university:io:
+* TOC :TOC_2:noexport:
+- [[#links][Links]]
+  - [[#drive-con-clases-grabadas][Drive con clases grabadas]]
+  - [[#lunes-0800][Lunes 0800]]
+  - [[#lunes-1050-a-1300][Lunes 1050 a 1300]]
+  - [[#jueves-1050-a-1300-cancelada-se-corre-pal-viernes][Jueves 1050 a 1300 (Cancelada: Se corre pal viernes)]]
+  - [[#viernes][Viernes]]
+  - [[#ayudantía-jueves-0900-1100][Ayudantía Jueves 0900-1100]]
+- [[#contenido][Contenido]]
+  - [[#apuntes][Apuntes]]
+- [[#horario][Horario]]
+  - [[#clase][Clase]]
+  - [[#ayudantía][Ayudantía]]
+- [[#contacto][Contacto]]
+- [[#links-1][Links]]
+  - [[#lunes-0800-1][Lunes 0800]]
+  - [[#lunes-1050][Lunes 1050]]
+  - [[#jueves-0830][Jueves 0830]]
+  - [[#viernes-1430-ayudantía][Viernes 1430-Ayudantía]]
+  - [[#clases-grabadas][Clases grabadas]]
+- [[#evaluación][Evaluación]]
+  - [[#canceled-encuesta-io][CANCELED encuesta io]]
+  - [[#teórico-70][Teórico 70%]]
+  - [[#práctico-30][Práctico 30%]]
+
+* Links
+** Drive con clases grabadas
+- https://drive.google.com/drive/u/1/folders/15i2ifq3RYAVlxlKzM-XIrveBHZdUUMkf
+** Lunes 0800
+- https://reuna.zoom.us/j/83071748889?pwd=dnRQdjNOVEtuSVo3QTBNcnpFVWZxQT09
+** Lunes 1050 a 1300
+- https://reuna.zoom.us/j/86202301999?pwd=cFJKNDJLRWt2U29Ic3R5dFhBcWpCUT09
+** Jueves 1050 a 1300 (Cancelada: Se corre pal viernes)
+- https://reuna.zoom.us/j/85217593690?pwd=NnBGcnhGNHF3bFoxQkVVTDJpOVZnQT09
+** Viernes
+** Ayudantía Jueves 0900-1100
+* Contenido
+** Apuntes
+- [[id:8ecda01d-0c22-426e-9260-f486d5df1217][apuntes.org]]
+* Horario :lecture:
+** Clase
+*** DONE Clase IO
+CLOSED: [2021-05-07 Fri 11:27] SCHEDULED: <2021-04-26 Mon 08:00-10:45>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-05-07 Fri 11:27]
+:END:
+*** CANCELED Clase IO
+SCHEDULED: <2021-05-03 Mon 08:00-10:45>
+:PROPERTIES:
+:ID:       41f4f922-b788-477b-86fa-a7d5637e268d
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-06-03 Thu 15:03]--[2021-06-03 Thu 15:15] =>  0:12
+CLOCK: [2021-06-03 Thu 14:51]--[2021-06-03 Thu 14:59] =>  0:08
+CLOCK: [2021-06-03 Thu 14:23]--[2021-06-03 Thu 14:41] =>  0:18
+CLOCK: [2021-06-03 Thu 14:21]--[2021-06-03 Thu 14:23] =>  0:02
+:END:
+- [[id:05111fce-a581-451f-9265-3898639d518c][apuntes.org]]
+- Ver esta.
+- No la vi x estudiar para [[id:3263d6b2-2c4b-4779-bb5c-f3225033e33a][Taller 2 de proba.]]
+- https://drive.google.com/drive/folders/15i2ifq3RYAVlxlKzM-XIrveBHZdUUMkf
+- [[file:~/Downloads/Clase Teorica 03.05.2021.mp4][file:~/Downloads/Clase Teorica 03.05.2021.mp4]]
+
+
+- Los primeros 10-15 son modelación de un problema PLE.
+*** DONE Clase IO
+CLOSED: [2021-05-10 Mon 12:34] SCHEDULED: <2021-05-10 Mon 08:00-10:45>
+:PROPERTIES:
+:ID:       a8f22325-80f8-44fb-a868-dbc3babd50bb
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-05-10 Mon 12:34]
+:END:
+- [[id:d08d23b3-c035-46fd-bff9-40d9a80b13a2][apuntes.org]]
+- Transporte, min cos, stepping stone etc.
+*** CANCELED Clase IO
+SCHEDULED: <2021-05-17 Mon 08:00-10:45>
+:PROPERTIES:
+:ID:       b6af4c7b-2726-4f5b-b4ff-0edf3c05e2eb
+:END:
+- [[id:e1c1cead-6598-47a9-812f-b6f7e7be0e5f][apuntes.org]]
+- Networks
+- Seen from 08:00 to 09:00 to study for test.
+*** CANCELED Clase IO
+SCHEDULED: <2021-05-31 Mon 08:00-10:45>
+:PROPERTIES:
+:ID:       ce7e6601-518d-4605-bf80-802484946074
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-06-04 Fri 18:10]--[2021-06-05 Sat 12:21] => 18:11
+CLOCK: [2021-06-04 Fri 17:21]--[2021-06-04 Fri 18:01] =>  0:40
+CLOCK: [2021-06-04 Fri 15:03]--[2021-06-04 Fri 15:05] =>  0:02
+CLOCK: [2021-06-03 Thu 18:15]--[2021-06-03 Thu 18:46] =>  0:31
+:END:
+- [[id:b383d416-bc5b-4308-8e49-0ffbd0bf3619][apuntes.org]]
+- This week we don't have workshop so this one replaces the one from following
+  friday.
+*** CANCELED Clase IO
+SCHEDULED: <2021-06-07 Mon 08:00-10:45>
+:PROPERTIES:
+:ID:       930919c9-a45e-4f51-bd79-fcf2876ade4f
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-06-07 Mon 09:58]--[2021-06-07 Mon 10:18] =>  0:20
+CLOCK: [2021-06-07 Mon 08:15]--[2021-06-07 Mon 09:52] =>  1:37
+:END:
+- [[id:91bbc39c-f1f5-4d58-92b6-3d3dc5787a43][apuntes.org]]
+- CPM y PERT
+- Repasar para apretar detalles
+*** DONE Clase IO
+CLOSED: [2021-06-14 Mon 10:32] SCHEDULED: <2021-06-14 Mon 08:00-10:45>
+:PROPERTIES:
+:ID:       aa3baaf2-c955-467f-9c0e-cf5b822f3af5
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-06-14 Mon 10:32]
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-06-14 Mon 09:26]--[2021-06-14 Mon 10:30] =>  1:04
+CLOCK: [2021-06-14 Mon 08:05]--[2021-06-14 Mon 09:26] =>  1:21
+:END:
+- [[id:3f6be649-d11d-4189-a287-d94362bf3855][apuntes.org]]
+- Para el test de este próximo sábado: CPM, PERT y flujo máximo de redes.
+
+** Ayudantía
+*** CANCELED Ayudantía 2 IO
+SCHEDULED: <2021-04-30 Fri 14:30-15:30>
+:PROPERTIES:
+:ID:       2152beef-422b-4eb3-bb09-e027921aa4e1
+:END:
+- Correspondiente a ayudantía 2
+- Viendo grabación @ [2021-05-06 Thu 11:02]
+- La ayudantia se trata de programación lineal entera en vez de sensibilidad
+  pues el profe le dijo al ayudante que siga con la materia.
+- [[id:85c7df83-20a9-46ec-8e3d-c29a234f7a1d][apuntes.org]]
+
+*** CANCELED Ayudantía 3 IO
+SCHEDULED: <2021-05-07 Fri 14:30-15:30>
+*** DONE Ayudantía 4 IO
+CLOSED: [2021-05-14 Fri 15:27] SCHEDULED: <2021-05-14 Fri 14:30-15:30>
+:PROPERTIES:
+:ID:       8e9e0b97-75f5-42c4-9bec-a1e4841c2e46
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-05-14 Fri 15:27]
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-05-14 Fri 15:18]--[2021-05-14 Fri 15:26] =>  0:08
+:END:
+- [[id:061f1d1b-43af-4ab0-bc84-6427f441914e][apuntes.org]]
+*** CANCELED Ayudantía 5 IO
+SCHEDULED: <2021-05-21 Fri 14:30-15:30>
+- No la he visto por ayudar a pato con mudanza
+*** CANCELED Ayudantía 6 IO
+CLOSED: [2021-06-03 Thu 17:16] SCHEDULED: <2021-06-04 Fri 14:30-15:30>
+:LOGBOOK:
+- State "CANCELED"   from "TODO"       [2021-06-03 Thu 17:16] \\
+  Cancelled by professor.
+:END:
+*** DONE Ayudantía 7 IO
+CLOSED: [2021-06-11 Fri 15:33] SCHEDULED: <2021-06-11 Fri 14:30-15:30>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-06-11 Fri 15:33]
+:END:
+- apuntes.org
+*** CANCELED Ayudantía 8 IO
+SCHEDULED: <2021-06-18 Fri 14:30-15:30>
+*** CANCELED Ayudantía 9 IO
+SCHEDULED: <2021-06-25 Fri 14:30-15:30>
+* Contacto
+- RICARDO ENRIQUE SEPULVEDA CONCHA
+  - [[mailto:ricardo.sepulveda@ufrontera.cl][ricardo.sepulveda@ufrontera.cl]]
+- Investigación Operacional
+- F: +56 9 98455040
+* Links
+:PROPERTIES:
+:ID:       e923e674-f884-4aa1-ab4c-84beb6611c53
+:END:
+** Lunes 0800
+- https://reuna.zoom.us/j/83071748889?pwd=dnRQdjNOVEtuSVo3QTBNcnpFVWZxQT09
+** Lunes 1050
+- https://reuna.zoom.us/j/86202301999?pwd=cFJKNDJLRWt2U29Ic3R5dFhBcWpCUT09
+** Jueves 0830
+- https://reuna.zoom.us/j/85217593690?pwd=NnBGcnhGNHF3bFoxQkVVTDJpOVZnQT09
+** Viernes 1430-Ayudantía
+- https://reuna.zoom.us/j/85651312970
+- https://reuna.zoom.us/j/83134519812 (nuevo)
+** Clases grabadas
+- https://drive.google.com/drive/u/1/folders/15i2ifq3RYAVlxlKzM-XIrveBHZdUUMkf
+* Evaluación :grade:
+** CANCELED encuesta io
+SCHEDULED: <2021-05-03 Mon>
+:LOGBOOK:
+- State "WAIT"       from              [2021-05-03 Mon 18:03] \\
+  Resp wasap
+:END:
+- Tal vez esta?
+  - https://campusvirtual.ufro.cl/mod/assign/view.php?id=1158513
+** Teórico 70%
+*** DONE prueba1
+CLOSED: [2021-05-10 Mon 12:34] DEADLINE: <2021-05-08 Sat -0d>
+:PROPERTIES:
+:ID:       2e038cee-1e5b-4451-8434-e13c2626a40c
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-05-10 Mon 12:34]
+:END:
+*** DONE [#A] prueba2
+CLOSED: [2021-06-26 Sat 13:00] DEADLINE: <2021-06-26 Sat 10:00-12:00 -0d>
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2021-06-26 Sat 13:00]
+:END:
+- CPM, PERT
+- Transporte y transbordo
+- Dijkstra, arbol de min expansion, y demases.
+** Práctico 30%
+*** DONE Taller1
+CLOSED: [2021-04-10 Sat 15:19] DEADLINE: <2021-04-10 Sat 09:00 -7d>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-04-10 Sat 15:19] \\
+  Simpleexxxxxxxxx
+:END:
+- Funciones en excel
+- Simpleeexxxx
+*** DONE Taller2
+CLOSED: [2021-04-24 Sat 13:03] DEADLINE: <2021-04-24 Sat 09:00 -3w>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-04-24 Sat 13:03]
+:END:
+- Axiomática Matricial de dualidad y sensibilidad.
+- Método de 2 Fases o M (Penalización)
+- Solver (Revisen el análisis de los informes)
+*** DONE Taller3
+CLOSED: [2021-06-05 Sat 17:32] DEADLINE: <2021-06-05 Sat 09:00 -0d>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-06-05 Sat 17:32]
+:END:
+- Problemas de transporte y transbordo
+- Problemas de redes
+*** DONE Taller4
+CLOSED: [2021-06-19 Sat 17:43] DEADLINE: <2021-06-19 Sat 10:00 -0d>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-06-19 Sat 17:43]
+:END:
+- En intranet aparece para el 19-06?
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:

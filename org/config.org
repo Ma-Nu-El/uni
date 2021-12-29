@@ -1,0 +1,27 @@
+:ORG_PREAMBLE:
+#+LANGUAGE: es
+#+OPTIONS: toc:2
+#+AUTHOR: [[mailto:m.fuica01@ufromail.cl][m.fuica01@ufromail.cl]]
+
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper,12pt]
+#+LATEX_HEADER: \usepackage[spanish]{babel}
+#+LATEX_HEADER: \usepackage{enumerate}
+#+LATEX_HEADER: \usepackage{tcolorbox}
+:END:
+:LATEX_PREAMBLE:
+# For probability definition
+
+\def\PP{{\mathbb P}}
+\def\emptyset{{\varnothing}}
+\def\union{{\ \cup\ }}
+\def\intersection{{\ \cap\ }}
+
+\\ Given that
+\\ https://tex.stackexchange.com/questions/141570/sizing-for-given-that-symbol-vertical-bar
+\newcommand\given[1][]{\:#1\vert\:}
+
+:END:
+:MACROS:
+#+MACRO: latex @@latex: \LaTeX@@@@html: LaTeX@@
+:END:

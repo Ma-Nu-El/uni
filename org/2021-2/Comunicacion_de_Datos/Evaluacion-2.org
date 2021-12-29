@@ -1,0 +1,377 @@
+#+TITLE: Evaluación 2
+#+SUBTITLE: IIS447 - Comunicación De Datos \\
+#+SUBTITLE: Universidad de La Frontera
+#+DATE: Viernes 29 de octubre de 2021
+#+AUTHOR: Manuel Fuica Morales \\
+#+AUTHOR: Matrícula: 18 959 392 9 19 \\
+#+AUTHOR: Estudiante de Ingeniería Civil Industrial mención Informática \\
+#+AUTHOR: [[mailto:m.fuica01@ufromail.cl][m.fuica01@ufromail.cl]]
+# #+OPTIONS: toc:4
+#+LANGUAGE: es
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper,12pt]
+#+LATEX_HEADER: \usepackage[spanish]{babel}
+#+LATEX_HEADER: \usepackage{enumerate}
+#+LATEX_HEADER:\usepackage{tcolorbox}
+
+
+* TOC :noexport:TOC_2:
+- [[#enunciados][Enunciados]]
+  - [[#ejemplo-no-informático-de-tcpip][Ejemplo no informático de TCP/IP]]
+  - [[#capas-del-osi-y-dispositivos-asociados][Capas del OSI y dispositivos asociados]]
+  - [[#ip-segmentación-de-redes][IP: segmentación de redes]]
+- [[#ejemplo-no-informático-de-tcpip-1][Ejemplo no informático de TCP/IP]]
+  - [[#contexto][Contexto]]
+  - [[#respuesta][Respuesta]]
+- [[#capas-del-osi-y-dispositivos-asociados-1][Capas del OSI y dispositivos asociados]]
+  - [[#respuesta-1][Respuesta]]
+- [[#ip-segmentación-de-redes-1][IP: segmentación de redes]]
+  - [[#ip-de-esta-computadora][IP de esta computadora]]
+  - [[#clase-y-máscara-por-defecto][Clase y máscara por defecto]]
+  - [[#máscara-de-subred-adaptada-para-30-hosts][Máscara de subred adaptada para 30 hosts]]
+  - [[#total-de-subredes-útiles][Total de subredes útiles]]
+  - [[#total-de-hosts-útiles][Total de hosts útiles]]
+  - [[#primer-y-último-segmento-útil][Primer y último segmento útil]]
+- [[#índice-de-cuadros][Índice de cuadros]]
+
+* Enunciados
+** Ejemplo no informático de TCP/IP
+:PROPERTIES:
+:ID:       97472242-762c-4052-bb57-9c17fb770add
+:END:
+- [[id:40bb9771-54b2-4856-88c7-635da39eb680][Link a desarrollo]]
+
+
+Entregue un ejemplo de cómo la comunicación se realiza en el modelo
+TCP/IP (Ejemplo no informático) (2 pts)
+
+** Capas del OSI y dispositivos asociados
+:PROPERTIES:
+:ID:       7087f0c6-3c98-4424-ae6d-fb9552af2bb4
+:END:
+- [[id:2c84c32c-8ebc-443c-8fba-db9587f4e70c][Link a desarrollo]]
+
+
+Identifique en qué capas del modelo OSI trabajan los siguientes
+dispositivos de red (0.2 pts c/u):
+- Router
+- Host
+- MAC
+- Switch
+- Gateway
+** IP: segmentación de redes
+:PROPERTIES:
+:ID:       3209acb6-fb51-4406-ac8e-7e99dc217e23
+:END:
+- [[id:c4306941-643e-4303-a434-227e36cb2982][Link a desarrollo]]
+
+
+Revise la dirección IP de su computadora (considere el último octeto
+como 0) e identifique lo siguiente:
+
+#+ATTR_LATEX: :options [(a)]
+a) Clase y máscara de subred por defecto (0,5 pts)
+b) Máscara de subred adaptada para 30 hosts (0,5 pts)
+c) Total de subredes útiles (0,5 pts)
+d) Total de hosts útiles (0,5 pts)
+e) Primer y último segmento útil (1 pt)
+
+* Ejemplo no informático de TCP/IP
+:PROPERTIES:
+:ID:       40bb9771-54b2-4856-88c7-635da39eb680
+:END:
+- [[id:97472242-762c-4052-bb57-9c17fb770add][Link a enunciado]]
+
+** Contexto
+Consideremos las similitudes entre las capas del modelo OSI y TCP/IP en
+el cuadro [[40bb9771-54b2-4856-88c7-635da39eb680-Capas del modelo OSI y TCP/IP]].
+#+name: Capas del modelo OSI y TCP/IP
+#+caption: Capas del modelo OSI y TCP/IP
+#+label: 40bb9771-54b2-4856-88c7-635da39eb680-Capas del modelo OSI y TCP/IP
+|                 | <c>  |  <c>   |                                |
+|                 | Capa |  Capa  |                                |
+| Tipificación    | OSI  | TCP/IP | Relacionado con                |
+|-----------------+------+--------+--------------------------------|
+| Aplicación      |  7   |   4    | Procesos de usuario            |
+| Presentación    |  6   |        | Formateo de datos              |
+| Sesión          |  5   |        | Comunicación entre hosts       |
+|-----------------+------+--------+--------------------------------|
+| Transporte      |  4   |   3    | Conexión extremo a extremo     |
+|-----------------+------+--------+--------------------------------|
+| Red             |  3   |   2    | Interconexión de redes         |
+|-----------------+------+--------+--------------------------------|
+| Enlace de datos |  2   |   1    | Conexión de equipos adyacentes |
+| Física          |  1   |        | Uso del medio                  |
+
+Y si tomamos como referencia el ejemplo no informático brindado en clase
+para el modelo OSI, podemos construir el cuadro
+[[40bb9771-54b2-4856-88c7-635da39eb680-Ejemplo modelo OSI superpuesto con modelo TCP/IP]].
+
+#+name: Ejemplo modelo OSI superpuesto con modelo TCP/IP
+#+caption: Ejemplo modelo OSI superpuesto con modelo TCP/IP
+#+label: 40bb9771-54b2-4856-88c7-635da39eb680-Ejemplo modelo OSI superpuesto con modelo TCP/IP
+| <c>  |  <c>   |                                                           |
+| Capa |  Capa  |                                                           |
+| OSI  | TCP/IP | Ejemplo brindado en clase para el modelo OSI              |
+|------+--------+-----------------------------------------------------------|
+|  7   |   4    | Emisor decide enviar una carta a un receptor.             |
+|      |        |                                                           |
+|  6   |        | Carta es redactada y se empaqueta en el formato           |
+|      |        | establecido por la empresa de correos.                    |
+|      |        |                                                           |
+|  5   |        | Emisor y receptor acuerdan forma y momento del envío      |
+|      |        | de carta.                                                 |
+|      |        |                                                           |
+|------+--------+-----------------------------------------------------------|
+|  4   |   3    | Se llama al servicio de transporte para confirmar que el  |
+|      |        | receptor espera la carta.                                 |
+|------+--------+-----------------------------------------------------------|
+|  3   |   2    | Servicio decide la ruta óptima y se etiqueta la dirección |
+|      |        | de recepción.                                             |
+|      |        |                                                           |
+|------+--------+-----------------------------------------------------------|
+|  2   |   1    | Se reparte la carta y se registra la recepción. Si        |
+|      |        | hay error se re-envía.                                    |
+|      |        |                                                           |
+|  1   |        | El camión recoge el paquete.                              |
+
+
+\clearpage
+** Respuesta
+Si nosotros quisiéramos hacer el paralelo con un ejemplo no informático
+para el modelo TCP/IP, podemos tomar el escenario de una empresa de
+comida en formato de "entrega a domicilio" --- o "delivery" ---.
+
+Gatillante: El cliente abre la app, decide que comer y hace la orden.
+
+Las capas del modelo TCP/IP se comportan de una forma similar a la
+caracterizada a continuación:
+
+\begin{tcolorbox}
+\begin{enumerate}
+\setcounter{enumi}{3}
+\item Aplicación: En el lugar donde hacen la comida, empiezan a
+preparar la comida de acuerdo a los requerimientos de la persona.
+Se encargan de la preparación de la comida, su presentación y
+empaquetado.
+
+\setcounter{enumi}{2}
+\item Transporte: La empresa le va notificando al cliente las
+fases del envío, avisándole finalmente que su paquete va en
+camino y que debería llegar en un momento y lugar determinado.
+
+\setcounter{enumi}{1}
+\item Red: La empresa le entrega el paquete al delivery man,
+quien primero decide que calles recorrerá para entregar el paquete.
+
+\setcounter{enumi}{0}
+\item Enlace: Finalmente, el delivery man recorre las calles que
+planeo y entrega el paquete en el lugar y en el momento previamente
+acordados. En esta sección es cuando el delivery man debe tener la
+capacidad de improvisar en caso de diferentes dificultes en el
+envío, como por ejemplo: elegir calles distintas de las acordadas
+inicialmente debido al alto trafico, o calles que según el mapa
+existen pero están actualmente deshabilitadas.
+
+Otra dificultad que puede haber es que el lugar de entrega
+registrado sea diferente del verdadero paradero del cliente.
+En este caso el delivery man debe comunicarse o bien con la empresa
+o el cliente para que la entrega se puede efectuar de forma exitosa.
+\end{enumerate}
+\end{tcolorbox}
+
+* Capas del OSI y dispositivos asociados
+:PROPERTIES:
+:ID:       2c84c32c-8ebc-443c-8fba-db9587f4e70c
+:END:
+- [[id:7087f0c6-3c98-4424-ae6d-fb9552af2bb4][Link a enunciado]]
+
+** Respuesta
+
+\begin{tcolorbox}
+\begin{center}
+\begin{tabular}{ll|}
+Dispositivo & Capa del OSI asociada\\
+\hline
+Router & 3: Capa de red\\
+Host & 5: Capa de sesión\\
+MAC & 1: Capa física\\
+Switch & 2: Capa de enlace de datos, también Capa 3\\
+Gateway & 3: Capa de red\\
+\end{tabular}
+\end{center}
+\end{tcolorbox}
+
+* IP: segmentación de redes
+:PROPERTIES:
+:ID:       c4306941-643e-4303-a434-227e36cb2982
+:END:
+- [[id:3209acb6-fb51-4406-ac8e-7e99dc217e23][Link a enunciado]]
+** IP de esta computadora
+
+#+begin_center
+=hostname -I=
+
+=192.168.1.102=
+#+end_center
+
+
+Pero nos dicen que consideremos el último octeto como 0:\\
+\[\therefore  \texttt{192.168.1.0}\]
+
+** Clase y máscara por defecto
+*** Contexto
+Así, podemos identificar la clase y máscara por defecto de ésta IP:
+
+#+name: Rangos de valores y máscaras por defecto para cada clase de IP
+#+caption: Rangos de valores y máscaras por defecto para cada clase de IP
+|  <c>  |     <c>     |        <c>        |         <c>         |
+| Clase |    Desde    |       Hasta       | Máscara por defecto |
+|-------+-------------+-------------------+---------------------|
+|   A   |   0.0.0.0   |  127.255.255.255  |      255.0.0.0      |
+|   B   |  128.0.0.0  |  191.255.255.255  |     255.255.0.0     |
+|  *C*  | *192.0.0.0* | *223.255.255.255* |   *255.255.255.0*   |
+|   D   |  224.0.0.0  |  239.255.255.255  |          -          |
+|   E   |  240.0.0.0  |  255.255.255.255  |          -          |
+
+*** Respuesta
+\begin{tcolorbox}
+\begin{center}
+Nuestra IP es de clase \texttt{C} con máscara de clase por defecto
+\texttt{255.255.255.0}.
+\end{center}
+\end{tcolorbox}
+
+** Máscara de subred adaptada para 30 hosts
+*** Contexto
+#+name: RED y HOST según clase
+#+caption: Red y Host según clase
+|   /   |    <>    |    >     |    >     |          |
+|  <c>  |   <c>    |   <c>    |   <c>    |   <c>    |
+| Clase | Octeto 1 | Octeto 2 | Octeto 3 | Octeto 4 |
+|-------+----------+----------+----------+----------|
+|   A   |   Red    |   Host   |   Host   |   Host   |
+|   B   |   Red    |   Red    |   Host   |   Host   |
+|  *C*  |  *Red*   |  *Red*   |  *Red*   |  *Host*  |
+
+Por lo tanto, nuestra IP se descompone en:
+\[
+\overbrace{
+\texttt{255.255.255}
+}^\text{Red}
+.
+\overbrace{
+\texttt{0}
+}^\text{Host}
+\]
+
+Máscara de subred adaptada será de la forma:
+
+#+begin_center
+\texttt{255.255.255.xxx}
+#+end_center
+
+
+| /  |         |            |            | >          |         |         |              |                |         |         |         |         |                 |
+|    |         |            |            |            |   <c>   |   <c>   |     <c>      |      <c>       |   <c>   |   <c>   |   <c>   |   <c>   |       <c>       |
+| IP | decimal |        255 |        255 | 255        |    0    |         |              | \(\downarrow\) |         |         |         |         |                 |
+|----+---------+------------+------------+------------+---------+---------+--------------+----------------+---------+---------+---------+---------+-----------------|
+|    | binario | \(\cdots\) | \(\cdots\) | \(\cdots\) | \(2^8\) | \(2^7\) |   \(2^6\)    |    \(2^5\)     | \(2^4\) | \(2^3\) | \(2^2\) | \(2^1\) |  nro de Hosts   |
+|    |         |            |            |            | \(2^1\) | \(2^2\) |   \(2^3\)    |    \(2^4\)     | \(2^5\) | \(2^6\) | \(2^7\) | \(2^8\) | nro de Subredes |
+|    |         |            |            |            |   128   |   64    |      32      |       16       |    8    |    4    |    2    |    1    |                 |
+|    |         |            |            |            |    1    |    1    |      1       |       0        |    0    |    0    |    0    |    0    |                 |
+|    |         |            |            |            |         |         | \(\uparrow\) |                |         |         |         |         |                 |
+
+Nos especifican /30/ hosts \(\rightarrow\) \(2^5=32-2 \geq 30\)
+
+Por lo tanto, el número de subredes será \(128+64+32 = 224 \)
+
+#+begin_src emacs-lisp :exports none :results replace
+(+ 128 64 32)
+#+end_src
+
+#+RESULTS:
+: 224
+
+*** Respuesta
+\begin{tcolorbox}
+\begin{center}
+Así, nuestra máscara de red adaptada para 30 hosts es: \\
+\texttt{255.255.255.224}.
+\end{center}
+\end{tcolorbox}
+
+** Total de subredes útiles
+*** Respuesta
+| Total      | : | \(2^3\)   | = | 8 |
+| Total útil | : | \(2^3\)-2 | = | 6 |
+** Total de hosts útiles
+*** Respuesta
+| Total      | : | \(2^5\)   | = | 32 |
+| Total útil | : | \(2^5\)-2 | = | 30 |
+** Primer y último segmento útil
+*** Contexto
+#+caption: Lista de segmentos
+|        <c>        |   |        <c>        |                      |
+|  =255.255.255.0=  | - | =255.255.255.31=  | Primer segmento      |
+| =255.255.255.32=  | - | =255.255.255.63=  | Primer segmento útil |
+| =255.255.255.64=  | - | =255.255.255.95=  | \(\cdots\)           |
+| =255.255.255.96=  | - | =255.255.255.127= | \(\cdots\)           |
+| =255.255.255.128= | - | =255.255.255.159= | \(\cdots\)           |
+| =255.255.255.160= | - | =255.255.255.191= | \(\cdots\)           |
+| =255.255.255.192= | - | =255.255.255.223= | Último segmento útil |
+| =255.255.255.224= | - | =255.255.255.255= | Último segmento      |
+
+#+name: Cálculo de último octeto para segmentos
+#+caption: Cálculo de último octeto para segmentos
+| <c>  |        <c>         |       <c>       |
+| 32 * | Inicio de segmento | Fin de segmento |
+|------+--------------------+-----------------|
+|  0   |         0          |       31        |
+|  1   |         32         |       63        |
+|  2   |         64         |       95        |
+|  3   |         96         |       127       |
+|  4   |        128         |       159       |
+|  5   |        160         |       191       |
+|  6   |        192         |       223       |
+|  7   |        224         |       255       |
+#+TBLFM: $2 = '(* $1 32);N :: $3= '(+ (* $1 32) 31);N
+
+Como se mencionó en clase, el primer y último segmento se reservan
+para tareas de broadcasting, por lo que no son considerados como
+segmentos utilizables.
+
+*** Respuesta
+\begin{tcolorbox}
+\begin{center}
+Por lo tanto, el primer y último segmento útiles para nuestra IP corresponden
+a:
+\end{center}
+
+\begin{center}
+\begin{tabular}{lclc}
+Primer segmento útil: & \texttt{255.255.255.32} & - & \texttt{255.255.255.63}\\
+Último segmento útil: & \texttt{255.255.255.192} & - & \texttt{255.255.255.223}\\
+\end{tabular}
+\end{center}
+\end{tcolorbox}
+
+* Índice de cuadros
+\listoftables
+\newpage
+* Usando ipconfig o similares :noexport:
+- https://askubuntu.com/questions/138119/ipconfig-not-working
+- https://serverfault.com/questions/458628/should-i-quit-using-ifconfig
+
+
+
+
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
+
+#  LocalWords:  TCP IP caption label app begin tcolorbox enumerate setcounter
+#  LocalWords:  enumi item man delivery end center hline Router Host MAC Switch
+#  LocalWords:  Gateway hostname therefore texttt name hosts overbrace text geq
+#  LocalWords:  downarrow cdots uparrow rightarrow src emacs lisp exports none
+#  LocalWords:  results replace TBLFM broadcasting

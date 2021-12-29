@@ -1,0 +1,65 @@
+#+TITLE: Apuntes Clase Plan de Marketing
+#+SUBTITLE: Gestión Comercial
+#+DATE: 2021-2
+#+INCLUDE: "~/org/uni/org/config.org"
+#+FILETAGS: :university:
+
+* Índice :TOC_2:noexport:
+- [[#clase-2021-11-16-tue-plan-de-marketing][clase [2021-11-16 Tue]: Plan de Marketing]]
+  - [[#link][Link]]
+  - [[#qué-es][Qué es?]]
+  - [[#7-pasos-para-crear-un-plan-de-marketing][7 pasos para crear un Plan de Marketing]]
+
+* DONE clase [2021-11-16 Tue]: Plan de Marketing
+** Link
+- https://www.youtube.com/watch?v=4-oQP_NgZjw
+** Qué es?
+
+Método para convertir estrategias de organización
+de actividades de marketing en acciones.
+
+Se centra en la ejecución efectiva de
+dichas actividades.
+
+** 7 pasos para crear un Plan de Marketing
+*** 1: Define tu Misión
+- Texto que describe brevemente valores y servicios.
+- Auténtico: que sea un reflejo de tus prácticas
+  de negocio.
+*** 2: Define tu audiencia
+- Público objetivo
+  - Crea un personaje e intégralo a tu plan de
+    marketing.
+*** 3: Define tu producto/servicio
+
+- Descripción detallada.
+- Menciona tu oferta actual y esperada para el futuro.
+- Identifica qué necesitas para aumentar la eficiencia
+  en la venta de tu producto/servicio en términos
+  de personal, experiencia y costos.
+
+*** 4: Define tu promoción
+- Medios? RRSS, TV, etc.
+  + Define a partir de público objetivo y
+    producto/servicio ofrecido.
+- Horarios?
+- Alta retroalimentación/actualización.
+*** 5: Define tu competencia
+- Determina tus puntos fuertes y débiles en
+  comparación a la competencia en términos de
+  valor, precio, productos/servicios y sus
+  combinaciones.
+*** 6: Define objetivos cuantificables
+- Puede incluir cantidad de clientes objetivo,
+  cantidad de clientes nuevos objetivo, cantidad
+  de ingresos objetivo, etc.
+- Se realista.
+*** 7: Controla tus resultados
+- Herramientas de análisis.
+- Actúa acorde a esos resultados.
+- Retroalimentación
+
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:

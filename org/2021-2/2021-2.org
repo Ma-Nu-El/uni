@@ -1,0 +1,16 @@
+#+TITLE: 2021-2
+
+- This is a mixed semester.
+  + Doesn't change anything for me tho.
+
+
+* DONE Start
+SCHEDULED: <2021-08-23 Mon 08:59>
+* DONE Subject annulment and appliance modification end
+SCHEDULED: <2021-09-16 Thu 08:59>
+* DONE Subject unsubscribe period start
+SCHEDULED: <2021-09-20 Mon 08:59>
+* DONE Subject unsubscribe period end
+SCHEDULED: <2021-11-05 Fri 08:59>
+* DONE University Recess period
+SCHEDULED: <2021-10-18 Mon 08:59>-<2021-10-22 Fri 08:59>

@@ -1,0 +1,229 @@
+:PROPERTIES:
+:ID:       c2b6ba28-b421-4cb0-a53e-d7463f4d1458
+:END:
+#+INCLUDE: "~/org/uni/org/config.org"
+#+FILETAGS: :university:
+#+TITLE: Contabilidad Financiera
+#+SUBTITLE: 2021-2
+
+* TOC :TOC_2:noexport:
+- [[#programa][Programa]]
+  - [[#horario][Horario]]
+- [[#calendario][Calendario]]
+- [[#evaluación][Evaluación]]
+  - [[#relacionado][Relacionado]]
+  - [[#teórico-ab][Teórico ab%]]
+  - [[#práctico-cd][Práctico cd%]]
+- [[#links][Links]]
+- [[#recursos][Recursos]]
+- [[#contacto][Contacto]]
+- [[#apuntes][Apuntes]]
+  - [[#relacionado-1][Relacionado]]
+  - [[#clases][Clases]]
+  - [[#ayudantías][Ayudantías]]
+
+* Programa
+- link to subject's sillabus.
+  + must be located in ~/myDrive/uni/202x-x/SUBJECT/programa.pdf
+** Horario
+* Calendario
+|  <c>  |       <c>        |  <c>   | <l>                                     |  <c>   |  <c>   |   <c>    |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+| Clase |      Fecha       | Semana | Tópico                                  | Prueba | Taller | Visitado |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+|   1   | [2021-04-08 Thu] |   1    | Introducción                            |   1    |   x    |    *     |
+|   2   | [2021-04-13 Tue] |   2    | Introduccion                            |   1    |   x    |    *     |
+|   3   | [2021-04-15 Thu] |   3    | Introduccion                            |   1    |   1    |    *     |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+|   4   | [2021-04-20 Tue] |   3    | Cargas Internas                         |   1    |   x    |    *     |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+|   5   | [2021-04-22 Thu] |   4    | Esfuerzo                                |   1    |   x    |    *     |
+|   6   | [2021-04-27 Tue] |   4    | Esfuerzo                                |   1    |   x    |    *     |
+|   7   | [2021-04-29 Thu] |   5    | Esfuerzo                                |   1    |   x    |    *     |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+|   8   | [2021-05-04 Tue] |   5    | Deformación                             |   2    |   x    |    *     |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+|   9   | [2021-05-06 Thu] |   6    | Propiedades Mecánicas de los Materiales |   2    |   2    |    *     |
+|  10   | [2021-05-11 Tue] |   7    | Propiedades Mecánicas de los Materiales |   2    |   2    |    *     |
+|  11   | [2021-05-13 Thu] |   7    | Propiedades Mecánicas de los Materiales |   2    |   2    |    *     |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+|  12   | [2021-05-18 Tue] |   8    | Carga Axial                             |   2    |   x    |    *     |
+|  13   | [2021-05-20 Thu] |   8    | Carga Axial                             |   2    |   x    |    *     |
+|  14   | [2021-06-01 Tue] |   9    | Carga Axial                             |   2    |   x    |    *     |
+|  15   | [2021-06-03 Thu] |   9    | Carga Axial                             |   2    |   x    |    *     |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+|  16   | [2021-06-08 Tue] |   10   | Torsión                                 |   3    |        |    *     |
+|  17   | [2021-06-10 Thu] |   10   | Torsión                                 |   3    |        |    *     |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+* Evaluación :evaluation:
+** Relacionado
+3 pruebas y 4 notas, la cuarta son las tareas acumuladas.
+
+- Examen hasta =3.6=
+  + =3.95= se revisa intranet. En intranet es =3.9= o =4.0=, no hay centésimas
+    de decimal.
+- [2021-08-25 Wed 18:22]
+  + Los días anteriores a la prueba se hacen varios tipo prueba.
+  + Se comparten todas las pruebas de años anteriores.
+** Teórico ab%
+*** DONE prueba1
+SCHEDULED: <2021-11-10 Wed 08:59>
+- Asientos contables, Estados de Situación y Estados
+  de Resultados.
+- Hasta clase 2021-10-13
+*** DONE prueba2
+SCHEDULED: <2021-12-02 Thu 17:00-22:00>
+- Indicadores financieros y Análisis.
+- Desde Clase 2021-10-28
+- Hasta Clase 2021-11-11
+*** DONE prueba3
+CLOSED: [2021-12-09 Thu 23:28] SCHEDULED: <2021-12-09 Thu 17:00-22:00>
+:LOGBOOK:
+- State "DONE"       from              [2021-12-09 Thu 23:28]
+:END:
+- Presupuesto de caja.
+** Práctico cd%
+* Links
+:PROPERTIES:
+:ID:       93b6e0b7-d917-46df-90ce-ff7bb0a03640
+:END:
+- Contabilidad Financiera (Mie, Jue) (1800-1920)
+  + Mie,Jue 1800-1900
+    - https://reuna.zoom.us/j/84837283449
+  + Clases grabadas
+    - https://drive.google.com/drive/folders/1Wxa32cg1_K7eDAN1Eea53jG_XbxnUNXI
+* Recursos
+- external links to books, videos etc.
+* Contacto
+|----------+---------------------------------|
+| Nombre   | Santiago Fernández Bustamante   |
+| E-mail   | santiago.fernandez@ufrontera.cl |
+| Teléfono | +569 93460462                   |
+|----------+---------------------------------|
+* Apuntes
+** Relacionado
+- Los jueves después de septiembre no habrá clases, solo lo miércoles
+  + O los miércoles teoría y jueves práctica
+- En presencial las clases eran de =1800= a =1920= aprox.
+  + =1930= a lo mucho. =60-75= minutos de clase.
+- Las grabaciones de las clases se suben a una carpeta.
+** Clases :lecture:
+**** DONE Clase 1
+SCHEDULED: <2021-08-25 Wed 18:00>
+:PROPERTIES:
+:ID:       eb4666a5-1c66-4df2-ae56-2083969cee09
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-08-25 Wed 18:02]--[2021-08-25 Wed 19:21] =>  1:19
+:END:
+- [[id:38060111-5291-424d-a6d6-97aa75e130d7][apuntes.org]]
+- [2021-08-25 Wed 18:04]
+
+**** DONE Clase 2
+SCHEDULED: <2021-08-26 Thu>
+:PROPERTIES:
+:ID:       6cad0b19-6171-41d3-82f7-90126bc8998b
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-08-26 Thu 18:03]--[2021-08-26 Thu 19:31] =>  1:28
+:END:
+- [[id:824c2f1b-ceee-4fc8-96b0-4bba64f2dce8][apuntes.org]]
+
+**** DONE Clase 3
+SCHEDULED: <2021-09-01 Wed 18:00-19:00>
+:PROPERTIES:
+:ID:       d5fac626-aefa-4215-a438-eb2361ce350a
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-09-01 Wed 18:04]--[2021-09-01 Wed 19:12] =>  1:08
+:END:
+- [[id:09f7ae92-5adb-480e-a210-fd847f7c1f33][apuntes.org]]
+**** DONE Clase 4
+SCHEDULED: <2021-09-02 Thu 18:00-19:00>
+:PROPERTIES:
+:ID:       898afd6e-1662-4c30-b485-be7807047aaf
+:END:
+- [[id:5b180faa-5fe0-46e5-96d6-60b7ed5e1229][apuntes.org]]
+**** DONE Clase 5
+SCHEDULED: <2021-09-08 Wed 18:00-19:00>
+**** DONE Clase 6
+CLOSED: [2021-09-09 Thu 19:25] SCHEDULED: <2021-09-09 Thu 18:00-19:00>
+:PROPERTIES:
+:ID:       88edf805-f957-46eb-b3b7-5ad8485e0069
+:END:
+:LOGBOOK:
+- State "DONE"       from              [2021-09-09 Thu 19:25] \\
+  Hacer las preguntas pendientes de esta clase al inicio de la proxima clase.
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-09-09 Thu 18:00]--[2021-09-09 Thu 19:24] =>  1:24
+:END:
+- [[id:05a93132-bb8b-4dfb-a220-a53c854fdfd6][apuntes.org]]
+**** CANCELED Clase 7
+SCHEDULED: <2021-09-15 Wed 18:00-19:00>
+**** CANCELED Clase 8
+SCHEDULED: <2021-09-16 Thu 18:00-19:00>
+**** CANCELED Clase 9
+SCHEDULED: <2021-09-22 Wed 18:00-19:00>
+:PROPERTIES:
+:ID:       e20e6f1f-0b73-4e15-b818-b9a760f4b4da
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-09-22 Wed 18:02]--[2021-09-22 Wed 18:10] =>  0:08
+:END:
+- [[id:c4389250-7ade-400e-8999-b1f7ecc05053][apuntes.org]]
+**** CANCELED Clase 10
+SCHEDULED: <2021-09-23 Thu 18:00-19:00>
+**** CANCELED Clase 11
+SCHEDULED: <2021-09-29 Wed 18:00-19:00>
+**** CANCELED Clase 12
+SCHEDULED: <2021-09-30 Thu 18:00-19:00>
+**** CANCELED Clase 13
+SCHEDULED: <2021-10-06 Wed 18:00-19:00>
+**** CANCELED Clase 14
+SCHEDULED: <2021-10-07 Thu 18:00-19:00>
+**** CANCELED Clase 15
+SCHEDULED: <2021-10-13 Wed 18:00-19:00>
+**** CANCELED Clase 16
+SCHEDULED: <2021-10-14 Thu 18:00-19:00>
+**** CANCELED Clase 17
+SCHEDULED: <2021-10-20 Wed 18:00-19:00>
+**** CANCELED Clase 18
+SCHEDULED: <2021-10-21 Thu 18:00-19:00>
+**** CANCELED Clase 19
+SCHEDULED: <2021-10-27 Wed 18:00-19:00>
+**** CANCELED Clase 20
+SCHEDULED: <2021-10-28 Thu 18:00-19:00>
+**** CANCELED Clase 21
+SCHEDULED: <2021-11-03 Wed 18:00-19:00>
+**** CANCELED Clase 22
+SCHEDULED: <2021-11-04 Thu 18:00-19:00>
+**** CANCELED Clase 23
+SCHEDULED: <2021-11-10 Wed 18:00-19:00>
+**** CANCELED Clase 24
+SCHEDULED: <2021-11-11 Thu 18:00-19:00>
+**** CANCELED Clase 25
+SCHEDULED: <2021-11-17 Wed 18:00-19:00>
+**** CANCELED Clase 26
+SCHEDULED: <2021-11-18 Thu 18:00-19:00>
+**** CANCELED Clase 27
+SCHEDULED: <2021-11-24 Wed 18:00-19:00>
+**** CANCELED Clase 28
+SCHEDULED: <2021-11-25 Thu 18:00-19:00>
+**** CANCELED Clase 29
+SCHEDULED: <2021-12-01 Wed 18:00-19:00>
+**** CANCELED Clase 30
+SCHEDULED: <2021-12-02 Thu 18:00-19:00>
+**** CANCELED Clase 31
+SCHEDULED: <2021-12-08 Wed 18:00-19:00>
+**** CANCELED Clase 32
+SCHEDULED: <2021-12-09 Thu 18:00-19:00>
+**** CANCELED Clase 33
+SCHEDULED: <2021-12-15 Wed 18:00-19:00>
+**** CANCELED Clase 34
+SCHEDULED: <2021-12-16 Thu 18:00-19:00>
+** Ayudantías :assistantship:
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:

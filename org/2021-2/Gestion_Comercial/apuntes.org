@@ -1,0 +1,1102 @@
+#+INCLUDE: "~/org/uni/org/config.org"
+#+FILETAGS: :university:
+
+
+* TOC :TOC_2:noexport:
+- [[#clases][Clases]]
+  - [[#clase-1][Clase 1]]
+  - [[#clase-2][Clase 2]]
+  - [[#clase-3][Clase 3]]
+  - [[#clase-4][Clase 4]]
+  - [[#clase-5][Clase 5]]
+  - [[#clase-6][Clase 6]]
+  - [[#clase-7][Clase 7]]
+  - [[#clase-8][Clase 8]]
+  - [[#clase-9][Clase 9]]
+  - [[#clase-10][Clase 10]]
+  - [[#clase-11][Clase 11]]
+  - [[#clase-12][Clase 12]]
+  - [[#clase-18][Clase 18]]
+- [[#ayudantías][Ayudantías]]
+  - [[#active-time-stamp-clase-x][active-time-stamp clase x]]
+- [[#control-de-lectura-1][Control de lectura 1]]
+  - [[#capítulo-1-el-mundo-del-marketing-moderno][Capítulo 1: El mundo del marketing moderno]]
+  - [[#definiciones-aceptadas-de-marketing][Definiciones aceptadas de marketing:]]
+  - [[#evolución-del-concepto-de-marketing][Evolución del concepto de marketing]]
+- [[#control-de-lectura-2][Control de lectura 2]]
+  - [[#34-p-55-58-estudio-de-mercado][3.4 (p 55-58) Estudio de Mercado]]
+  - [[#41-p-62-65-concepto-de-mercado][4.1 (p 62-65) Concepto de Mercado]]
+  - [[#42-p-65-67-comportamiento-de-compra-del-consumidor][4.2 (p 65-67) Comportamiento de compra del consumidor]]
+- [[#2021-09-23-thu-prueba1][[2021-09-23 Thu] prueba1]]
+  - [[#intento-1][Intento 1]]
+  - [[#intento-2][Intento 2]]
+- [[#2021-10-14-thu-taller][[2021-10-14 Thu] taller]]
+
+* Clases
+** Clase 1
+:PROPERTIES:
+:ID:       ae972f24-3ceb-4587-b25b-cb0f4a386f77
+:END:
+- [[id:b79861b7-25b1-44d0-9e01-7d35f8a653b8][log]]
+
+
+Empezó como marketing de productos y ahora de servicios.
+
+Lo nuevo es la marca personal. ¿Por qué contratarme a mi en vez
+de a alguien más?
+
+
+- Gestión y Desarrollo Personal y Profesional
+- Plan de Marketing
+
+
+- El programa total esta dividido en 11 unidades.
+- Al final del semestre se espera generar un Plan de Marketing.
+** Clase 2
+:PROPERTIES:
+:ID:       166688ad-4dfa-4d0e-a23c-543365a29ede
+:END:
+- [[id:0fc6aa29-c611-4f80-b9fc-36c26947fa63][log]]
+
+
+- Marketing en un entorno VUCA
+
+
+#+begin_center
+"El marketing actual se orienta a la creación de valor para el cliente
+y la construcción de relaciones fuertes con el cliente en un entorno
+global de alta tecnología y en constante cambio".
+#+end_center
+
+- VUCA:
+  + V: Volatilidad
+    - Adaptabilidad
+  + U: Uncertainty
+    - Incertidumbre, reciprocidad
+  + C: Complejidad
+    - Actitud y miradas diversas
+  + A: Ambigüedad
+    - Funcionalidad
+
+
+Ambiente de trabajo: equipos pequeños y flexibles. Volatilidad en la
+organización, mas horizontalidad. Mejor capacidad adaptativa.
+
+Misma idea para decisiones de marketing.
+
+Generación y captación de valor del cliente
+Kotler, 2013
+
+1. Crear valor *para los clientes* y construir relaciones con los clientes
+   1. Comprender el mercado y las necesidades y deseos de los clientes
+   2. Diseñar una estrategia de marketing orientada a los clientes
+   3. Crear un programa de marketing integrado que entregue un valor superior
+   4. Construir relaciones rentables y crear deleite en los clientes
+2. Captar en reciprocidad el valor *de los clientes*
+   1. Captar valor de los clientes para generar utilidades y capital de
+      los clientes
+
+
+a) *Qué es el marketing*: gestión de relaciones redituables con los clientes.
+   + Proceso por el que la empresa crea valor para sus clientes, generando
+     relaciones con los clientes y en repiprocidad, captando el valor
+     de los clientes.
+b) *Qué no es el marketing*: manipular a los consumidores para que compren los
+  productos que no necesitan. Vender y hacer publicidad. Entregar volantes
+  y regalos.
+
+
+Aunque: manipulación != persuasión.
+
+*Pirámide de Maslow*
+
+- Necesidad | Deseo o Demanda
+  + Necesidad
+    - Estado de carencia percibida
+  + Deseo
+  + Demanda
+    - Necesidad respaldada por poder de compra.
+
+Marketing vs Publicidad la próxima clase.
+
+** Clase 3
+:PROPERTIES:
+:ID:       91ef0bf3-ba53-44bf-80cc-a2ccbfa453e4
+:END:
+- [[id:f90c48d8-440f-4835-b1ff-a653c5e59e9b][log]]
+
+
+- [2021-08-31 Tue 11:49] Resumen de la clase anterior.
+  + Marketing en entorno VUCA (VICA en español)
+    - (V)olatile
+    - (U)ncertain
+    - (C)omplex
+    - (A)mbiguous
+- [2021-08-31 Tue 12:08]
+  + Marketing != publicidad
+- [2021-08-31 Tue 12:24]
+  + Las 4P -> 4C -> 4V
+- [2021-08-31 Tue 12:31] Para la próxima clase
+  + Know your audience
+  + A quién atendemos?
+    - Mercado meta
+  + Cómo lo podemos atender mejor?
+    - Propuesta de valor
+
+** Clase 4
+:PROPERTIES:
+:ID:       fa2e7c43-dede-43d3-b01b-cb4a1bec0851
+:END:
+- [[id:08c01011-9ae7-4d86-b42c-2e01391f412a][log]]
+
+
+- Repaso de las clases pasadas para taller en grupo mas tarde en la clase
+  de hoy.
+
+
+- VUCA
+- Maslow
+- Marketing vs publicidad
+- 4P -> 4C -> 4V
+  + 4P
+    1. Producto
+    2. Precio
+    3. Promoción (comunicación)
+    4. Plaza (distribución)
+    5. Política
+    6. Publico
+  + 4C
+    1. Consumidor
+    2. Comunicación
+    3. Costo
+    4. Conveniencia
+  + 4V
+    1. Validez
+    2. Valor
+    3. Virtualidad
+    4. Viralidad
+    5. Volumen
+- Mercado
+  + Conjunto de todos los compradores reales y potenciales de un producto
+    o servicio.
+- A quién atendemos?
+  - Mercado meta
+- Cómo lo podemos atender mejor?
+  - Propuesta de valor
+
+
+- Audio 2
+- Video 5
+*** Ejercicio en grupo: comentar sobre lo anterior para:
+- Grupo2: Manuel, Javier, Leonardo, Manu2
+**** ONG (Organismo No Gubernamental)
+- mercado meta
+  + voluntarios, socios
+
+
+- propuesta de valor
+  + ONG-hub (javier)
+**** Orquesta
+- mercado meta
+  + personas que les gusta la musica e instrumentos, musica clásica
+  + cuando lo anoto: orquesta instalada con sus musico, que se contrata
+
+
+- propuesta
+  + mas abierta al publico.
+  + filarmónica: sitio web, colegios públicos: no hay formación musical
+**** Pizzería
+- propuesta de valor
+  + mas días de tenedor libre (leo)
+  + 24/7: bajón a las 5 am (javier)
+**** Persona que postula a un cargo al senado
+- mercado meta
+- propuesta valor
+  + que se someta a un detector de mentiras
+  + +chamullento+, oratoria, aparentar confiabilidad
+**** Floreria
+- cementerio, día de todos los santos, san valentin, matrimonio, cumpleaños
+  licenciaturas, fiesta de 15.
+
+
+- propuesta de valor
+- florearía móvil
+- flori-móvil
+**** Universidad
+- 18, todas las personas que quieran estudiar
+
+
+- propuesta de valor
+- arancel mas flexible
+  + que se acomode a la situación país
+- protocolos sanitarios
+- jardín infantil
+- campus grande
+**** Jardín infantil
+- todos nuevos padres
+
+
+- personas capacitadas, personal calificado, integridad del personal
+**** Bicicleteria
+- rapidez de la mano de obra, calidad en el trabajo
+- aplicación de seguimiento, integración con uber. (manu)
+*** Lecciones
+- El beneficiado no necesariamente es el financiador (ONG)
+** Clase 5
+:PROPERTIES:
+:ID:       6ae69d54-cd44-4543-8a94-84bfb2871d78
+:END:
+- [[id:432d7139-cb6a-4f76-a90c-05aaa45be39b][log]]
+** Clase 6
+:PROPERTIES:
+:ID:       98499933-330c-4243-948c-e7aec668598c
+:END:
+- [[id:d7307384-2be4-4b02-9b01-730e31e5363f][log]]
+
+
+- Ver clase 5
+  + [[id:432d7139-cb6a-4f76-a90c-05aaa45be39b][Clase 5]]
+- Clase de hoy: Estudio y Segmentación de Mercado
+
+
+- Decisiones de compra
+  + Persona compradora
+    - Culturales
+      + Cultura
+      + Subcultura
+      + Clase social
+    - Sociales
+      + Grupos de referencia
+      + Familia
+      + Roles y estatus
+    - Personales
+      + Edad
+      + Ocupación
+      + Estilo de vida
+      + Personalidad
+    - Psicológicos
+      + Motivación
+      + Percepción
+      + Actitudes
+- Investigación de Mercados
+  + "La investigación de mercados proporciona información sobre las
+    características..."
+  + Ayuda a:
+    - Definir el producto
+    - Establecer el precio
+    - Identificar la mejor forma de promoción
+    - Determinar el canal de distribución mas adecuado para el producto
+  + "Proceso sistemático y objetivo de obtener información acerca de posibles
+    clientes para guiar las decisiones de marketing".
+- Caso Cocacola: (hacer tabla en {{{latex}}} con /merged cells/)
+- Caso Uber
+  + Hallazgos
+    1. "Había una oportunidad de integrar la tecnología a una necesidad
+       común (viaje citadinos)".
+    2. "Los consumidores buscaban comodidad y seguridad".
+  + Acciones
+    1. "Hizo que los consumidores tuvieran la oportunidad de pedir transporte
+       desde su teléfono móvil".
+    2. "Implementó un sistema de puntuaciones de los conductores".
+- Caso Pepsi Crystal:
+  + Pérdida de $40 M USD
+- Recolección de información
+  + Datos primarios
+    - "Información de marketing que se observa, registra o recopila
+      directamente con los participantes".
+  + Datos secundarios
+    - "Información que se recopila un tanto dentro como fuera de una
+      organización para algún propósito que no sea la situación actual".
+    - Investigaciones anteriores, bibliografías, estadísticas, etc.
+  + Diferencia
+    - En primaria el contacto es directo con el usuario, en secundaria
+      se puede obtener la información por otros medios.
+
+
+
+Fuentes de recolección de datos para investigación de mercados.
+- Actividad en clase
+  + Diseña en tu cuaderno un formulario de recolección de datos con el uso
+    de intranet de 4 preguntas:
+    - Fuentes primarias
+      + Dato 1
+        - "¿Es la tabla de contenidos lo suficientemente intuitiva?"
+      + Dato 2
+        - "¿Que dato o función de intranet te gustaría que estuviese
+          más automatizada con tu día a día?"
+      + Dato 3
+        - "¿Hay datos repartidos entre campus e intranet que según tu deberían
+          ser accesibles desde un mismo sitio? Ya sea campus o intranet?"
+        - "¿Existe algún trámite o información que incluso hoy día debes
+          estar presencialmente en la Universidad para obtener? Ese trámite
+          o dato se puede subir a intranet?
+    - Fuentes secundarias
+      + Dato 1
+        - "¿Tiempo promedio que un alumno demora para inscribir asignaturas?"
+        - "¿Tiempo promedio de conexión?"
+        - "¿Dato o función mas usada de intranet"
+      + Dato 2
+        - "¿Momentos del semestre que presentan más afluencia?"
+        - "¿Horas de mayor uso?"
+  + [2021-09-14 Tue 12:00] Me gané 10 décimas para un control de lectura,
+    ya sea el 1ro o 2do.
+
+
+
+- Mercado
+  + "conjunto de compradores reales y potenciales de un producto o servicio"
+
+- Comportamiento de compra del consumidor
+  + Proceso de desciño de compra
+    1) Reconocer necesidad
+    2) Establecer nivel de participación
+    3) Identificar alternativas
+    4) Evaluar alternativas
+    5) Decir la compra
+    6) Comportamiento post-compra
+  + Influyen
+    - Fuerzas sociales y grupales
+    - Fuerzas psicológicas
+    - Facilitadores de información
+    - Factores circunstanciales
+- A considerar
+  + Comportamiento de compra
+    - Forma como compran los consumidores finales
+  + Disonancia cognoscitiva
+    - Actitudes negativas, ansiedades o insatisfacciones posteriores a la
+      compra debido a ...
+- Ejemplo: Circo: que hay en un circo comúnmente?
+  + 12:06:08 From Sofia Varas : malabaristas
+  + 12:06:10 From Andrés Gutiérrez : Show de talentos
+  + 12:06:14 From MANUEL EDGARDO FUICA MORALES : payasos musica golosinas
+  + 12:06:27 From MANUEL EDGARDO FUICA MORALES : horarios de show definidos
+  + 12:06:39 From MANUEL EDGARDO FUICA MORALES : precios fijos
+  + 12:07:24 From Sofia Varas : espacios estrategicos
+- Contraejemplo: Cirque du Soleil
+- Estrategias
+  + Océano rojo (circo común) (compite trabajando más duro)
+    - Si ellos tienen algo, nosotros tenemos más de eso mismo
+    - Si ellos cobran algo, nosotros cobramos más barato
+  + Océano azul (cirque du soleil) (compite cambiando paradigma)
+    - Simplemente propone algo distinto, no se basa en la competencia
+    - Se basa en crear valor al cliente
+- Michael E. Porter: Objetivos y ventajas estratégicas
+  + Alta segmentación
+    - Volvo
+  + Diferenciación
+    - Toyota Corolla Cross 2021
+  + Liderazgo en costos
+    - AX7
+- Ejemplos
+  + Iphone transparente (segmentacion/dif)
+  + Dr Simi (costos)
+  + Jumbo (dif)
+  + Porshe (seg)
+  + Agua de la llave (costos)
+  + Rolex (seg)
+  + Cocacola (dif)
+  + Zapatillas Converse (dif)
+  + Citi car (cos)
+  + Supermercado mayorista (cos)
+  + Viviendas sociales (cos)
+- Segmentación de mercados
+  + Consideraciones para el mercado meta
+    1) Que los mercados sean compatibles con la misión e imagen de la empresa
+    2) Que las oportunidades de los mercados meta tengan alguna relación
+       con los recursos disponibles de la compañía
+    3) Que los mercados meta generen utilidades a largo plazo
+    4) Que en los mercados meta el número y tamaño de la competencia
+       sea el mismo.
+  + Estrategias de selección del mercado meta
+    1. Definición del mercado particular
+       A) Mercado meta indiferenciado o masivo
+       B) Mercado meta segmentado
+    2. Evaluar fuerzas del entorno (micro y macro) Oportunidades - Amenazas
+    3. Evaluar factores internos de la organizacion
+       - Fortalezas ...
+  + Tipos de estrategias
+    1. Segmentación indiferenciada
+    2. Segmentación diferenciada
+    3. Segmentación de nichos
+  + Segmentacion del mercado
+    - "Dividir un mercado en grupos de compradores que segun sus diferentes
+      necesidades, caracteristicas y comportamientos, podrian requerir
+      productos o programas de marketing..."
+  + Criterios para segmentar
+    1) Conducta del consumidor
+    2) Aspectos demográficos
+    3) Factores psicográficos
+    4) Variables geográficas
+  + Ejemplos en página 76-80
+  + Condiciones
+    - "La base de segmentación debe ser cuantificable y la información
+      accesible".
+    - "El segmento debe ser accesible a los canales de distribución, a los
+      medios publicitarios y la fuerza de ventas con el mínimo costo".
+    - "Cada segmento debe ser capaz por si solo de generar beneficios
+      económicos".
+
+** Clase 7
+** Clase 8
+:PROPERTIES:
+:ID:       5da1310f-8929-4767-af88-6a98c2518fd6
+:END:
+- [[id:027d111e-a96c-437a-a597-18cfac488fcd][log]]
+- esta clase sera de repaso.
+
+
+- la profesora hace un PPT a modo de resumen.
+
+
+- [2021-09-21 Tue 12:17] Por qué existe la segmentación de mercado?
+** Clase 9
+** Clase 10
+:PROPERTIES:
+:ID:       74f71be7-bb7c-4fd9-98e1-34e467d4853d
+:END:
+- [[id:d1f77a9a-1112-425f-87a4-7619d5f4d0d6][log]]
+
+
+Resumen del ramo para introducir nueva materia.
+
+- Las 3 de Porter son Alta Segmentación, Diferenciación y
+  Liderazgo en Costos.
+- Las 4p -> 4c -> 4v
+- Cotler: definiciones de producto y servicio.
+
+
+- Dimensiones del producto
+  1) Genérico
+  2) Esperado
+  3) Aumentado
+  4) Potencial
+
+
+- Niveles del producto: ejemplo
+  - [2021-09-28 Tue 11:36]
+- Niveles del producto: ampliación del modelo
+
+
+- Producto: ciclo de vida
+  1. Introducción ( \(\sin (0^\circ)\) )
+  2. Desarrollo ( \(\sin (45^\circ)\) )
+  3. Madurez ( \(\sin (90^\circ)\) )
+  4. Decadencia ( \(\sin (135^\circ)\) )
+
+
+- Otros ciclos de vida
+  - Aprendizaje largo
+  - Re-lanzamientos
+  - Con demanda residual
+  - Sin aprendizaje
+  - Introducción y desaparición rápida
+
+- Mapa de nuevas profesiones digitales
+- Trabajos en declive o destruidos
+** Clase 11
+:PROPERTIES:
+:ID:       d2ef1fa1-5bf6-4172-9e51-db3263c50cb5
+:END:
+- [[id:a53da768-7849-4166-b3c2-4adf9089f359][log]]
+
+
+*** Resumen clase anterior
+- Dimensiones del producto
+- Ciclo de vida
+
+
+- Ejemplo del Diskette
+- Nuevos perfiles profesionales
+- Nuevas profesiones y su impacto en la economía actual
+  + Arquitecto de información
+  + Community Manager
+  + Blogger
+  + Copywriter
+  + etc
+- Trabajos en declive
+  + Ascensorista
+
+*** Mezcla de marketing: Introducción
+
+- Producto: sujeto a cambios ante respuesta del mercado.
+- Precio: establecido por la empresa
+  - Bajo: estrategia de penetración de mercado
+  - Bajo: estrategia de descremado de mercado
+  - Cual de los dos depende de la competencia
+- Comunicación:
+  - Mensajes informativos
+*** Efecto canibalismo
+
+*** mas
+- Cocacola
+- Barbie en China-Mattel Inc
+  "No puedes pretender que algo que funciona en un lugar, va a funcionar
+  en todos lados".
+
+
+- Windows XP a 2007
+  + Inestable y costoso
+  + Campaña de $10 M USD con un humorista para ganar confianza
+  + "Haz las pruebas necesarias y no insistas en vender algo que no gusta".
+
+
+- Nintendo y Virtual Boy 1995
+  + Diseño incómodo, costosa, pocos juegos y tecnologías a medio
+    desarrollar, le causaron a Nintendo una pérdida millonaria.
+- Nintendo y Game Cube en 2001
+- Kodak
+  + "Incluso las empresas mas grandes toman malas desiciones".
+- Colgate en 1980 lanzo una lasaña de carne pre-congelada.
+  + "Enfócate en aquello que haces bien".
+
+** Clase 12
+:PROPERTIES:
+:ID:       6ea03e6d-cfc7-44ae-a148-6eff896c21ba
+:END:
+- [[id:c0cc9ccb-aa63-4cb8-be91-f6a446081a0b][log]]
+
+*** Resumen clase anterior
+- Mezcla de Marketing: declinacion
+- Efecto canibalismo
+
+*** Tipos de productos
+**** De consumo
+***** Consumidor final
+***** Producto de
+****** Conveniencia
+- No son el motivo de ir al súper, pero están a mano.
+- Ej: Dulces al lado de las cajas.
+****** Comparación
+- A estos si los pensamos un poco. Hacemos un esfuerzo e
+  investigamos antes de comprar.
+- Ej: comprar un celular o un computador.
+****** Especialidad
+- Diseñados para un segmento. Especificos para un segmento puntual.
+- Ej: Zapatillas, productos de aseo (por los químicos).
+****** No buscados
+- Incluso a veces, no deseados, no te gustaría usarlos, pero entre
+  tenerlos y no tenerlos, mejor tenerlos.
+- Ej: Servicios funerarios, extintores, seguro de vida,
+  goma de mascar de menta.
+**** Industriales
+- Para producir otros bienes
+***** Materiales y piezas
++ Materias primas
++ Materiales y piezas manufacturados
+***** Bienes de capital
++ Instalaciones
+***** Suministros y servicios
+*** Linea de productos
+**** Ejemplos
+**** Relleno
+**** Extensión
+**** Mezcla
+** Clase 18
+:PROPERTIES:
+:ID:       8dc480fc-de10-4214-bfc6-13093ac9dfdd
+:END:
+- [[id:2a9539e1-1beb-4d16-9379-ca3a56d7e4bd][log]]
+- Primera clase despues del receso de octubre
+*** Hoy
+- Mezcla de marketing: precio
+
+
+- sin dinero?
+  - trueque
+- distintos tipos de moneda
+  - piedras
+  - oro
+  - billetes
+  - electrónico(bitcoin)
+- valor del dinero según contexto
+  - interés para controlar inflación
+  - épocas del año
+    - Ejemplo: flores en día de todos los santos
+- fijos y dinámicos (variable)
+  - fijos
+    - no dependen de la producción
+  - dinámicos (variable)
+    - sí dependen de la producción
+- costo total es la suma del fijo mas el dinámico (variable)
+- Cada organización debe identificar la combinación de fijo + dinámico
+  adecuada.
+
+
+- Estrategia de fijación de precios basada en costos:
+  1) Diseñar un buen producto
+  2) Determinar los costos del productos
+  3) Fijar el precio con base en costos
+  4) Convencer a compradores del valor del producto
+
+
+
+- Estrategia de fijación de precios basada en valor:
+  1) Evaluar las necesidades y percepciones de valor del cliente
+  2) Fijar un precio meta para igualar el valor percibido por el cliente
+  3) Determinar en que costos se puede incurrir
+  4) Diseñar un producto que entregue el valor deseado en el precio meta
+
+
+- Estrategia de fijación de precios basada en competencia.
+- Estrategia de fijación de precios basada en penetración de mercado.
+  - mercado-descreme?
+- Estrategia de ajuste de precios.
+  - Precio psicológico
+  - Precio promocional
+  - Precio geográfico
+  - Descuento y bonif
+    - Pronto pago
+    - Cantidad
+    - De temporada
+  - Diferenciado
+    - Segmentación
+    - Por tiempo
+* Ayudantías :assistantship:
+** active-time-stamp clase x
+# - Then =org-clone-subtree-with-time-shift= and repeat
+- =[ link to <subject-name.org> class entry ]=
+- =org-timer-start=
+
+
+< your_notes >
+
+* Control de lectura 1
+:PROPERTIES:
+:ID:       75b23a7f-c3fa-45f7-94ae-3bb4ac72300f
+:END:
+- [[id:c0705cb6-43b1-4702-9465-d346388e83a6][log]]
+- [2021-08-30 Mon 17:15]
+
+
+** Capítulo 1: El mundo del marketing moderno
+- Libro: Fundamentos de marketing de Mario Mesa Holguín.
+
+| Página | Item                    | Sub ítem                            |
+|--------+-------------------------+-------------------------------------|
+|      1 | objetivos del marketing | -                                   |
+|--------+-------------------------+-------------------------------------|
+|    2-5 | definiciones aceptadas  | -                                   |
+|        | de marketing            |                                     |
+|      2 |                         | definiciones                        |
+|      3 |                         | definiciones                        |
+|      4 |                         | mezcla de marketing                 |
+|      5 |                         | marketing como proceso              |
+|        |                         | de intercambio                      |
+|--------+-------------------------+-------------------------------------|
+|    5-9 | evolución del concepto  |                                     |
+|        | de marketing            |                                     |
+|      6 |                         | orientación hacia el producto       |
+|      7 |                         | orientación hacia el ventas         |
+|      7 |                         | orientación hacia el consumidor     |
+|      8 |                         | orientación hacia la nueva era      |
+|      9 |                         | diferencia entre marketing y ventas |
+|--------+-------------------------+-------------------------------------|
+
+** Definiciones aceptadas de marketing:
+*** Definiciones
+- "un proceso de planear y ejecutar la concepción, el precio, la comunicación
+  y distribución de ideas, bienes y servicios para crear intercambios que
+  puedan satisfacer los objetivos de los individuas y las organización".
+  - Salomón y Stuart, 2001, p. 3.
+- "marketing es una función organizacional y un conjunto de procesos para
+  generar, comunicar y entregar valor a los consumidores, así como para
+  administrar las relaciones con estos últimos, de modo que la organización
+  y los accionistas obtengan un beneficio".
+  - Kotler y Keller, 2006, p. 6.
+- "marketing es una actividad, un conjunto de herramientas y procesos de
+  creación, comunicación, entrega e intercambio de ofertas que tienen valor
+  para los consumidores, clientes, socios y sociedad en general".
+  + AMA, 2007.
+- "marketing es un sistema total de actividades de negocios ideado para
+  planear productos satisfactores de necesidades, asignarles precios,
+  promoverlos y distribuirlos a los mercados meta, a fin de lograr los
+  objetivos de la organización".
+  + Stanton, Etzel y Walker, 2004, p. 7.
+- "es la ciencia y el arte de explorar, crear y entregar valor para
+  satisfacer las necesidades de un mercado objetivo y obtener así una
+  utilidad".
+  + Kotler, considerado el padre del marketing moderno, 2005, p. 1.
+- American Marketing Association: AMA.
+- Interpretación de dichas definiciones:
+  + "El marketing descubre deseos, motivos, gustos, preferencias, temores
+    de los consumidores; planea y desarrolla bienes o servicios; participa
+    en la fijación de precios; promueve y distribuye bienes o servicios e
+    igualmente, genera valor al satisfacer necesidades."
+
+*** Mezcla de marketing
+
+| Producto  | Product   | What             |
+| Precio    | Price     | How much / value |
+| Promoción | Promotion | Why/How          |
+| Plaza     | Placement | Where/When       |
+
+*** Marketing como proceso de intercambio
+
+| Etapa             | Empresa | -  |                | -  | Consumidor |
+|-------------------+---------+----+----------------+----+------------|
+| Pretransaccional  |         | -> | Expectativas   | -> |            |
+|                   |         | <- | Información    | <- |            |
+|-------------------+---------+----+----------------+----+------------|
+| Transaccional     |         | -> | Productos      | -> |            |
+|                   |         | <- | Ingresos       | <- |            |
+|-------------------+---------+----+----------------+----+------------|
+| Posttransaccional |         | -> | Satisfacciones | -> |            |
+|                   |         | <- | Lealtad        | <- |            |
+|-------------------+---------+----+----------------+----+------------|
+
+** Evolución del concepto de marketing
+Según Kotler (2005), el marketing se transforma en un concepto como tal
+a principios del siglo XX en Estados Unidos.
+
+*** Las etapas históricas del marketing
+Según Salomón y Stuart (2001), son:
+1) Orientación hacia el producto
+   - Revolución Industrial
+2) Orientación hacia las ventas
+   - Gran depresión
+3) Orientación hacia el consumidor
+   - Guerras mundiales
+4) Orientación hacia la nueva era
+   - Huella de carbono
+
+**** 1 Orientación hacia el producto
+- Revolución Industrial
+
+
+Después de la etapa del trueque, las empresas ponen su foco en la producción
+a inicios del siglo XX, comenzando el marketing como concepto. El axioma es
+que /la oferta es menor que la demanda/. De ahí, la empresa se dedica a
+elaborar y distribuir el mejor producto. Otra consecuencia es que el precio
+es fijado por producción y finanzas.
+
+Actualmente, las empresas con esta filosofía ven a los compradores como
+un grupo homogéneo que se satisface con las funciones de un producto a un
+precio justo. El énfasis de la empresa esta en la producción y distribución
+de productos.
+
+**** 2 Orientación hacia las ventas
+- Gran depresión
+
+
+Surge en la década de 1930, cuando /la oferta supera a la demanda/. Ahora
+el problema no es fabricar y vender el mejor producto, sino cómo venderlo
+en primer lugar.
+
+Como consecuencia, las empresas pierden cuidado y ahora simplemente buscan
+vender sin considerar la retención de clientes. Solo buscan reducir los
+inventarios.
+
+Ejemplos: empresas que venden bienes no buscados, seguros de vida, lotes
+en el cementerio.
+
+**** 3 Orientación hacia el consumidor
+- Guerras mundiales
+
+
+En los 50's inicia el marketing como se conoce hoy en día. Ahora el comprador
+está consciente de la deshonestidad de los vendedores de la época y busca
+nuevos y mejores estilos de vida.
+
+Mayores estándares por parte del consumidor generan mayores estándares por
+parte de los fabricantes.
+
+En esta etapa se desarrollan 3 actividades clave
+
+1) Investigación de mercado, la competencia y el entorno en general
+   - función /conectiva/ de marketing con el entorno
+2) Los resultados de la investigación son analizados por las empresas
+   - función /integradora/ de marketing con el entorno
+   - La diferencia: la empresa ahora también se ve beneficiada con los
+     nuevos cambios.
+3) Las empresas satisfacen las nuevas necesidades de los clientes
+   - función /empresarial y de relaciones/ de marketing con los clientes
+   - Ahora no es solo el producto, sino que también el bienestar general
+     del cliente.
+     + Síntomas son la lealtad y fidelización del cliente hacia
+       el producto, fomentando la recompra y obtención de nuevos clientes
+       por parte de la empresa.
+
+
+V Kumar, Eli Jones, Rajkumar Venkatesan y Robert P Leona (2011) establecieron
+que las Empresas Orientadas al Consumidor (consumidor = mercado) se
+ven más beneficiadas que las empresas que no adoptan esta postura. Beneficio
+manifestado a corto y largo plazo.
+
+**** 4 Orientación hacia la nueva era
+- Impacto social y ambiental
+- La salud, seguridad y bienestar de la comunidad tienen igual importancia
+  que la venta misma.
+
+
+La actualidad gerencial adopta la orientación hacia la Nueva Era.
+
+Se recomienda a la empresa definir la misión en función del mercado mas
+que en función del producto.
+
+*** Diferencias entre el marketing y ventas
+- Para el alcance del libro, los dos conceptos son totalmente diferentes,
+  concluyendo que las ventas son parte integral del programa de marketing.
+- La importancia de uno o otro depende de la filosofía de la empresa.
+
+
+- De qué se preocupa cada concepto
+
+| Marketing                   | Ventas                              |
+|-----------------------------+-------------------------------------|
+| Necesidades del consumidor  | El producto                         |
+| Plan integrado              | Fabrica y después busca cómo vender |
+| Utilidades a largo plazo    | Ventas por volumen                  |
+| Plan a largo plazo          | Plan a corto plazo                  |
+| Ve al mercado por segmentos | No ve varianza en el mercado        |
+
+* Control de lectura 2
+:PROPERTIES:
+:ID:       cb99fd60-1e07-4f45-a37d-8017b70d838e
+:END:
+- [[id:40f25fdc-e357-4197-87ee-c2431f5ef812][log]]
+
+
+** 3.4 (p 55-58) Estudio de Mercado
+
+Antes de introducir una propuesta comercial, es recomendable analizar
+los factores externos a la empresa para determinar las estrategias mas
+adecuadas para cada tipo de mercado.
+
+De esta manera, un /estudio de mercado/ identifica la necesidad de un
+producto en un mercado específico, destaca las empresas productoras de dicho
+bien o servicio, describe la forma de comercialización, incluyendo fijación
+de precio, comunicación integral y distribución. Así, el estudio señala y
+cuantifica los actores principales y factores que influyen en sus
+comportamientos.
+
+El objetivo del /estudio de mercado/ es "establecer la cantidad de producto
+que el mercado estaría dispuesto a adquirir" dadas las necesidades y
+condiciones socio económicas. El /estudio de mercado/ es el paso inicial
+para un proyecto de inversión.
+
+Un /estudio de mercado/ consta de:
+
+*** Producto
+
+"El /estudio de mercado/ comienza con la identificación detallada del bien
+o servicio". Atributos tangibles e intangibles que lo diferencian del resto.
+Se identifica si es de consumo final o de uso industrial.
+Segun Miranda (2002) el detalle del bien/servicio debe estar compuesto de:
+
+- Usos
+- Usuarios
+- Presentación
+- Composición
+- Características físicas
+- Tipo de producto
+- Sustitutos
+- Complementarios
+- Bienes de capital, intermedios y finales
+- Fuentes de abastecimiento de insumos
+- Sistemas de distribución
+- Bienes y servicios del sector publico
+- Precios y costos
+- Legislación y otros aspectos institucionales relacionados con la
+  producción, comercialización y usos del producto
+
+*** Consumidor
+
+Definir el/los segmentos de usuarios potenciales, incluyendo motivos de
+compra o beneficios esperados del producto hacia el consumidor,
+características demográficas y geográficas, nivel de ingresos, personalidad,
+estilo de vida, valores y comportamiento de compra.
+
+*** Demanda
+
+Se detalla la cantidad y valor del producto que el usuario esta dispuesto
+a asignar en función de los beneficios de tener y usar dicho producto.
+Esto permite justificar la producción y comercialización actual y futura
+del producto. En otras palabras, se analiza estadísticamente las
+condiciones de la demanda actual y futura del bien o servicio.
+
+Según Miranda (2002) el estudio de la demanda se debe enfocar en:
+- Variables
+- Área del mercado
+- Comportamiento histórico
+- Características teóricas
+- Estimación futura
+
+*** Oferta
+
+Detalla la cantidad de producto ofrecida al mercado por parte de los
+comercializadores. Considera el contexto actual y futuro de la industria,
+junto con la competencia existente. Se recomienda hacer un análisis histórico
+de la evolución y tendencias de la oferta.
+
+Según Miranda (2002) el estudio de la oferta se debe enfocar en:
+- Listado de proveedores
+- Régimen de mercado
+- Régimen del mercado de insumos
+- Proyeccion de la oferta
+- Demanda vs oferta
+
+*** Precio
+
+Consiste en determinar el precio que el consumidor está dispuesto a pagar
+para adquirir en intercambio el producto y los servicios asociados.
+
+Los métodos para determinar dicho precio se discuten en el capítulo 6.
+
+El estudio debe considerar la brecha donde fluctuará el precio.
+
+Una vez determinado el precio y su brecha, se establecen los cálculos de
+las proyecciones financieras.
+
+*** Mercado Potencial
+
+El objetivo de esta sección es determinar la demanda insatisfecha con
+el producto.
+
+Se establece el equilibrio entre la demanda y oferta previamente establecidos,
+y si la demanda supera a la oferta, entonce existe una diferencia llamada
+demanda insatisfecha.
+
+Si existe demanda insatisfecha, esta se justifica para diseñar un nuevo
+producto. Si no existe dicha demanda, se justifica el actual proyecto
+con otras técnicas para captar un mercado ya cubierto con otros productos.
+
+*** Comercialización
+
+El conjunto de actividades realizadas por parte de fabricantes e
+intermediarios para ajustar el producto a las necesidades del mercado.
+Incluye acciones de precio, distribución, comunicaciones de marketing y
+servicio post-venta.
+
+*** Conclusión de sección 3.4
+
+La importancia del estudio de mercado radica en que es el puntapié inicial
+para la toma de decisiones posterior, futuros proyectos de inversión,
+estudios técnicos, de organización, legal, financiero, económico, ambiental
+y social.
+
+** 4.1 (p 62-65) Concepto de Mercado
+*** Alzar: Las cuatro C del mercado
+- Compañía
+- Cliente
+- Canales
+- Competencia
+** 4.2 (p 65-67) Comportamiento de compra del consumidor
+*** 4.2.1 (66-67) El proceso de decisión de compra del consumidor
+* [2021-09-23 Thu] prueba1
+:PROPERTIES:
+:ID:       9817de78-bbeb-42f4-9296-99f0d656cad3
+:END:
+- [[id:82c977fc-b67c-4159-a111-3e8a4f2db677][log]]
+** Intento 1
+- [2021-09-23 Thu 11:15]
+
+*** Pregunta 8:
+- ideas rechazadas por los clientes vs disonancia cognositiva
+- el comportamiento de compra involucra las ideas rechazadas por los
+  clientes? Si o no?
+
+*** Pregunta 9:
+
+La estrategia utilizada por la UFRO es la de Liderazgo en Costos.
+
+Tradicionalmente siempre se ha caracterizado por ofrecer un servicio de
+calidad a bajo costo.
+
+Un ejemplo de universidad enfocada en la Diferenciación es el AIEP y sus
+programas vespertinos, ideales para estudiantes que trabajan. Y un
+ejemplo de universidad con estrategia de segmentación es la Universidad
+Adolfo Ibáñez.
+
+
+*** Pregunta 10:
+
+Lo que entendí de la primera parte de la asignatura es que si
+quiero tener un negocio exitoso, tengo que enfocarme en lo que el
+cliente va a sentir antes, durante y después de adquirir mis productos
+y servicios.
+
+Entender que el mercado de hoy es una persona con alto acceso a información
+que antes si quiera de pensar en comprar, va a hacer toda una investigación
+y comparar lo que ofrece mi empresa vs lo que ofrecen las demás.
+
+Además, entendí que tampoco basta con diferenciarme cambiando el paradigma
+en lo emocional y financiero, también hay que tener conciencia ambiental
+y el impacto en el ecosistema entero de la existencia de mi empresa.
+Probablemente a corto plazo otras estrategias pueden funcionar mejor, pero
+si quiero obtener la fidelidad de los clientes, tengo que demostrarles
+que la empresa es un ente flexible que se adapta a diferentes necesidades
+y que en general, la empresa mas allá del éxito monetario, tiene un impacto
+positivo en la comunidad a distintas escalas.
+
+
+*** Pregunta 11:
+
+Necesidad: salud, educación, bienestar, auto-realización.
+
+Deseo: Dinero para suplir estas necesidades. Para obtener el dinero se
+hace un intercambio de mis conocimientos y habilidades para
+solucionar un problema de la sociedad materializado en dinero.
+
+Demandas: suplir las necesidades originales.
+
+*** Pregunta 12:
+
+Muy relacionado con el costo de oportunidad; un ejemplo seria la
+aprobación social de tener un iPhone vs la facilidad de la transmisión
+de datos de Android vía USB con un computador.
+
+El placer de tener un iPhone supera el displacer de la dificultad de
+uso del mismo.
+
+La disonancia es la molestia mencionada.
+
+** Intento 2
+- [2021-09-23 Thu 12:22]-[2021-09-23 Thu 13:08]
+
+*** Pregunta 11:
+
+Yo lo entendí como alguien que requiere servicios médicos pues su salud
+está críticamente mal.
+
+Necesidad: estado de salud deficiente. Requiere mejorar.
+
+Deseo: Tratamientos médicos, camas, medicamentos, personal capacitado,
+instalaciones apropiadas, herramientas necesarias.
+
+Demandas: ir al hospital / clínica / posta / centro de salud / consulta
+particular.
+
+En caso de referirse a una persona que quiera estudiar medicina general
+el esquema es:
+
+Necesidad: salud, educación, bienestar, auto-realización demostrada en
+querer ayudar a los demás.
+
+Deseo: tener un título que avale los conocimientos y habilidades necesarias
+para ejercer como médico. Dinero para aportar en una casa y una familia.
+
+Demandas: una casa, una familia, una consulta particular.
+
+
+*** Pregunta 12:
+"En relación al dispositivo electrónico con el cual estás
+conectado para responder esta prueba ¿qué teoría de comportamiento del
+consumidor orientó tu decisión?¿por qué?"
+
+Racional-económica: era un computador que sabía que me iba a durar años,
+tenia un precio moderado dentro de las opciones disponibles, era fácil de
+obtener pues solo lo tuve que ir a buscar e Temuco --- no lo tuve que
+importar o comprar por internet ---, y existía un descuento por compra
+en efectivo.
+
+* [2021-10-14 Thu] taller
+- Sala 2
+
+
+- Ignacio Bustamante
+- Claudio Garcia
+- Francisca Fuentes
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:

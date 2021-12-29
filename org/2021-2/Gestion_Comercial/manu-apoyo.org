@@ -1,0 +1,193 @@
+#+TITLE: Manuel - Material de apoyo
+#+INCLUDE: "~/org/uni/org/config.org"
+#+DATE: 19 diciembre 2021
+#+FILETAGS: :university:
+
+* Índice :TOC_4:noexport:
+- [[#empresa-rumel][Empresa: Rumel]]
+- [[#misión][Misión]]
+  - [[#aboutig][About:IG]]
+  - [[#tagline][Tagline]]
+  - [[#definición-en-página][Definición en página]]
+    - [[#foto1][foto1]]
+      - [[#cuerpo][Cuerpo]]
+      - [[#resumen][Resumen]]
+    - [[#foto2][foto2]]
+    - [[#foto3][foto3]]
+    - [[#foto4][foto4]]
+    - [[#foto5][foto5]]
+  - [[#resumen-1][Resumen]]
+  - [[#resumen-del-resumen-30-s][Resumen del resumen (30 s)]]
+- [[#productoservicio][Producto/Servicio]]
+  - [[#línea-de-productos-30-s][Línea de productos (30 s)]]
+    - [[#actual][Actual]]
+      - [[#tabla-de-equilibrio-balance-board][Tabla de equilibrio "Balance Board"]]
+      - [[#tablas-largas-longboard][Tablas largas "Longboard"]]
+    - [[#esperable][Esperable]]
+      - [[#mercado-de-slackline][Mercado de Slackline]]
+      - [[#mercado-de-escalada][Mercado de Escalada]]
+  - [[#posibles-mejoras-30-s][Posibles mejoras (30 s)]]
+    - [[#diseñadores-gráficos][Diseñadores gráficos]]
+    - [[#programadores][Programadores]]
+      - [[#para-grabado-láser-del-diseño][Para grabado láser del diseño]]
+      - [[#página-web][Página web]]
+      - [[#automatización-venta-desde-pagina-web-misma][Automatización venta desde pagina web misma]]
+      - [[#venta-en-shop-de-ig][Venta en "Shop" de IG]]
+
+* Empresa: Rumel
+
+- https://www.rumelchile.cl/
+
+* Misión
+** About:IG
+- https://www.instagram.com/rumelchile.cl/?hl=en
+- "Diseño y fabricación en madera".
+- "Villarrica, Chile".
+
+
+- Identificación visual: logotipo de la marca.
+
+** Tagline
+
+"Desde siempre y para siempre".
+- Significado de "rumel" en mapuzungun.
+
+** Definición en página
+*** foto1
+**** Cuerpo
+
+Rumel, es una palabra que proviene del mapuzungun,
+lengua de la tierra, donde acoge el significado de
+"siempre, desde siempre y para siempre", es por esto
+que la esencia de este nombre va ligado a la
+recuperación y re-utilización de la materia y así
+mismo, de la vida. La madera es un elemento que ha
+acompañado por generaciones a trabajadores,
+productores y familias con una cultura ancestral.
+La madera mas que un elemento, es recuerdo e historia.
+
+La madera es el principal cuerpo de Rumel, la
+columna de innovación y reencuentro, poniendo en
+valor grandes generaciones de madereros que se
+adentraban a la montaña para obtener este recurso,
+recurso que les brindaba creencias, ritos y hogares,
+como un elemento de fuerza, energía y sabiduría.
+Es por esto que pretendemos que Rumel sea el símbolo
+al reconocimiento de este material ortótropo, dejando
+de lado el mundo desechable, en la búsqueda de la
+innovación y conciencia de nuestra huella ecológica.
+
+Desde el cuidado, la re-utilización y el reencuentro,
+de la mano del amor de una zona y el reconcomiendo
+intrínseco, nace la idea de recuperar dichos recursos
+y hacerlos presentes con una visión contemporánea,
+pero respetuosa, arraigada a sus raíces.
+Miradas distintas en un mismo margen, desde la
+tierra, siempre, desde siempre y para siempre.
+
+**** Resumen
+
+Reutilización del material, y de paso recuperar
+tradiciones madereras de la zona lacustre con una
+visión contemporánea.
+
+Relacionado con la /Nueva Era/ del marketing,
+busca el equilibrio de la actividad con el
+impacto medio-ambiental.
+
+*** foto2
+
+La introspección, como acto de auto conciencia,
+permite analizarnos y reflexionar sobre nuestro
+proceder. Rumel no solo trasciende en un elemento,
+sino mas bien en un estilo de vida.
+
+*** foto3
+
+#+begin_quote
+"Adopta el ritmo de la naturaleza; su secreto es la
+paciencia".
+#+end_quote
+
+Ralph Waldo Emerson.
+
+*** foto4
+
+Balance Board con grabados láser y tallado mecanizado,
+cantos redondeados, modelos con y sin cinta
+antideslizante, procesos de pintura a mano,
+rodillos de madera, diferentes tamaños y modelos.
+
+Ideales para cualquier tipo de ejercicio
+o entrenamiento.
+
+*** foto5
+
+El árbol de la vida simboliza la conexión con
+nuestro origen y nuestro proceso de crecimiento,
+ilustrando en él, la importancia de nuestra raíces,
+las que nos sostienen y mantienen desde siempre y
+para siempre.
+
+** Resumen
+
+Rumel busca la /fidelidad/ del cliente por medio
+de referencias a la /paciencia/, /constancia/
+y apoyo en tradiciones con miradas modernas.
+
+"Rumel no solo trasciende en un elemento,
+sino mas bien en un estilo de vida".
+
+** Resumen del resumen (30 s)
+
+Identificación:
+- Rumel
+  - Empresa de ventas de tablas de balance
+    personalizadas.
+
+
+- Tagline: "siempre, desde siempre y para siempre".
+  - significado de la marca en mapudungun.
+- Identificación visual: logotipo de la marca.
+
+
+Diferenciación:
+- fidelidad desde y hacia el cliente
+  - por medio de paciencia, constancia, tradiciones
+    madereras.
+- auto-conciencia
+  - bajo impacto medio-ambiental (Nueva Era)
+  - reutilización (reciclaje) de recursos
+    - madera: principal materia prima de la empresa
+
+* Producto/Servicio
+** Línea de productos (30 s)
+*** Actual
+**** Tabla de equilibrio "Balance Board"
+
+Variedades de tamaño, forma, colores y grabado
+láser personalizado con máquinas de grabado en madera.
+
+**** Tablas largas "Longboard"
+
+Integración con mercado de tablas largas, también
+conocidas como "Long Boards".
+
+*** Esperable
+**** Mercado de Slackline
+**** Mercado de Escalada
+** Posibles mejoras (30 s)
+- Reducción de tiempo de espera y automatización
+  de venta por pagina web e "Shop" de IG.
+*** Diseñadores gráficos
+*** Programadores
+**** Para grabado láser del diseño
+**** Página web
+**** Automatización venta desde pagina web misma
+**** Venta en "Shop" de IG
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
+
+#  LocalWords:  Rumel mapuzungun

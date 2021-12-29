@@ -1,0 +1,691 @@
+#+INCLUDE: "~/org/uni/org/config.org"
+#+FILETAGS: :university:
+
+#+TITLE: Apuntes
+#+SUBTITLE: 2021-2/Comunicacion_de_Datos
+
+* TOC :TOC_2:noexport:
+- [[#clases][Clases]]
+  - [[#clase-1][Clase 1]]
+  - [[#clase-2-video-1-problemas-que-soluciona-una-red][Clase 2 (video 1): Problemas que soluciona una Red]]
+  - [[#clase-3-video-2-hardware-de-red][Clase 3 (video 2): Hardware de Red]]
+  - [[#clase-4-video-3-software-de-red][Clase 4 (video 3): Software de Red]]
+  - [[#clase-4-video-4-ip-y-segmentación-de-redes][Clase 4 (video 4): IP y segmentación de redes]]
+  - [[#clase-5-video-5-osi-y-tcpip][Clase 5 (video 5): OSI y TCP/IP]]
+- [[#ayudantías][Ayudantías]]
+  - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
+- [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
+- [[#footnotes][Footnotes]]
+
+* Clases
+** Clase 1
+:PROPERTIES:
+:ID:       5c28d175-d49d-430c-87f9-b885db423412
+:END:
+- [[id:a472d354-b97e-4ee2-a85e-91a05da5fad0][log]]
+
+
+- Veremos 2 protocolos TCP/IP y OCI.
+- Todo en el programa.
+** Clase 2 (video 1): Problemas que soluciona una Red
+- Introduccion, necesidades de la transmision de datos, binarios
+** Clase 3 (video 2): Hardware de Red
+*** Intro
+- Hoy: Hardware de red
+- Los clasicos, router
+
+
+
+- Nuevos: cluster (no conectado al internet).
+- La antigua: red punto a punto (carpeta compartida), no require de acceso
+  a un servidor externo. Puede usar una red local.
+
+*** Transmisión de datos
+- Señal análoga
+  - Línea contínua
+  - Líneas de teléfono para tener internet, el internet no se vendía
+    sin línea telefónica, la interferencia cada vez que te llamaban
+- Señal digital
+  - Función discreta
+*** Medios guiados de transmisión: tipos de cables
+:PROPERTIES:
+:ID:       d5359e0b-2e2e-4802-910a-6f4b9eaf05fb
+:END:
+- Coaxial de banda base
+  - digital
+- Coaxial de banda ancha
+  - análogo
+  - como el de la tele
+- Pares sin trenzar (paralelo)
+- Pares trenzados
+  - UTP
+    - Sin blindaje anti-ruido, para redes locales
+  - FTP
+    - UTP + apantallado para protección anti-interferencia, todos los pares
+      cubiertos en conjunto
+  - STP
+    - Cada par blindado individualmente
+- Fibra óptica (se comenta su estructura interior)
+*** Medios no guiados
+:PROPERTIES:
+:ID:       17104b3f-8f08-42b2-ba81-ab252830eb07
+:END:
+- Antenas
+  - Radiofrecuencias
+  - Microondas
+  - Infrarrojas
+  - Satélite
+
+*** Comparación de velocidad de internet de Chile
+- https://www.speedtest.net/global-index
+- Se compara la velocidad de internet alambica e inalámbrica
+  de Chile con el resto del mundo.
+*** Dispositivos de interconexión
+- ISP: Internet Service Provider
+  - Movistar
+  - Claro
+  - VTR
+  - entre otros
+- NIC: nivel físico
+  - en las torres son las que tienen la entrada RJ45
+  - en los laptop hay mas variedad
+  - MAC address
+- Modem (modulation & demodulation): nivel enlace de datos
+  - Tradicionalmente el Modem ADSL
+- Router: nivel de red
+  - Necesita una tarjeta de red para gestionar el tráfico
+- HUB: nivel enlace de datos
+  - simplemente muchos RJ45
+  - En decadencia
+  - Colisión de datos
+  - Información hacia todos los conectados al HUB
+- Switch: reemplaza al HUB
+  - Su diseño previene colisiones
+  - Información va con dirección hacia únicamente el o los receptores
+    deseados
+- Bridge: nivel enlace de datos
+  - Conecta dos segmentos de red
+  - Las redes se dividen para evitar la sobrecarga; un bridge las
+    vuelve a unir
+- Gateway
+  - Para conectar redes de distinta arquitectura o distinto protocolos
+  - Hace el trabajo de traductor
+** Clase 4 (video 3): Software de Red
+*** Intro
+- Hoy: Software de red
+*** Jerarquía de protocolos
+- El conjunto de capas y protocolos se conoce como Arquitectura de Red
+
+
+- La salida de una capa es la entrada de otra
+- División de información en paquetes
+- Entre cada capa hay una interfaz
+- Una capa solo se conecta con las adyacentes, no hay saltos
+  entre conexión de capas
+
+
+- Modelo OSI: 7 capas
+  - Solo de referencia
+- Modelo TCP/IP: 4 capas
+  - Los esfuerzos aquí
+*** Aspectos del diseño
+**** Confiabilidad
+- Verificación de operación
+- Detección de errores
+- Capacidad de encontrar ruta funcional (enrutamiento)
+**** Evolución
+- Escalabilidad
+- Distribución de protocolos en capas
+- Requiere un mecanismo para identificar emisores y receptores
+  (direccionamiento)
+**** Asignación de recursos
+- División de recursos
+- Compartición dinámica del ancho de banda (multiplexado estadístico)
+- Control de flujo
+  + Que la velocidad de emisión sea similar a la de recepción
+- Evitar recurrencia y exceso de solicitudes (congestión)
+**** Seguridad
+- Defensa general de amenazas
+- Confidencialidad
+- Autenticación
+- Criptografía
+
+
+Cabe mencionar que el internet se creo para asistir a los estados.
+
+*** Servicios orientados a conexión y sin conexión
+- Relacionado con la instantaneidad de la respuesta
+**** Orientado a conexión
+- Modelado a partir del sistema telefónico
+- El usuario
+  1) Establece la conexión
+  2) La utiliza
+  3) La libera
+**** Orientado sin conexión
+- Modelado a partir del sistema postal
+- No es necesario que el receptor reciba el mensaje entero para que el
+  receptor responda de vuelta (conmutación de vuelo)
+- Ejemplo: el correo electronico
+**** Ejemplos
+
+| Orientado    | Servicio                            | Ejemplo               |
+|--------------+-------------------------------------+-----------------------|
+| A conexión   | Flujo de mensajes confiables        | Secuencia de páginas  |
+|              | Flujo de bytes confiables           | Descarga de películas |
+|              | Conexión no confiable               | Voz sobre IP          |
+|--------------+-------------------------------------+-----------------------|
+| Sin conexión | Datagrama no confiable              | Email basura          |
+|              | Datagrama confirmación de recepción | Mensajería de texto   |
+|              | Solicitud-respuesta                 | Consulta en DDBB      |
+
+*** Primitivas de servicio
+:PROPERTIES:
+:ID:       eaea9ec1-60fe-4441-b453-629454bd4261
+:END:
+| Primitiva  | Significado                                   |
+|------------+-----------------------------------------------|
+| LISTEN     | Bloquea en espera de una conexión entrante    |
+| CONNECT    | Establece una conexión con un igual en espera |
+| ACCEPT     | Acepta una conexión entrante de un igual      |
+| RECEIVE    | Bloquea en espera de un mensaje entrante      |
+| SEND       | Envía un mensaje al igual                     |
+| DISCONNECT | Termina una conexión                          |
+
+** Clase 4 (video 4): IP y segmentación de redes
+*** Intro
+- Hoy: Direcciones IP y como clasificarlas, aka Segmentación de redes
+  - Direccionamiento IP
+- Despues del receso: Se sigue con modelos OSI y TCP/IP
+*** Direcciones IP
+- (I)nternet (P)rotocol
+- Protocolo de "encaminamiento"
+- La IP es como el "RUT" del computador
+- Permite mover los datos de un punto geográfico a otro, o desde
+  una máquina hasta otra
+- Cada dirección indica una "zona geográfica" donde se encuentra una
+  máquina.
+
+
+- Todo cliente o servidor de una red debe tener una dirección IP
+- Un enrutador debe tener una dirección IP por cada salida a una subred
+  que tenga contenida
+- Cada red debe tener asignada una dirección IP para el broadcasting
+*** Componentes de una dirección IP
+- Cada dirección IP se compone de 4 números decimales
+- Estos valores pueden tomar valores desde el 0 al 255
+  - Los valores son entre 0-255 porque son números de 8 bits
+- Cada número es separado por un punto
+- Finalmente, una direccion IP se compone de 4 bytes (32 bits)
+
+
+- En Ubuntu, se puede obtener la direccion IP local con:
+  #+name: esta-ip
+  #+begin_src shell :results replace :exports both
+  hostname -I
+  #+end_src
+
+  #+RESULTS: esta-ip
+  : 192.168.1.102
+
+  + Fuente
+    - https://askubuntu.com/questions/430853/how-do-i-find-my-internal-ip-address
+*** ¿Cúantas direcciones IP existen?
+- Muchas, pero es un número finito.
+- \(2^x\), cantidad de direcciones posibles, donde \(x\) es la cantidad de
+  bits
+  - \(\therefore\) es posible obtener 256 combinaciones
+  - Cada número entre los puntos pueden ser 256 números diferentes
+- Si se toman los 32 bits, se pueden obtener mas de /4,000 millones/ de
+  combinaciones, ergo 4,000 millones de dispositivos conectados a una red.
+- Es suficiente?
+  - Nope.
+*** Clases de direcciones IP
+- Clase A
+  - Mas de 16 millones
+  - Muy difíciles de conseguir
+  - Gran corporación o gobierno
+- Clase B
+  - Mas de 65 mil
+  - Difícil de conseguir
+  - Grandes compañías o universidades
+- Clase C
+  - 256 direcciones
+  - Muy fácil de conseguir
+  - Empresas pequeñas o proveedores de internet
+- Clase D y E (especiales, no se venden)
+  - Clase D reservada a tareas de broadcast
+  - Clase E reservada a investigación
+*** Rangos de valores para cada clase
+:PROPERTIES:
+:ID:       f3c869e5-ab29-438d-bae0-4022394e8077
+:END:
+
+|  <c>  |    <c>    |       <c>       |         <c>         |
+| Clase |   Desde   |      Hasta      | Cantidad disponible |
+|-------+-----------+-----------------+---------------------|
+|   A   |  0.0.0.0  | 127.255.255.255 |     16,777,216      |
+|   B   | 128.0.0.0 | 191.255.255.255 |       65,536        |
+|   C   | 192.0.0.0 | 223.255.255.255 |         256         |
+|   D   | 224.0.0.0 | 239.255.255.255 |          -          |
+|   E   | 240.0.0.0 | 255.255.255.255 |          -          |
+
+*** Direcciones IP reservadas
+|  <c>  |     <c>     |       <c>       |
+| Clase |    Desde    |      Hasta      |
+|-------+-------------+-----------------|
+|   A   |  10.0.0.0   | 10.255.255.255  |
+|   B   | 172.16.0.0  | 172.31.255.255  |
+|   C   | 192.168.0.0 | 192.168.255.255 |
+
+*** Direcciones IP privadas
+- Solamente pueden ser utilizadas en redes privadas
+- No se pueden asignar a un computador que esté conectado a una red
+  pública (Internet)
+- Se utilizan en ambientes que requieren mayor seguridad
+- Se puede disponer de una IP privada y conectarse a través de un
+  proxy con una IP pública a la red.
+- Un proxy hace que tu computador se conecte con una IP distinta
+*** Parte de red, parte de host
+- Parte de red: en qué sector nos estamos moviendo, en qué red estamos.
+- Parte de host: ahí voy a identificar a mi máquina.
+
+
+- Parte de red: esta parte identifica unívocamente la red respecto de
+  las demás redes de Internet.
+- Parte de host: identifica unívocamente al computador dentro de la
+  red en la que se encuentra inmerso.
+- En una misma red todas las direcciones IP tendrán el mismo valor
+  en la parte de red, sin embargo la parte de host sera única para
+  cada equipo.
+- La cantidad de bits que se toman para identificar la parte de red
+  y host varia según la clase.
+*** RED y HOST según clase
+:PROPERTIES:
+:ID:       5c8c30d3-d35c-4b7d-9b8c-316ae88337e6
+:END:
+
+|   /   |    <>    |    >     |    >     |          |
+|  <c>  |   <c>    |   <c>    |   <c>    |   <c>    |
+| Clase | Octeto 1 | Octeto 2 | Octeto 3 | Octeto 4 |
+|-------+----------+----------+----------+----------|
+|   A   |   Red    |   Host   |   Host   |   Host   |
+|   B   |   Red    |   Red    |   Host   |   Host   |
+|   C   |   Red    |   Red    |   Red    |   Host   |
+
+*** Transformar decimal a binario y viceversa
+*** Mascara por defecto por clase
+
+|   /   |          <          |
+|  <c>  |         <c>         |
+| Clase | Máscara por defecto |
+|-------+---------------------|
+|   A   |      255.0.0.0      |
+|   B   |     255.255.0.0     |
+|   C   |    255.255.255.0    |
+
+*** Resumen hasta el momento
+
+1) Identificar red por [[id:f3c869e5-ab29-438d-bae0-4022394e8077][Rangos de valores para cada clase]][fn:1]
+2) Identificar [[id:5c8c30d3-d35c-4b7d-9b8c-316ae88337e6][RED y HOST según clase]] [fn:2]
+3) Obtener mascara de subred adaptada (ver algoritmo y video)
+
+** Clase 5 (video 5): OSI y TCP/IP
+*** Intro
+- Hoy: Modelo de referencia OSI y TCP/IP
+- El modelo de referencia es OSI, pero actualmente el TCP/IP
+  es el más usado.
+*** OSI: Open System Interconnection
+:PROPERTIES:
+:ID:       aef52fbc-9250-4068-afbc-dd9f08a135a9
+:END:
+**** Intro
+- Origen: ¿Cómo comunicar 2 usuarios físicamente distantes?
+  - ¿Puedo enviar los datos juntos?
+  - Tengo un mensaje, ¿lo puedes recibir?
+  - Estoy enviando un mensaje, ¿es mucho? ¿poco?
+  - Los datos que llegaron, ¿están correctos?
+  - ¿Puedo utilizar un único canal para realizar varias
+    comunicaciones simultaneas?
+
+
+- Propuesto por la ISO (Organización Internacional de Normas)
+- En términos generales corresponde a un modelo para la comunicación
+  de sistemas abiertos
+**** 7 Capas (o niveles) del modelo OSI
+- Mientras más alto el número, más cerca del usuario estamos.
+- El usuario trabaja directamente en la capa 7.
+
+| Capa | Corresponde a   | Relacionado con                |
+|------+-----------------+--------------------------------|
+|    7 | Aplicación      | Procesos de usuario            |
+|    6 | Presentación    | Formateo de datos              |
+|    5 | Sesión          | Comunicación entre hosts       |
+|    4 | Transporte      | Conexión extremo a extremo     |
+|    3 | Red             | Interconexión de redes         |
+|    2 | Enlace de datos | Conexión de equipos adyacentes |
+|    1 | Física          | Uso del medio                  |
+
+**** 1: Física
+:PROPERTIES:
+:ID:       8a141f2b-6837-44f6-86c6-b58137beefd0
+:END:
+- Aquí se transmiten bits
+- Medios de transmisión guiados y no guiados.
+  - [[id:d5359e0b-2e2e-4802-910a-6f4b9eaf05fb][Medios guiados de transmisión: tipos de cables]]
+  - [[id:17104b3f-8f08-42b2-ba81-ab252830eb07][Medios no guiados]]
+
+
+- Pueden ser señales por cable o por ondas
+
+- Mecánica: Conectores, pins, formas
+- Eléctricas: duración del bit, niveles de voltaje
+- Temporización: asignación de señales a los pins
+
+
+- "Los métodos de modulación digital envían bits a través de los medios
+  guiados y no guiados en forma de señales analógicas"
+
+**** 2: Enlace de datos
+:PROPERTIES:
+:ID:       641dfdc8-27bc-4ea6-a4f4-5e56b604f90d
+:END:
+- Le quita los errores a los mensajes obtenidos desde la capa física.
+- Revisa los errores, se los quita y pasa la información.
+
+
+- Encapsulado de información y errores
+- Para control de tráfico
+- Se trabaja en tramas: conjunto de bytes enviados de forma secuencial en
+  un orden específico
+- Las tramas son como sondas de prueba para confirmar la integridad del
+  medio, junto con el control de flujo de información
+  - Si la confirmación regresa íntegra, entonces se procede
+
+
+- Para evitar que "el primero que llegue ocupa toda la banda"; tráfico
+  controlado
+
+
+- Aqui también pueden aparecer los switchs
+**** 3: Red
+:PROPERTIES:
+:ID:       50a09bfb-530b-43c8-bbaa-fac50dfef7ad
+:END:
+- Aquí trabajan los routers, switchs, access points, gateways
+
+
+- Ruteo de paquetes de información
+  - Define un esquema de direccionamiento: desde un router a otro, desde
+    un switch a otro, desde un equipo a otro.
+- Controla también congestión de paquetes para evitar cuellos de botella
+
+
+- No se trabaja con bits ni con tramas; se trabaja con paquetes.
+- Los paquetes son un conjunto de tramas \(\rightarrow \) son una agrupación
+  de bytes más grande.
+
+
+- Identifica el origen y destino de cada comunicación
+
+
+- Calidad del servicio depende de esta capa
+  - Maneja el retardo, tiempo de tránsito, variaciones, etc
+- Cuando un paquete es enviado a otra red, ésta puede tener un protocolo,
+  direccionamiento o tamaño de información diferentes y con ello
+  pueden surgir problemas. La capa de red debe darle solución a todos
+  estos inconvenientes
+- "Si un router es inaccesible, la capa de red debe tener un plan B"
+- Redes de Broadcast al tener un encaminamiento sencillo, pueden ser
+  obviadas
+
+**** 4: Transporte
+:PROPERTIES:
+:ID:       ae1de8c5-f17e-436f-bed6-69dbc28f535f
+:END:
+- Garantiza que la comunicación sea confiable entre sistemas finales
+- Garantiza que los paquetes han sido entregados en el orden correcto
+
+
+- Los protocolos que operan en la capa de transporte deben indicar
+  si el mensaje se envió completo o no.
+
+
+- El mensaje se aisla de los cambios en el hardware para las capas
+  superiores (5-7)
+
+**** 5: Sesión
+:PROPERTIES:
+:ID:       32088332-1768-40ce-a9bb-00e285955925
+:END:
+- No trabaja directamente con el mensaje
+
+- Abre canales comunicación entre dispositivos usando las primitivas
+  - [[id:eaea9ec1-60fe-4441-b453-629454bd4261][Primitivas de servicio]]
+
+
+- Control de diálogo
+- Manejo de tokens: evitar que 2 máquinas realicen la misma operación
+  critica simultáneamente
+- Sincronización y re-sincronización cuando hay interrupciones
+
+
+- En muchos casos no se utiliza la capa de sesión dado que esto
+  lo trabaja o la capa de transporte o aplicación
+
+**** 6: Presentación
+:PROPERTIES:
+:ID:       0f78ef45-2ce7-4800-b32c-2a0b417ec7ca
+:END:
+- No trabaja directamente con el mensaje
+
+
+- Encargada en la sintaxis y semántica de lo que se transmite desde la capa de
+  aplicación hacia abajo (5-1)
+- Esto último también lo puede hacer la capa de aplicación, por lo que
+  también muchas veces la capa de presentación no se utiliza
+
+**** 7: Aplicación
+:PROPERTIES:
+:ID:       e23a3cb0-d8c7-42f5-9620-4833cd0c949e
+:END:
+- Interfaz con usuario
+
+**** Capas y dispositivos
+
+| Capa | Corresponde a   | Dispositivos        |
+|------+-----------------+---------------------|
+|    7 | Aplicación      | Dispositivo final   |
+|    6 | Presentación    | Dispositivo final   |
+|    5 | Sesión          | Dispositivo final   |
+|    4 | Transporte      | Dispositivo final   |
+|    3 | Red             | Router, Firewall    |
+|    2 | Enlace de datos | Hub, Switch, Bridge |
+|    1 | Física          | Cables, Conectores  |
+
+**** Ejemplo modelo OSI
+
+| <c>  |                                                                |
+| Capa | Ejemplo                                                        |
+|------+----------------------------------------------------------------|
+|  7   | Emisor decide enviar una carta a un receptor.                  |
+|  6   | Carta es redactada y se empaquetada en el formato establecido  |
+|      | por la empresa de correos.                                     |
+|  5   | Emisor y receptor acuerdan forma y momento del envío de carta. |
+|  4   | Se llama al servicio de transporte para confirmar que el       |
+|      | receptor espera la carta.                                      |
+|  3   | Servicio decide la ruta óptima y se etiqueta la dirección      |
+|      | de recepción.                                                  |
+|  2   | Se reparte la carta y se registra la recepción. Si hay error   |
+|      | se re-envía.                                                   |
+|  1   | El camión recoge el paquete.                                   |
+
+*** TCP/IP
+**** Intro
+- OSI es el modelo para entender. Pero el modelo utilizado en Internet
+  actualmente es el TCP/IP.
+
+- TCP: Transfer Control Protocol
+- IP: Internet Protocol
+
+
+- Utilizado desde ARPANET.
+- Solucionó los problemas de comunicación generados por
+  - [[id:17104b3f-8f08-42b2-ba81-ab252830eb07][medios de comunicación no guiados]].
+
+
+Diferente del OSI, TCP consta de solo 4 capas:
+1) Enlace
+2) Internet
+3) Transporte
+4) Aplicación
+
+**** 1: Enlace
+- Toma las funciones de la capa 1 y 2 del modelo OSI.
+  - [[id:8a141f2b-6837-44f6-86c6-b58137beefd0][1: Física]]
+  - [[id:641dfdc8-27bc-4ea6-a4f4-5e56b604f90d][2: Enlace de datos]]
+- Protocolos:
+  - Ethernet
+  - FDDI
+  - ATM
+**** 2: Internet
+- Eje central del TCP/IP
+- Similar a la capa de red del OSI
+  - [[id:50a09bfb-530b-43c8-bbaa-fac50dfef7ad][3: Red]]
+- Se gestionan los paquetes, aunque descuida del
+  orden de éstos.
+- No se resuelven errores, solo se preocupa de que se envíen /todos/ los
+  paquetes.
+- Las capas de transporte y aplicación se deben encargar de corregir
+  estos errores.
+
+
+- Aquí opera el protocolo IP
+- Tambien el ICMP (Internet Control of Messaging Protocol)
+
+
+- "Cuando queremos probar la red y hacemos un Ping Test, estamos invocando
+  el ICMP"
+  - Solo envía mensajes de control de un punto a otro y entrega:
+    - Tiempos de envío
+    - Confirmación de totalidad de paquetes entregados
+
+     #+begin_src shell :results output replace :exports both
+     ping -c4 www.google.cl # -c4 for 4 packages to send
+     #+end_src
+
+     #+RESULTS:
+     : PING www.google.cl (142.251.0.94) 56(84) bytes of data.
+     : 64 bytes from cj-in-f94.1e100.net (142.251.0.94): icmp_seq=1 ttl=107 time=19.7 ms
+     : 64 bytes from cj-in-f94.1e100.net (142.251.0.94): icmp_seq=2 ttl=107 time=19.9 ms
+     : 64 bytes from cj-in-f94.1e100.net (142.251.0.94): icmp_seq=3 ttl=107 time=19.6 ms
+     : 64 bytes from cj-in-f94.1e100.net (142.251.0.94): icmp_seq=4 ttl=107 time=19.2 ms
+     :
+     : --- www.google.cl ping statistics ---
+     : 4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+     : rtt min/avg/max/mdev = 19.156/19.565/19.872/0.260 ms
+
+     #+begin_src shell :results output replace :exports both
+     ping -c 4 www.google.com
+     #+end_src
+
+     #+RESULTS:
+     : PING www.google.com (142.251.0.106) 56(84) bytes of data.
+     : 64 bytes from cj-in-f106.1e100.net (142.251.0.106): icmp_seq=1 ttl=108 time=16.7 ms
+     : 64 bytes from cj-in-f106.1e100.net (142.251.0.106): icmp_seq=2 ttl=108 time=18.5 ms
+     : 64 bytes from cj-in-f106.1e100.net (142.251.0.106): icmp_seq=3 ttl=108 time=17.3 ms
+     : 64 bytes from cj-in-f106.1e100.net (142.251.0.106): icmp_seq=4 ttl=108 time=17.4 ms
+     :
+     : --- www.google.com ping statistics ---
+     : 4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+     : rtt min/avg/max/mdev = 16.652/17.454/18.476/0.654 ms
+
+**** 3: Transporte
+- Similar a la capa Transporte del OSI
+  - [[id:ae1de8c5-f17e-436f-bed6-69dbc28f535f][4: Transporte]]
+
+
+- Aquí opera el protocolo TCP y UDP (User Datagram Protocol)
+- UDP
+  - Más rápido pero menos confiable que TCP
+- TCP
+  - Controla orden de envío y recepción de paquetes
+  - Asegura recepción y estado de paquetes
+
+
+| Primitivas        | Significado                                      |
+|-------------------+--------------------------------------------------|
+| Enchufar (Socket) | Crea punto terminal de comunicación              |
+| Ligar (Bind)      | Conecta socket a una dirección local             |
+| Listen            | Anuncia disposición a aceptar conexiones, indica |
+|                   | tamaño de cola                                   |
+| Accept            | Bloquea al invocador hasta la llegada de         |
+|                   | un intento de conexión.                          |
+| Connect           | Intenta activamente establecer una conexión      |
+| Send              | Envía datos a través de la conexión              |
+| Receive           | Recibe los datos de la conexión                  |
+| Close             | Libera la conexión                               |
+
+**** 4: Aplicación
+- Las mismas funciones de la capa aplicación del OSI
+  - [[id:e23a3cb0-d8c7-42f5-9620-4833cd0c949e][7: Aplicación]]
+- Además abarca funciones de las capas 5 y 6
+  - [[id:32088332-1768-40ce-a9bb-00e285955925][5: Sesión]]
+  - [[id:0f78ef45-2ce7-4800-b32c-2a0b417ec7ca][6: Presentación]]
+
+
+- HTTP
+  - HTTPS
+- SSH
+- SMPT
+- RTP
+- DNS
+- TELNET
+- FTP
+- SFTP
+- entre otros
+
+**** Capas y protocolos
+
+| <c> |            |             <c>              |
+|  N  | Capa       |          Protocolos          |
+|-----+------------+------------------------------|
+|  4  | Aplicación |   HTTP(s), SMTP, RTP, DNS    |
+|  3  | Transporte |           TCP, UDP           |
+|  2  | Internet   |           IP, ICMP           |
+|  1  | Enlace     | DSL, SONET, 802.11, Ethernet |
+
+**** Ventajas
+- Protocolos involucrados ya existían desde antes de la creación del
+  TCP/IP
+- TCP/IP puede ser implementado en desde pequeñas hasta grandes redes
+- Sus protocolos están estandarizados
+- TCP/IP es independiente del hardware utilizado
+
+**** Desventajas
+- Diferente del OSI, en TCP/IP no existe diferenciación clara entre
+  protocolos, interfaces y servicios
+- Más complejo de configurar y mantener
+
+* Ayudantías :assistantship:
+** inactive-time-stamp clase x
+# - Then =org-clone-subtree-with-time-shift= and repeat
+- =[ link to <subject-name.org> class entry ]=
+- =org-timer-start=
+
+
+< your_notes >
+
+* Resúmenes para evaluaciones
+- link-to-resumen-eval1.org
+- link-to-resumen-eval2.org
+- link-to-resumen-eval3.org
+* Footnotes
+
+[fn:1] [[id:f3c869e5-ab29-438d-bae0-4022394e8077][Rangos de valores para cada clase]]
+
+[fn:2] [[id:5c8c30d3-d35c-4b7d-9b8c-316ae88337e6][RED y HOST según clase]]
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
+
+#  LocalWords:  IP host hosts

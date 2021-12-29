@@ -1,0 +1,524 @@
+:PROPERTIES:
+:ID:       43351302-15a6-4e54-88ad-3c5af0adcd15
+:END:
+#+TITLE: Resistencia de Materiales
+#+OPTIONS: toc:2
+#+FILETAGS: :university:
+
+* TOC :TOC_2:noexport:
+:PROPERTIES:
+:ID:       e2b7be17-cb7d-447e-a1d1-2b2cf6419f99
+:END:
+- [[#programa][Programa]]
+- [[#calendario][Calendario]]
+- [[#evaluación][Evaluación]]
+  - [[#teórico-80][Teórico 80%]]
+  - [[#práctico-20][Práctico 20%]]
+  - [[#examen][Examen]]
+- [[#links][Links]]
+  - [[#martes-0830-y-jueves-1650][Martes 0830 y Jueves 1650]]
+  - [[#ayudantía-viernes-1910][Ayudantía Viernes 1910]]
+  - [[#clases-grabadas][Clases grabadas]]
+- [[#contacto][Contacto]]
+- [[#apuntes][Apuntes]]
+  - [[#clase][Clase]]
+  - [[#ayudantía][Ayudantía]]
+- [[#extras][Extras]]
+  - [[#canceled-a-tarea-para-este-fin-de-semana-][CANCELED [#A] tarea para este fin de semana !]]
+
+* Programa
+- [[file:~/myDrive/uni/2021-1/resis/Clase 0 Estructura de la Asignatura.pdf][file:~/myDrive/uni/2021-1/resis/Clase 0 Estructura de la Asignatura.pdf]]
+- https://campusvirtual.ufro.cl/pluginfile.php/1201581/mod_resource/content/3/Clase%200%20Estructura%20de%20la%20%20Asignatura.pdf
+* Calendario
+:PROPERTIES:
+:ID:       d0bc647c-b38e-43b3-a2c5-7f55b8ae16c3
+:END:
+|  <c>  |        |                                         |  <c>   |  <c>   |
+|-------+--------+-----------------------------------------+--------+--------|
+| Clase | Semana | Tópico                                  | Prueba | Taller |
+|-------+--------+-----------------------------------------+--------+--------|
+|   1   |      1 | Introducción                            |   1    |   x    |
+|   2   |      2 | Introducción                            |   1    |   x    |
+|   3   |      3 | Introducción                            |   1    |   1    |
+|-------+--------+-----------------------------------------+--------+--------|
+|   4   |      3 | Cargas Internas                         |   1    |   x    |
+|-------+--------+-----------------------------------------+--------+--------|
+|   5   |      4 | Esfuerzo                                |   1    |   x    |
+|   6   |      4 | Esfuerzo                                |   1    |   x    |
+|   7   |      5 | Esfuerzo                                |   1    |   x    |
+|-------+--------+-----------------------------------------+--------+--------|
+|   8   |      5 | Deformación                             |   2    |   x    |
+|-------+--------+-----------------------------------------+--------+--------|
+|   9   |      6 | Propiedades Mecánicas de los Materiales |   2    |   2    |
+|  10   |      7 | Propiedades Mecánicas de los Materiales |   2    |   2    |
+|  11   |      7 | Propiedades Mecánicas de los Materiales |   2    |   2    |
+|-------+--------+-----------------------------------------+--------+--------|
+|  12   |      8 | Carga Axial                             |   2    |   x    |
+|  13   |      8 | Carga Axial                             |   2    |   x    |
+|  14   |      9 | Carga Axial                             |   2    |   x    |
+|  15   |      9 | Carga Axial                             |   2    |   x    |
+|-------+--------+-----------------------------------------+--------+--------|
+| Clase | Semana | Tópico                                  | Prueba | Taller |
+|-------+--------+-----------------------------------------+--------+--------|
+|  16   |     10 | Torsión                                 |   3    |   3    |
+|  17   |     10 | Torsión                                 |   3    |   3    |
+|  18   |     11 | Torsión                                 |   3    |   3    |
+|  19   |     12 | Torsión                                 |   3    |   3    |
+|  20   |     13 | Torsión                                 |   3    |   3    |
+|-------+--------+-----------------------------------------+--------+--------|
+|  21   |     14 | Flexión                                 |   3    |   3    |
+|  22   |     14 | Flexión                                 |   3    |   3    |
+|-------+--------+-----------------------------------------+--------+--------|
+|  23   |     15 | Torsión Flexión                         |   3    |   3    |
+|-------+--------+-----------------------------------------+--------+--------|
+|  24   |     15 | Esfuerzo Cortante Transversal           |   3    |   3    |
+|-------+--------+-----------------------------------------+--------+--------|
+* Evaluación :grade:
+** Teórico 80%
+*** DONE prueba1 33%
+CLOSED: [2021-05-07 Fri 10:51] DEADLINE: <2021-05-04 Tue 08:30 -3w>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-05-07 Fri 10:51]
+:END:
+- Materia hasta martes [2021-04-27 Tue] correspodiente a clase 7.
+- Solo me falta ver clase 6.
+*** DONE prueba2 33%
+CLOSED: [2021-06-18 Fri 10:55] DEADLINE: <2021-06-15 Tue 08:30-11:00 -0d>
+:PROPERTIES:
+:ID:       7a13c1ce-b542-4b35-95af-96ca078987cb
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-06-18 Fri 10:55]
+:END:
+- Supongo que desde la clase 8 en adelante? Confirmado.
+- Hasta una semana antes.
+- Hasta clase de hoy [2021-06-03 Thu]
+  - [[id:82464d64-1e90-48c1-8e0d-c8a0d363fe72][Clase resistencia]]
+  - Desde deformacion (clase 8) hasta hoy (clase 15)
+    - Deformación
+    - Propiedades mecánicas de materiales
+    - Carga axial
+*** DONE prueba3 34%
+CLOSED: [2021-07-27 Tue 15:31] DEADLINE: <2021-07-27 Tue 08:30-11:00 -0d>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-07-27 Tue 15:31]
+:END:
+** Práctico 20%
+- 3 a 5 talleres
+- Tentativamente los viernes
+  - finalmente los miercoles
+- 24 horas para entregar
+- 1 semana de anticipación de aviso mínimo
+- Son 3 oficiales + 1 recuperativo
+**** DONE taller1
+CLOSED: [2021-04-29 Thu 12:41] DEADLINE: <2021-04-28 Wed -3w>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-04-29 Thu 12:41]
+:END:
+- Mierc o viernes de la semana del 26
+- Materia del taller clase del [2021-04-15 Thu 17:57]
+- El profe deberia enviar un correo confirmando fecha mañana [2021-04-16 Fri 17:58]
+***** contenido :university:grade:resistencia:
+- [2021-04-16 Fri 08:00]
+- Materia de hoy [2021-04-15 Thu 17:57]
+- El profe deberia enviar un correo confirmando fecha mañana [2021-04-16 Fri 17:58]
+**** DONE taller2
+CLOSED: [2021-06-10 Thu 01:24] SCHEDULED: <2021-06-09 Wed 08:30> DEADLINE: <2021-06-10 Thu 08:30 -0d>
+:PROPERTIES:
+:ID:       4f0e46b3-d4f8-4937-b11f-f1c372a1e3d1
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-06-10 Thu 01:24]
+:END:
+- claase en la que se fijó.
+  - [[id:a96cd3b1-580e-4bf2-814f-cb0b102dc229][Clase 9 resistencia]]
+- Temario?
+  + Propiedades Mecánicas de Materiales
+    - Clase 9 - 11
+    - [X] 9
+    - [X] 10
+    - [X] 11
+**** DONE [#A] taller3
+CLOSED: [2021-07-01 Thu 04:41] DEADLINE: <2021-06-30 Wed 08:30 -0d>--<2021-07-01 Thu 08:30 -0d>
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2021-07-01 Thu 04:41]
+:END:
+- Materia a evaluar: Esfuerzo por torsión y ángulo de torsión
+**** DONE [#A] taller4 (opcional)
+CLOSED: [2021-07-15 Thu 01:42] SCHEDULED: <2021-07-15 Thu 08:30 -0d>--<2021-07-14 Wed 08:30 -0d>
+:LOGBOOK:
+- State "DONE"       from "NEXT"       [2021-07-15 Thu 01:42]
+- State "NEXT"       from "TODO"       [2021-07-01 Thu 04:41]
+:END:
+- transmission de potencia.
+
+** DONE Examen
+CLOSED: [2021-08-04 Wed 10:50] SCHEDULED: <2021-08-03 Tue 08:20-11:00>
+:LOGBOOK:
+- State "DONE"       from              [2021-08-04 Wed 10:50] \\
+  4.9 --- done, bitch ---.
+:END:
+* Links
+:PROPERTIES:
+:ID:       2516d471-5920-4ef2-9034-77bf16fa722e
+:END:
+** Martes 0830 y Jueves 1650
+- https://reuna.zoom.us/j/84101345696?pwd=ZHl3eVVRcEZqT1BHVVUxSmxLbkZQdz09
+** Ayudantía Viernes 1910
+- https://meet.google.com/rhh-yzvc-rgc?hs=224
+** Clases grabadas
+- En campus mismo
+- O YouTube
+  + https://www.youtube.com/playlist?list=PL42VjjVQrato8I__VEBOLETDnPKK_EMaY
+* Contacto
+- Ignacio Ríos
+- ignacio.rios@ufrontera.cl
+- ICI-M
+* Apuntes
+- [[id:35c4778b-3086-4e81-91ef-8ea885837f6a][apuntes.org]]
+** Clase
+**** Reporte
+#+BEGIN: clocktable :scope tree2 :maxlevel 5
+#+CAPTION: Clock summary at [2021-06-13 Sun 16:10]
+| Headline                       | Time    |       |   |       |      |
+|--------------------------------+---------+-------+---+-------+------|
+| *Total time*                   | *16:52* |       |   |       |      |
+|--------------------------------+---------+-------+---+-------+------|
+| \_  Clase                      |         | 16:52 |   |       |      |
+| \_      Prueba1                |         |       |   |  1:18 |      |
+| \_        Clase 5 resistencia  |         |       |   |       | 0:15 |
+| \_        Clase 7 resistencia  |         |       |   |       | 1:03 |
+| \_      Prueba2                |         |       |   | 13:35 |      |
+| \_        Clase 8 resistencia  |         |       |   |       | 1:55 |
+| \_        Clase 9 resistencia  |         |       |   |       | 2:43 |
+| \_        Clase 10 resistencia |         |       |   |       | 1:55 |
+| \_        Clase 11 resistencia |         |       |   |       | 2:46 |
+| \_        Clase 12 resistencia |         |       |   |       | 1:32 |
+| \_        Clase 13 resistencia |         |       |   |       | 1:12 |
+| \_        Clase 14 resistencia |         |       |   |       | 0:25 |
+| \_        Clase 15 resistencia |         |       |   |       | 1:07 |
+| \_      Prueba3                |         |       |   |  1:59 |      |
+| \_        Clase 16 resistencia |         |       |   |       | 1:01 |
+| \_        Clase 17 resistencia |         |       |   |       | 0:58 |
+#+END:
+**** Prueba1
+***** DONE Clase 5 resistencia
+CLOSED: [2021-06-12 Sat 17:22] SCHEDULED: <2021-04-22 Thu>
+:PROPERTIES:
+:ID:       b2146caf-8871-48fc-b5d2-40756308b7cb
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-06-12 Sat 17:22]
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-06-12 Sat 17:10]--[2021-06-12 Sat 17:22] =>  0:12
+CLOCK: [2021-06-12 Sat 16:43]--[2021-06-12 Sat 16:46] =>  0:03
+:END:
+- No vi el vídeo pero tomé apuntes del pdf.
+- [[id:e41ad016-10f1-4566-9fe4-39a122ff0c96][apuntes.org]]
+***** DONE Clase 6 resistencia
+CLOSED: [2021-05-07 Fri 10:51] SCHEDULED: <2021-04-27 Tue 08:30-10:40>
+:PROPERTIES:
+:ID:       99949742-36bf-4bad-afed-5af3ad00fcda
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-05-07 Fri 10:51]
+:END:
+- No vi el vídeo pero tomé apuntes del pdf.
+- [[id:4bcbac27-2180-4942-bbb6-3ae1c2ce07dd][apuntes.org]]
+***** DONE Clase 7 resistencia
+CLOSED: [2021-04-29 Thu 17:54]
+:PROPERTIES:
+:ID:       501f3f90-2498-4d0d-bb2c-5f735bb4e3ad
+:END:
+:LOGBOOK:
+- State "DONE"       from              [2021-04-29 Thu 17:54]
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-06-12 Sat 16:49]--[2021-06-12 Sat 17:04] =>  0:15
+CLOCK: [2021-04-29 Thu 17:06]--[2021-04-29 Thu 17:54] =>  0:48
+:END:
+- [[id:4002a7ee-b774-4925-a244-24212f50c31d][apuntes.org]]
+- Clase exclusiva a entender deformación
+- Clase siguiente se une deformación y esfuerzo
+  + Propiedades mecánicas de los materiales
+
+**** Prueba2
+
+***** DONE Clase 8 resistencia
+CLOSED: [2021-05-07 Fri 10:51] SCHEDULED: <2021-05-04 Tue 08:30-10:40>
+:PROPERTIES:
+:ID:       146af7e4-9f74-4072-91b4-dc78e8d5a2a0
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-06-12 Sat 15:38]--[2021-06-12 Sat 16:42] =>  1:04
+CLOCK: [2021-06-12 Sat 15:12]--[2021-06-12 Sat 15:25] =>  0:13
+CLOCK: [2021-06-12 Sat 14:57]--[2021-06-12 Sat 15:11] =>  0:14
+CLOCK: [2021-06-12 Sat 14:41]--[2021-06-12 Sat 14:53] =>  0:12
+CLOCK: [2021-06-12 Sat 13:39]--[2021-06-12 Sat 13:45] =>  0:06
+CLOCK: [2021-06-12 Sat 13:33]--[2021-06-12 Sat 13:39] =>  0:06
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-05-07 Fri 10:51]
+:END:
+- [[id:c6926df3-1d1b-49f5-a7bd-5bc961aefc1e][apuntes.org]]
+***** DONE Clase 9 resistencia
+CLOSED: [2021-05-06 Thu 17:57]
+:PROPERTIES:
+:ID:       e33a1bd1-ddad-446d-94ee-571d7b34b965
+:END:
+:LOGBOOK:
+- State "DONE"       from              [2021-05-06 Thu 17:57] \\
+  Hasta Ley de Hooke.
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-06-09 Wed 13:11]--[2021-06-09 Wed 15:15] =>  2:04
+CLOCK: [2021-05-06 Thu 17:57]--[2021-05-06 Thu 17:57] =>  0:00
+CLOCK: [2021-05-06 Thu 17:56]--[2021-05-06 Thu 17:56] =>  0:00
+CLOCK: [2021-05-06 Thu 17:43]--[2021-05-06 Thu 17:49] =>  0:06
+CLOCK: [2021-05-06 Thu 16:56]--[2021-05-06 Thu 17:29] =>  0:33
+:END:
+
+- [[id:a86b24d7-98f8-4c69-aee3-017e67f0d6ca][apuntes.org]]
+
+***** DONE Clase 10 resistencia
+CLOSED: [2021-05-11 Tue 09:23] SCHEDULED: <2021-05-11 Tue 08:30-10:40>
+:PROPERTIES:
+:ID:       a96cd3b1-580e-4bf2-814f-cb0b102dc229
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-05-11 Tue 09:23]
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-06-09 Wed 18:16]--[2021-06-09 Wed 18:50] =>  0:34
+CLOCK: [2021-06-09 Wed 15:24]--[2021-06-09 Wed 16:08] =>  0:44
+CLOCK: [2021-05-11 Tue 08:46]--[2021-05-11 Tue 09:23] =>  0:37
+:END:
+- [[id:aa793541-239f-4295-b84f-af04cdd16443][apuntes.org]]
+- se planea taller 2 para primera después de receso.
+  - el receso es la última de mayo
+  - materia de propiedad de materiales
+    - finaliza este próximo jueves esta materia
+    - este viernes ayudantía.
+  - una semana antes de la [[id:7a13c1ce-b542-4b35-95af-96ca078987cb][prueba 2]].
+    - pal 9 de junio.
+  - la idea es 4 talleres en semestre. Se elimina el mas malo.
+***** DONE Clase 11 resistencia
+CLOSED: [2021-06-10 Thu 01:11] SCHEDULED: <2021-05-13 Thu 16:50-19:00>
+:PROPERTIES:
+:ID:       a8b99b98-69fe-4c35-a3c1-4e1588e27a1a
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-06-10 Thu 01:11]
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-06-09 Wed 22:28]--[2021-06-10 Thu 01:11] =>  2:43
+CLOCK: [2021-06-09 Wed 18:50]--[2021-06-09 Wed 18:53] =>  0:03
+:END:
+- [[id:32bd84b9-318d-4d9f-9826-7e9ff0926eb1][apuntes.org]]
+***** DONE Clase 12 resistencia
+CLOSED: [2021-05-18 Tue 10:03] SCHEDULED: <2021-05-18 Tue 08:30-10:40>
+:PROPERTIES:
+:ID:       0881f1cb-9fe5-47da-8450-bfadaabe4cba
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-05-18 Tue 10:03]
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-06-13 Sun 15:11]--[2021-06-13 Sun 15:21] =>  0:10
+CLOCK: [2021-05-18 Tue 08:41]--[2021-05-18 Tue 10:03] =>  1:22
+:END:
+- [[id:b21e2950-d068-476a-942f-b50e3d9461dd][apuntes.org]]
+***** DONE Clase 13 resistencia
+CLOSED: [2021-05-20 Thu 18:34] SCHEDULED: <2021-05-20 Thu 16:50-19:00>
+:PROPERTIES:
+:ID:       6e02076a-7184-451c-967a-0234f86c82d8
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-05-20 Thu 18:34]
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-06-13 Sun 15:21]--[2021-06-13 Sun 15:31] =>  0:10
+CLOCK: [2021-05-20 Thu 17:03]--[2021-05-20 Thu 18:05] =>  1:02
+:END:
+- [[id:4b8955bc-57ff-4acd-ad86-5599c7a72ba2][apuntes.org]]
+- Hoy el profe dijo que subió las notas de la primera prueba.
+  + No estaban buenas, pero esa es la tendencia en la prueba 1 de cualquier
+    forma y llama a no desanimarse.
+***** DONE Clase 14 resistencia
+CLOSED: [2021-06-02 Wed 06:18] SCHEDULED: <2021-06-01 Tue 08:30-10:40>
+:PROPERTIES:
+:ID:       90cd18d5-bbef-4915-b659-b6f011862228
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-06-13 Sun 15:32]--[2021-06-13 Sun 15:57] =>  0:25
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-06-02 Wed 06:18]
+:END:
+- [[id:1a665b0f-7def-4cc1-ac85-655de4b2b616][apuntes.org]]
+- Jueves última clase de la materia actual. Luego se cambia de unidad.
+***** DONE Clase 15 resistencia
+CLOSED: [2021-06-03 Thu 17:59] SCHEDULED: <2021-06-03 Thu 16:50-19:00>
+:PROPERTIES:
+:ID:       82464d64-1e90-48c1-8e0d-c8a0d363fe72
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-06-03 Thu 17:59] \\
+  Ultima clase carga axial. Concentracion de esfuerzos.
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-06-13 Sun 18:44]--[2021-06-13 Sun 19:48] =>  1:04
+CLOCK: [2021-06-13 Sun 15:59]--[2021-06-13 Sun 16:14] =>  0:15
+CLOCK: [2021-06-03 Thu 16:49]--[2021-06-03 Thu 17:56] =>  1:07
+:END:
+- [[id:6faf11de-b1c8-444b-9a1e-90f4e78ee6c5][apuntes.org]]
+- En la prueba 2 entra hasta la materia de hoy.
+
+Timer start time set to 16:59:35, current value is 0:00:00
+
+****** Intro
+:PROPERTIES:
+:ID:       bebe7eb7-70d0-4864-85fe-6331134196ef
+:END:
+- Ultima clase de carga axial.
+- 0:00:06 :: Start, probably waiting for more people.
+  + 0:01:04 :: Has to answer some emails and starts lecture.
+- 0:05:03 :: Start recording.
+- 0:05:44 :: Hoy se finaliza la materia de carga axial.
+- 0:06:00 :: Hoy: concentración de esfuerzos.
+
+**** Prueba3
+***** DONE Clase 16 resistencia
+CLOSED: [2021-06-08 Tue 10:56] SCHEDULED: <2021-06-08 Tue 08:30-10:40>
+:PROPERTIES:
+:ID:       7fab38c8-262d-4b80-b980-19fed1c2a146
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-06-08 Tue 10:56]
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-06-08 Tue 08:41]--[2021-06-08 Tue 09:42] =>  1:01
+:END:
+- [[id:a93ce8cf-acd5-4ed4-9562-895cd1b1049d][apuntes.org]]
+- Inicia materia de Torsión
+***** DONE Clase 17 resistencia
+CLOSED: [2021-06-10 Thu 17:50] SCHEDULED: <2021-06-10 Thu 16:50-19:00>
+:PROPERTIES:
+:ID:       3947c9b0-f0c8-47de-a5a0-484aef258f70
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-06-10 Thu 17:50]
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-06-10 Thu 16:45]--[2021-06-10 Thu 17:43] =>  0:58
+:END:
+- [[id:04023b0b-a864-486b-a3a4-62f7c9fb73ff][apuntes.org]]
+- Esta clase no entra en la prueba 2, al igual que la clase 16.
+***** CANCELED Clase 18 resistencia
+SCHEDULED: <2021-06-17 Thu 16:50-19:00>
+:PROPERTIES:
+:ID:       af97d879-e716-4dde-8144-bc28672c5a69
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-06-20 Sun 09:43]--[2021-06-20 Sun 09:53] =>  0:10
+CLOCK: [2021-06-18 Fri 11:00]--[2021-06-18 Fri 11:01] =>  0:01
+:END:
+- [[id:345b31d1-5cbb-4cbe-834d-5312c7ca670e][apuntes.org]]
+***** CANCELED Clase 19 resistencia
+SCHEDULED: <2021-06-22 Tue 08:30-10:40>
+:PROPERTIES:
+:ID:       773b7dc8-f7c8-40e4-86fb-e504ed55c8f7
+:END:
+- [[id:32d7e961-f6a2-4cfb-a97f-6e7144a66ba0][apuntes.org]]
+
+
+Próxima semana último taller.
+4 optativo es subsiguiente semana.
+28 de julio última prueba.
+
+Tarea con décimas para la prueba 3.
+- Enviar ésta semana.
+
+***** CANCELED Clase 20 resistencia
+SCHEDULED: <2021-06-29 Tue 08:30-10:40>
+***** CANCELED Clase 21 resistencia
+SCHEDULED: <2021-07-01 Thu 16:50-19:00>
+***** DONE Clase 21 resistencia
+CLOSED: [2021-07-06 Tue 15:20] SCHEDULED: <2021-07-06 Tue 08:30-10:40>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-07-06 Tue 15:20]
+:END:
+***** DONE Clase 22 resistencia
+CLOSED: [2021-07-10 Sat 00:16] SCHEDULED: <2021-07-08 Thu 16:50-19:00>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-07-10 Sat 00:16]
+:END:
+***** DONE Clase 23 resistencia
+CLOSED: [2021-07-13 Tue 10:22] SCHEDULED: <2021-07-13 Tue 08:30-10:40>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-07-13 Tue 10:22]
+:END:
+***** DONE Clase 24 resistencia
+CLOSED: [2021-07-15 Thu 18:11] SCHEDULED: <2021-07-15 Thu 16:50-19:00>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-07-15 Thu 18:11]
+:END:
+***** CANCELED Clase 25 resistencia
+CLOSED: [2021-07-21 Wed 17:37] SCHEDULED: <2021-07-20 Tue 08:30-10:40>
+:LOGBOOK:
+- State "CANCELED"   from "TODO"       [2021-07-21 Wed 17:37]
+:END:
+***** CANCELED Clase 26 resistencia
+CLOSED: [2021-07-24 Sat 15:42] SCHEDULED: <2021-07-22 Thu 16:50-19:00>
+:LOGBOOK:
+- State "CANCELED"   from "TODO"       [2021-07-24 Sat 15:42]
+:END:
+** Ayudantía
+- Cada 2 semanas empezando el 16 de abril.
+- Ayudantía 4 se corre una semana por receso.
+*** DONE Ayudantía 1 resistancia
+CLOSED: [2021-05-07 Fri 13:32] SCHEDULED: <2021-04-16 Fri 19:10-20:10>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-05-07 Fri 13:32]
+:END:
+*** CANCELED 2 resistancia
+SCHEDULED: <2021-04-30 Fri 19:10-20:10>
+- Esta tengo que ver
+*** DONE Ayudantía 3 resistancia
+CLOSED: [2021-05-15 Sat 11:00] SCHEDULED: <2021-05-14 Fri 19:10-20:10>
+:PROPERTIES:
+:ID:       b6a61478-c279-4af2-8365-a934b5781448
+:END:
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-05-15 Sat 11:00]
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-05-14 Fri 19:17]--[2021-05-15 Sat 10:59] => 15:42
+:END:
+- [[id:245afd7e-df50-4e2c-aa91-be01fe9ebd0d][apuntes.org]]
+*** CANCELED Ayudantía 4 resistancia
+SCHEDULED: <2021-06-11 Fri 19:10>
+*** CANCELED Ayudantía 5 resistancia
+SCHEDULED: <2021-06-25 Fri 19:10>
+*** CANCELED Ayudantía 6 resistancia
+CLOSED: [2021-07-09 Fri 11:55] SCHEDULED: <2021-07-02 Fri 19:10>
+:LOGBOOK:
+- State "CANCELED"   from "TODO"       [2021-07-09 Fri 11:55]
+:END:
+*** CANCELED Ayudantía 7 resistancia
+CLOSED: [2021-07-16 Fri 19:35] SCHEDULED: <2021-07-16 Fri 19:10>
+:LOGBOOK:
+- State "CANCELED"   from "TODO"       [2021-07-16 Fri 19:35] \\
+  Feriado.
+:END:
+* Extras
+** CANCELED [#A] tarea para este fin de semana !
+CLOSED: [2021-07-21 Wed 17:37] SCHEDULED: <2021-07-09 Fri>
+:LOGBOOK:
+- State "CANCELED"   from "TODO"       [2021-07-21 Wed 17:37]
+:END:
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:

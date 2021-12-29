@@ -1,0 +1,115 @@
+:PROPERTIES:
+:ID:       0cf4c4d9-f578-4fb3-a317-a6e1cfcded72
+:END:
+#+TITLE: Estrategias Comunicativas para el Mundo Laboral
+#+FILETAGS: :university:electivo:
+
+* Contenido
+** [2021-03-29 Mon 17:00]
+*** Introducción
+    - Desarrollar habilidades comunicativas.
+*** Resultados de aprendizaje
+    1) Redactar textos coherentes, cohesionados, respetando reglas ortográficas
+       y contextualizados al ámbito laboral.
+    2) Emplear herramientas tecnológicas para la productividad y comunicación,
+       centrados en el ámbito laboral.
+    3) Comunicar oralmente las ideas de manera efectiva, considerando el
+       contexto y situación comunicativa.
+** robo [2021-04-05 Mon 18:37]
+   Funcionario de seguridad ejecuta robo millonario.
+
+   El hecho habría ocurrido después de que el equipo de seguridad de la empresa
+   Brinks retirara 60 millones de pesos de una sucursal del Banco de Crédito e
+   Inversiones.
+
+   Presuntamente, fue uno de los guardias que aprovechó un descuido para escapar
+   con el monto durante la vuelta del camión blindado a su casa central.
+
+   El resto de los trabajadores llamaron a carabineros al percatarse del robo y
+   se están haciendo las pericias correspondientes para dar con el paradero del
+   sospechoso.
+
+* Horario :lecture:
+** DONE Clase Electivo
+   CLOSED: [2021-05-07 Fri 11:25] SCHEDULED: <2021-04-26 Mon 16:50-19:00>
+   :LOGBOOK:
+   - State "DONE"       from "TODO"       [2021-05-07 Fri 11:25]
+   :END:
+** DONE Clase Electivo
+   CLOSED: [2021-05-07 Fri 13:24] SCHEDULED: <2021-05-03 Mon 16:50-19:00>
+   :LOGBOOK:
+   - State "DONE"       from "TODO"       [2021-05-07 Fri 13:24]
+   :END:
+   - No tuvimos pero hay tarea.
+** CANCELED Clase Electivo
+   CLOSED: [2021-05-12 Wed 17:35] SCHEDULED: <2021-05-10 Mon 16:50-19:00>
+   :LOGBOOK:
+   - State "CANCELED"   from "TODO"       [2021-05-12 Wed 17:35]
+   :END:
+** CANCELED Clase Electivo
+   CLOSED: [2021-05-18 Tue 05:40] SCHEDULED: <2021-05-17 Mon 16:50-19:00>
+   :LOGBOOK:
+   - State "CANCELED"   from "TODO"       [2021-05-18 Tue 05:40]
+   :END:
+** CANCELED Clase Electivo
+   CLOSED: [2021-06-02 Wed 06:55] SCHEDULED: <2021-05-31 Mon 16:50-19:00>
+:LOGBOOK:
+- State "CANCELED"   from "TODO"       [2021-06-02 Wed 06:55] \\
+  Professor ladder fall injury.
+:END:
+** CANCELED Clase Electivo
+   SCHEDULED: <2021-06-07 Mon 16:50-19:00>
+** CANCELED Clase Electivo
+   SCHEDULED: <2021-06-14 Mon 16:50-19:00>
+** CANCELED Clase Electivo
+   SCHEDULED: <2021-06-21 Mon 16:50-19:00>
+** CANCELED Clase Electivo
+   SCHEDULED: <2021-06-28 Mon 16:50-19:00>
+** CANCELED Clase Electivo
+   SCHEDULED: <2021-07-05 Mon 16:50-19:00>
+** CANCELED Clase Electivo
+   SCHEDULED: <2021-07-12 Mon 16:50-19:00>
+** CANCELED Clase Electivo
+   SCHEDULED: <2021-07-19 Mon 16:50-19:00>
+** CANCELED Clase Electivo
+   SCHEDULED: <2021-07-26 Mon 16:50-19:00>
+* Links
+:PROPERTIES:
+:ID:       2efe99f0-c937-4cb9-8801-7a94a62e20c9
+:END:
+*** Lunes 1650
+- https://reuna.zoom.us/j/89325169600?pwd=bGlEUExmT2ZoT2d2cXZkOUZKU1phUT09
+*** Clases grabadas
+- https://drive.google.com/drive/folders/1ZhNtPFIN63m0OKIMflMbq0WTK3mb1n9u?usp=sharing
+* Contacto
+  - Javiera Ibaceta Carreño
+    - javiera.ibaceta@ufrontera.cl
+    - _Prioridad_ campus como plataforma de comunicación.
+* Evaluación :grade:
+  - Detalles en [[https://campusvirtual.ufro.cl/][campus virtual]] e [[https://intranet.ufro.cl/][intranet]].
+  - Todas las cátedras grabadas. Subidas a campus. Google Drive.
+  - Todas las evaluaciones son asincrónicas.
+  - Grupal online
+** Teórico
+*** DONE Informe
+    CLOSED: [2021-05-23 Sun 23:52] DEADLINE: <2021-05-23 Sun 23:59 -0d>
+    :PROPERTIES:
+    :ID:       9447acff-a2e9-4249-945f-714dad500206
+    :END:
+    :LOGBOOK:
+    - State "DONE"       from "TODO"       [2021-05-23 Sun 23:52]
+    :END:
+    - Date confirmed by whatsapp group.
+    - [[id:d1e861d0-9664-4ecb-bd09-7ba412a22441][desarrollo]]
+** Práctico :workshop:
+*** DONE Portfolio
+    CLOSED: [2021-04-05 Mon 13:17] DEADLINE: <2021-04-04 Sun -7d>
+    :LOGBOOK:
+    - State "DONE"       from "TODO"       [2021-04-05 Mon 13:17]
+    :END:
+    - En .jpeg
+    - Antes de la clase.
+* Local variables :noexport:
+  # Local Variables:
+  # ispell-local-dictionary: "espanol"
+  # End:

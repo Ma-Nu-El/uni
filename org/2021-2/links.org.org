@@ -1,0 +1,22 @@
+# Created 2021-09-29 Wed 12:03
+#+TITLE: Links Uni
+#+DATE: 2021-2
+#+AUTHOR: Manuel Fuica Morales
+- Contabilidad Financiera (Mie, Jue) (1800-1920)
+  - https://reuna.zoom.us/j/84837283449
+- Gestión Comercial: (Mar, Jue) (1100-1300)
+  - https://reuna.zoom.us/j/83016198450?pwd=cmRVR0Jnem9jTjNjNnR5T09hQzBLdz09
+  - https://chat.whatsapp.com/EUgd5mXmn7N9eGquZ8CYgb
+- Probabilidades y Estadística
+  - Lunes 1050-1300
+    - https://reuna.zoom.us/j/82145777430?pwd=d2diYkNFdkxDYWdZM0N2TURMS0M2dz09
+  - Miérc 1100-1159
+    - https://reuna.zoom.us/j/87660962476?pwd=aW5QaENnVUsvbW1WZExIeXlBSmtlZz09
+  - Miérc (ayudantía) 1200-1300
+    - https://reuna.zoom.us/j/87376060146?pwd=L3hkV3ROOVVUMU1ORVJycWJUYWx2dz09
+  - Consultas Mierc 0830-0930
+    - https://reuna.zoom.us/j/82621233575?pwd=cjFSUDNLRzg0R1E1c2hzN2NEa1JSQT09
+- Complejidad Computacional
+  - https://reuna.zoom.us/j/81474576366?pwd=SUZMU3BkbGVEL1Z1Vm04bENKSnpHQT09
+- Comunicación de Datos
+  - https://reuna.zoom.us/j/86279707156?pwd=Z0owSzlOSXo5Z3p5UDlCSUpXd2hlZz09

@@ -1,0 +1,313 @@
+#+TITLE: Tarea1
+#+SUBTITLE: IIS447 - Comunicación De Datos \\
+#+SUBTITLE: Universidad de La Frontera
+#+DATE: Viernes 12 de noviembre de 2021
+#+AUTHOR: Manuel Fuica Morales \\
+#+AUTHOR: Matrícula: 18 959 392 9 19 \\
+#+AUTHOR: Estudiante de Ingeniería Civil Industrial mención Informática \\
+#+AUTHOR: [[mailto:m.fuica01@ufromail.cl][m.fuica01@ufromail.cl]]
+#+OPTIONS: toc:nil
+#+LANGUAGE: es
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [a4paper,12pt]
+#+LATEX_HEADER: \usepackage[spanish]{babel}
+#+LATEX_HEADER: \usepackage{enumerate}
+#+LATEX_HEADER:\usepackage{tcolorbox}
+
+* TOC :noexport:TOC_2:
+- [[#enunciados-con-respuestas][Enunciados con respuestas]]
+  - [[#tabla-1][Tabla 1]]
+  - [[#tabla-2][Tabla 2]]
+  - [[#tabla-3][Tabla 3]]
+
+* Enunciados con respuestas
+"Con la información entregada, completar todas las tablas con lo que se pide."
+** Tabla 1
+:PROPERTIES:
+:ID:       f7545fc9-0033-4856-b077-08c28e34b97e
+:END:
+- [[id:ba210870-b212-4b45-aec7-fa7b4cadc579][link a desarrollo]]
+|      <c>      |            <c>             |           <c>           |
+|      IP       | Subredes útiles necesarias | Hosts útiles necesarios |
+| =192.10.10.0= |            =14=            |          =14=           |
+-----
+| <l>                           |        <c>        |
+| /                             |         <         |
+| Clase                         |        =C=        |
+| Máscara de subred por defecto |  =255.255.255.0=  |
+| Máscara de subred adaptada    | =255.255.255.240= |
+| Total subredes válidas        |       =16=        |
+| Total subredes útiles         |       =14=        |
+| Total de hosts válidos        |       =16=        |
+| Total de direcciones hosts    |       =14=        |
+| Total de bits tomados         |       =4=         |
+
+** Tabla 2
+:PROPERTIES:
+:ID:       ecddd1d8-4e8d-4a93-a025-c1b902a8b3ae
+:END:
+- [[id:2fd27fa9-842c-4ab1-b3d7-b17a391f217c][link a desarrollo]]
+|      <c>       |            <c>             |           <c>           |
+|       IP       | Subredes útiles necesarias | Hosts útiles necesarios |
+| =210.100.56.0= |            =6=             |          =30=           |
+-----
+| <l>                           |        <c>        |
+| /                             |         <         |
+| Clase                         |        =C=        |
+| Máscara de subred por defecto |  =255.255.255.0=  |
+| Máscara de subred adaptada    | =255.255.255.224= |
+| Total subredes válidas        |        =8=        |
+| Total subredes útiles         |        =6=        |
+| Total de hosts válidos        |       =32=        |
+| Total de direcciones hosts    |       =30=        |
+| Total de bits tomados         |        =3=        |
+
+** Tabla 3
+:PROPERTIES:
+:ID:       f454488a-99f5-4b0a-837b-2131be19de37
+:END:
+- [[id:ee9c6a83-5764-434d-9d04-58075e36b73d][link a desarrollo]]
+|     <c>      |            <c>             |           <c>           |
+|      IP      | Subredes útiles necesarias | Hosts útiles necesarios |
+| =195.85.8.0= |            =6=             |          =30=           |
+-----
+| <l>                           |        <c>        |
+| /                             |         <         |
+| Clase                         |        =C=        |
+| Máscara de subred por defecto |  =255.255.255.0=  |
+| Máscara de subred adaptada    | =255.255.255.224= |
+| Total subredes válidas        |        =8=        |
+| Total subredes útiles         |        =6=        |
+| Total de hosts válidos        |       =32=        |
+| Total de direcciones hosts    |       =30=        |
+| Total de bits tomados         |        =3=        |
+
+* Desarrollo :noexport:
+** Tabla 1
+:PROPERTIES:
+:ID:       ba210870-b212-4b45-aec7-fa7b4cadc579
+:END:
+- [[id:f7545fc9-0033-4856-b077-08c28e34b97e][link a tabla]]
+*** Clase y máscara por defecto
+**** Respuesta
+\begin{tcolorbox}
+\begin{center}
+Nuestra IP es de clase
+\texttt{C}
+con máscara de clase por defecto
+\texttt{255.255.255.0}.
+\end{center}
+\end{tcolorbox}
+
+*** Máscara de subred adaptada para 14 subredes útiles y 14 hosts útiles
+**** Contexto
+
+| /  |         |            |            | >          |         |         |         |              |                |         |         |         |                 |
+|    |         |            |            |            |   <c>   |   <c>   |   <c>   |     <c>      |      <c>       |   <c>   |   <c>   |   <c>   |       <c>       |
+| IP | decimal |        255 |        255 | 255        |    0    |         |         |              | \(\downarrow\) |         |         |         |                 |
+|----+---------+------------+------------+------------+---------+---------+---------+--------------+----------------+---------+---------+---------+-----------------|
+|    | binario | \(\cdots\) | \(\cdots\) | \(\cdots\) | \(2^8\) | \(2^7\) | \(2^6\) |   \(2^5\)    |    \(2^4\)     | \(2^3\) | \(2^2\) | \(2^1\) |  nro de Hosts   |
+|    |         |            |            |            | \(2^1\) | \(2^2\) | \(2^3\) |   \(2^4\)    |    \(2^5\)     | \(2^6\) | \(2^7\) | \(2^8\) | nro de Subredes |
+|    |         |            |            |            |   128   |   64    |   32    |      16      |       8        |    4    |    2    |    1    |                 |
+|    |         |            |            |            |    1    |    1    |    1    |      1       |       0        |    0    |    0    |    0    |  bits tomados   |
+|    |         |            |            |            |         |         |         | \(\uparrow\) |                |         |         |         |                 |
+
+Nos especifican /14/ hosts y /14/ subredes
+\(\rightarrow\) \(2^4-2=16-2 \geq 14\)
+
+# Por lo tanto, el número de subredes será \(128+64+32+ = 224 \)
+La sumatoria nos queda de la forma:
+\(\sum (128, 64, 32, 16) = 240\)
+
+#+begin_src emacs-lisp :exports none :results replace
+(+ 128 64 32 16)
+#+end_src
+
+#+RESULTS:
+: 240
+
+**** Respuesta
+\begin{tcolorbox}
+\begin{center}
+Así, nuestra máscara de red adaptada para 14 subredes útiles
+y 14 hosts útiles es: \\
+\texttt{255.255.255.240}.
+\end{center}
+\end{tcolorbox}
+
+*** Total de subredes válidas y útiles
+**** Respuesta
+| Total      | : | \(2^4\)   | = | 16 |
+| Total útil | : | \(2^4\)-2 | = | 14 |
+*** Total de hosts útiles
+**** Respuesta
+| Total      | : | \(2^4\)   | = | 16 |
+| Total útil | : | \(2^4\)-2 | = | 14 |
+*** Bits tomados
+\[\texttt{4}\]
+** Tabla 2
+:PROPERTIES:
+:ID:       2fd27fa9-842c-4ab1-b3d7-b17a391f217c
+:END:
+- [[id:ecddd1d8-4e8d-4a93-a025-c1b902a8b3ae][link a tabla]]
+*** Clase y máscara por defecto
+**** Respuesta
+\begin{tcolorbox}
+\begin{center}
+Nuestra IP es de clase \texttt{C} con máscara de clase por defecto
+\texttt{255.255.255.0}.
+\end{center}
+\end{tcolorbox}
+
+*** Máscara de subred adaptada para 6 subredes útiles y 30 hosts útiles
+**** Contexto
+| /  |         |            |            | >          |         |         |              |                |         |         |         |         |                 |
+|    |         |            |            |            |   <c>   |   <c>   |     <c>      |      <c>       |   <c>   |   <c>   |   <c>   |   <c>   |       <c>       |
+| IP | decimal |        255 |        255 | 255        |    0    |         |              | \(\downarrow\) |         |         |         |         |                 |
+|----+---------+------------+------------+------------+---------+---------+--------------+----------------+---------+---------+---------+---------+-----------------|
+|    | binario | \(\cdots\) | \(\cdots\) | \(\cdots\) | \(2^8\) | \(2^7\) |   \(2^6\)    |    \(2^5\)     | \(2^4\) | \(2^3\) | \(2^2\) | \(2^1\) |  nro de Hosts   |
+|    |         |            |            |            | \(2^1\) | \(2^2\) |   \(2^3\)    |    \(2^4\)     | \(2^5\) | \(2^6\) | \(2^7\) | \(2^8\) | nro de Subredes |
+|    |         |            |            |            |   128   |   64    |      32      |       16       |    8    |    4    |    2    |    1    |                 |
+|    |         |            |            |            |    1    |    1    |      1       |       0        |    0    |    0    |    0    |    0    |  bits tomados   |
+|    |         |            |            |            |         |         | \(\uparrow\) |                |         |         |         |         |                 |
+
+Nos especifican /30/ hosts y /6/ subredes
+#+begin_src emacs-lisp :exports none :results replace
+(expt 2 5)
+#+end_src
+
+#+RESULTS:
+: 32
+
+\(\rightarrow\) \(2^5-2=32-2 \geq 30\)
+
+La sumatoria nos queda de la forma:
+\(\sum (128, 64, 32) = 224\)
+
+#+begin_src emacs-lisp :exports none :results replace
+(+ 128 64 32)
+#+end_src
+
+#+RESULTS:
+: 224
+
+**** Respuesta
+\begin{tcolorbox}
+\begin{center}
+Así, nuestra máscara de red adaptada para 30 hosts es: \\
+\texttt{255.255.255.224}.
+\end{center}
+\end{tcolorbox}
+
+*** Total de subredes válidas y útiles
+**** Respuesta
+| Total      | : | \(2^3\)   | = | 8 |
+| Total útil | : | \(2^3\)-2 | = | 6 |
+*** Total de hosts útiles
+**** Respuesta
+| Total      | : | \(2^5\)   | = | 32 |
+| Total útil | : | \(2^5\)-2 | = | 30 |
+*** Bits tomados
+\[\texttt{3}\]
+** Tabla 3
+:PROPERTIES:
+:ID:       ee9c6a83-5764-434d-9d04-58075e36b73d
+:END:
+- [[id:f454488a-99f5-4b0a-837b-2131be19de37][link a tabla]]
+*** Clase y máscara por defecto
+**** Respuesta
+\begin{tcolorbox}
+\begin{center}
+Nuestra IP es de clase \texttt{C} con máscara de clase por defecto
+\texttt{255.255.255.0}.
+\end{center}
+\end{tcolorbox}
+
+*** Máscara de subred adaptada para 6 subredes útiles y 30 hosts útiles
+**** Contexto
+| /  |         |            |            | >          |         |         |              |                |         |         |         |         |                 |
+|    |         |            |            |            |   <c>   |   <c>   |     <c>      |      <c>       |   <c>   |   <c>   |   <c>   |   <c>   |       <c>       |
+| IP | decimal |        255 |        255 | 255        |    0    |         |              | \(\downarrow\) |         |         |         |         |                 |
+|----+---------+------------+------------+------------+---------+---------+--------------+----------------+---------+---------+---------+---------+-----------------|
+|    | binario | \(\cdots\) | \(\cdots\) | \(\cdots\) | \(2^8\) | \(2^7\) |   \(2^6\)    |    \(2^5\)     | \(2^4\) | \(2^3\) | \(2^2\) | \(2^1\) |  nro de Hosts   |
+|    |         |            |            |            | \(2^1\) | \(2^2\) |   \(2^3\)    |    \(2^4\)     | \(2^5\) | \(2^6\) | \(2^7\) | \(2^8\) | nro de Subredes |
+|    |         |            |            |            |   128   |   64    |      32      |       16       |    8    |    4    |    2    |    1    |                 |
+|    |         |            |            |            |    1    |    1    |      1       |       0        |    0    |    0    |    0    |    0    |  bits tomados   |
+|    |         |            |            |            |         |         | \(\uparrow\) |                |         |         |         |         |                 |
+
+Nos especifican /30/ hosts y /6/ subredes
+#+begin_src emacs-lisp :exports none :results replace
+(expt 2 5)
+#+end_src
+
+#+RESULTS:
+: 32
+
+\(\rightarrow\) \(2^5-2=32-2 \geq 30\)
+
+La sumatoria nos queda de la forma:
+\(\sum (128, 64, 32) = 224\)
+
+#+begin_src emacs-lisp :exports none :results replace
+(+ 128 64 32)
+#+end_src
+
+#+RESULTS:
+: 224
+
+**** Respuesta
+\begin{tcolorbox}
+\begin{center}
+Así, nuestra máscara de red adaptada para 30 hosts es: \\
+\texttt{255.255.255.224}.
+\end{center}
+\end{tcolorbox}
+
+*** Total de subredes válidas y útiles
+**** Respuesta
+| Total      | : | \(2^3\)   | = | 8 |
+| Total útil | : | \(2^3\)-2 | = | 6 |
+*** Total de hosts útiles
+**** Respuesta
+| Total      | : | \(2^5\)   | = | 32 |
+| Total útil | : | \(2^5\)-2 | = | 30 |
+*** Bits tomados
+\[\texttt{3}\]
+* Tablas de ayuda :noexport:
+#+name: Tabla de clases de IP y mascaras por defecto por rango
+#+caption: Tabla de clases de IP y mascaras por defecto por rango
+|  <c>  |     <c>     |        <c>        |         <c>         |
+| Clase |    Desde    |       Hasta       | Máscara por defecto |
+|-------+-------------+-------------------+---------------------|
+|  =A=  |  =0.0.0.0=  | =127.255.255.255= |     =255.0.0.0=     |
+|  =B=  | =128.0.0.0= | =191.255.255.255= |    =255.255.0.0=    |
+|  =C=  | =192.0.0.0= | =223.255.255.255= |   =255.255.255.0=   |
+|  =D=  | =224.0.0.0= | =239.255.255.255= |          -          |
+|  =E=  | =240.0.0.0= | =255.255.255.255= |          -          |
+
+#+name: Tabla de potencias de 2 y relacionados
+#+caption: Tabla de potencias de 2 y relacionados
+| <c> |    <c>    |        |
+| 2^  | Resultado | \(-2\) |
+|-----+-----------+--------|
+| =0= |    =1=    | =-1=   |
+| =1= |    =2=    | =0=    |
+| =2= |    =4=    | =2=    |
+| =3= |    =8=    | =6=    |
+| =4= |   =16=    | =14=   |
+| =5= |   =32=    | =30=   |
+| =6= |   =64=    | =62=   |
+| =7= |   =128=   | =126=  |
+| =8= |   =256=   | =254=  |
+#+TBLFM: $2='(expt 2 $1);N :: $3='(- $2 2);N
+
+\clearpage
+* @@latex:Índice de cuadros@@ :noexport:
+@@latex:\listoftables@@
+@@latex:\newpage@@
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
+
+#  LocalWords:  IP Hosts hosts link

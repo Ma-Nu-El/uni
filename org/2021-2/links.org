@@ -1,0 +1,8 @@
+#+TITLE: Links Uni
+#+AUTHOR: Manuel Fuica Morales
+#+DATE: 2021-2
+#+INCLUDE: "~/org/uni/org/2021-2/Contabilidad_Financiera/asignatura.org::*Links" :only-contents t
+#+INCLUDE: "~/org/uni/org/2021-2/Gestion_Comercial/asignatura.org::*Links" :only-contents t
+#+INCLUDE: "~/org/uni/org/2021-2/Probabilidades_y_Estadistica/asignatura.org::*Links" :only-contents t
+#+INCLUDE: "~/org/uni/org/2021-2/Complejidad_Computacional/asignatura.org::*Links" :only-contents t
+#+INCLUDE: "~/org/uni/org/2021-2/Comunicacion_de_Datos/asignatura.org::*Links" :only-contents t

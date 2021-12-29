@@ -1,0 +1,247 @@
+Started:
+[2020-05-23 Sat]
+
+* Source
+https://www.youtube.com/watch?v=eIrMbAQSU34
+
+
+* Software required
+** A java development kit (JDK)
+
+A JDK contains all necessary tools for the computer to process Java
+code like a compiler and runtime (...?)
+
+** A text editor
+If you want to learn the syntax, any will do. If you want to write
+useful things, you will need to get an IDE like IntelliJ IDEA,
+Netbeans or Eclipse. There are other IDE's also, but the ones I named
+are the ones that are optimized to handle a project written in
+Java: you could even write a Java project with pen and paper, but
+erasing and moving things around would be really cumbersome.
+
+In practice, when you code, you make mistakes, and when you keep
+practicing, you make even deeper mistakes; that's when an IDE pays its
+convenience by fixing your errors in a smart way for you to focus on
+coding and letting the machine do the things that are already
+automated. Read about refactoring and debugging.
+
+** Putting it together
+
+You use the IDE to write, edit and debug code, but the IDE itself
+doesn't actually execute the code; the entity that does that job is
+the JDK. What the IDE really does is help you write code in a way that
+is easy for the JDK to read and execute the code you write.
+
+* code
+
+The "smallest building blocks" in java are functions. Every function
+is contained inside a class.
+
+A class is a container for one or more related functions.
+
+A package is a container for one or more related classes.
+
+So, for instance, you could have one singular file with its
+correspondent .java extension that could contain something like this:
+
+#+begin_example java
+class ClassName {
+	accessModifier returnType functionName(parameterType parameterName, ... ) {
+	// body; this is a comment
+	}	
+	
+        accessModifier returnType functionName2(parameterType parameterName, ... ) {
+	// body; this is a comment
+	}	
+}
+#+end_example
+
+and you would have written your first java project.
+
+** returnType:
+- int (primitive)
+- boolean (primitive)
+- String (non-primitive)
+  
+** parameterType: same as returnType
+** accessModifier: determines the access to the information contained in
+this particular class.
+
+- public
+- protected
+- private
+
+its use is related to OOP Inheritance.
+
+** the Main class and main function
+
+Every Java project contains at least one class containing one
+function: Main.
+
+#+begin_example java
+class Main {
+	public static void main() {
+	// body; this is a comment
+	}	
+}
+#+end_example
+
+And now considering you could find projects that contain literally
+thousands of classes, you could group them in packages by writing:
+
+#+begin_example java
+package com.codingisawesome;
+
+class Main {
+	public static void main(String[] args) {
+	// body; this is a comment
+	}	
+}
+#+end_example
+
+This is read: "this .java file pertains to a package whose name is
+~com.codingisawesome~".
+
+The ~public static void main(String[] args)~ part is read: "this is a
+~public~ method that returns no value (~void~), and actually is the
+method I first need to see when executing this program (~main~). Also,
+this method can take as parameters an array (~[]~) named ~args~ that
+contains variables of type ~String~".
+
+~class Main {~ : "the following are a set of functions (~class~) that
+are all related to the ~main~ part of the project".
+
+#+begin_comment
+The ~static~ part is related to memory allocation, a topic a little
+more advanced: it's related to the way the computer actually stores
+the information.
+#+end_comment
+
+By now your project should look like this:
+
+#+begin_example
+yourProjectName/
+└── com.codingisawesome
+    └── yourJavaFile.java
+#+end_example
+
+where:
+- ~yourProjectName/~ is a directory(folder)
+- ~com.codingisawesome~ is a fancy directory that contains only .java files.
+- ~yourJavaFile.java~ is an actual file; a .java file.
+
+#+begin_comment
+Wait, how do classes fit in this diagram?
+
+TLDR: Restrict yourself to one class per file.
+
+long: One .java file may contain as many classes as you want, but for
+convenience purposes it's common to write only one class per file to
+allow modularity, a key factor when you discover your project can
+expand to areas you wouldn't think of and now you need more
+flexibility.
+#+end_comment
+
+** Naming conventions
+
+https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html
+
+| Classes  | PascalNamingConvention    |
+| Methods  | camelNamingConvention     |
+| Packages | com.yourCompanyName[fn:1] |
+
+[fn:1] Your company domain name reversed. 
+
+| company domain name | package name        |
+| codingisawesome.com | com.codingisawesome |
+
+** Calling methods from other classes
+
+Just like using/calling a command in Bash.
+
+~packageName.className.functionName(optionalParam);~
+
+The ~optionalParam~ is because you might be calling a ~void~ function;
+requires no parameters.
+
+** The flow of code
+
+From the moment it's written to the moment it's executed.
+
+1. Write project (code) with help of IDE.
+2. IDE passes the code to the Java compiler.
+
+This is the same if you manually did (for every file):
+
+#+begin_example shell
+$ pwd
+~/yourProjectName/com.codingisawesome/
+
+$ ls
+Main.java
+
+$ javac Main.java
+
+(...)
+
+$ ls
+Main.java
+Main.class
+#+end_example
+
+Now you have your compiled Main.class file! This file is a byte-code
+representation of your .java file.
+
+The particular thing about the .class file is that it's platform
+independent. Any machine with a Java Runtime Enviroment (JRE)
+installed could run your freshly compiled .class file! The JRE comes
+bundled with your JDK.
+
+3. Byte-code to native-code
+   
+Next, your IDE takes this byte-code and feeds it into the JRE. The JRE
+converts your platform independent byte-code into a platform dependent
+native code, which is the one that the machine actually can read[fn:2].
+
+This is done with
+
+#+begin_example shell
+$ java src/com.codingisawesome/Main.class
+Fuck You World!
+#+end_example
+The ~.class~ extension is optional: ~$ java~ won't execute a ~.java~
+file.
+
+That is the reason why Java is a WORE language: Write Once and Run
+Everywhere.
+
+You could write your app in Windows and run it without a problem in
+Linux/Mac OS and vice versa: as long as the machines involved have a
+JRE installed[fn:3]. 
+
+And, of course, all this complexity is hidden from you by the "Run"
+button of your IDE, so you just worry about writing beautiful code and
+running it; the compilation and execution are made by the JDK via you
+IDE.
+
+[fn:2] This step is done specifically by the Java Virtual Machine
+(JVM) contained inside the JRE.
+
+[fn:3] The same idea is implemented for Python and C#.
+
+* Java editions 
+
+Java SE: Standard Edition
+The core of every other Java edition. 
+
+The one you have most likely used. As of March 2019 they are in Java
+SE12.
+
+Java EE: Enterprise Edition
+Optimized for large projects.
+
+Java EE: Micro Edition
+Optimized for mobile apps development (Android).
+
+Java Card:
+Optimized for cards.

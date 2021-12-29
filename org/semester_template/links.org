@@ -1,0 +1,6 @@
+#+TITLE: Links Uni
+#+AUTHOR: Manuel Fuica Morales
+#+DATE: <semester>
+# #+INCLUDE: "~/org/uni/org/<semester>/<subject>/asignatura.org::*Links" :only-contents t
+# #+INCLUDE: "~/org/uni/org/<semester>/<subject>/asignatura.org::*Links" :only-contents t
+# #+INCLUDE: "~/org/uni/org/<semester>/<subject>/asignatura.org::*Links" :only-contents t

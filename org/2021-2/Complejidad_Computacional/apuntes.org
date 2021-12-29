@@ -1,0 +1,1248 @@
+:PROPERTIES:
+:ID:       b4f4693b-f4ef-4045-affb-8ab72a2b2d17
+:END:
+#+INCLUDE: "~/org/uni/org/config.org"
+#+TITLE: Apuntes Complejidad Computacional
+#+SUBTITLE: 2021-2
+#+OPTIONS: toc:3
+#+FILETAGS: :university:
+
+
+* TOC :TOC_3:noexport:
+- [[#unidades][Unidades]]
+  - [[#1][1]]
+    - [[#semana-1][Semana 1]]
+    - [[#semana-2-introducción-a-la-complejidad-computacional][Semana 2: Introducción a la Complejidad Computacional]]
+    - [[#semana-3-arreglos-----ordenamiento-simple][Semana 3: Arreglos --- Ordenamiento Simple]]
+    - [[#semana-4-ordenamiento-avanzado][Semana 4: Ordenamiento Avanzado]]
+  - [[#2][2]]
+    - [[#semana-5][Semana 5]]
+    - [[#semana-6-pilas][Semana 6: Pilas]]
+    - [[#semana-7-colas][Semana 7: Colas]]
+    - [[#semana-8-listas-enlazadas][Semana 8: Listas enlazadas]]
+  - [[#3][3]]
+    - [[#semana-9][Semana 9]]
+    - [[#semana-10-arboles-binarios][Semana 10: Arboles binarios]]
+    - [[#semana-11-tablas-hash][Semana 11: Tablas hash]]
+    - [[#semana-12-grafos][Semana 12: Grafos]]
+- [[#videos-de-las-clases][Videos de las clases]]
+  - [[#21-04-2021][21-04-2021]]
+    - [[#arreglos][Arreglos]]
+    - [[#tiempo-de-operaciones-en-un-arreglo][Tiempo de operaciones en un arreglo]]
+    - [[#ordenamientos-simples-y-su-eficiencia][Ordenamientos simples y su eficiencia]]
+  - [[#28-04-2021][28-04-2021]]
+  - [[#12-05-2021][12-05-2021]]
+  - [[#16-06-2021][16-06-2021]]
+- [[#ayudantías][Ayudantías]]
+  - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
+- [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
+
+* Unidades
+** DONE 1
+:PROPERTIES:
+:ID:       2eb36b79-8785-4de0-a6e2-d3bd43c37f21
+:END:
+*** DONE Semana 1
+No existe Semana 1.
+*** DONE Semana 2: Introducción a la Complejidad Computacional
+:PROPERTIES:
+:ID:       90231ba4-05d5-4f72-a2cb-783a63c421d4
+:END:
+**** Introducción
+- Estudia la cantidad de recursos necesarios para resolver un problema
+  (entregar una solución), generalmente los recursos están asociados a
+  variables de tiempo - espacio.
+- Tiempo: número de pasos de ejecución de un algoritmo.
+- Espacio: cantidad de memoria utilizada por el algoritmo
+
+
+- ¿Cómo podemos medir la dificultad de un problema?
+- ¿En qué sentido podemos decir que un problema es
+  más complejo que otro?
+- ¿Es posible verificar rápidamente si existe una
+  solución?
+- Si existe solución. ¿Es posible obtener éstas
+  respuestas rápidamente?
+**** Indecidibilidad
+Si  ante  una  pregunta  cualquiera  "x"  es  posible  determinar  una
+solución en un tiempo finito, el problema entonces es "decidible".
+Sin embargo, existen problemas que no cumplen lo anterior y son
+los llamados problemas "indecidibles".
+
+**** Notación asintótica
+- ¿El algoritmo se hace más lento cuando la cantidad de datos de
+  entrada aumenta?
+- ¿Existe una tendenecia de aumento de velocidad a medida que los
+  datos aumentan?
+**** Funciones en notación asintótica
+- Función logaritmica
+  - \( log(n) \)
+- Función lineal
+  - \( a*n + b \)
+- Función cuadrática
+  - \( a*n^2 + b*n + c \)
+- Función polinómica
+  - \( a*n^z + \cdots + a*n^2 + a*n + a \) donde z = constante.
+- Función exponencial
+  - \( a^n \), donde a = constante.
+**** Notación Big O
+
+Corresponde a una notación asintótica asociada al
+"peor caso", al utilizar ésta notación se establece un
+límite superior.
+
+El propósito de utilizar Big O no es para comparar
+tiempos de ejecución, sino más bien para transmitir
+como el tiempo de ejecución se ve afectado por el
+número de ítems.
+
+\[
+T(n) \leq C \cdot g(n)\; \forall n
+\]
+
+**** Clasificación P y NP
+*** DONE Semana 3: Arreglos --- Ordenamiento Simple
+:PROPERTIES:
+:ID:       8471a337-b6ff-46b6-b8ec-46d6ec353cc5
+:END:
+**** Arreglos: ordenamientos simples
+- [X] Qué son los arreglos
+  - Corresponden a la estructura de datos más utilizada.
+  - Es la estructura más sencilla, por lo que es el motor de
+    arranque para comprender otro tipo de formas de
+    almacenamiento de datos más avanzadas.
+  - Es posible realizar operaciones básicas como 'Insertar', 'Eliminar',
+    'Buscar' y algunas más complejas como 'Ordenar'.
+  - Existen diversos tipos de ejemplos de utilización de arreglos
+    en programas informáticos.
+- [X] Representación gráfica
+**** Tiempos de operacion en arreglos
+- 'Insertar' es la opción más rápida, siempre el elemento se agrega
+  en la última posición (aún cuando existan otros espacios vacíos).
+- 'Buscar' un elemento requiere, en el peor de los casos recorrer
+  todos los elementos pero, en promedio cuesta n/2 comparaciones.
+- 'Eliminar' un elemento requiere dos operaciones, en primera
+  instancia buscar el dato y posteriormente desplazar todos
+  los datos posteriores.
+
+  | Operación   | Sin Duplicados | Con Duplicados     |
+  |-------------+----------------+--------------------|
+  | Búsqueda    | n/2 C          | n C                |
+  | Inserción   | 0 C            | 0 C                |
+  | Eliminación | n/2 C y n/2 M  | n C y más de n/2 M |
+  - C:comparaciones
+  - M:movimientos
+**** Arreglos ordenados
+***** Caracteristicas
+- Los elementos pueden estar ordenados de forma ascendiente
+  o descendiente.
+- La inserción de elementos cambia, ya que hay que encontrar la
+  posición correcta y realizar algunos desplazamientos.
+***** Búsqueda lineal
+- Es similar a la búsqueda en un arreglo desordenado, pero ésta
+  termina cuando se encuentra un elemento mayor al buscado.
+- 'Buscar' presenta mejoras en tiempos de ejecución y
+  comparaciones.
+- 'Insertar' requiere mover los elementos posteriores.
+- 'Eliminar' funciona similar al arreglo no ordenado.
+***** Búsqueda binaria
+- Más rápida que la búsqueda lineal.
+- Se basa en el juego de adivinar un número, dividiendo
+  el espacio de búsqueda siempre por la mitad.
+***** Ventajas y desventajas
+- Los algoritmos de búsqueda son más rápidos.
+- 'Inserción' se hace más lenta, ya que se debe definir el
+  espacio correcto en el cual se debe grabar el dato.
+- 'Eliminar' en arreglos ordenados y desordenados es lenta.
+***** Eficiencia
+
+| Algoritmo                       | Eficiencia      |
+|---------------------------------+-----------------|
+| Búsqueda lineal                 | \( O(N) \)      |
+| Búsqueda binaria                | \( O(log(N)) \) |
+|                                 |                 |
+| Insertar en arreglo ordenado    | \( O(N) \)      |
+| Insertar en arreglo no ordenado | \( O(1) \)      |
+|                                 |                 |
+| Eliminar en arreglo ordenado    | \( O(N) \)      |
+| Eliminar en arreglo no ordenado | \( O(N) \)      |
+
+**** Estructuras de datos
+***** Ordenamiento simple
+****** Bubble sort
+- Es el algoritmo de ordenamiento más lento, pero también
+  es el conceptualmente más sencillo.
+- Después de la primera iteración los elementos quedan ordenados
+  (según el criterio) de ahí nace el nombre “burbuja”.
+- El algoritmo realiza una cantidad de comparaciones e intercambios
+  proporcional a la cantidad de elementos que existen en el arreglo
+****** Selection sort
+- Reduce la cantidad de intercambios de bubble sort pero
+  las comparaciones se mantienen.
+- Después de la primera iteración el elemento seleccionado (el
+  mayor o menor) queda ordenado en su posición correspondiente.
+- El elemento seleccionado se intercambia directamente con
+ el que está utilizando la posición que le corresponde.
+****** Insertion sort
+- En la mayoría de los casos éste algoritmo es el mejor de
+  los revisados anteriormente.
+- Los elementos permanecen parcialmente ordenados a un
+  costado del arreglo (dependiendo del criterio).
+- Al estar parcialmente ordenados, se reduce la cantidad
+  de comparaciones.
+***** Eficiencia
+
+|      <c>       |      <c>      |      <c>      |      <c>       |
+|      Tipo      | Comparaciones | Intercambios  |     Big O      |
+|----------------+---------------+---------------+----------------|
+|  Bubble sort   | \( N^{2}/2 \) | \( N^{2}/4 \) | \( O(N^{2}) \) |
+| Selection sort | \( N^{2}/2 \) |    \( N \)    | \( O(N^{2}) \) |
+| Insertion sort | \( N^{2}/4 \) | \( N^{2}/4 \) | \( O(N^{2}) \) |
+
+*** DONE Semana 4: Ordenamiento Avanzado
+:PROPERTIES:
+:ID:       1b681435-f0ab-49cd-bb6b-f88927d28a66
+:END:
+**** Introducción
+Ya repasamos los ordenamientos simples, cuya implementación es
+sencilla pero el proceso es demasiado lento.
+**** Antecedentes
+- El algoritmo de ~Quick Sort~ es el ordenamiento más rápido de
+  todos los algoritmos en general.
+- Fue planteado por Charles A. Hoare en 1962 y se basa en realizar
+  particiones y la utilización de la recursividad.
+- Animación
+  - https://www.youtube.com/watch?v=ywWBy6J5gz8
+**** Características técnicas
+***** Particiones
+El partionamiento es el mecanismo que subyace al ~Quick Sort~.
+Consiste en dividir un “todo” en partes pequeñas. ~Quick Sort~
+particiona el conjunto de datos en dos grupos.
+
+- Grupo 1: Datos mayores a cierto valor.
+- Grupo 2: Datos menores a cierto valor.
+
+
+El partionamiento es ejecutado en O(N)
+- Las comparaciones y permutaciones son
+  proporcionales al número de ítems.
+- Las comparaciones no dependen de cómo estén
+  ordenados los elementos.
+- Las permutaciones si dependen del orden de
+  los elementos. En el PEOR de los casos
+  realiza N/2 permutaciones.
+- Hay menos permutaciones que comparaciones
+
+
+#+begin_example java
+public int partitionIt(int left, int right, long pivot){
+  int leftPtr = left; // right of first element
+  int rightPtr = right -1; // left of pivot
+
+  while(true){
+    while(theArray[++leftPtr] < pivot){ //find bigger{
+      ; // (nop)
+      while( theArray[--rightPtr] > pivot){ // find smaller
+        ; // (nop)
+        if(leftPtr >= rightPtr){ // if pointers cross,
+          break;  // partition done
+        }
+        else
+          swap(leftPtr, rightPtr); // swap elements
+      } // end while for find smaller
+    } // end while for find bigger
+  } // end while(true)
+
+  swap(leftPtr, right-1); // restore pivot
+  return leftPtr; // return pivot location
+
+} // end partitionIt()
+
+#+end_example
+
+***** Quick sort
+- Es el algoritmo de ordenamiento más rápido que existe.
+- Las reglas que sigue Quick Sort, son las siguientes
+  a) Dividir el arreglo en un grupo izquierdo (valores menores)
+     y un grupo derecho (valores mayores).
+  b) Se llama a sí mismo para ordenar el grupo izquierdo
+     (recursividad).
+  c) Se llama a sí mismo para ordenar el grupo derecho
+     (recursividad).
+  d) Se repiten los pasos anteriores (a, b, c) hasta que el
+     arreglo quede completamente ordenado.
+
+
+#+begin_example java
+public void recQuickSort(int left, int right){
+
+  if(right-left <=0){ // if size <= 1,
+    return; // already sorted
+  }else{
+    /*
+    * pivot     : rightmost item
+    * partition : partition range
+    */
+    long pivot = theArray[right];
+    int partition = partitionIt(left, right,pivot);
+
+    recQuickSort(left, partition-1); // sort left side
+    recQuickSort(partition+1, right); // sort right side
+  } // end else
+
+} // end recQuickSort()
+#+end_example
+
+***** Caso desfavorable
+QuickSort con un arreglo ordenado inversamente es bastante lento.
+- Existe un problema con la elección del pivote.
+- El peor de los casos ocurre cuando la partición se traduce
+  en un grupo de 1 elemento y otro grupo de N-1 elementos.
+- En cada grupo de un arreglo ordenado inversamente el pivote
+  es el “menor” y hay que realizar muchas particiones.
+***** Mejora posible: mejorar el pivote
+- Se puede controlar la elección del pivote,
+  no siempre debe ser el último elemento del
+  arreglo.
+- La solución óptima es escoger el pivote como la “mediana”,
+  pero su cálculo es muy costoso.
+- La solución: Mediana del ítem en la primera posición,
+  en la última y justo en el medio: “Mediana de tres”.
+- Se reciben como parámetros las posiciones izquierda y derecho.
+- Se realiza una división (entera) entre los índices y
+  se obtiene la posición central.
+- Se intercambian los elementos de las posiciones izquierda,
+  derecho y centro hasta quedar ordenador de manera ascendente
+  de izquierda a derecha.
+- De ésta manera, los elementos de la izquierda y derecha
+  quedan parcialmente ordenados.
+
+
+#+begin_example java
+public long medianOf3(int left, int right){
+  int center = (left+right)/2;
+
+  // order left & center
+  if (theArray[left] > theArray[center]){
+    swap(left,center);
+  }
+
+  // order left & right
+  if (theArray[left] > theArray[right]){
+    swap(left,right);
+  }
+
+  // order center & right
+  if (theArray[center] > theArray[right]){
+    swap(center,right);
+  }
+
+  // put pivot on right
+  swap(center,right-1);
+
+  // return median value
+  return theArray[right-1];
+
+} // end medianOf3
+#+end_example
+
+Los beneficios que otorga la mejora en la elección
+del pivote son:
+
+- Como los valores en la posición de la izquierda y derecha
+  ya se encuentran “ordenados” no es necesario incluirlo
+  en el proceso de particionamiento, porque ya se encuentran ordenados.
+- La mediana de 3 evita el caso más
+  desfavorable O(N^2), ya que selecciona un
+  pivote más adecuado.
+- Mejora el rendimiento de los ciclos internos
+  (while) de la partición.
+
+***** Eficiencia
+- QuickSort opera en un tiempo de \( O(N \cdot log N \).
+- “Dividir para conquistar” donde el método
+  recursivo divide un rango de ítems en dos
+  grupos y luego se llama así mismo para
+  resolver cada grupo \( O(N \cdot log 2 N) \).
+- Una partición opera en tiempo \( O(N)\ ).
+- Es claramente mejor que los ordenamientos
+  revisados anteriormente donde el tiempo de
+  ejecución era de \( O(N^2)\ ).
+** DONE 2
+:PROPERTIES:
+:ID:       e3cc2b5a-f167-47a8-9d5e-802fc7d2965c
+:END:
+*** DONE Semana 5
+No hay semana 5.
+*** DONE Semana 6: Pilas
+:PROPERTIES:
+:ID:       f4d1f4fc-7c42-439b-b4bb-39054b2bf088
+:END:
+**** Introducción
+
+En un arreglo, se puede acceder a cualquier ítem solamente
+ingresando el índice en el que se encuentra (si es que el índice
+es conocido) o también se puede realizar una búsqueda por todas las
+celdas hasta encontrar el elemento. Sin embargo, las pilas presentan
+una restricción en éste sentido: Solamente un *elemento* puede ser
+eliminado, insertado o leído en un momento dado.
+
+Las pilas y colas, son utilizados como herramientas de programación
+para modelar situaciones con un mayor nivel de *abstracción* y
+comportamientos claramente identificados.
+
+**** Característica principal
+
+La característica principal de las pilas, es que se puede
+acceder solamente el *último ítem* insertado. Si éste ítem es
+removido entonces se podrá acceder al elemento ingresado antes
+del último (penúltimo elemento) y así sucesivamente hasta llegar
+al primer dato insertado (que se encontrará al fondo del arreglo).
+
+El nombre “pila” se da por la simulación de estar *“apilando”*
+objetos, como por ejemplo, en una despensa se van armando torres
+de cajas donde la primera caja que se guardó está al final de la
+torre y para sacarla, es necesario remover todas las anteriores.
+
+Muchos *microprocesadores* usan una arquitectura basada en un
+sistema de Pilas. Cuando un método es llamado, los argumentos
+son almacenados en una pila hasta que son procesados y salen de
+ella.
+
+Para comprender la idea de una pila, se puede considerar el
+*sistema postal*. Muchas personas cuando reciben la correspondencia,
+la dejan apiladas sobre la mesa o sobre un cajón. Cuando tienen
+tiempo libre se disponen a revisar las cartas una a una, *comenzando
+desde la primera carta de la pila* (que a su vez fue la última agregada).
+Después de leer la primera carta, ésta es eliminada de la pila y
+continúa con la siguiente hasta que no queden más cartas por leer
+(o se aburra de leer las cartas de deudas).
+
+Esta forma de realizar una acción siguiendo el orden de los datos
+desde arriba hasta abajo (*top to down*) permite realizar la tarea de
+manera más sencilla y de una manera que se utilicen menos recursos
+y tome el menor tiempo posible. Pero hay un *problema* relacionado
+con ésta forma de trabajo.
+
+**** Procesamiento
+
+El procesamiento de las pilas es de “arriba hacia abajo”
+(siendo el valor de “arriba” el último que se ingresó):
+
+- Se puede acceder al siguiente elemento solo tras la
+  eliminación del elemento marcado como *“top”*.
+- Existe el riesgo de *no alcanzar* el último elemento.
+- Agregar un elemento se llama *“push”*.
+- Eliminar un elemento se llama *“pop”*.
+- Conocer el elemento que está en la cima se llama *“peek”*.
+- Las pilas funcionan según el mecanismo *LIFO* (Last In First Out).
+
+**** Eficicencia
+
+La eficiencia de las Pilas está dada por:
+- Los ítems en una pila pueden ser apilados y desapilados
+  en un tiempo constante: \( O(1) \).
+- Es decir, el tiempo NO depende del número de elementos
+  que hay en la pila.
+- No son necesarias ni comparaciones ni movimientos de elementos.
+- Las pilas son muy rápidas.
+
+*** DONE Semana 7: Colas
+:PROPERTIES:
+:ID:       d272cb9f-1fc5-43ed-8d80-36a2bd75bc4b
+:END:
+**** Introducción
+
+Los arreglos son estructuras muy utilizadas en estructuras
+de datos porque facilitan el acceso a datos (inserción,
+búsqueda y eliminación).
+
+Las colas son una estructura que aprovecha las ventajas de los
+arreglos y mejora la eficiencia de algunas de sus operaciones
+para resolver casos específicos, son muy similares a las pilas.
+
+**** Característica principal
+
+La característica principal de las colas, es que se puede acceder
+solamente al *primer ítem* insertado. Si éste ítem es removido
+entonces se podrá acceder al elemento ingresado en segundo lugar
+y así sucesivamente hasta llegar al último dato insertado (que se
+encontrará al principio del arreglo).
+
+Ésta estructura puede ser útil para modelar muchas situaciones como
+por ejemplo:
+- Bancos
+- Aviones esperando a despegar
+- Sistemas Operativos
+- Impresoras
+- Sistemas de atención hospitalarios
+
+**** Procesamiento
+
+- El funcionamiento de las colas informaticas (queue) consiste
+  en tomar los elementos desde “abajo hacia arriba” (*down to top*).
+- Solo se puede acceder al siguiente elemento si el anterior
+  a éste ha sido removido (función remove).
+- Insertar un elemento dejará a éste en la posición N y será
+  marcado como el *“rear”*. Cualquier elemento que esté bajo esta
+  etiqueta será el último valor a visitar.
+- La parte frontal de la cola se marcará con una etiqueta llamada
+  *“front”*. Cualquier elemento que esté bajo esta etiqueta será
+  el valor al que se tendrá acceso.
+- Es posible conocer el valor que se encuentra próximo a ser
+  “atendido” realizando una llamada al método *“peekFront”* (No quitará
+  el elemento de la cola, simplemente revisará su valor).
+- El mecanismo con el trabajan las pilas es *FIFO* (First In First Out).
+
+
+Cuando trabajamos con una cola, existe un problema sobre
+los elementos. No solamente se da el caso de no poder alcanzar
+un elemento, sino que también puede existir el caso en el cual,
+a pesar de que la cola posea espacios vacíos no se puedan
+seguir insertando ítems.
+
+Para evitar el problema de no poder insertar más elementos en
+la cola incluso cuando no está llena, las etiquetas *front* y
+*rear* se ajustan al principio del arreglo. El resultado es
+una cola circular (wraparound).
+
+**** Eficiencia
+
+La eficiencia de las Colas está dada por:
+- Los elementos en una cola pueden ser insertados y
+  eliminados en un tiempo constante \( O(1) \).
+- El tiempo NO depende del número de elementos que hay en la cola.
+- No son necesarias comparaciones ni permutaciones.
+- Las colas al igual que las pilas son bastante rápidas.
+
+**** Colas de prioridad
+***** Procesamiento
+
+- Las colas de prioridad son estructuras más especializadas
+  que una pila o una cola simple, ya que sus elementos
+  están *ordenados*.
+- Se puede definir de manera arbitraria una forma de
+  darle prioridad a un elemento sobre otro.
+- Un escenario válido para la utilización de ésta estructura
+  es cuando el Sistema Operativo prioriza ciertos procesos o
+  cuando estamos en el servicio de urgencia de un
+  Hospital o Clínica.
+- Ordenar los elementos requiere un movimiento extra por lo
+  tanto la eficiencia de la inserción cambia y ahora dependerá
+  del número de elementos que existan en la cola.
+
+***** Eficiencia
+
+La eficiencia de las Colas de prioridad (*PriorityQ*) está dada por.
+- Los elementos en una cola de prioridad pueden ser eliminados
+  en un tiempo constante \( O(1) \).
+- Al tener que mantener los elementos ordenados, la inserción de
+  un dato opera en tiempo \( O(N) \).
+- Es posible mejorar la inserción utilizando otras estructuras
+  que reemplacen los arreglos tradicionales.
+
+*** DONE Semana 8: Listas enlazadas
+:PROPERTIES:
+:ID:       08df7762-4f09-4ec3-860a-eb118d7836eb
+:END:
+**** Introducción
+
+- Las listas enlazadas (Linked List) son otra forma de representar
+  datos, en pro de mejorar ciertas operaciones y velocidad de
+  ejecución de algunas acciones específicas de los arreglos.
+- Son útiles en bases de datos, sobre todo aquellas que no son
+  relacionales y además pueden sustituir a los arreglos en
+  las Pilas y Colas.
+- Son estructuras relativamente simples y poseen ciertas
+  restricciones.
+
+
+|         <c>          |     <c>     |      <c>       |
+|   Tipo de arreglo    |   Método    |   Velocidad    |
+|----------------------+-------------+----------------|
+|       Ordenado       |  Búsqueda   |  Lenta - O(N)  |
+|     Desordenado      |  Inserción  | Lenta   - O(N) |
+| Ordenado/Desordenado | Eliminación |  Lenta - O(N)  |
+
+Cada ítem de una lista enlazada es un objeto que puede
+contener múltiples datos en su interior, a éste objeto
+se le llama LINK (o enlace).
+
+Cada LINK tiene una referencia hacia el siguiente LINK de
+la lista, la cual es conocida como NEXT.
+
+La Lista enlazada contiene una referencia que señala al
+primer LINK de la lista, llamado FIRST.
+
+#+begin_example java
+class Link(){
+  // Properties
+  public int iData;
+  public double dData;
+  public Link next; // next link in list
+
+  // Methods
+  // Constructor
+  public Link(int id, double dd){
+    iData = id; // initialize data
+    dData = dd; // 'next' is automatically set to 'null'
+  } // end constructor Link()
+
+  public void displayLink(){ //display ourself
+    System.out.print("{" + iData + ", " + dData + "}");
+  } // end displayLink()
+
+} // end class Link()
+
+class LinkList(){
+  // Properties
+  private Link first; // ref to first link on list
+
+  // Methods
+  // Constructor
+  public void LinkList(){
+    first = null; // no items on list yet
+  }
+
+  public boolean isEmpty(){ // true if list is empty
+    return (first==null);
+  }
+} // end class LinkList()
+#+end_example
+
+**** Método Insert First
+- Este método inserta un nuevo elemento LINK al comienzo de la lista.
+- Es la manera más sencilla de realizar una inserción.
+- Primero se comienza creando un objeto tipo LINK usando los datos
+  que se pasan como argumentos, posteriormente se cambian las
+  referencias como se aprecia en la imagen.
+
+
+#+begin_example java
+public void insertFirst(int id, double dd){ // make new link
+
+  Link newLink = new Link(id, dd);
+
+  newLink.next = first; // newLink --> old first
+  first = newLink;      // first --> newLink
+} // end class insertFirst()
+#+end_example
+
+**** Método Delete First
+- Este método elimina el elemento LINK que está al
+  comienzo de la lista.
+- “Desconecta” el primer LINK y reconecta la referencia
+  FIRST con el segundo elemento.
+- Finalmente retorna el elemento LINK que ha sido desconectado.
+- Todas las reestructuraciones las hace simplemente cambiando
+  las referencias.
+
+
+#+begin_example java
+public Link deleteFirst(){
+  Link temp = first;
+  first = first.next;
+  return temp;
+} // end class deleteFirst
+#+end_example
+
+**** Método Display
+- Para mostrar los elementos de la lista, se debe comenzar
+  por el primer elemento el marcado bajo la etiqueta “first”.
+- Después se va a ir visitando cada LINK de la lista y para
+  continuar hacia el siguiente se avanzará a través de la
+  referencia “next”.
+- Cuando la referencia “next” sea nula entonces ya no quedan
+  más elementos de la lista.
+
+
+#+begin_example java
+public void displayList(){
+  System.out.print("List (first-->last): ");
+  Link current = first; // start at beginning of list
+  while (current != null){
+    current.displayLint();  // print data
+    current = current.next; // move to next link
+  } // end while
+  System.out.println("");
+} // end method displayList()
+#+end_example
+
+**** Otros métodos
+
+Las listas enlazadas pueden adquirir más características
+específicas de acuerdo al contexto en el que se estén ocupando,
+como por ejemplo poder buscar y eliminar un link específico.
+Dado ésto es que nacen 2 nuevos métodos:
+
+El método *find()*
+- Este método funciona similar al display(). En cada uno de
+  los link que va visitando comprueba si está el valor
+  buscado o no, si la respuesta es correcta retorna el link,
+  si no, retorna null.
+
+
+El método *delete()*
+- Funciona similar a find() ya que para eliminar un valor debe
+  buscar el elemento, cuando lo encuentra entonces
+  desconecta las referencias al link.
+
+**** Otros tipos de listas enlazadas
+***** Double-Ended
+
+Otra variación que pueden presentar las Listas Enlazadas,
+son las que cuentan con una referencia doble
+(Doble-Ended Lists). Posee una referencia al *primer* y
+*último* LINK de la lista.
+
+Gracias a que tenemos una referencia al último LINK podemos
+insertar un elemento en dicha posición con el método
+*insertLast()*
+
+***** Sorted
+
+- Además de las características anteriores se puede agregar
+  un orden a la lista enlazada (*Sorted Lists*).
+- La única diferencia entre éstas listas con las anteriores
+  es que el método de *insertar* elementos debe recorrer cada
+  LINK para encontrar la posición correcta.
+
+
+|        <c>        |       <c>        |           <c>           |
+|      Acción       | Arreglo Ordenado | Lista Enlazada Ordenada |
+|-------------------+------------------+-------------------------|
+| Insertar elemento |        -         |            X            |
+| Eliminar elemento |        -         |            X            |
+|   Escalabilidad   |        -         |            X            |
+|  Implementación   |        X         |            -            |
+
+***** Doubly-Linked
+
+Las listas doblemente enlazadas poseen dos referencias a
+cada uno de los LINK, una referencia que apunta al siguiente
+elemento *next* y una referencia al elemento previo *previous*.
+
+Esta lista puede ser recorrida en ambas direcciones,
+desde el first a last o desde el last hacia el first.
+
+**** Eficiencia
+
+La *eficiencia* de las Listas Enlazadas está determinada por:
+
+| Operación                             | Big O      |
+|---------------------------------------+------------|
+| Insertar en primera o última posición | \( O(1) \) |
+| Eliminar en primera o última posición | \( O(1) \) |
+| Buscar un elemento específico         | \( O(N) \) |
+| Insertar elementos ordenados          | \( O(N) \) |
+| Eliminar un dato específico           | \( O(N) \) |
+
+** 3
+*** Semana 9
+No hay semana 9.
+*** DONE Semana 10: Arboles binarios
+:PROPERTIES:
+:ID:       b8514d2d-bdc9-4e37-850e-3192abaf8255
+:END:
+**** Introducción
+- Otra forma de *representación* de
+  datos.
+- Al igual que las [[id:08df7762-4f09-4ec3-860a-eb118d7836eb][listas enlazadas]]
+  los *“nodos”* están relacionados a
+  través de referencias.
+- Sirve para organizar la
+  manipulación de datos: *Ingreso*,
+  *borrado* o *búsqueda*.
+- La ventaja de utilizar árboles
+  binarios es que son muy rápidos
+  al buscar un elemento.
+- Consiste en la conexión de nodos
+  *(Node)* a través de aristas
+  *(Edges).*
+- Los nodos representan normalmente
+  *entidades.*
+- Las aristas representan la forma
+  en que los nodos están relacionados
+  (son referencias).
+- Hay normalmente un nodo principal
+  en la parte superior del árbol,
+  el cual se conecta a otros nodos
+  del nivel siguiente.
+- Para que un árbol sea *binario*,
+  cada Nodo puede tener como máximo
+  2 hijos.
+
+
+- Ruta: Camino de un nodo a otro.
+- Raíz: Nodo (único) ubicado en la
+  parte superior del árbol.
+- Padre: Nodo superior de otro
+  conectado por una arista.
+- Hijo: Nodo inferior a otro
+  conectado por una arista.
+- Hoja: Nodo que no tiene hijos.
+
+
+- Subárbol: Cualquier Nodo puede
+  considerarse como la raíz de un
+  sub nodo.
+- Visitar: Un Nodo es visitado
+  cuando el control del programa
+  llega al Nodo.
+- Atravesar: Visitar todos los Nodos
+  en un cierto orden.
+- Niveles: Número de generaciones
+  desde la raíz.
+- Clave (key): Valor de un Nodo que
+  permite buscar y ejecutar
+  operaciones.
+
+
+- Algunos árboles son generados de
+  forma desbalanceada: Tienen la
+  mayor parte de sus nodos en uno
+  de los lados de la raíz.
+- El desbalanceo se origina a través
+  del orden en que son insertados
+  los elementos.
+  - Aleatorio: Más o menos
+    balanceado.
+  - Ascendente: Hacia la derecha.
+  - Descendente: Hacia la izquierda.
+- Los árboles desbalanceados
+  presentan algunos problemas de
+  eficiencia.
+**** Implementación java
+
+Existen varias alternativas para
+representar un árbol en la memoria
+de un computador y posteriormente
+utilizarla en cualquier programa.
+
+La forma más común de realizar ésta
+acción es almacenando los nodos como
+una posición independiente en
+memoria y posteriormente conectar
+éstas mediante el uso de referencias.
+
+Primero necesitamos una clase para
+los Nodos.
+
+Contiene los datos que representan
+los objetos que estamos almacenando
+(empleados, repuestos, etc.)
+
+También incluye las referencia a sus
+dos nodos hijos.
+
+#+begin_example java
+class Node(){
+  int iData;
+  double fData;
+  node leftChild;
+  node rightChild;
+} // end class Node()
+#+end_example
+
+También necesitamos una clase para
+el Árbol.
+
+Contiene todos los Nodos que han
+sido creados y almacena una
+referencia especial para el nodo
+raíz --- que será el primer nodo
+ingresado al árbol ---.
+
+Como todos los nodos son accedidos
+a través de la raíz, no necesita
+otros campos adicionales.
+
+#+begin_example java
+class Tree(){
+  //properties
+  private Node root;
+
+  // methods
+  public void find(int key){}
+  public void insert(int id, double dd){}
+  public void delete(int id){}
+  // more methods
+} // end class Tree()
+#+end_example
+
+**** Insertando un Nodo en el Árbol
+
+1. Se crea un nuevo Nodo a ingresar.
+2. Se evalúa si existe un nodo raíz,
+   si no existe, entonces el nuevo
+   nodo es insertado en esa posición.
+3. Si ya existe un nodo raíz, se
+   comparan los datos de éste con
+   los datos del nuevo nodo. Si el
+   nuevo nodo es menor, entonces
+   sigue su camino hacia la
+   izquierda, si es mayor, entonces
+   sigue su camino hacia la derecha.
+4. Cuando el nuevo nodo encuentra
+   una referencia NULL en su camino,
+   entonces significa que ya ha
+   encontrado su posición para
+   ser insertado.
+
+**** Buscando un Nodo en el Árbol
+1. Existe una variable llamada
+   “current” que contiene el Nodo
+   actualmente examinado.
+2. La rutina comienza desde el nodo
+   raíz (root)
+3. Compara los valores del nodo con
+   el buscado.
+   a. Valor del nodo mayor: Avanza
+      por la izquierda.
+   b. Valor del nodo menor: Avanza
+      por la derecha.
+   c. Si no encuentra nada,
+      retorna null.
+
+**** Eliminando un Nodo en el Árbol
+
+1. Se comienza buscando el nodo a
+   eliminar.
+2. Cuando se encuentra existen 3
+   posibles casos:
+   a. El nodo a eliminar es una hoja.
+   b. El nodo a eliminar tiene un
+      hijo.
+   c. El nodo a eliminar tiene dos
+      hijos.
+3. El primer caso es fácil, el
+   segundo relativamente fácil y el
+   tercer caso es complejo.
+
+***** Caso a: Nodo Hoja.
+
+1. Luego de encontrar el Nodo hay
+   que verificar si tiene o no hijos.
+2. Si no tiene hijos, el método
+   finaliza asignando el valor de
+   referencia del padre a null.
+3. Si tiene hijos hay que revisar
+   los casos siguientes.
+
+***** Caso b: Nodo con un hijo.
+1. Esta situación es manejada con
+   4 variaciones:
+   a. El nodo a ser borrado puede
+      tener un hijo izquierdo o
+      derecho.
+   b. El nodo a ser borrado puede
+      ser hijo izquierdo o derecho.
+2. Como se utilizan referencias
+   (similar a las listas enlazadas)
+   mover un sub árbol a otra
+   posición es relativamente
+   sencilla.
+***** Caso c: Nodo con dos hijos.
+1. Primero se debe encontrar el
+   Nodo sucesor (se obtiene
+   encontrando el menor de los
+   nodos mayores que el nodo a
+   eliminar).
+2. Si el sucesor es el hijo derecho
+   del Nodo a borrar, entonces el
+   hijo derecho toma la posición
+   del Nodo eliminado.
+3. Para hacerlo se debe desarrollar
+   lo siguiente:
+   a. Desconectar el Nodo a eliminar
+      y apuntar ésta conexión
+      directamente al sucesor.
+   b. Desconectar el hijo izquierdo
+      del Nodo borrado y conectarlo
+      como hijo izquierdo del
+      sucesor.
+4. Si el sucesor es hijo izquierdo
+   del hijo derecho del nodo a
+   eliminar.
+5. Ésta operación requiere 4 pasos:
+   a. Conectar hijo derecho del
+      sucesor como hijo izquierdo
+      del padre del sucesor.
+   b. Conectar el hijo derecho del
+      nodo a eliminar como hijo
+      derecho del sucesor.
+   c. Desconectar el nodo a eliminar
+      de la posición de hijo derecho
+      de su padre y colocar al
+      sucesor en su posición.
+   d. Desconectar el hijo izquierdo
+      del nodo a eliminar y
+      conectarlo como hijo izquierdo
+      del sucesor.
+
+**** Recorriendo los nodos
+
+- El recorrer (traversing) árboles significa visitar los
+  nodos de un árbol en un orden determinado.
+- Esta operación no es tan común como: find(), insert() o
+  delete() y además es más lenta.
+- Recorrer un árbol es teóricamente interesante y muy útil
+  en algunas circunstancias.
+- Hay 3 formas de recorrer un árbol:
+  - Pre-Orden
+  - In-Orden
+  - Post-Orden
+- La forma más común en árboles binarios es: In-Orden
+
+***** In Order
+
+- Si es un árbol de búsqueda binario. los nodos son
+  visitados en orden ascendente.
+- Parte con el nodo raíz, y se llama recursivamente hasta
+  que no queden más nodos por recorrer.
+- El método sólo hace tres cosas para In Order (Infix):
+  a. Se llama a sí mismo para recorrer el subárbol
+     izquierdo.
+  b. Visita el nodo.
+  c. Se llama a sí mismo para recorrer el subárbol derecho.
+
+***** Pre & Post Order
+
+- Este tipo de recorrido es útil para analizar expresiones
+  algebraicas.
+- Para Pre- y Post-orden se usan los mismo pasos que en
+  In- Orden, sólo la secuencia es diferente.
+- Para Pre-Orden (Prefix):
+  a. Visitar el nodo.
+  b. Se llama a si mismo para recorrer el sub-árbol
+     izquierdo.
+  c. Se llama a si mismo para recorrer el sub-árbol
+     derecho.
+- Para Post-Orden(Postfix):
+  a. Se llama a si mismo para recorrer el sub-árbol
+     izquierdo.
+  b. Se llama a si mismo para recorrer el sub-árbol
+     derecho.
+  c. Visitar el nodo.
+
+**** Eficiencia
+
+- La mayoría de las operaciones se basan en descender
+  por el árbol de nivel en nivel hasta un Nodo en
+  particular.
+- En un árbol lleno, la mitad de sus Nodos está en el
+  último nivel. Es decir, la mitad de las operaciones se
+  llevan a cabo en éste nivel inferior.
+- Durante la búsqueda por ejemplo, es necesario visitar un
+  Nodo por cada nivel.
+- Entonces podemos estimar el tiempo de ejecución al
+  número de niveles del árbol.
+
+
+| <l>           |       <c>       |
+| Accion        |   Eficiencia    |
+|---------------+-----------------|
+| Insertar nodo | \( O(log(N)) \) |
+| Buscar nodo   | \( O(log(N)) \) |
+| Eliminar nodo | \( O(log(N)) \) |
+
+*** Semana 11: Tablas hash
+:PROPERTIES:
+:ID:       b1631fb1-ef3f-437d-a17b-454ac161c8eb
+:END:
+**** Introducción
+
+- Una tabla Hash es una estructura que permite una
+  *inserción* y una *búsqueda* muy rápida de O(1).
+- No importa la cantidad de elementos, el orden de la
+  búsqueda e inserción será siempre el mismo.
+- Las tablas hash son más rápidas que los árboles binarios.
+- Son fáciles de programar.
+- Desventajas:
+  - Se basan en arreglos y se degradan cuando están muy
+    llenas.
+  - Hay que tener claro cuantos datos almacenará, de lo
+    contrario, habrá que transferir datos a tablas más
+    grandes (proceso muy lento).
+
+**** Hashing
+
+Hashing
+- Transformación de un rango de valores a un rango de
+  índices.
+- Existen ciertos valores que no necesitan una
+  transformación ya que pueden ser utilizados directamente
+  como índices.
+- Por ejemplo: Cuando una tabla hash almacena los ID de
+  los empleados, el dato “ID” será utilizado directamente
+  como índice, ya que es un valor único, secuencial y no
+  es necesario eliminarlo.
+- Caso A: ID empleado == Indice
+
+
+|    <c>     |    <c>     |    <c>     |    <c>     |
+|     1      |     2      | \(\cdots\) |    1000    |
+|------------+------------+------------+------------|
+| Juan Perez | Pedro Soto | \(\cdots\) | Jose Muñoz |
+|    CEO     |    G.O.    | \(\cdots\) |  Vendedor  |
+|    2000    |    1000    | \(\cdots\) |    300     |
+
+
+- Caso B: Un diccionario de 50.000 palabras donde cada
+  palabra ocupa una celda en un arreglo tamaño 50.000 y se
+  puede acceder a la palabra a través de su índice ¿Cómo
+  hacer la relación entre palabra e índice?
+  - Sumando los dígitos.
+  - Multiplicando potencias.
+
+**** Sumando los dígitos
+
+- Tomemos como referencia la palabra “ábaco” y le damos
+  un índice a cada letra (enumerados desde la a hasta la z),
+  la palabra ábaco tendría un valor de:
+  a + b + a + c + o = 1 + 2 + 1 + 3 + 15 = 22
+- Con palabras de máximo 10 letras tendríamos índices que
+  van desde el 1 hasta el 260 (a, zzzzzzzzzz). Por lo tanto
+  tendríamos un rango de códigos [1 , 260], como son
+  50.000 palabras tendríamos que almacenar en cada celda
+  192 palabras aprox. Lo que nos dificultará la búsqueda.
+- Conclusión: Se debe aumentar la cantidad de índices.
+
+**** Multiplicando potencias
+
+- Pensando en la composición de los números como potencias,
+  donde los dígitos tienen 10 posibilidades:
+- 7546 = 7*10^3 + 5*10^2 + 4*10^1 + 6*10^0
+- Análogamente: abaco = 1*26^4 + 2*26^3 + 1*26^2 + 3*26^1
+  + 15*26^0 = 492.897
+- Ahora generamos muchos índices pero el problema es que
+  para palabras “grandes” necesitaremos índices enormes.
+  Ejemplo: para una palabra de 10 letras necesitamos
+  índices mayores a 7.000.000.000.000.
+- No sería muy práctico generar un arreglo con dicha
+  cantidad de celdas.
+
+**** La función módulo %
+
+- smallNumber = largeNumber % smallRange;
+- Considerando un ejemplo de largeNumber: [0, 199]
+  y smallRange[0,9] aplicando el resto de la división entera
+   obtendríamos un radio de comprensión de 20 a 1.
+- Lo anterior podemos aplicarlo a nuestro ejemplo y
+  reducir los 7.000.000.000.000 de índices a 100.000,
+  un ejemplo de una función hash sería:
+  - arraySize = numberWords * 2;
+  - arrayIndex = hugeNumber % arraySize;
+
+**** Colisiones
+
+- Podríamos decir que las colisiones son el “precio que
+  se paga” al compactar el rango en uno más pequeño.
+- Corresponde a la coincidencia del índice resultante del
+  hash de una entidad que se quiera almacenar en una tabla.
+
+***** Open Addressing
+
+- Cuando un nuevo ítem no puede ser ubicado en el índice
+  calculado por la función hash, se debe buscar una nueva
+  posición disponible (open) para este valor en la
+  tabla hash.
+- Vamos a revisar 3 métodos:
+  - Prueba Lineal.
+  - Prueba Cuadrática.
+  - Hashing doble.
+
+
+- En primer lugar revisaremos la Prueba Lineal.
+- Cuando se genera una colisión al intentar insertar un
+  elemento, se debe buscar un espacio vacío avanzando de
+  uno a uno por cada una de las posiciones de la tabla.
+- El largo de la prueba puede ser de 1 o muchas celdas
+  dependiendo cuán lleno se encuentre el arreglo.
+- Por lo tanto, antes de insertar se debe llamar al
+  método buscar, el cual finaliza cuando encuentra un
+  espacio vacío. Éste proceso se llama “prueba”.
+- Cuando se van almacenando valores con el mismo índice
+  se comienzan a crear los clúster, que corresponden a
+  agrupaciones de valores en ciertos sectores de la tabla.
+- Cuando queremos eliminar un elemento de la tabla se
+  complica la solución debido a las características de
+  las tablas hash.
+- Si realizamos un desplazamiento de los elementos
+  perderán su valor “hash” por lo que afectaría a los
+  otros métodos.
+- La solución que se propone es cambiar  el  valor por
+  un -1, false, null u otro acorde al tipo de dato que
+  se esté utilizando.
+- Al tener marcados éstas celdas, se podría insertar un
+  nuevo elemento sin problema en este sitio.
+- Como los datos jamás son eliminados, se degrada el
+  funcionamiento por lo que muchas tablas hash no admiten
+  la función de eliminación de datos.
+
+- Cuando la tabla hash comienza a llenarse una opción es
+  expandir su arreglo.
+- Hay que crear un nuevo arreglo más grande (doble) e
+  insertar en él, el contenido del arreglo antiguo.
+- Como la función hash calcula la posición de los
+  elementos en función del tamaño de arreglo, estos no
+  quedarán en la misma posición del arreglo original.
+- Hay que copiar los ítems uno a uno, utilizando el
+  método insert : rehashing (proceso lento).
+
+*** Semana 12: Grafos
+:PROPERTIES:
+:ID:       0d2ac797-3d6b-4975-bde6-742a01055706
+:END:
+
+* Videos de las clases
+- [[file:~/Downloads/2021-2/complejidad/videos-clases]]
+** 21-04-2021
+:PROPERTIES:
+:ID:       2b552206-d622-4ea9-b3f0-264b8eb2e65f
+:END:
+*** Arreglos
+- Arreglos y matrices
+- Un arreglo es una estructura de datos sencilla que permite
+  entender otras estructuras más complejas.
+
+*** Tiempo de operaciones en un arreglo
+| Operación   | Sin Duplicados | Con Duplicados     |
+|-------------+----------------+--------------------|
+| Búsqueda    | n/2 C          | n C                |
+| Inserción   | 0 C            | 0 C                |
+| Eliminación | n/2 C y n/2 M  | n C y más de n/2 M |
+- C:comparaciones
+- M:movimientos
+
+*** Ordenamientos simples y su eficiencia
+
+|      <c>       |      <c>      |     <c>      |     <c>      |
+|      Tipo      | Comparaciones | Intercambios |    Big O     |
+|----------------+---------------+--------------+--------------|
+|  Bubble sort   |  \(N^{2}/2\)  | \(N^{2}/4\)  | \(O(N^{2})\) |
+| Selection sort |  \(N^{2}/2\)  |    \(N\)     | \(O(N^{2})\) |
+| Insertion sort |  \(N^{2}/4\)  | \(N^{2}/4\)  | \(O(N^{2})\) |
+
+** 28-04-2021
+- quick sort y baile húngaro
+- https://visualgo.net/en/sorting
+** 12-05-2021
+** 16-06-2021
+* Ayudantías :assistantship:
+** inactive-time-stamp clase x
+# - Then =org-clone-subtree-with-time-shift= and repeat
+- =[ link to <subject-name.org> class entry ]=
+- =org-timer-start=
+
+
+< your_notes >
+
+* Resúmenes para evaluaciones
+- link-to-resumen-eval1.org
+- link-to-resumen-eval2.org
+- link-to-resumen-eval3.org
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:

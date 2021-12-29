@@ -1,0 +1,304 @@
+#+INCLUDE: "~/org/uni/org/config.org"
+#+FILETAGS: :university:
+#+TITLE: Gestión Comercial
+#+SUBTITLE: 2021-2
+
+* TOC :TOC_2:noexport:
+- [[#programa][Programa]]
+  - [[#horario][Horario]]
+- [[#evaluación][Evaluación]]
+  - [[#relacionado][Relacionado]]
+  - [[#teórico-50][Teórico 50%]]
+  - [[#práctico-50][Práctico 50%]]
+- [[#links][Links]]
+- [[#resources][Resources]]
+- [[#contacto][Contacto]]
+- [[#apuntes][Apuntes]]
+  - [[#relacionado-1][Relacionado]]
+  - [[#clase][Clase]]
+  - [[#ayudantía-etc][Ayudantía etc]]
+
+* Programa
+- link to subject's sillabus.
+  + must be located in ~/myDrive/uni/202x-x/SUBJECT/programa.pdf
+** Horario
+- Martes y Jueves de 1100 a 1300.
+* Evaluación :evaluation:
+** Relacionado
+- Diciembre se dedica entero a la generación del Plan de Marketing.
+- La clase anterior a las pruebas es de repaso.
+** Teórico 50%
+1. 40% (1-5)
+2. 60% (6-11)
+
+*** DONE prueba1
+CLOSED: [2021-09-30 Thu 11:06] SCHEDULED: <2021-09-23 Thu 11:00-12:00>
+:PROPERTIES:
+:ID:       82c977fc-b67c-4159-a111-3e8a4f2db677
+:END:
+:LOGBOOK:
+- State "DONE"       from              [2021-09-30 Thu 11:06] \\
+  Error en el primer intento, se hizo un segundo intento.
+:END:
+- [[id:9817de78-bbeb-42f4-9296-99f0d656cad3][apuntes.org]]
+*** DONE prueba2
+SCHEDULED: <2021-11-25 Thu 08:59>
+** Práctico 50%
+*** Relacionado
+- Controles con selección de preguntas de un banco de 200 preguntas.
+- Casos prácticos 30%
+- Trabajos de investigación 20%
+- Plan de Marketing 50%
+
+
+- [2021-08-31 Tue] Pregunté 2 veces sobre la ponderación de los talleres,
+  pero no entendí la explicación. Lo que me quedó claro es que hay talleres
+  y controles, además de los casos prácticos, trabajos de investigación
+  y el trabajo final (Plan de Marketing).
+*** DONE control de lectura 1
+CLOSED: [2021-08-31 Tue 11:04] SCHEDULED: <2021-08-31 Tue 11:00-11:30>
+:LOGBOOK:
+- State "DONE"       from              [2021-08-31 Tue 11:04]
+:END:
+- Páginas 5-9.
+- Par de alternativas de V y F.
+- Habilitado en ese periodo pero dura 5 minutos máximo.
+**** apuntes
+:PROPERTIES:
+:ID:       c0705cb6-43b1-4702-9465-d346388e83a6
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-08-30 Mon 20:48]--[2021-08-30 Mon 22:06] =>  1:18
+CLOCK: [2021-08-30 Mon 17:14]--[2021-08-30 Mon 17:34] =>  0:20
+:END:
+- [[id:75b23a7f-c3fa-45f7-94ae-3bb4ac72300f][apuntes.org]]
+*** DONE control de lectura 2
+SCHEDULED: <2021-09-16 Thu 11:00-11:30>
+:PROPERTIES:
+:ID:       40f25fdc-e357-4197-87ee-c2431f5ef812
+:END:
+- [[id:cb99fd60-1e07-4f45-a37d-8017b70d838e][apuntes.org]]
+- paginas 55-58,62-67.
+- Par de alternativas de V y F.
+- Habilitado en ese periodo pero dura 5 minutos máximo.
+*** DONE análisis de caso en clases
+CLOSED: [2021-10-15 Fri 19:20] SCHEDULED: <2021-10-14 Thu 08:59>
+:LOGBOOK:
+- State "DONE"       from              [2021-10-15 Fri 19:20]
+:END:
+*** DONE trabajo grupal
+SCHEDULED: <2021-11-18 Thu 08:59>
+**** DONE clase de consultas
+CLOSED: [2021-12-09 Thu 12:49] SCHEDULED: <2021-12-09 Thu 10:50>
+:LOGBOOK:
+- State "DONE"       from              [2021-12-09 Thu 12:49]
+:END:
+**** DONE clase de consultas
+CLOSED: [2021-12-17 Fri 06:07] SCHEDULED: <2021-12-16 Thu 10:50>
+:LOGBOOK:
+- State "DONE"       from              [2021-12-17 Fri 06:07]
+:END:
+*** DONE exposición - video Plan de Marketing
+CLOSED: [2021-12-21 Tue 17:05] SCHEDULED: <2021-12-21 Tue 08:59>
+:LOGBOOK:
+- State "DONE"       from              [2021-12-21 Tue 17:05]
+:END:
+* Links
+:PROPERTIES:
+:ID:       facfb3e9-38e8-430d-80a8-b85f73dbfdf2
+:END:
+- Gestión Comercial: (Mar, Jue) (1100-1300)
+  + https://reuna.zoom.us/j/83016198450?pwd=cmRVR0Jnem9jTjNjNnR5T09hQzBLdz09
+  + https://chat.whatsapp.com/EUgd5mXmn7N9eGquZ8CYgb
+* Resources
+- external links to books, videos etc.
+
+
+- Libro: Fundamentos de Marketing, Mario Mesa Holguín
+- Links en campus virtual
+- YouTube: Gestión Comercial
+* Contacto
+|----------+----------------------------|
+| Nombre   | Liliana Oberg              |
+| Email    | liliana.oberg@ufrontera.cl |
+| Teléfono | +569                       |
+|----------+----------------------------|
+
+- Comunicarse con compañeros
+  + Ignacio Bustamante
+  + Magdalena Constanza Araneda Valenzuela
+* Apuntes
+** Relacionado
+- Apuntes, ppt's subidas en campus virtual.
+- Clases de Martes y Jueves de 1100 a 1300
+- Clases grabadas y subidas a youtube.
+** Clase :lecture:
+*** DONE Clase 1
+SCHEDULED: <2021-08-24 Tue 11:00-13:00>
+:PROPERTIES:
+:ID:       b79861b7-25b1-44d0-9e01-7d35f8a653b8
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-08-24 Tue 11:01]--[2021-08-24 Tue 17:40] =>  6:39
+:END:
+- [[id:ae972f24-3ceb-4587-b25b-cb0f4a386f77][apuntes.org]]
+
+
+- Este próximo jueves se fijan las fechas de las pruebas.
+
+*** DONE Clase 2
+SCHEDULED: <2021-08-26 Thu 11:00-13:00>
+:PROPERTIES:
+:ID:       0fc6aa29-c611-4f80-b9fc-36c26947fa63
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-08-26 Thu 11:08]--[2021-08-26 Thu 12:37] =>  1:29
+:END:
+- [[id:166688ad-4dfa-4d0e-a23c-543365a29ede][apuntes.org]]
+*** DONE Clase 3
+SCHEDULED: <2021-08-31 Tue 11:00-13:00>
+:PROPERTIES:
+:ID:       f90c48d8-440f-4835-b1ff-a653c5e59e9b
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-08-31 Tue 11:45]--[2021-08-31 Tue 12:39] =>  0:54
+CLOCK: [2021-08-31 Tue 11:34]--[2021-08-31 Tue 11:45] =>  0:11
+:END:
++ [[id:91ef0bf3-ba53-44bf-80cc-a2ccbfa453e4][apuntes.org]]
+
+*** DONE Clase 4
+SCHEDULED: <2021-09-02 Thu 11:00-13:00>
+:PROPERTIES:
+:ID:       08c01011-9ae7-4d86-b42c-2e01391f412a
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-09-02 Thu 11:19]--[2021-09-02 Thu 13:07] =>  1:48
+:END:
+- [[id:fa2e7c43-dede-43d3-b01b-cb4a1bec0851][apuntes.org]]
+*** CANCELED Clase 5
+CLOSED: [2021-09-07 Tue 09:47] SCHEDULED: <2021-09-07 Tue 11:00-13:00>
+:LOGBOOK:
+- State "CANCELED"   from              [2021-09-07 Tue 09:47] \\
+  la profe no puede. re agendada.
+:END:
+*** CANCELED Clase 5
+SCHEDULED: <2021-09-09 Thu 11:00-13:00>
+:PROPERTIES:
+:ID:       432d7139-cb6a-4f76-a90c-05aaa45be39b
+:END:
+- [[id:6ae69d54-cd44-4543-8a94-84bfb2871d78][apuntes.org]]
+*** DONE Clase 6
+SCHEDULED: <2021-09-14 Tue 11:00-13:00>
+:PROPERTIES:
+:ID:       d7307384-2be4-4b02-9b01-730e31e5363f
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-09-14 Tue 11:04]--[2021-09-14 Tue 12:45] =>  1:41
+:END:
+- [[id:98499933-330c-4243-948c-e7aec668598c][apuntes.org]]
+- Esta es la última antes de la prueba.
+- Este próximo jueves el control de lectura 2 tendrá la misma extensión
+  pero tendrá más período de respuesta.
+- [2021-09-14 Tue 12:00] Me gané 10 décimas para un control de lectura,
+  ya sea el 1ro o 2do.
+  + Por actividad en clases
+*** CANCELED Clase 7
+SCHEDULED: <2021-09-16 Thu 11:00-13:00>
+*** CANCELED Clase 8
+SCHEDULED: <2021-09-21 Tue 11:00-13:00>
+:PROPERTIES:
+:ID:       027d111e-a96c-437a-a597-18cfac488fcd
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-09-21 Tue 11:08]--[2021-09-21 Tue 12:32] =>  1:24
+:END:
+- [[id:5da1310f-8929-4767-af88-6a98c2518fd6][apuntes.org]]
+*** CANCELED Clase 9
+SCHEDULED: <2021-09-23 Thu 11:00-13:00>
+*** DONE Clase 10
+SCHEDULED: <2021-09-28 Tue 11:00-13:00>
+:PROPERTIES:
+:ID:       d1f77a9a-1112-425f-87a4-7619d5f4d0d6
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-09-28 Tue 11:24]--[2021-09-28 Tue 12:11] =>  0:47
+:END:
+- [[id:74f71be7-bb7c-4fd9-98e1-34e467d4853d][apuntes.org]]
+*** DONE Clase 11
+SCHEDULED: <2021-09-30 Thu 11:00-13:00>
+:PROPERTIES:
+:ID:       a53da768-7849-4166-b3c2-4adf9089f359
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-09-30 Thu 11:07]--[2021-09-30 Thu 12:47] =>  1:40
+:END:
+- [[id:d2ef1fa1-5bf6-4172-9e51-db3263c50cb5][apuntes.org]]
+*** DONE Clase 12
+CLOSED: [2021-10-05 Tue 16:38] SCHEDULED: <2021-10-05 Tue 11:00-13:00>
+:PROPERTIES:
+:ID:       c0cc9ccb-aa63-4cb8-be91-f6a446081a0b
+:END:
+:LOGBOOK:
+- State "DONE"       from              [2021-10-05 Tue 16:38]
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-10-05 Tue 11:15]--[2021-10-05 Tue 12:21] =>  1:06
+CLOCK: [2021-10-05 Tue 11:06]--[2021-10-05 Tue 11:13] =>  0:07
+:END:
+- [[id:6ea03e6d-cfc7-44ae-a148-6eff896c21ba][apuntes.org]]
+*** CANCELED Clase 14
+SCHEDULED: <2021-10-12 Tue 11:00-13:00>
+*** CANCELED Clase 17
+SCHEDULED: <2021-10-21 Thu 11:00-13:00>
+*** DONE Clase 18
+SCHEDULED: <2021-10-26 Tue 11:00-13:00>
+:PROPERTIES:
+:ID:       2a9539e1-1beb-4d16-9379-ca3a56d7e4bd
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-10-26 Tue 11:29]--[2021-10-26 Tue 12:16] =>  0:47
+:END:
+- [[id:8dc480fc-de10-4214-bfc6-13093ac9dfdd][apuntes.org]]
+*** CANCELED Clase 19
+CLOSED: [2021-11-02 Tue 16:52] SCHEDULED: <2021-10-28 Thu 11:00-13:00>
+:LOGBOOK:
+- State "CANCELED"   from              [2021-11-02 Tue 16:52] \\
+  Receso
+:END:
+*** CANCELED Clase 20
+CLOSED: [2021-11-02 Tue 16:52] SCHEDULED: <2021-11-02 Tue 11:00-13:00>
+:LOGBOOK:
+- State "CANCELED"   from              [2021-11-02 Tue 16:52] \\
+  No clases esta semana
+:END:
+*** CANCELED Clase 21
+SCHEDULED: <2021-11-04 Thu 11:00-13:00>
+*** CANCELED Clase 22
+SCHEDULED: <2021-11-09 Tue 11:00-13:00>
+*** CANCELED Clase 23
+SCHEDULED: <2021-11-11 Thu 11:00-13:00>
+*** CANCELED Clase 24
+SCHEDULED: <2021-11-16 Tue 11:00-13:00>
+*** CANCELED Clase 25
+SCHEDULED: <2021-11-18 Thu 11:00-13:00>
+*** CANCELED Clase 26
+SCHEDULED: <2021-11-23 Tue 11:00-13:00>
+*** CANCELED Clase 27
+SCHEDULED: <2021-11-25 Thu 11:00-13:00>
+*** CANCELED Clase 28
+SCHEDULED: <2021-11-30 Tue 11:00-13:00>
+*** CANCELED Clase 29
+SCHEDULED: <2021-12-02 Thu 11:00-13:00>
+*** CANCELED Clase 30
+SCHEDULED: <2021-12-07 Tue 11:00-13:00>
+*** CANCELED Clase 31
+SCHEDULED: <2021-12-09 Thu 11:00-13:00>
+*** CANCELED Clase 32
+SCHEDULED: <2021-12-14 Tue 11:00-13:00>
+*** CANCELED Clase 33
+SCHEDULED: <2021-12-16 Thu 11:00-13:00>
+** Ayudantía etc
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:

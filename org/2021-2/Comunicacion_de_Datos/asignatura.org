@@ -1,0 +1,168 @@
+#+INCLUDE: "~/org/uni/org/config.org"
+#+FILETAGS: :university:
+#+SUBTITLE: IIS447
+
+* TOC :TOC_2:noexport:
+- [[#programa][Programa]]
+- [[#horario][Horario]]
+- [[#calendario][Calendario]]
+- [[#evaluación][Evaluación]]
+  - [[#relacionado][Relacionado]]
+  - [[#teórico-35][Teórico 35%]]
+  - [[#práctico-65][Práctico 65%]]
+- [[#links][Links]]
+- [[#recursos][Recursos]]
+- [[#contacto][Contacto]]
+- [[#apuntes][Apuntes]]
+  - [[#relacionado-1][Relacionado]]
+  - [[#clases][Clases]]
+  - [[#ayudantías][Ayudantías]]
+- [[#preguntas-primera-clase][Preguntas primera clase]]
+
+* Programa
+- link to subject's sillabus.
+  + must be located in ~/myDrive/uni/202x-x/SUBJECT/programa.pdf
+* Horario
+- Solo clases los martes, no los jueves.
+* Calendario
+|  <c>  |       <c>        |  <c>   | <l>                                     |  <c>   |  <c>   |   <c>    |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+| Clase |      Fecha       | Semana | Tópico                                  | Prueba | Taller | Visitado |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+|   1   | [2021-04-08 Thu] |   1    | Introducción                            |   1    |   x    |    *     |
+|   2   | [2021-04-13 Tue] |   2    | Introduccion                            |   1    |   x    |    *     |
+|   3   | [2021-04-15 Thu] |   3    | Introduccion                            |   1    |   1    |    *     |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+|   4   | [2021-04-20 Tue] |   3    | Cargas Internas                         |   1    |   x    |    *     |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+|   5   | [2021-04-22 Thu] |   4    | Esfuerzo                                |   1    |   x    |    *     |
+|   6   | [2021-04-27 Tue] |   4    | Esfuerzo                                |   1    |   x    |    *     |
+|   7   | [2021-04-29 Thu] |   5    | Esfuerzo                                |   1    |   x    |    *     |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+|   8   | [2021-05-04 Tue] |   5    | Deformación                             |   2    |   x    |    *     |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+|   9   | [2021-05-06 Thu] |   6    | Propiedades Mecánicas de los Materiales |   2    |   2    |    *     |
+|  10   | [2021-05-11 Tue] |   7    | Propiedades Mecánicas de los Materiales |   2    |   2    |    *     |
+|  11   | [2021-05-13 Thu] |   7    | Propiedades Mecánicas de los Materiales |   2    |   2    |    *     |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+|  12   | [2021-05-18 Tue] |   8    | Carga Axial                             |   2    |   x    |    *     |
+|  13   | [2021-05-20 Thu] |   8    | Carga Axial                             |   2    |   x    |    *     |
+|  14   | [2021-06-01 Tue] |   9    | Carga Axial                             |   2    |   x    |    *     |
+|  15   | [2021-06-03 Thu] |   9    | Carga Axial                             |   2    |   x    |    *     |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+|  16   | [2021-06-08 Tue] |   10   | Torsión                                 |   3    |        |    *     |
+|  17   | [2021-06-10 Thu] |   10   | Torsión                                 |   3    |        |    *     |
+|-------+------------------+--------+-----------------------------------------+--------+--------+----------|
+* Evaluación :evaluation:
+** Relacionado
+En campus las fechas son distintas de las del google drive.
+Guiarse por las de campus.
+
+Las ultimas dos:
+- 2021-11-23 (talleres)
+- 2021-11-30 (proyecto final)
+
+
+explican todo relacionado al taller y proyecto.
+
+** Teórico 35%
+*** DONE evaluación1
+SCHEDULED: <2021-10-17 Sun 23:59>
+- hasta software de red (incluido)
+*** DONE evaluación2
+SCHEDULED: <2021-10-29 Fri 23:59>
+** Práctico 65%
+*** Tareas 30%
+**** DONE tarea1
+SCHEDULED: <2021-11-05 Fri 23:59>
+**** CANCELED tarea2
+CLOSED: [2021-12-20 Mon 13:09] SCHEDULED: <2021-11-15 Mon 23:59>
+:LOGBOOK:
+- State "CANCELED"   from              [2021-12-20 Mon 13:09]
+:END:
+**** CANCELED tarea3
+CLOSED: [2021-12-20 Mon 13:09] SCHEDULED: <2021-11-19 Fri 23:59>
+:LOGBOOK:
+- State "CANCELED"   from              [2021-12-20 Mon 13:09]
+:END:
+**** CANCELED tarea4
+CLOSED: [2021-12-20 Mon 13:09] SCHEDULED: <2021-11-26 Fri 23:59>
+:LOGBOOK:
+- State "CANCELED"   from              [2021-12-20 Mon 13:09]
+:END:
+*** CANCELED Proyecto final 70%
+CLOSED: [2021-12-20 Mon 13:09] SCHEDULED: <2021-12-13 Mon 23:59>
+:LOGBOOK:
+- State "CANCELED"   from              [2021-12-20 Mon 13:09]
+:END:
+* Links
+- Comunicación de Datos
+  + Zoom
+    - https://reuna.zoom.us/j/86279707156?pwd=Z0owSzlOSXo5Z3p5UDlCSUpXd2hlZz09
+  + Fechas
+    - https://docs.google.com/spreadsheets/d/1RWINt5beQG2vi6sdKGa1KboZlfum9oUAs87ymoh5mC0/edit#gid=0
+* Recursos
+- links a libros, videos, etc.
+
+
+- [[file:~/myDrive/uni/2021-2/Comunicacion-de-datos/Lafore_-_Data_Structures_Algorithms_in_Java.pdf]]
+* Contacto
+|----------+------|
+| Nombre   |      |
+| E-mail   |      |
+| Teléfono | +569 |
+|----------+------|
+* Apuntes
+** Relacionado
+** Clases :lecture:
+*** DONE Clase 1
+CLOSED: [2021-09-07 Tue 14:19] SCHEDULED: <2021-09-07 Tue 08:30-10:40>
+:PROPERTIES:
+:ID:       a472d354-b97e-4ee2-a85e-91a05da5fad0
+:END:
+:LOGBOOK:
+- State "DONE"       from              [2021-09-07 Tue 14:19]
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-09-07 Tue 09:17]--[2021-09-07 Tue 09:42] =>  0:25
+:END:
+- [[id:5c28d175-d49d-430c-87f9-b885db423412][apuntes.org]]
+
+
+- Empezamos a las 09:00
+*** Clase 2
+*** Clase 3
+*** Clase 4
+*** Clase 5
+*** Clase 6
+*** Clase 7
+*** Clase 8
+*** Clase 9
+*** Clase 10
+*** Clase 11
+*** Clase 12
+*** Clase 13
+*** Clase 14
+*** Clase 15
+** Ayudantías :assistantship:
+* Preguntas primera clase
+- Pruebas
+  + [X] sincrónicas o asincrónicas?
+  + [X] lápiz y papel o alguna otra forma?
+  + [X] formulario o memoria?
+  + [ ] fechas de las pruebas?
+- [-] Clases
+  + [X] sincrónicas o asincrónicas?
+  + [X] grabaciones de las clases?
+  + [ ] principal libro de apoyo?
+  + [ ] horario de las clases?
+- [ ] Email y horario de consultas del profesor.
+- Ayudantías
+  + [ ] Quién?
+    - Nombre
+    - Mail
+  + [ ] Horario?
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:

@@ -1,0 +1,317 @@
+#+INCLUDE: "~/org/uni/org/config.org"
+#+FILETAGS: :university:
+
+* TOC :TOC_2:noexport:
+- [[#programa][Programa]]
+  - [[#horario][Horario]]
+- [[#calendario][Calendario]]
+- [[#evaluación][Evaluación]]
+  - [[#relacionado][Relacionado]]
+  - [[#teórico-ab][Teórico ab%]]
+  - [[#práctico-cd][Práctico cd%]]
+- [[#links][Links]]
+- [[#resources][Resources]]
+- [[#contacto][Contacto]]
+- [[#apuntes][Apuntes]]
+  - [[#relacionado-1][Relacionado]]
+  - [[#clases][Clases]]
+  - [[#ayudantías][Ayudantías]]
+
+* Programa
+- link to subject's sillabus.
+  + must be located in ~/myDrive/uni/202x-x/SUBJECT/programa.pdf
+
+
+- file:~/myDrive/uni/2021-2/Probabilidad_y_Estadistica/programa.pdf
+** Horario
+* Calendario
+|  <c>  |       <c>        |  <c>   | <l>             |   <c>    |
+|-------+------------------+--------+-----------------+----------|
+| Clase |      Fecha       | Semana | Tópico          | Visitado |
+|-------+------------------+--------+-----------------+----------|
+|   1   | [2021-08-23 Mon] |   1    | Introducción    |    *     |
+|   2   | [2021-08-25 Wed] |   1    | Unidad 1        |    *     |
+|-------+------------------+--------+-----------------+----------|
+|   3   | [2021-04-15 Thu] |   3    | Introduccion    |    -     |
+|   4   | [2021-04-20 Tue] |   3    | Cargas Internas |    -     |
+|-------+------------------+--------+-----------------+----------|
+|   5   | [2021-04-22 Thu] |   4    | Esfuerzo        |    -     |
+|   6   | [2021-04-27 Tue] |   4    | Esfuerzo        |    -     |
+|   7   | [2021-04-29 Thu] |   5    | Esfuerzo        |    -     |
+|-------+------------------+--------+-----------------+----------|
+|   8   | [2021-05-04 Tue] |   5    | Deformación     |    -     |
+|-------+------------------+--------+-----------------+----------|
+|   9   | [2021-05-06 Thu] |   6    | Propiedades     |    -     |
+|  10   | [2021-05-11 Tue] |   7    | Propiedades     |    -     |
+|  11   | [2021-05-13 Thu] |   7    | Propiedades     |    -     |
+|-------+------------------+--------+-----------------+----------|
+|  12   | [2021-05-18 Tue] |   8    | Carga Axial     |    *     |
+|  13   | [2021-05-20 Thu] |   8    | Carga Axial     |    *     |
+|  14   | [2021-06-01 Tue] |   9    | Carga Axial     |    *     |
+|  15   | [2021-06-03 Thu] |   9    | Carga Axial     |    *     |
+|-------+------------------+--------+-----------------+----------|
+|  16   | [2021-06-08 Tue] |   10   | Torsión         |    *     |
+|  17   | [2021-06-10 Thu] |   10   | Torsión         |    *     |
+|-------+------------------+--------+-----------------+----------|
+* Evaluación :evaluation:
+** Relacionado
+- Se puede tener formulario en las pruebas.
+** Teórico ab%
+*** DONE prueba1
+SCHEDULED: <2021-10-06 Wed 10:50-13:00>
+- hasta Teorema de Bayes.
+*** DONE prueba2
+CLOSED: [2021-11-15 Mon 16:01] SCHEDULED: <2021-11-15 Mon 10:50-13:00>
+:LOGBOOK:
+- State "DONE"       from              [2021-11-15 Mon 16:01]
+:END:
+*** DONE prueba3
+SCHEDULED: <2021-12-15 Wed 10:50-13:00>
+*** CANCELED recuperativa
+CLOSED: [2021-12-16 Thu 09:42] SCHEDULED: <2021-12-20 Mon 10:50-13:00>
+:LOGBOOK:
+- State "CANCELED"   from              [2021-12-16 Thu 09:42]
+:END:
+** Práctico cd%
+- no hay talleres.
+* Links
+:PROPERTIES:
+:ID:       ab3961fa-b80a-4c29-9b92-923815509813
+:END:
+- Probabilidades y Estadística
+  - Zoom
+    + Lunes 1050-1300
+      - https://reuna.zoom.us/j/82145777430?pwd=d2diYkNFdkxDYWdZM0N2TURMS0M2dz09
+    + Miérc 1100-1159
+      - https://reuna.zoom.us/j/87660962476?pwd=aW5QaENnVUsvbW1WZExIeXlBSmtlZz09
+    + Miérc (ayudantía) 1200-1300
+      - https://reuna.zoom.us/j/87376060146?pwd=L3hkV3ROOVVUMU1ORVJycWJUYWx2dz09
+    + Consultas Mierc 0830-0930
+      - https://reuna.zoom.us/j/82621233575?pwd=cjFSUDNLRzg0R1E1c2hzN2NEa1JSQT09
+  - Ayudantías grabadas
+    - https://drive.google.com/drive/folders/1CIgcatYFrjynyeuC7elnswJIa4HlnS5b
+* Resources
+- external links to books, videos etc.
+
+
+- Libro: William Mendenhall
+* Contacto
+- Profesor
+|----------+---------------------------|
+| Nombre   | Jorge Cortés              |
+| Email    | jorge.cortes@ufrontera.cl |
+| Teléfono | +569                      |
+|----------+---------------------------|
+- Ayudante
+|----------+------------------------|
+| Nombre   | Héctor Eduardo Garcés  |
+| Email    | h.garces01@ufromail.cl |
+| Teléfono | +569                   |
+|----------+------------------------|
+* Apuntes
+** Relacionado
+** Clases :lecture:
+*** DONE Clase 1
+SCHEDULED: <2021-08-23 Mon 10:50-13:00>
+:PROPERTIES:
+:ID:       27f93fa9-787c-4a07-a888-2fcae46b6ac4
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-08-23 Mon 11:25]--[2021-08-23 Mon 12:15] =>  0:50
+CLOCK: [2021-08-23 Mon 11:02]--[2021-08-23 Mon 11:25] =>  0:23
+:END:
+- [[id:53799d8b-2732-45eb-918b-5a10dfa47c07][apuntes.org]]
+
+
+- Este semestre no hay talleres, solo pruebas.
+
+
+- 0:16:14 :: [2021-08-23 Mon 11:19] Evaluación
+  + Pruebas los miércoles
+**** DONE [#A] campus virtual ?
+- Miércoles se actualiza
+- Ahí se subirán las grabaciones, etc.
+*** DONE Clase 2
+SCHEDULED: <2021-08-25 Wed 10:50-13:00>
+:PROPERTIES:
+:ID:       178e2f5f-536d-4104-a9a8-48e19b77ce24
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-08-25 Wed 11:15]--[2021-08-25 Wed 12:34] =>  1:19
+:END:
+- [2021-08-25 Wed 11:15]
+- [[id:80b15810-ddf9-442e-b97a-c7bbecb18a80][apuntes.org]]
+*** DONE Clase 3
+SCHEDULED: <2021-08-30 Mon 10:50-13:00>
+:PROPERTIES:
+:ID:       0898d928-d8d3-413d-93ad-b9372e3062f9
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-08-30 Mon 11:11]--[2021-08-30 Mon 12:47] =>  1:36
+:END:
+- [[id:d58d2509-5b8a-43af-bb12-f0f5ee45560d][apuntes.org]]
+*** DONE Clase 4
+SCHEDULED: <2021-09-01 Wed 10:50-13:00>
+:PROPERTIES:
+:ID:       6509ef84-3fc9-4d4f-8a0a-ab2affb5e605
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-09-01 Wed 11:17]--[2021-09-01 Wed 18:04] =>  6:47
+:END:
+- [[id:4eeca230-1f44-4139-ad1a-b3f0b621474f][apuntes.org]]
+*** DONE Clase 5
+CLOSED: [2021-09-06 Mon 22:18] SCHEDULED: <2021-09-06 Mon 10:50-13:00>
+:PROPERTIES:
+:ID:       635e131c-5806-40a6-8a89-77ae8df52ba6
+:END:
+:LOGBOOK:
+- State "DONE"       from              [2021-09-06 Mon 22:18]
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-09-06 Mon 11:13]--[2021-09-06 Mon 13:16] =>  2:03
+:END:
+- [[id:b6984dd2-b9a3-486b-9f2a-da05a18b09ff][apuntes.org]]
+*** CANCELED Clase 6
+SCHEDULED: <2021-09-08 Wed 10:50-13:00>
+*** DONE Clase 6
+SCHEDULED: <2021-09-13 Mon 10:50-13:00>
+:PROPERTIES:
+:ID:       932a7e98-ecef-4275-86de-a37d7fbbccf6
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-09-13 Mon 11:13]--[2021-09-13 Mon 12:30] =>  1:17
+:END:
+- [[id:fff8ac30-a167-47b5-8354-868cacec6d79][apuntes.org]]
+*** DONE Clase 7
+SCHEDULED: <2021-09-15 Wed 10:50-13:00>
+:PROPERTIES:
+:ID:       122cd42d-775e-41c9-b748-2becef2a53a1
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-09-15 Wed 11:07]--[2021-09-15 Wed 12:09] =>  1:02
+:END:
+- [[id:3c10866b-10dd-47d7-80b1-5d4e1a787e0f][apuntes.org]]
+*** DONE Clase 8
+CLOSED: [2021-09-20 Mon 12:08] SCHEDULED: <2021-09-20 Mon 10:50-13:00>
+:PROPERTIES:
+:ID:       c9265c73-e0a0-4cae-9a52-9637b1a46dc1
+:END:
+:LOGBOOK:
+- State "DONE"       from              [2021-09-20 Mon 12:08]
+:END:
+- [[id:974e88ed-fac9-428a-b0d4-ee74972a9ca3][apuntes.org]]
+*** DONE Clase 9
+SCHEDULED: <2021-09-22 Wed 10:50-13:00>
+:PROPERTIES:
+:ID:       3588f1e0-ac99-440d-8334-19f78c6f482b
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-09-22 Wed 11:37]--[2021-09-22 Wed 11:53] =>  0:16
+:END:
+- [[id:de7d162c-3e8e-4e93-8e93-7eeb9872353f][apuntes.org]]
+- Hoy la clase termina a las 11:59 pues empiezan las ayundantias los miércoles
+  a las 12:00, siendo la primera hoy.
+*** CANCELED Clase 10
+SCHEDULED: <2021-09-27 Mon 10:50-13:00>
+*** DONE Clase 11
+SCHEDULED: <2021-09-29 Wed 10:50-13:00>
+*** DONE Clase 12
+SCHEDULED: <2021-10-04 Mon 10:50-13:00>
+*** CANCELED Clase 13
+CLOSED: [2021-10-07 Thu 15:51] SCHEDULED: <2021-10-06 Wed 10:50-13:00>
+:LOGBOOK:
+- State "CANCELED"   from              [2021-10-07 Thu 15:51] \\
+  Aqui fue la prueba.
+:END:
+*** CANCELED Clase 14
+SCHEDULED: <2021-10-11 Mon 10:50-13:00>
+*** CANCELED Clase 15
+SCHEDULED: <2021-10-13 Wed 10:50-13:00>
+*** CANCELED Clase 16
+CLOSED: [2021-10-19 Tue 10:24] SCHEDULED: <2021-10-18 Mon 10:50-13:00>
+:LOGBOOK:
+- State "CANCELED"   from              [2021-10-19 Tue 10:24] \\
+  Recess
+:END:
+*** CANCELED Clase 17
+SCHEDULED: <2021-10-20 Wed 10:50-13:00>
+*** CANCELED Clase 18
+SCHEDULED: <2021-10-25 Mon 10:50-13:00>
+*** CANCELED Clase 19
+SCHEDULED: <2021-10-27 Wed 10:50-13:00>
+*** CANCELED Clase 20
+SCHEDULED: <2021-11-01 Mon 10:50-13:00>
+*** CANCELED Clase 21
+SCHEDULED: <2021-11-03 Wed 10:50-13:00>
+*** CANCELED Clase 22
+SCHEDULED: <2021-11-08 Mon 10:50-13:00>
+*** CANCELED Clase 23
+SCHEDULED: <2021-11-10 Wed 10:50-13:00>
+*** CANCELED Clase 24
+SCHEDULED: <2021-11-15 Mon 10:50-13:00>
+*** CANCELED Clase 25
+SCHEDULED: <2021-11-17 Wed 10:50-13:00>
+*** CANCELED Clase 26
+SCHEDULED: <2021-11-22 Mon 10:50-13:00>
+*** CANCELED Clase 27
+SCHEDULED: <2021-11-24 Wed 10:50-13:00>
+*** CANCELED Clase 28
+SCHEDULED: <2021-11-29 Mon 10:50-13:00>
+*** CANCELED Clase 29
+SCHEDULED: <2021-12-01 Wed 10:50-13:00>
+*** CANCELED Clase 30
+SCHEDULED: <2021-12-06 Mon 10:50-13:00>
+*** CANCELED Clase 31
+SCHEDULED: <2021-12-08 Wed 10:50-13:00>
+*** CANCELED Clase 32
+SCHEDULED: <2021-12-13 Mon 10:50-13:00>
+*** CANCELED Clase 33
+SCHEDULED: <2021-12-15 Wed 10:50-13:00>
+** Ayudantías :assistantship:
+*** DONE Ayudantía 1
+SCHEDULED: <2021-09-22 Wed 12:00-13:00>
+:PROPERTIES:
+:ID:       0deb33d9-39a8-42a1-b0d9-66d6567dcadf
+:END:
+:CLOCKBOOK:
+CLOCK: [2021-09-22 Wed 12:09]--[2021-09-22 Wed 12:59] =>  0:50
+:END:
+- [[id:08627b8a-ce5d-418b-9928-7d1dc1f7ce0c][apuntes.org]]
+- Primera ayudantía.
+*** DONE Ayudantía 2
+SCHEDULED: <2021-09-29 Wed 12:00-13:00>
+*** CANCELED Ayudantía 2
+CLOSED: [2021-10-07 Thu 15:51] SCHEDULED: <2021-10-06 Wed 12:00-13:00>
+:LOGBOOK:
+- State "CANCELED"   from              [2021-10-07 Thu 15:51] \\
+  Aqui fue la prueba.
+:END:
+*** CANCELED Ayudantía 4
+CLOSED: [2021-11-11 Thu 17:32] SCHEDULED: <2021-10-13 Wed 12:00-13:00>
+:LOGBOOK:
+- State "CANCELED"   from              [2021-11-11 Thu 17:32]
+:END:
+*** CANCELED Ayudantía 5
+SCHEDULED: <2021-10-20 Wed 12:00-13:00>
+*** CANCELED Ayudantía 7
+SCHEDULED: <2021-10-27 Wed 12:00-13:00>
+*** CANCELED Ayudantía 8
+SCHEDULED: <2021-11-03 Wed 12:00-13:00>
+*** CANCELED Ayudantía 9
+SCHEDULED: <2021-11-10 Wed 12:00-13:00>
+*** CANCELED Ayudantía 10
+SCHEDULED: <2021-11-17 Wed 12:00-13:00>
+*** CANCELED Ayudantía 11
+SCHEDULED: <2021-11-24 Wed 12:00-13:00>
+*** CANCELED Ayudantía 12
+SCHEDULED: <2021-12-01 Wed 12:00-13:00>
+*** CANCELED Ayudantía 13
+SCHEDULED: <2021-12-08 Wed 12:00-13:00>
+*** CANCELED Ayudantía 14
+SCHEDULED: <2021-12-15 Wed 12:00-13:00>
+*** CANCELED Ayudantía 15
+SCHEDULED: <2021-12-22 Wed 12:00-13:00>
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
