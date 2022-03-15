@@ -150,9 +150,10 @@ caracterizada a continuación:
 \begin{tcolorbox}
 \begin{enumerate}
 \setcounter{enumi}{3}
-\item Aplicación: En el lugar donde hacen la comida, empiezan a
-preparar la comida de acuerdo a los requerimientos de la persona.
-Se encargan de la preparación de la comida, su presentación y
+\item Aplicación: En el lugar donde hacen la comida,
+empiezan a preparar la comida de acuerdo a los
+requerimientos de la persona. Se encargan de la
+preparación de la comida, su presentación y
 empaquetado.
 
 \setcounter{enumi}{2}

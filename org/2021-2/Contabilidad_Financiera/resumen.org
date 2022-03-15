@@ -119,7 +119,6 @@ rubros que pertenecen a distintos /elementos/ financieros.
 |            |              |                        |
 
 
-
 ** Estados Financieros: Situación y Resultados
 * U2: Análisis de Estados Financieros --- Indicadores ---
 * U3: Presupuesto de Caja o Flujo de Caja
