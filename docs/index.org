@@ -1,0 +1,5 @@
+#+TITLE: Uni
+#+DESCRIPTION: personal university notes
+#+AUTHOR: Manuel Fuica Morales
+
+#+INCLUDE: ../README.org

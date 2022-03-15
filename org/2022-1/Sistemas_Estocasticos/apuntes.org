@@ -1,0 +1,177 @@
+#+INCLUDE: "~/org/uni/org/config.org"
+#+FILETAGS: :university:
+
+
+* TOC :TOC_2:noexport:
+- [[#clases][Clases]]
+  - [[#2022-03-14-mon-clase-1][[2022-03-14 Mon] Clase 1]]
+  - [[#ayudantías][Ayudantías]]
+- [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
+
+* Clases :lecture:
+** About :noexport:
+- Copia el contenido de "Clases" en "asignatura.org"
+- Pegalo en esta sección
+- Elimina el dia, dejando las clases únicamente
+- Selecciona visualmente las clases
+  + Tambien puedes seleccionar el contenido del heading "Clases", es lo mismo.
+    - Se hace con =v i R=: "visual inside R"
+      + La R hace referencia al contenido interior de un heading
+- =org-sort= alpha
+
+
+- Asi deberias tener luego las clases ordenadas
+  por numero de clase.
+- Mientras que en "asignatura.org" estaran ordenadas
+  por el dia.
+** [2022-03-14 Mon] Clase 1
+:PROPERTIES:
+:ID:       d1ee40b4-c7d3-47aa-bac9-51fe3a7d8249
+:END:
+:CLOCKBOOK:
+CLOCK: [2022-03-14 Mon 08:53]--[2022-03-14 Mon 10:36] =>  1:43
+:END:
+- [[id:4083b2df-12b7-4337-96eb-901f2f1f892f][Intro]]
+- [[id:c5ff6955-6b0e-4eb3-9a96-2702ba3db6d9][Clase]]
+  - [[id:5c9ebb14-cb6c-4a43-8149-bf88a8c3764e][Parte 1]]
+  - [[id:1f39490e-c6fb-4156-97db-39b8e2faf98f][Parte 2]]
+*** Intro
+:PROPERTIES:
+:ID:       4083b2df-12b7-4337-96eb-901f2f1f892f
+:END:
+- [2022-03-14 Mon 08:41]
+
+
+El ramo es la continuación de Investigación de
+Operaciones.
+
+- En IO trabajamos con deterministico.
+- Aquí trabajamos con probabilístico.
+
+
+En el ramo veremos 4 contenidos.
+1) Probabilidad.
+   - Fortalecemos eso.
+
+
+- Se parte fuerte y al final de semestre estamos mas
+  holgados.
+- Parte practica la hace el profe igual de vez
+  en cuando.
+- Lunes en la tarde y martes se hace la practica.
+- El que tenga topon hablar con el profe.
+- Ivan Gonzales es el ayudante.
+
+
+Del programa en pdf (dar holgura de 1 semana para
+ajustes):
+- 05 abril test.
+- 03 mayo test.
+- Último certamen a fines de julio.
+- Ahora todo individual.
+- Pero se puede inventar alguna alternativa.
+- Certámenes definitivamente individuales.
+- Pero todo es conversable.
+
+-----
+*** Clase
+:PROPERTIES:
+:ID:       c5ff6955-6b0e-4eb3-9a96-2702ba3db6d9
+:END:
+- [2022-03-14 Mon 09:03]
+
+**** Parte 1: Conceptos básicos de probabilidad.
+:PROPERTIES:
+:ID:       5c9ebb14-cb6c-4a43-8149-bf88a8c3764e
+:END:
+- Probabilidad.
+- Evento.
+- Suceso.
+  - Un evento definido más específicamente.
+- Espacio Muestral.
+- Experimento.
+- Experimento Aleatorio.
+
+#+begin_quote
+- La ley de Newton es determinista, la industria
+  es probabilística.
+#+end_quote
+
+Estocástico = probabilístico.
+
+
+- Experimento: usar interruptor de luz.
+- Espacio Muestral: Encendido/Apagado
+- Probabilidad: 1/2 y 1/2.
+
+
+- Experimento: nacimientos en un dia.
+- Espacio Muestral: 0,1,/cdots,\infty
+- Evento: hay nacimientos.
+- Suceso: hay mas de 3 nacimientos.
+- Probabilidad: P(1) + P(2) + P(3)
+
+
+- Unión de eventos:
+  - "o"; se suman.
+- Intersección de eventos:
+  - "y"; se multiplican.
+
+
+- Evento complementario: \(1-P(x)\).
+- Diferencia de eventos:
+  - \(x \in E\setminus F \iff x \in E & \notin F\)
+  - Que parte de E /no/ esta en F.
+  - Relación con disjuntos.
+
+
+- Diagramas de Venn.
+- Teoria de conjuntos: suma de eventos.
+  \[
+    P(A \cup B)= P(A) + P(B) - P(A \cap B)
+  \]
+- Probabilidad condicional:
+  \[
+    P(A|B)=
+    \frac {P(A\cap B)} {P(B)}
+  \]
+  - Probabilidad de occurencia de A dado que ocurre B.
+
+
+- Apuntando a Bayes:
+  \[
+  P(A \cap B)=P(A)P(B|A)=P(B)P(A|B)
+  \]
+- Bayes:
+  \[
+  P(A|B)=\frac{P(A|B)P(B)}{P(A)}
+  \]
+-----
+**** Parte 2:
+:PROPERTIES:
+:ID:       1f39490e-c6fb-4156-97db-39b8e2faf98f
+:END:
+
+- [ ] Técnicas de conteo:
+  - Permutación.
+  - Combinación.
+  - Cuando usar?
+- Binomio de Combinación de Newton:
+  \[
+  \binom{N}{n}=\frac{N!}{n! \, (N-n)!}
+  \]
+  - De cuantas formas puedo combinar \(n\)
+    elementos de un universo de \(N\) elementos,
+    suponiendo que el universo no se altera
+    después de elegir un elemento.
+
+-----
+** Ayudantías :assistantship:
+* Resúmenes para evaluaciones
+- link-to-resumen-eval1.org
+- link-to-resumen-eval2.org
+- link-to-resumen-eval3.org
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
