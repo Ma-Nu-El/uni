@@ -53,6 +53,17 @@
 |-------+------------------+--------+-----------------------------------------+--------+--------+----------|
 * Evaluación :evaluation:
 ** Relacionado
+- De la primera clase.
+  - [[id:36e1b271-8b68-4238-95b0-4350908e5a3f][[2022-03-15 Tue] Clase 1]]
+- Primera prueba: Significado de las cosas.
+  - Sabemos como calcular la desviación estándar,
+    pero, ¿qué significa?
+- Segunda prueba: Probabilidad.
+- Tercera prueba: Modelos de regresión.
+  - Redes neuronales, AI, Regresión Logística.
+  - Ej: Bancos usan Regresiones Logísticas para
+    calculo de riesgo para un crédito.
+
 ** Teórico ab%
 ** Práctico cd%
 * Links
@@ -65,11 +76,11 @@
 - links a libros, videos, etc.
 * Contacto
 - Profesor
-|----------+------|
-| Nombre   |      |
-| E-mail   |      |
-| Teléfono | +569 |
-|----------+------|
+|----------+------------|
+| Nombre   |            |
+| E-mail   |            |
+| Teléfono |       +569 |
+|----------+------------|
 - Ayudante
 |----------+------|
 | Nombre   |      |

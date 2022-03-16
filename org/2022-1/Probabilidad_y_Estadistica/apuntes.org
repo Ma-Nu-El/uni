@@ -33,11 +33,32 @@
 < your_notes >
 
 ** [2022-03-15 Tue] Clase 1
+:PROPERTIES:
+:ID:       36e1b271-8b68-4238-95b0-4350908e5a3f
+:END:
 - [2022-03-15 Tue 11:33]
+
 
 - R, Python.
 - Ejemplos covid.
 - Ingeniería social.
+
+
+- Promedio vs moda vs mediana.
+  - Sesgo en distribuciones.
+  - Promedio = media = media aritmética.
+- Ejemplo de diferencia de sueldo por genero.
+  - ¿Ganan más dinero los hombres para un mismo
+    trabajo?
+  - Caso Enfermería.
+  - Caso Párvulos.
+  - Distribución Normal para IQ de hombres vs mujeres.
+    - IQ de mujeres es tiene más curtosis.
+      La distribución de IQ para la curva de hombres
+      está más esparcida.
+    - Sin embargo, el promedio es el mismo.
+  - Curva distribución del ingreso en Chile.
+- Prueba de hipótesis.
 
 
 - Tableau
@@ -45,9 +66,12 @@
 - SAS
 
 
-- Promedio vs moda vs mediana.
-  - Sesgo en distribuciones.
-  - Promedio = media = media aritmética.
+- Primera prueba: Significado de las cosas.
+- Segunda prueba: Probabilidad.
+- Tercera prueba: Modelos de regresión.
+  - Redes neuronales, AI, Regresion Logística.
+  - Ej: Bancos usan Regresiones Logísticas para
+    calculo de riesgo para un crédito.
 
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
