@@ -7,6 +7,7 @@
   - [[#about][About]]
   - [[#inactive-timestamp-clase-x-nombre-ramo-abrev][[inactive timestamp] Clase X <nombre ramo abrev>]]
   - [[#2022-03-15-tue-clase-1][[2022-03-15 Tue] Clase 1]]
+  - [[#2022-03-18-fri-clase-2][[2022-03-18 Fri] Clase 2]]
 - [[#ayudantías][Ayudantías]]
   - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
 - [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
@@ -72,6 +73,208 @@
   - Redes neuronales, AI, Regresion Logística.
   - Ej: Bancos usan Regresiones Logísticas para
     calculo de riesgo para un crédito.
+
+-----
+** [2022-03-18 Fri] Clase 2
+:PROPERTIES:
+:ID:       4109903c-5882-49a7-b531-0b3f59d11352
+:END:
+:CLOCKBOOK:
+CLOCK: [2022-03-18 Fri 08:31]--[2022-03-20 Sun 16:32] => 56:01
+:END:
+
+Resumen: Acerca de control de procesos y
+la calidad su medición.
+
+-----
+- Campus/ Sem 1/CONCEPTUALIZANDO parte 1
+
+
+- Etapas de la Investigación Estadística.
+  - Defina el Problema, Los Objetivos, Las Hipótesis.
+  - Defina las Variables de análisis.
+  - Defina la Población de trabajo o muestra.
+  - Defina que instrumentos utilizará para
+    medir las variables.
+  - Defina el procedimiento estadístico para
+    analizar los datos.
+  - Obtenga Resultados.
+  - Responda las Hipótesis.
+  - Concluya.
+
+-----
+- ¿Cómo reconocemos un PROBLEMA o
+  cómo lo encontramos?: Por lo general es una
+  pregunta relacionada al desconocimiento de algo.
+  - ¿El producto cumple con la norma?
+    - Ejemplo botella de pisco de 750cc.
+      - ¿Cúanto puede ser el delta? 10cc? El rango
+        entonces es 740-760cc?
+      - ¿Cómo se puede medir?
+    - Ejemplo cajas de fósforo: empresa demandada
+      por entregar a veces 38 o a veces 45 fósforos,
+      siendo que publicitan 40 en cada caja.
+    - El objeto es el /error/ en las muestras.
+
+  - ¿Cómo se comporta la producción?
+    - Opciones:
+      - Bien/Mal.
+      - Defectuoso.
+      - Regular.
+    - Implícitamente asignamos un numero al
+      comportamiento.
+
+  - ¿Qué variables explican el comportamiento
+    de la variación de un producto?
+    - ¿Qué es lo que provoca las pequeñas
+      alteraciones o errores en la producción?
+    - ¿Quién sostiene esos errores?
+      - El consumidor, siempre.
+
+  - ¿Qué explica mejor la variación del producto
+    para controlar su fluctuación?
+    - El jefe pregunta por esto, no la anterior.
+
+-----
+- Componentes de un Problema:
+  - Diagrama Ishikawa:
+    - aka Causa-Efecto.
+    - aka Espina de Pescado.
+
+  - Variable Dependiente (Y). Aquella que se mide
+    y donde se centra la respuesta. Por lo general
+    la respuesta al problema se asocia con lo que
+    le ocurre a esta variable.
+
+  - Contexto. Datos que permiten establecer en
+    condiciones se mide Y, además permite entender
+    el porque de los resultados de Y.
+    - El porqué de los resultados.
+
+  - Acción. Concepto, que permite saber que se
+    desea conocer de Y.
+    - ¿Qué tipo de análisis voy a ejercer sobre ...?
+
+  - Variable independiente (X), aquella que agrupa
+    o explica la variación de Y, no siempre
+    se identifica primariamente en un problema
+    o puede no estar presente.
+
+-----
+- Claves
+  - Accion
+  - Variables
+  - Contexto
+
+  - ¿Cómo se comporta la producción de paneles
+    SIP en la región de La Araucanía?
+
+-----
+- Campus/ Sem 1/CONCEPTUALIZANDO parte 2
+
+
+- [[4109903c-5882-49a7-b531-0b3f59d11352-custom1][Variable: Dependencia.]]
+- [[4109903c-5882-49a7-b531-0b3f59d11352-custom2][Variable: Tipología.]]
+- [[4109903c-5882-49a7-b531-0b3f59d11352-custom3][Variable: Escala.]]
+
+
+Variables: ¿Cómo se entiende una variable?
+
+Por definición es algo que esta sujeto a
+cambios frecuentes.
+
+También debe entenderse como aquella
+característica medida en una unidad
+experimental (persona, animal, objeto, etc),
+que presenta fluctuación intra medidas y
+entre medidas.
+
+- Intra medida. El mismo objeto evaluado \(n\) veces.
+- Entre medida. \(n\) objetos medidos con el
+  mismo instrumento.
+  - Ejemplo al pesarse: la misma persona con la
+    misma balanza se pesa varias veces seguidas y
+    aun así hay diferencias. Factores que afectan
+    el error: presión atmosférica, la altitud.
+  - Lección: las condiciones de medición deben
+    ser las mismas.
+  - Ejemplo de pesar sillas americanas: 30
+    sillas diferentes van a pesar diferente a
+    pesar de ser el mismo modelo y marca:
+    simplemente no son iguales, son semejantes,
+    pero para efectos prácticos son la misma silla.
+  - Premisa: las sillas no son iguales. Si medición
+    arroja que /sí/ son iguales: el proceso
+    productivo es muy bueno.
+  - Acerca de la calidad del dato y los indicadores.
+  - Ejemplo de notas: ¿Qué tan representativo
+    es el promedio de notas respecto de la
+    realidad del curso? Caso: 80 % notas sobre 40,
+    pero un par de casos extremos bajan el promedio
+    general al 39.
+
+-----
+
+<<4109903c-5882-49a7-b531-0b3f59d11352-custom1>>
+Variables: ¿Cómo se clasifican?: Dependencia.
+
+Se entiende como la relación funcional de la
+variable, es una variable que explica
+(independiente) o que es explicada (dependiente).
+
+
+¿Diferencia entre objetivo y subjetivo?
+- Objetivo: cuando más de una persona opina
+  lo mismo sobre un mismo fenómeno.
+- Subjetivo: cuando al menos una persona opina
+  algo diferente respecto de un mismo fenómeno.
+
+-----
+
+<<4109903c-5882-49a7-b531-0b3f59d11352-custom2>>
+Variables: ¿Cómo se clasifican?: Tipología.
+
+Clasificación que dice relación con la forma.
+1) Cualitativo:
+   1) Nominal.
+      - El orden no importa.
+   2) Ordinal.
+      - El orden sí importa.
+2) Cuantitativo
+   1) Discreto.
+      - Números Enteros.
+   2) Continuo.
+      - Números Reales.
+
+
+- La edad es un continuo.
+
+
+- ¿En qué escenario todas las personas deberían
+  tener el mismo sueldo?
+-----
+
+<<4109903c-5882-49a7-b531-0b3f59d11352-custom3>>
+Variables: ¿Cómo se clasifican?: Escala.
+
+Es una clasificación que tiene por fin,
+describir la naturaleza de la información
+contenida dentro de los objetos,
+a través de números.
+
+-----
+
+Población y Muestra
+
+Población se entenderá en estadística,
+como el conjunto total de unidades
+experimentales (personas, objetos, animales, etc.),
+que están contextualizados por una serie de
+características que funcionan como discriminadores.
+
+Ejemplo: ¿Cómo debe ser un celular para ser
+considerado bueno? ¿A quién le debo preguntar
+la opinión? ¿Quién clasifica como opinión relevante?
 
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x

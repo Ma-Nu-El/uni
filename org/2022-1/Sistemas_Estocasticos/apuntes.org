@@ -5,6 +5,8 @@
 * TOC :TOC_2:noexport:
 - [[#clases][Clases]]
   - [[#2022-03-14-mon-clase-1][[2022-03-14 Mon] Clase 1]]
+  - [[#2022-03-15-tue-clase-2][[2022-03-15 Tue] Clase 2]]
+  - [[#2022-03-21-mon-clase-3][[2022-03-21 Mon] Clase 3]]
   - [[#ayudantías][Ayudantías]]
 - [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
 
@@ -166,6 +168,71 @@ Estocástico = probabilístico.
     después de elegir un elemento.
 
 -----
+** [2022-03-15 Tue] Clase 2
+- Clase practica. Intro a probabilidades.
+** [2022-03-21 Mon] Clase 3
+:PROPERTIES:
+:ID:       4517cf21-481b-49cd-bd44-ef346f8731d7
+:END:
+:CLOCKBOOK:
+CLOCK: [2022-03-21 Mon 09:54]
+CLOCK: [2022-03-21 Mon 08:40]--[2022-03-21 Mon 09:34] =>  0:54
+CLOCK: [2022-03-21 Mon 08:37]--[2022-03-21 Mon 08:40] =>  0:03
+:END:
+- [2022-03-21 Mon 08:37]
+
+
+- VARIABLES ALEATORIAS BIDIMENSIONALES
+  - campus/semana1/unidad1 axiomática probabilística.
+  - \approx pag100
+- Ejemplo de desarrollo en Excel.
+- Aprender probabilidad multivariada
+  - "Multivariate probability".
+
+-----
+- Ejemplo caja con bolas (pag 121).
+  - 4 negras.
+  - 3 rojas.
+
+Sacar sin reemplazo:
+- F = {(roja, roja), (roja, negra)}.
+- E = {(roja, negra)}.
+- G = {roja, negra}
+
+
+\begin{align*}
+\Omega =
+\underbrace{
+  (R,R)
+  \overbrace{
+    (R,N)
+  }^{
+    \text{E}
+  }
+}_{
+  \text{F}
+}
+(N,R)(N,N)
+\end{align*}
+
+Por lo tanto:
+
+\begin{align*}
+E \cup F = \{ (R,R) (R,N) \} = F \\
+E \cap F = \{ (R,N) \} = E
+\end{align*}
+
+- Calcular: \(E \cup F\):
+- Calcular: \(E \cap F\):
+- Calcular: \((E \cup F)^{c}\):
+- Calcular: \(F /E\):
+- Calcular: \(E /F\):
+
+
+-----
+
+- Ejemplo caja con bolas (pag 122).
+
 ** Ayudantías :assistantship:
 * Resúmenes para evaluaciones
 - link-to-resumen-eval1.org
