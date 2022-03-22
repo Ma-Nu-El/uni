@@ -1,0 +1,64 @@
+#+INCLUDE: "~/org/uni/org/config.org"
+#+FILETAGS: :university:
+
+
+* TOC :TOC_2:noexport:
+- [[#clases][Clases]]
+  - [[#about][About]]
+  - [[#2022-03-22-tue-clase-1][[2022-03-22 Tue] Clase 1]]
+- [[#ayudantías][Ayudantías]]
+  - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
+- [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
+
+* Clases :lecture:
+** About
+- Copia el contenido de "Clases" en "asignatura.org"
+- Pegalo en esta sección
+- Elimina el dia, dejando las clases únicamente
+- Selecciona visualmente las clases
+  + Tambien puedes seleccionar el contenido del heading "Clases", es lo mismo.
+    - Se hace con =v i R=: "visual inside R"
+      + La R hace referencia al contenido interior de un heading
+- =org-sort= alpha
+
+
+- Asi deberias tener luego las clases ordenadas por numero de clase
+- Mientras que en "asignatura.org" estaran ordenadas por el dia
+** [2022-03-22 Tue] Clase 1
+:PROPERTIES:
+:ID:       699d1615-9a1d-4154-b29e-46c9f6a84067
+:END:
+- [2022-03-22 Tue 17:07]
+- Clase del martes pasado fue solo introductoria.
+
+
+*** TODO Preguntar por topón del martes
+- Tengo topón con otro ramo que usualmente puedo
+  ir a otra hora, pero para evaluaciones no.
+
+*** TODO Agregarme a campus virtual
+*** Materia
+
+Contexto-conceptos y gestión de RRHH.
+-----
+- Complejidades para análisis en RRHH.
+
+* Ayudantías :assistantship:
+** inactive-time-stamp clase x
+# - Then =org-clone-subtree-with-time-shift= and repeat
+- log link by ID
+- =org-timer-start=
+
+
+< your_notes >
+
+* Resúmenes para evaluaciones
+- link-to-resumen-eval1.org
+- link-to-resumen-eval2.org
+- link-to-resumen-eval3.org
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
+
+#  LocalWords:  RRHH
