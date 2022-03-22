@@ -43,6 +43,16 @@ Contexto-conceptos y gestión de RRHH.
 -----
 - Complejidades para análisis en RRHH.
 
+
+Origen de RRHH en 1910:
+| Frederic Taylor | Inglaterra |
+
+-----
+Ejemplo empresa de venta de papas fritas;
+verlo como un sistema (input, output):
+- ¿Qué elementos necesitamos para ofrecer el
+  servicio?
+
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
 # - Then =org-clone-subtree-with-time-shift= and repeat
