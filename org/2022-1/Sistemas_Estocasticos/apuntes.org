@@ -175,7 +175,7 @@ Estocástico = probabilístico.
 :ID:       4517cf21-481b-49cd-bd44-ef346f8731d7
 :END:
 :CLOCKBOOK:
-CLOCK: [2022-03-21 Mon 09:54]
+CLOCK: [2022-03-21 Mon 09:54]--[2022-03-21 Mon 10:39] =>  0:45
 CLOCK: [2022-03-21 Mon 08:40]--[2022-03-21 Mon 09:34] =>  0:54
 CLOCK: [2022-03-21 Mon 08:37]--[2022-03-21 Mon 08:40] =>  0:03
 :END:
