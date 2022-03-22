@@ -1,0 +1,140 @@
+#+INCLUDE: "~/org/uni/org/config.org"
+#+FILETAGS: :university:
+
+
+* TOC :TOC_2:noexport:
+- [[#clases][Clases]]
+  - [[#about][About]]
+  - [[#2022-03-21-mon-clase-1][[2022-03-21 Mon] Clase 1]]
+  - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
+- [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
+
+* Clases :lecture:
+** About
+- Copia el contenido de "Clases" en "asignatura.org"
+- Pegalo en esta sección
+- Elimina el dia, dejando las clases únicamente
+- Selecciona visualmente las clases
+  + Tambien puedes seleccionar el contenido del heading "Clases", es lo mismo.
+    - Se hace con =v i R=: "visual inside R"
+      + La R hace referencia al contenido interior de un heading
+- =org-sort= alpha
+
+
+- Asi deberias tener luego las clases ordenadas por numero de clase
+- Mientras que en "asignatura.org" estaran ordenadas por el dia
+** [2022-03-21 Mon] Clase 1
+:CLOCKBOOK:
+CLOCK: [2022-03-21 Mon 17:16]--[2022-03-21 Mon 19:32] =>  2:16
+:END:
+- [2022-03-21 Mon 17:13]
+
+-----
+*** Intro al ramo
+**** Resumen del ramo
+
+- Todo acerca del hardware del computador. Como
+  trabajan los componentes. Se desmenuza el procesador
+  y todos los componentes en general del computador.
+- Distintos tipos de arquitecturas de computadores.
+- Como instalar un sistema operativo.
+- Jugar con el kernel del computador.
+- Nuevas tecnologias.
+  - AI
+  - Smart City
+  - Arduino
+  - Raspberry
+
+
+-----
+
+**** Metodología
+
+- Lunes primera hora teoría.
+- Lunes segunda hora ayudantía.
+- Viernes online.
+
+-----
+
+**** Evaluación
+
+4 notas.
+
+1) (taller) Primera nota Hardware.
+2) (taller) Segunda nota Sistema Operativo.
+   - Instalar un sistema operativo.
+3) Proyecto final.
+4) Global al final de semestre.
+
+
+Talleres en grupo o pareja.
+
+-----
+
+**** Asistencia
+
+- Registrada en Intranet por Covid.
+- Si faltan muchas veces se llama la atención,
+  pero por faltar un par de clases no se reprueba.
+
+
+------
+
+**** Recursos
+
+- Campus virtual.
+  - Ahí se suben las tareas.
+  - Son sin nota pero sirven para el 3,9 de final
+    de semestre.
+  - Hacer las tareas igual.
+
+*** Intro a la historia del ramo
+**** Origen y generaciones de los computadores.
+
+- 1 gen: computadores gigantes. Válvulas.
+- 2 gen: transistores. Teclados numéricos.
+- 4 gen: integración con microchips.
+  - sistemas operativos enfocados a usuarios.
+    MSDOS
+- "5" gen: smartphones, nano-tecnologías y
+  computación cuántica.
+
+
+- 3 generación?
+
+
+Windows 95 fue el primer OS enfocado al usuario
+que tenia interfaz gráfica a diferencia de
+CLI.
+
+-----
+**** Partiendo por la placa madre.
+- Origen: Patty McHugh.
+
+
+Partes que van conectadas a la placa madre.
+- RAM
+- Procesador
+- Tarjeta de video
+- Modulos I/O
+- Conectores disco
+- Ranuras de expansion (bluetooth, wifi)
+- Fuente de poder
+- Pila
+
+** inactive-time-stamp clase x :assistantship:
+# - Then =org-clone-subtree-with-time-shift= and repeat
+- log link by ID
+- =org-timer-start=
+
+
+< your_notes >
+
+* Resúmenes para evaluaciones
+- link-to-resumen-eval1.org
+- link-to-resumen-eval2.org
+- link-to-resumen-eval3.org
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
