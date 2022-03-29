@@ -115,7 +115,92 @@ CLOCK: [2022-03-29 Tue 17:13]
     aumento en el sueldo mínimo?
   - Efecto del aumento de combustible.
   - Efecto del aumento del dolar.
+    - Importar vs exportar.
 
+
+- Ambiente general: Factores económicos
+  - Ambiente de trabajo: Otras organizaciones.
+    - Organización.
+
+
+- Ambiente general:
+  - Sociales.
+  - Legales.
+  - Políticos.
+  - Demográficos.
+  - Culturales.
+  - Tecnológicos.
+  - Factores económicos.
+- Ambiente de trabajo
+  - Competidores.
+  - Clientes.
+  - Entidades reguladoras.
+  - Proveedores.
+  - Otras organizaciones.
+
+
+- Factores de macroentorno.
+  - P: Políticos.
+  - E: Económicos.
+  - S: Sociales.
+  - T: Tecnológicos.
+  - A: Ambientales.
+  - C: culturales.
+
+
+- Camino de las organizaciones:
+  *Definición de Términos*.
+- Se consigue y cambian.
+  1) Estrategia:
+     - Cómo alcanzo la visión de la organización.
+     - Acciones y tareas:
+       - Metas y objetivos.
+  2) Visión:
+     - Visión: en que me quiero convertir.
+       - Normalmente de largo plazo.
+       - Nuestro caso: "ser ing civi ind, y quiero
+         trabajar en <X>."
+
+-----
+- No cambia y no se completa.
+  3) [@3] Valores:
+     - Inspiracion para la ejecución.
+  4) Misión
+     - Misión: "¿Para qué se existe?"; la razón
+       de ser de la organización.
+       - En el largo plazo, las misiones no se ven
+         alteradas, cambian las estrategias y las
+         formas, pero la misión no.
+
+
+*Enfoques estructurales*
+- Enfoque funcional:
+  - Foco:
+    - Procesos.
+    - Resultados.
+    - Trabajo conjunto.
+    - Equipos autónomos y multidisciplinarios.
+    - Cooperación /inter/-departamental.
+    - Más integrado con el entorno.
+- Enfoque sistémico:
+  - Foco:
+    - Especialización.
+    - Cooperación /intra/-departamental.
+    - Más aislado.
+
+
+*Modelos*
+- Centralizados:
+  - Monopolio de RRHH.
+  - Tratamiento genérico para todos.
+- Descentralizados:
+  - Actividades delegadas.
+  - Tratamiento personalizado.
+
+
+*Rol de RRHH*
+
+-----
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
 # - Then =org-clone-subtree-with-time-shift= and repeat
