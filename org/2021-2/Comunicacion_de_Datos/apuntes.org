@@ -1,8 +1,9 @@
 #+INCLUDE: "~/org/uni/org/config.org"
 #+FILETAGS: :university:
-
-#+TITLE: Apuntes
-#+SUBTITLE: 2021-2/Comunicacion_de_Datos
+#+title: Apuntes
+#+subtitle: Comunicación de Datos
+#+date:
+#+OPTIONS: toc:3
 
 * TOC :TOC_2:noexport:
 - [[#clases][Clases]]
@@ -12,9 +13,6 @@
   - [[#clase-4-video-3-software-de-red][Clase 4 (video 3): Software de Red]]
   - [[#clase-4-video-4-ip-y-segmentación-de-redes][Clase 4 (video 4): IP y segmentación de redes]]
   - [[#clase-5-video-5-osi-y-tcpip][Clase 5 (video 5): OSI y TCP/IP]]
-- [[#ayudantías][Ayudantías]]
-  - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
-- [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
 - [[#footnotes][Footnotes]]
 
 * Clases
@@ -22,7 +20,7 @@
 :PROPERTIES:
 :ID:       5c28d175-d49d-430c-87f9-b885db423412
 :END:
-- [[id:a472d354-b97e-4ee2-a85e-91a05da5fad0][log]]
+# - [[id:a472d354-b97e-4ee2-a85e-91a05da5fad0][log]]
 
 
 - Veremos 2 protocolos TCP/IP y OCI.
@@ -67,8 +65,16 @@
       en conjunto.
   - STP.
     - Cada par blindado individualmente.
-- Fibra óptica (se comenta su estructura interior).
+- Fibra óptica (se comenta su estructura interior):
+  - Núcleo.
+  - Hilos de fibra.
+  - Buffer y Cladding.
+  - Cinta de Mylar.
+  - Armadura.
+  - Recubrimiento exterior.
 
+- Submarine Cable Map.
+  - https://www.submarinecablemap.com/
 *** Medios no guiados
 :PROPERTIES:
 :ID:       17104b3f-8f08-42b2-ba81-ab252830eb07
@@ -85,37 +91,39 @@
   e inalámbrica de Chile con el resto del mundo.
 *** Dispositivos de interconexión
 - ISP: Internet Service Provider
-  - Movistar
-  - Claro
-  - VTR
-  - entre otros
+  - Movistar.
+  - Claro.
+  - VTR.
+  - entre otros.
 - NIC: nivel físico
-  - en las torres son las que tienen la entrada RJ45
-  - en los laptop hay mas variedad
-  - MAC address
+  - en las torres son las que tienen la entrada RJ45.
+  - en los laptop hay mas variedad.
+  - MAC address.
 - Modem (modulation & demodulation):
   nivel enlace de datos.
-  - Tradicionalmente el Modem ADSL
+  - Tradicionalmente el Modem ADSL.
 - Router: nivel de red
   - Necesita una tarjeta de red para gestionar
     el tráfico.
 - HUB: nivel enlace de datos
-  - simplemente muchos RJ45
-  - En decadencia
-  - Colisión de datos
-  - Información hacia todos los conectados al HUB
+  - simplemente muchos RJ45.
+  - En decadencia.
+  - Colisión de datos.
+  - Información hacia todos los conectados al HUB.
 - Switch: reemplaza al HUB
-  - Su diseño previene colisiones
+  - Su diseño previene colisiones.
   - Información va con dirección hacia únicamente
     el o los receptores deseados.
 - Bridge: nivel enlace de datos
-  - Conecta dos segmentos de red
+  - Conecta dos segmentos de red.
   - Las redes se dividen para evitar la sobrecarga;
     un bridge las vuelve a unir.
 - Gateway
   - Para conectar redes de distinta arquitectura
-    o distinto protocolos.
-  - Hace el trabajo de traductor
+    o distintos protocolos.
+  - Hace el trabajo de traductor.
+  - Para redes más complejas que una red de hogar
+    se recomienda el gateway.
 ** Clase 4 (video 3): Software de Red
 *** Intro
 - Hoy: Software de red
@@ -227,9 +235,9 @@ Cabe mencionar que el internet se creo para asistir a los estados.
 
 - En Ubuntu, se puede obtener la direccion IP local con:
   #+name: esta-ip
-  #+begin_src shell :results replace :exports both
+  #+begin_example shell :results replace :exports both
   hostname -I
-  #+end_src
+  #+end_example
 
   #+RESULTS: esta-ip
   : 192.168.1.102
@@ -576,9 +584,9 @@ Diferente del OSI, TCP consta de solo 4 capas:
     - Tiempos de envío
     - Confirmación de totalidad de paquetes entregados
 
-     #+begin_src shell :results output replace :exports both
+     #+begin_example shell :results output replace :exports both
      ping -c4 www.google.cl # -c4 for 4 packages to send
-     #+end_src
+     #+end_example
 
      #+RESULTS:
      : PING www.google.cl (142.251.0.94) 56(84) bytes of data.
@@ -591,9 +599,9 @@ Diferente del OSI, TCP consta de solo 4 capas:
      : 4 packets transmitted, 4 received, 0% packet loss, time 3005ms
      : rtt min/avg/max/mdev = 19.156/19.565/19.872/0.260 ms
 
-     #+begin_src shell :results output replace :exports both
+     #+begin_example shell :results output replace :exports both
      ping -c 4 www.google.com
-     #+end_src
+     #+end_example
 
      #+RESULTS:
      : PING www.google.com (142.251.0.106) 56(84) bytes of data.
@@ -673,7 +681,7 @@ Diferente del OSI, TCP consta de solo 4 capas:
   protocolos, interfaces y servicios
 - Más complejo de configurar y mantener
 
-* Ayudantías :assistantship:
+* Ayudantías :assistantship:noexport:
 ** inactive-time-stamp clase x
 # - Then =org-clone-subtree-with-time-shift= and repeat
 - =[ link to <subject-name.org> class entry ]=
@@ -682,7 +690,7 @@ Diferente del OSI, TCP consta de solo 4 capas:
 
 < your_notes >
 
-* Resúmenes para evaluaciones
+* Resúmenes para evaluaciones :noexport:
 - link-to-resumen-eval1.org
 - link-to-resumen-eval2.org
 - link-to-resumen-eval3.org
