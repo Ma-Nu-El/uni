@@ -7,6 +7,7 @@
 - [[#clases][Clases]]
   - [[#about][About]]
   - [[#2022-03-22-tue-clase-1][[2022-03-22 Tue] Clase 1]]
+  - [[#2022-03-29-tue-clase-2][[2022-03-29 Tue] Clase 2]]
 - [[#ayudantías][Ayudantías]]
   - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
 - [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
@@ -83,6 +84,37 @@ Intangible: compra-venta cafetería funcionando.
 *Motivaciones*
 - o Estimulos.
 -----
+
+** [2022-03-29 Tue] Clase 2
+:CLOCKBOOK:
+CLOCK: [2022-03-29 Tue 17:13]
+:END:
+
+- Contexto - Conceptos y Gestión de RRHH.
+  - Repaso clase anterior.
+
+
+- Entorno de la organización.
+  - Perfil organizacional.
+  - Micro-entorno.
+  - Macro-entorno.
+
+
+- 2200 personas aprox trabajan en la UFRO,
+  dependiendo del contrato.
+  - Incluye sedes fuera de Temuco.
+  - 600 a honorario.
+  - Algunas gratis.
+  - *Micro-entorno*: otras universidades.
+  - *Macro-entorno*: otras industrias.
+    - Electricidad
+    - Retail
+    - Bancos
+    - etc
+  - ¿Por qué a las mineras no les afecta mucho el
+    aumento en el sueldo mínimo?
+  - Efecto del aumento de combustible.
+  - Efecto del aumento del dolar.
 
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
