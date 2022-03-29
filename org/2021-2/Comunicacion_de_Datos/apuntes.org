@@ -43,29 +43,32 @@
 *** Transmisión de datos
 - Señal análoga
   - Línea contínua
-  - Líneas de teléfono para tener internet, el internet no se vendía
-    sin línea telefónica, la interferencia cada vez que te llamaban
+  - Líneas de teléfono para tener internet,
+    el internet no se vendía sin línea telefónica,
+    la interferencia cada vez que te llamaban.
 - Señal digital
   - Función discreta
 *** Medios guiados de transmisión: tipos de cables
 :PROPERTIES:
 :ID:       d5359e0b-2e2e-4802-910a-6f4b9eaf05fb
 :END:
-- Coaxial de banda base
-  - digital
-- Coaxial de banda ancha
-  - análogo
-  - como el de la tele
-- Pares sin trenzar (paralelo)
-- Pares trenzados
-  - UTP
-    - Sin blindaje anti-ruido, para redes locales
-  - FTP
-    - UTP + apantallado para protección anti-interferencia, todos los pares
-      cubiertos en conjunto
-  - STP
-    - Cada par blindado individualmente
-- Fibra óptica (se comenta su estructura interior)
+- Coaxial de banda base.
+  - digital.
+- Coaxial de banda ancha.
+  - análogo.
+  - como el de la tele.
+- Pares sin trenzar (paralelo).
+- Pares trenzados.
+  - UTP.
+    - Sin blindaje anti-ruido, para redes locales.
+  - FTP.
+    - UTP + apantallado para protección
+      anti-interferencia, todos los pares cubiertos
+      en conjunto.
+  - STP.
+    - Cada par blindado individualmente.
+- Fibra óptica (se comenta su estructura interior).
+
 *** Medios no guiados
 :PROPERTIES:
 :ID:       17104b3f-8f08-42b2-ba81-ab252830eb07
@@ -78,8 +81,8 @@
 
 *** Comparación de velocidad de internet de Chile
 - https://www.speedtest.net/global-index
-- Se compara la velocidad de internet alambica e inalámbrica
-  de Chile con el resto del mundo.
+- Se compara la velocidad de internet alambica
+  e inalámbrica de Chile con el resto del mundo.
 *** Dispositivos de interconexión
 - ISP: Internet Service Provider
   - Movistar
@@ -90,10 +93,12 @@
   - en las torres son las que tienen la entrada RJ45
   - en los laptop hay mas variedad
   - MAC address
-- Modem (modulation & demodulation): nivel enlace de datos
+- Modem (modulation & demodulation):
+  nivel enlace de datos.
   - Tradicionalmente el Modem ADSL
 - Router: nivel de red
-  - Necesita una tarjeta de red para gestionar el tráfico
+  - Necesita una tarjeta de red para gestionar
+    el tráfico.
 - HUB: nivel enlace de datos
   - simplemente muchos RJ45
   - En decadencia
@@ -101,27 +106,29 @@
   - Información hacia todos los conectados al HUB
 - Switch: reemplaza al HUB
   - Su diseño previene colisiones
-  - Información va con dirección hacia únicamente el o los receptores
-    deseados
+  - Información va con dirección hacia únicamente
+    el o los receptores deseados.
 - Bridge: nivel enlace de datos
   - Conecta dos segmentos de red
-  - Las redes se dividen para evitar la sobrecarga; un bridge las
-    vuelve a unir
+  - Las redes se dividen para evitar la sobrecarga;
+    un bridge las vuelve a unir.
 - Gateway
-  - Para conectar redes de distinta arquitectura o distinto protocolos
+  - Para conectar redes de distinta arquitectura
+    o distinto protocolos.
   - Hace el trabajo de traductor
 ** Clase 4 (video 3): Software de Red
 *** Intro
 - Hoy: Software de red
 *** Jerarquía de protocolos
-- El conjunto de capas y protocolos se conoce como Arquitectura de Red
+- El conjunto de capas y protocolos se conoce
+  como Arquitectura de Red.
 
 
 - La salida de una capa es la entrada de otra
 - División de información en paquetes
 - Entre cada capa hay una interfaz
-- Una capa solo se conecta con las adyacentes, no hay saltos
-  entre conexión de capas
+- Una capa solo se conecta con las adyacentes,
+  no hay saltos entre conexión de capas.
 
 
 - Modelo OSI: 7 capas
@@ -332,8 +339,8 @@ Cabe mencionar que el internet se creo para asistir a los estados.
 ** Clase 5 (video 5): OSI y TCP/IP
 *** Intro
 - Hoy: Modelo de referencia OSI y TCP/IP
-- El modelo de referencia es OSI, pero actualmente el TCP/IP
-  es el más usado.
+- El modelo de referencia es OSI,
+  pero actualmente el TCP/IP es el más usado.
 *** OSI: Open System Interconnection
 :PROPERTIES:
 :ID:       aef52fbc-9250-4068-afbc-dd9f08a135a9

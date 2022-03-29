@@ -82,7 +82,7 @@
 *** Clase 0
 *** Clase 1
 :CLOCKBOOK:
-CLOCK: [2022-03-22 Tue 17:15]
+CLOCK: [2022-03-22 Tue 17:15]--[2022-03-22 Tue 18:28] =>  1:13
 :END:
 - [[id:699d1615-9a1d-4154-b29e-46c9f6a84067][[2022-03-22 Tue] Clase 1]]
 ** Ayudantías :assistantship:

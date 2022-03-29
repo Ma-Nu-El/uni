@@ -6,7 +6,7 @@
 - [[#clases][Clases]]
   - [[#about][About]]
   - [[#2022-03-21-mon-clase-1][[2022-03-21 Mon] Clase 1]]
-  - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
+  - [[#2022-03-28-mon-clase-2][[2022-03-28 Mon] Clase 2]]
 - [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
 
 * Clases :lecture:
@@ -24,10 +24,14 @@
 - Asi deberias tener luego las clases ordenadas por numero de clase
 - Mientras que en "asignatura.org" estaran ordenadas por el dia
 ** [2022-03-21 Mon] Clase 1
+:PROPERTIES:
+:ID:       44a82081-aab7-4d91-a89a-7c95d43a1211
+:END:
 :CLOCKBOOK:
 CLOCK: [2022-03-21 Mon 17:16]--[2022-03-21 Mon 19:32] =>  2:16
 :END:
 - [2022-03-21 Mon 17:13]
+- [[id:05355743-d893-4185-ba36-fbab031c6aa5][log]]
 
 -----
 *** Intro al ramo
@@ -122,18 +126,40 @@ Partes que van conectadas a la placa madre.
 - Fuente de poder
 - Pila
 
-** inactive-time-stamp clase x :assistantship:
-# - Then =org-clone-subtree-with-time-shift= and repeat
-- log link by ID
-- =org-timer-start=
+** [2022-03-28 Mon] Clase 2
+:PROPERTIES:
+:ID:       5f0838d2-72c0-450a-bcaf-fa2140842f58
+:END:
+- [[id:e458c001-5d04-45c5-af0a-cefd7444936b][log]]
 
 
-< your_notes >
+- Componentes de un computador.
+- Ejemplos vivos de placas madres.
+
+-----
+- Hardware
+  - Procesador: Central Processing Unit.
+  - Processor socket: zócalo.
+
+
+- Parts of the processor.
+  - ALU: Arithmetic Logic Unit.
+  - Registers: aka Cache
+    - L1,L2 & L3.
+  - Fastest memory type.
+  - Control Unit.
+- Cores and threads.
+- Frequency.
+
+
+Memory: Cache -> RAM -> Storage.
 
 * Resúmenes para evaluaciones
+
 - link-to-resumen-eval1.org
 - link-to-resumen-eval2.org
 - link-to-resumen-eval3.org
+
 * Local variables :noexport:
 # Local Variables:
 # ispell-local-dictionary: "espanol"

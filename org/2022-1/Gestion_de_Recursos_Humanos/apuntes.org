@@ -1,6 +1,7 @@
 #+INCLUDE: "~/org/uni/org/config.org"
 #+FILETAGS: :university:
-
+#+TITLE: Gestión de Recursos Humanos
+#+SUBTITLE: RRHH
 
 * TOC :TOC_2:noexport:
 - [[#clases][Clases]]
@@ -32,26 +33,56 @@
 - Clase del martes pasado fue solo introductoria.
 
 
-*** TODO Preguntar por topón del martes
-- Tengo topón con otro ramo que usualmente puedo
-  ir a otra hora, pero para evaluaciones no.
-
-*** TODO Agregarme a campus virtual
 *** Materia
 
 Contexto-conceptos y gestión de RRHH.
 -----
-- Complejidades para análisis en RRHH.
-
-
-Origen de RRHH en 1910:
-| Frederic Taylor | Inglaterra |
+Complejidades para análisis en RRHH.
 
 -----
+*Sistema*
+
 Ejemplo empresa de venta de papas fritas;
-verlo como un sistema (input, output):
+verlo como un /sistema/ /abierto/
+(input,output):
+
 - ¿Qué elementos necesitamos para ofrecer el
-  servicio?
+  producto/servicio?
+
+------
+*Entorno*
+- Ejemplo supermercado; Unimarc:
+  - Recursos TC-
+  - RRHH.
+  - RR Intangibles.
+    - Patentes alcoholes, casinos.
+  - Competencia (Macro-entorno).
+
+
+Intangible: compra-venta cafetería funcionando.
+
+-----
+*Ambiente de trabajo (micro y macro)*
+-----
+*Socios*
+- Stakeholders
+  - Todos a quien le interesa que a la
+    empresa de papas fritas le vaya bien.
+    - El agricultor.
+    - Proveedor.
+      - Nos proveen cosas.
+    - Acreedores.
+      - Nos proveen dinero.
+-----
+*Necesidades*
+-----
+*Conducta*
+- Ejemplo terremoto.
+  - Las personas reaccionan de forma diferente.
+-----
+*Motivaciones*
+- o Estimulos.
+-----
 
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x

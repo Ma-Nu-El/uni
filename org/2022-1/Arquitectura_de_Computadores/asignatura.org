@@ -86,22 +86,19 @@ Consultas por video-conferencia.
 * Clases y apuntes
 ** Relacionado
 ** Clases :lecture:
-*** Martes
-**** [inactive timestamp] Clase X <nombre ramo abrev>
-scheduled ...
-- [apuntes.org] link by ID
-- =org-clock-in=
-
-
-- Then =org-clone-subtree-with-time-shift= and repeat
-*** Jueves
-**** [inactive timestamp] Clase X <nombre ramo abrev>
-scheduled ...
-- [apuntes.org] link by ID
-- =org-clock-in=
-
-
-- Then =org-clone-subtree-with-time-shift= and repeat
+*** [2022-03-21 Mon] Clase 1
+:PROPERTIES:
+:ID:       05355743-d893-4185-ba36-fbab031c6aa5
+:END:
+- [[id:44a82081-aab7-4d91-a89a-7c95d43a1211][apuntes.org]]
+*** [2022-03-28 Mon] Clase 2
+:PROPERTIES:
+:ID:       e458c001-5d04-45c5-af0a-cefd7444936b
+:END:
+:CLOCKBOOK:
+CLOCK: [2022-03-28 Mon 17:35]--[2022-03-28 Mon 18:07] =>  0:32
+:END:
+- [[id:5f0838d2-72c0-450a-bcaf-fa2140842f58][apuntes.org]]
 ** Ayudantías :assistantship:
 * Preguntas primera clase
 - [ ] Pruebas
