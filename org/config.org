@@ -9,19 +9,6 @@
 #+LATEX_HEADER: \usepackage{enumerate}
 #+LATEX_HEADER: \usepackage{tcolorbox}
 :END:
-:LATEX_PREAMBLE:
-# For probability definition
-
-\def\PP{{\mathbb P}}
-\def\emptyset{{\varnothing}}
-\def\union{{\ \cup\ }}
-\def\intersection{{\ \cap\ }}
-
-\\ Given that
-\\ https://tex.stackexchange.com/questions/141570/sizing-for-given-that-symbol-vertical-bar
-\newcommand\given[1][]{\:#1\vert\:}
-
-:END:
 :MACROS:
 #+MACRO: latex @@latex: \LaTeX@@@@html: LaTeX@@
 :END:
