@@ -199,7 +199,72 @@ CLOCK: [2022-03-29 Tue 17:13]
 
 
 *Rol de RRHH*
+- Dave Urlich
 
+
+#+begin_src example
+ (Actividad) Estratégicas
+                  |
+ "Lider           |
+  Estrategico"    | "Gestor del Cambio"
+                  |
+            [4]   |  [3]
+                  |
+Procesos -------------------- Personas
+                  |
+ "Experto         | "Defensor de los
+  Administrativo" |  trabajadores"
+                  |
+            [1]   |  [2]
+                  |
+ (Actividad) Operativas
+#+end_src
+
+1) Decisiones: "Experto Administrativo".
+   - Roles más conocidos del área de RRHH.
+   - Pagos.
+   - Controles.
+     - Verificación de horario.
+     - Horas trabajadas.
+   - Contratos.
+   - Procesos y funciones.
+   - Bonos.
+   - Aguinaldos.
+   - Comisión.
+   - Verificación de cumplimiento de metas.
+   - Declaración de impuestos.
+   - "Cómo puede ofrecer RRHH una base de
+     servicios para que la organización
+     sea eficiente y eficaz".
+   - Administración de la infraestructura
+     de la empresa.
+2) Personas: "Defensor de los trabajadores".
+   - "Adalid".
+   - Reconocimientos.
+   - Celebraciones.
+   - Vestuario y elementos de seguridad.
+   - Administración de vacaciones.
+   - Actividades.
+   - Becas.
+   - "Cómo puede ayudar RRHH en el involucramiento
+     y compromiso de los empleados."
+   - Administración de la contribución de los
+     empleados.
+3) "Gestor del Cambio".
+   - Perfiles de cargo.
+     - ¿Qué se necesita para postular a este cargo?
+   - Reclutamiento y selección.
+   - "Cómo puede ayudar RRHH en la construcción
+     de una organización creativa, renovadora e
+     innovadora."
+   - Administración de la transformación y el
+     cambio.
+4) "Lider Estratégico"
+   - ¿Qué aprendizaje le dejó, a la organización,
+     el estallido social?
+   - "Cómo puede ayudar RRHH a impulsar la
+     estrategia organizacional."
+   - Administración de las estrategias de RRHH.
 -----
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
