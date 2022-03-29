@@ -3,12 +3,7 @@
 #+OPTIONS: toc:2
 #+AUTHOR: [[mailto:m.fuica01@ufromail.cl][m.fuica01@ufromail.cl]]
 
-#+LATEX_CLASS: article
-#+LATEX_CLASS_OPTIONS: [a4paper,12pt]
 #+LATEX_HEADER: \usepackage[spanish]{babel}
 #+LATEX_HEADER: \usepackage{enumerate}
 #+LATEX_HEADER: \usepackage{tcolorbox}
-:END:
-:MACROS:
-#+MACRO: latex @@latex: \LaTeX@@@@html: LaTeX@@
 :END:
