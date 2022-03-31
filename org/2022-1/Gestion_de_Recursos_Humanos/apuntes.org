@@ -8,6 +8,7 @@
   - [[#about][About]]
   - [[#2022-03-22-tue-clase-1][[2022-03-22 Tue] Clase 1]]
   - [[#2022-03-29-tue-clase-2][[2022-03-29 Tue] Clase 2]]
+  - [[#2022-03-31-thu-clase-3][[2022-03-31 Thu] Clase 3]]
 - [[#ayudantías][Ayudantías]]
   - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
 - [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
@@ -87,7 +88,7 @@ Intangible: compra-venta cafetería funcionando.
 
 ** [2022-03-29 Tue] Clase 2
 :CLOCKBOOK:
-CLOCK: [2022-03-29 Tue 17:13]
+CLOCK: [2022-03-29 Tue 17:13]--[2022-03-29 Tue 19:00] =>  1:47
 :END:
 
 - Contexto - Conceptos y Gestión de RRHH.
@@ -266,6 +267,32 @@ Procesos -------------------- Personas
      estrategia organizacional."
    - Administración de las estrategias de RRHH.
 -----
+** [2022-03-31 Thu] Clase 3
+:CLOCKBOOK:
+CLOCK: [2022-03-31 Thu 08:46]--[2022-03-31 Thu 09:58] =>  1:12
+:END:
+
+Rol y KPI en la Gestión de RRHH.
+
+-----
+Sub-sistemas de RRHH
+- Integración
+  - Reclutamiento, selección, inducción,
+    contratación y desvinculación.
+- Organización
+  - Diseño, descripción de puestos,
+    evaluación de desempeño.
+- Retención
+  - Pago de sueldos, imposiciones,
+    licencias médicas, cargas familiares,
+    seguros, políticas de reconocimientos,
+    beneficios, clima laboral, calidad de vida.
+- Desarrollo
+  - Formación, planes de carrera y sucesión.
+- Auditoría
+  - Bases de datos, sistemas, ética y
+    responsabilidad.
+
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
 # - Then =org-clone-subtree-with-time-shift= and repeat
@@ -284,4 +311,4 @@ Procesos -------------------- Personas
 # ispell-local-dictionary: "espanol"
 # End:
 
-#  LocalWords:  RRHH
+#  LocalWords:  RRHH KPI
