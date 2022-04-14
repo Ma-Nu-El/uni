@@ -9,9 +9,13 @@
   - [[#2022-03-22-tue-clase-1][[2022-03-22 Tue] Clase 1]]
   - [[#2022-03-29-tue-clase-2][[2022-03-29 Tue] Clase 2]]
   - [[#2022-03-31-thu-clase-3][[2022-03-31 Thu] Clase 3]]
+  - [[#2022-04-05-tue-clase-4][[2022-04-05 Tue] Clase 4]]
+  - [[#2022-04-12-tue-clase-5][[2022-04-12 Tue] Clase 5]]
+  - [[#2022-04-14-thu-clase-6][[2022-04-14 Thu] Clase 6]]
 - [[#ayudantías][Ayudantías]]
   - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
 - [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
+- [[#footnotes][Footnotes]]
 
 * Clases :lecture:
 ** About
@@ -34,8 +38,6 @@
 - [2022-03-22 Tue 17:07]
 - Clase del martes pasado fue solo introductoria.
 
-
-*** Materia
 
 Contexto-conceptos y gestión de RRHH.
 -----
@@ -85,7 +87,6 @@ Intangible: compra-venta cafetería funcionando.
 *Motivaciones*
 - o Estimulos.
 -----
-
 ** [2022-03-29 Tue] Clase 2
 :CLOCKBOOK:
 CLOCK: [2022-03-29 Tue 17:13]--[2022-03-29 Tue 19:00] =>  1:47
@@ -292,6 +293,216 @@ Sub-sistemas de RRHH
 - Auditoría
   - Bases de datos, sistemas, ética y
     responsabilidad.
+-----
+** [2022-04-05 Tue] Clase 4
+:CLOCKBOOK:
+CLOCK: [2022-04-05 Tue 17:15]--[2022-04-05 Tue 18:36] =>  1:21
+:END:
+
+Rol y KPI en la Gestión de RRHH.
+
+*Concepto de imposiciones*: descuentos que se
+hacen en forma de redirección de las remuneraciones
+de los trabajadores en beneficio de los mismos.
+- Seguros de cesantía.
+- Cajas de compensación.
+- Isapres.
+- Seguros médicos.
+  - Patologías temporales y permanentes.
+- Cargas familiares.
+
+
+Tipos de autoridad de RRHH: Línea vs Staff.
+- Organigrama
+
+
+"La planificación estratégica de RRHH debe
+vincular el quehacer de RRHH con la
+planificación Estratégica de la organización."
+
+Pirámide organizacional:
+- Niveles más altos:
+  - Menos gente, decisiones mas estratégicas.
+- Niveles más bajos:
+  - Más gente, decisiones más operativas.
+
+
+¿Cómo relacionar la estrategia y la gestion?
+
+Control.
+- de mercado.
+- burocrático.
+- de clan.
+
+¿Por qué es importante el control?
+- Es el vínculo final en las funciones
+  de la gerencia.
+- Es la forma de saber si los objetivos se
+  están cumpliendo o no.
+- Permiten desarrollar seguimiento.
+- Ayuda a tomar decisiones de futuro.
+- "Empowerment": "Empoderamiento".
+
+
+"La razón final del control es la protección
+de la organización y del centro de *trabajo*".
+
+
+"El proceso de control":
+1. Medición del desempeño real.
+2. Comparación con estándar.
+3. Toma de medidas para corregir desviaciones.
+
+
+Ejemplo choripanada FICA.
+
+
+Oportunidad para controlar el desempeño en
+una organización.
+- Alimentacion anticipada.
+- Concurrente.
+- Retroalimentacion.
+
+
+Herramientas para el control:
+- Financieros
+- Cuadros de mando
+- Información
+- Benchmarking
+
+
+"Los controles deben ser suficientes,
+fáciles de comprender, relevantes y pertinentes
+para medir directamente el logro de los objetivos".
+
+Estos controles son los renombrados *KPI*.
+
+"Los KPI son el medio para verificar el
+cumplimiento de los objetivos estratégicos."
+
+Los KPI deben ser S.M.A.R.T[fn:1].
+
+
+Cuadro de Mando Integral o
+BSC (/Balance/ /Score/ /Card/)
+
+- Una parte gráfica de lluvia de ideas.
+- Otro parte, el tablero de comandos.
+
+
+Ejemplo de BSC de Canal 13.
+
+
+Próxima clase: formación de KPIs.
+
+-----
+** [2022-04-12 Tue] Clase 5
+
+Empezamos con nueva unidad.
+
+Unidad 3: Provisión/Integración de RRHH.
+
+
+- Procesos de selección.
+  - No es lo mismo que elegir unos lentes
+    que elegir personal.
+- Análisis y descripción de puestos.
+- Problema de falta de objetivos.
+  - Duplicación de esfuerzo o funciones.
+- Solución: puestos o cargos.
+  - Conjunto de funciones predefinidas
+    en una estructura organizacional.
+- Perfil = puesto + extras.
+  - extras: habilidades blandas, información
+    específica del puesto, etc.
+- Evolución de los perfiles.
+  - por distintos motivos, avances tecnológicos,
+    cambios en paradigmas sociales, etc.
+
+
+Nasa: 18,300 postulantes en 2021[fn:2]. 200,000
+mencionados en la clase.
+
+
+Etapas de selección:
+1) Relevamiento de la información. Análisis del
+   puesto de trabajo:
+   - ¿Cómo recopilamos la información?
+   - ¿Qué información recopilamos?
+2) Confirmación de la información. 
+3) Descripción del puesto[fn:3].
+   - Generación del documento.
+
+   
+\begin{tcolorbox}
+  \begin{center}
+    La profesora nombra el triángulo de
+    las competencias. Básicamente:
+    - Manejar teoría.
+    - Manejar práctica.
+    - Sentido común.
+    
+    
+    Existen diferentes modelos para perfiles
+    que carecen de 0,1,2 o 3 de las 3 aristas
+    del triángulo.
+  \end{center}
+\end{tcolorbox}
+   
+** [2022-04-14 Thu] Clase 6
+
+Repaso clase anterior.
+
+-----
+
+- Gestión de RRHH por competencias.
+- Triángulo de las competencias.
+  - Saber
+  - Hacer
+  - Ser
+
+
+- Caso UFRO: 11 competencias[fn:4].
+  1) Aprender a aprender.
+  2) Compresión lectora.
+  3) Comunicación escrita.
+  4) Comunicación en ingles.
+  5) Comunicación verbal.
+  6) Emprendimiento.
+  7) Liderazgo.
+  8) Pensamiento critico.
+  9) Responsabilidad social.
+  10) Trabajo en equipo.
+  11) Uso de TIC.
+- Identificación y fortalecimiento de
+  competencias.
+  - Promedio: 6 meses en crear una competencia.
+- Siguiente: predicción de comportamiento.
+  - El saber competencias pasadas, permite
+    predecir competencias futuras[fn:5].
+
+
+Tipos de competencias:
+- Cardinales, estratégicas, o genéricas:
+  - Presentes transversalmente en la organización.
+  - Ej: innovación.
+- Específicas: 
+  - Ej: programación en Java.
+
+
+- Identificación profesional online: Linkedin.
+
+- Reclutamiento vs selección.
+  1. Reclutar: Buscar postulantes al por mayor.
+  2. Selección: Seleccionar a mano.
+
+
+- Error común: acomodar el puesto al postulante
+  dada una muy buena impresión del postulante,
+  siendo que hay otros que se acomodan más al
+  perfil buscado. Lo debe ocurrir es que el
+  postulante se debe acomodar a las necesidades
+  del cargo.
 
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
@@ -306,9 +517,28 @@ Sub-sistemas de RRHH
 - link-to-resumen-eval1.org
 - link-to-resumen-eval2.org
 - link-to-resumen-eval3.org
+
+* Footnotes
+
+[fn:1] Buscar "S.M.A.R.T. goals".
+
+[fn:2] https://www.nasa.gov/press-release/record-number-of-americans-apply-to-beanastronaut-at-nasa
+
+[fn:3]
+Ejemplo en clase:
+- https://adp.serviciocivil.cl/concursos-spl/opencms/convocatoria/ADP-7072
+
+[fn:4]
+http://competenciasgenericas.ufro.cl/index.php/diccionario-de-competencias-genericas/
+
+[fn:5]
+En entrevistas, no te preguntan directamente,
+te hacen contar una historia, y de esa historia
+los reclutadores van formando un modelo.
+
+#  LocalWords:  RRHH
+
 * Local variables :noexport:
 # Local Variables:
 # ispell-local-dictionary: "espanol"
 # End:
-
-#  LocalWords:  RRHH KPI

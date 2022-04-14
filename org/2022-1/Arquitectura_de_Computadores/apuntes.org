@@ -7,6 +7,8 @@
   - [[#about][About]]
   - [[#2022-03-21-mon-clase-1][[2022-03-21 Mon] Clase 1]]
   - [[#2022-03-28-mon-clase-2][[2022-03-28 Mon] Clase 2]]
+- [[#ayudantías][Ayudantías]]
+  - [[#2022-04-01-fri-ayudantía-1][[2022-04-01 Fri] Ayudantía 1]]
 - [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
 
 * Clases :lecture:
@@ -153,6 +155,18 @@ Partes que van conectadas a la placa madre.
 
 
 Memory: Cache -> RAM -> Storage.
+
+* Ayudantías
+** [2022-04-01 Fri] Ayudantía 1
+- [2022-04-01 Fri 12:20]
+
+Componentes del PC
+- Procesador
+  - Tipos de socket
+- Placa madre
+
+
+a.rodriguez08@ufromail.cl
 
 * Resúmenes para evaluaciones
 

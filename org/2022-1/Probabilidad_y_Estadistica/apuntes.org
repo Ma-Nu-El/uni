@@ -5,11 +5,13 @@
 * TOC :TOC_2:noexport:
 - [[#clases][Clases]]
   - [[#about][About]]
-  - [[#inactive-timestamp-clase-x-nombre-ramo-abrev][[inactive timestamp] Clase X <nombre ramo abrev>]]
-  - [[#2022-03-15-tue-clase-1][[2022-03-15 Tue] Clase 1]]
-  - [[#2022-03-18-fri-clase-2][[2022-03-18 Fri] Clase 2]]
+  - [[#2022-04-01-fri-clase][[2022-04-01 Fri] Clase]]
+  - [[#2022-04-05-tue-clase][[2022-04-05 Tue] Clase]]
+  - [[#2022-04-08-fri-clase][[2022-04-08 Fri] Clase]]
+  - [[#2022-04-12-tue][[2022-04-12 Tue]]]
 - [[#ayudantías][Ayudantías]]
   - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
+  - [[#2022-04-13-wed-ayudantía-1][[2022-04-13 Wed] Ayudantía 1]]
 - [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
 
 * Clases :lecture:
@@ -26,14 +28,7 @@
 
 - Asi deberias tener luego las clases ordenadas por numero de clase
 - Mientras que en "asignatura.org" estaran ordenadas por el dia
-** [inactive timestamp] Clase X <nombre ramo abrev>
-- [log] link to "asignatura.org" by ID
-- =org-timer-start=
-
-
-< your_notes >
-
-** [2022-03-15 Tue] Clase 1
+** [2022-03-15 Tue] Clase :noexport:
 :PROPERTIES:
 :ID:       36e1b271-8b68-4238-95b0-4350908e5a3f
 :END:
@@ -75,7 +70,7 @@
     calculo de riesgo para un crédito.
 
 -----
-** [2022-03-18 Fri] Clase 2
+** [2022-03-18 Fri] Clase :noexport:
 :PROPERTIES:
 :ID:       4109903c-5882-49a7-b531-0b3f59d11352
 :END:
@@ -276,6 +271,245 @@ Ejemplo: ¿Cómo debe ser un celular para ser
 considerado bueno? ¿A quién le debo preguntar
 la opinión? ¿Quién clasifica como opinión relevante?
 
+** [2022-04-01 Fri] Clase
+:CLOCKBOOK:
+CLOCK: [2022-04-01 Fri 09:18]--[2022-04-01 Fri 11:00] =>  1:42
+:END:
+- [2022-04-01 Fri 09:18]
+
+
+- Leptocurtosis
+- Mesocurtosis
+- Platocurtosis
+
+
+- Medidas de forma: Asimetría.
+  - Positiva: cola hacia la derecha.
+  - Negativa: cola hacia la izquierda.
+
+
+- Bisagras:
+  - \( b_{max}=P_{75} + 1.5 IQR \)
+  - \( b_min=P_{25} - 1.5 IQR \)
+  - \( IQR=P_{75} - P_{25} \)
+
+** [2022-04-05 Tue] Clase
+
+- Tarea: Dashboard:
+  - Generar o realizar uno.
+  - Indicadores tipo KPI.
+  - Buscar: "kpi dashboard in R".
+
+
+- Páginas de bases de datos:
+  - Chile
+    - [[https://datos.gob.cl/][datos.gob.cl/]]
+  - Universidad de Michigan
+    - [[https://www.icpsr.umich.edu/web/pages/ICPSR/index.html][icpsr.umich.edu/web/pages/ICPSR/index.html]]
+  - Universidad de California
+    - [[https://archive.ics.uci.edu/ml/datasets.php][archive.ics.uci.edu/ml/datasets.php]]
+  - Kaggle
+    - [[http://www.kaggle.com][kaggle.com]]
+
+
+- Tipos de variable.
+  - Son 4 en total.
+
+
+- ¿Explicación para valores atípicos?
+  - O es un error humano o es simplemente
+    un valor extremo.
+  - ¿Existe alguna variable que pueda explicar
+    este valor atípico?
+    - En caso de distribución de sueldos, la
+      variable "experiencia" puede explicar
+      valores atípicos. Tambien lo pueden hacer
+      la variable "nivel de educación".
+
+- Preguntas para hacerse respecto a valores atípicos:
+  1) ¿Es posible este valor a típico? Independiente
+     de si es extremo real o error humano.
+  2) ¿Qué necesito para modificar este dato con el
+     objetivo de tener resultados más consistentes?
+
+
+- ¿Cuándo la información es correcta? Cuando
+  los datos son correctos.
+
+
+#+begin_example
+
+         +-------------+
+         |             |
+   Datos |   Proceso   | Información
+  ------>+             +--->
+         |             |
+         |             |
+         +-------------+
+
+#+end_example
+
+
+Estratificación:
+
+Para todos los datos que superen cierto =valor=,
+se crea un nuevo grupo para evitar efecto de
+valores atípicos.
+
+#+begin_example R
+datos$columna[datos$otra_columna>=valor] <- c(4)
+#+end_example
+
+** [2022-04-08 Fri] Clase
+:CLOCKBOOK:
+CLOCK: [2022-04-08 Fri 09:16]--[2022-04-08 Fri 10:36] =>  1:20
+:END:
+
+- Utilizamos archivo "PSU_diagnostico_01.xlsx".
+
+
+- ¿En qué prueba les va mejor?
+  - La que tiene una mediana superior a la media.
+
+
+Usamos =descriptY=: cosas que podemos observar:
+- Hay valores atípicos presentes.
+  - El mínimo real es inferior a la bisagra inferior,
+    y el máximo real es superior a la bisagra
+    superior.
+
+
+Asimetría positiva \(\rightarrow\) Cola
+hacia la derecha \(\rightarrow\) De los
+valores atípicos, los esperados son
+los del lado derecho, los del lado izquierdos
+son valores atípicos inesperados.
+
+
+Dados que son datos de estudiantes de ingeniería,
+¿En cuál prueba les debería ir mejor: matemática
+o lenguaje? ¿Qué tanto más?
+
+¿Qué indica la curtosis?
+- Cúanto, no dónde, se concentran los datos.
+  Mayor curtosis, mayor concentración. No
+  considera /dónde/ se concentran.
+
+
+En =rend1=, el resultado es expresado en
+porcentaje de buenas.
+- Las bisagras entregadas no tienen sentido,
+  la mínima es negativa y la máxima es mayor
+  a 100.
+- Que tanta informacion relevante aporta
+  un porcentaje de =0=? Que tan probable
+  es que un estudiante de ing tenga /todas/
+  malas en una prueba de matematica?
+  - Que no haya asistido, o que responda
+    todas malas a conciencia no es relevante.
+    Si responde a conciencia, y aun así
+    tiene /todas/ malas, ahí si es relevante,
+    pero ese caso es muy improbable.
+
+
+Por todas estas razones, se eliminan los
+puntajes 0 de la data original, pues no aportan
+información relevante a las conclusiones.
+
+: data <- dataOriginal
+
+Copiamos los datos a una nueva base de datos
+para no alterar el original.
+
+luego
+: data$rendida <-c(0)
+
+No se elimina nada, sino que la variable ahora
+describe cuando rinden o no rinden el examen.
+
+Ahora:
+: data$rendida[data$rend1>0]<-c(1)
+
+Cuando /sí/ rinden el examen, la variable
+=rendida= es =1=. Cuando no, es =0=.
+
+Sin embargo, se debe mencionar en el informe
+final que hubieron ciertos elementos no
+considerados.
+
+
+Eliminando los =0=, las bisagras siguen iguales,
+pero los mínimos y máximos reales se ajustan.
+
+Sin embargo, la curtosis disminuye, siendo
+que debería aumentar; la curtosis mide la
+concentración de datos. Mayor curtosis,
+mayor concentración.
+
+** [2022-04-12 Tue]
+
+- Semana 2-5: ejemplo prueba pasada.
+
+*** Ejemplo
+
+Dada una base de datos:
+1) Enuncie una pregunta de investigación
+   respecto de las variables que aparecen en
+   el data set, para la hoja PROB1 y otro
+   para la PROB2.(2p)
+2) Respecto de los datos de PROB 1, ¿Qué
+   variable pudiese afectar en la variabilidad
+   del tamaño muestral?. Si lo desea, puede
+   hacer ajustes a su contexto. (2p)
+3) Respecto de los datos de PROB 2, que tipo
+   de Muestreo podría usar, explique cómo lo
+   usaría. (3p)
+4) Evalúe la calidad de los datos. Prob 1 y
+   Prob 2.
+   1) Si existen valores atípicos, explique en
+      cuál es la mejor opción para tratar estos
+      valores. si no existiesen, explique qué
+      valores pudiesen ser considerados V.A.
+      especulando. (4p), arregle el data set
+      de ser necesario.
+5) Evalúe la variable, por si sola. en la
+   hoja Prob 1 (4p).
+6) Evalúe la variable respecto de un factor
+   de la variable independiente. en la hoja
+   Prob 2 (4p).
+
+*** Conceptos
+
+- Tipos de muestreo.
+- ¿Cómo sé si los datos están correctos,
+  estadísticamente hablando?
+  - Que los datos atípicos sean esperables.
+  - Simetría positiva, datos atípicos hacia
+    la derecha.
+  - Simetría negativa, datos atípicos hacia
+    la izquierda.
+
+
+Si tengo datos atípicos, o son un error,
+o simplemente son reales.
+
+
+Tratamientos para los valores atípicos.
+- Eliminar:
+  - Cuando es un error.
+- Modificar:
+  - Cuando puedo identificar la fuente del valor.
+    Hacer trazabilidad.
+- Tomarlo en cuenta:
+  - Detectando que es un valor que ocurre, está
+    cerca de la bisagra.
+
+
+Acerca del error:
+- Datos -> Proceso -> Información.
+  - Para info correcta, datos y proceso correctos.
+- Datos buenos y proceso malo?
+
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
 # - Then =org-clone-subtree-with-time-shift= and repeat
@@ -285,6 +519,50 @@ la opinión? ¿Quién clasifica como opinión relevante?
 
 < your_notes >
 
+** [2022-04-13 Wed] Ayudantía 1
+*** Parte1: R
+
+- Ayudante: j.mainhard01@ufromail.com
+  - discord: koke#5991
+
+- dinfo.ufro.cl/eduroam
+
+
+- https://rstudio.cloud/
+
+
+- https://aur.archlinux.org/packages/rstudio-desktop
+
+
+- https://stackoverflow.com/questions/2127246/difference-between-affero-gpl-and-gplv3
+- https://www.gnu.org/licenses/why-affero-gpl.html
+- https://www.networkworld.com/article/2229265/is-the-affero-gpl-unfriendly-to-hobbyists-.html
+
+*** Parte2: Proba
+
+- 2 tipos de variables: dependiente e independiente.
+  - Dependiente: aquella en cual basamos nuestra
+    respuesta.
+  - Independiente: explica la variación de
+    la independiente.
+- Mención a población vs muestra
+- Curtosis
+  - Leptocurtosis
+    - 1<<curtosis
+  - Mesocurtosis
+    - 0<curtosis<1
+  - Platocurtosis
+    - curtosis<0
+
+
+- Asimetría
+  - Positiva: cola hacia la derecha
+    - mo<me<pr
+  - Negativa: cola hacia la izquierda
+    - pr<me<mo
+  - 0.08<asimetría<0.08
+    - Se considera simétrica.
+
 * Resúmenes para evaluaciones
 - link-to-resumen-eval1.org
 - link-to-resumen-eval2.org
@@ -293,3 +571,5 @@ la opinión? ¿Quién clasifica como opinión relevante?
 # Local Variables:
 # ispell-local-dictionary: "espanol"
 # End:
+
+#  LocalWords:  curtosis

@@ -81,12 +81,18 @@
 | E-mail   |            |
 | Teléfono |       +569 |
 |----------+------------|
-- Ayudante
-|----------+------|
-| Nombre   |      |
-| E-mail   |      |
-| Teléfono | +569 |
-|----------+------|
+- Ayudante:
+|----------+------------------------------|
+| Nombre   | JORGE ESTEBAN MAINHARD BRAVO |
+| E-mail   |                              |
+| Teléfono |                         +569 |
+|----------+------------------------------|
+- Ayudante:
+|----------+-------------------------------|
+| Nombre   | FELIPE ANDRES BUSTOS SANDOVAL |
+| E-mail   | f.bustos06@ufromail.cl        |
+| Teléfono | +569                          |
+|----------+-------------------------------|
 * Clases y apuntes
 ** Relacionado
 ** Clases :lecture:

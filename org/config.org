@@ -1,9 +1,9 @@
 :ORG_PREAMBLE:
 #+LANGUAGE: es
 #+OPTIONS: toc:2
-#+AUTHOR: [[mailto:m.fuica01@ufromail.cl][m.fuica01@ufromail.cl]]
 
-#+LATEX_HEADER: \usepackage[spanish]{babel}
-#+LATEX_HEADER: \usepackage{enumerate}
-#+LATEX_HEADER: \usepackage{tcolorbox}
+#+LATEX_HEADER:\usepackage[spanish]{babel}
+#+LATEX_HEADER:\usepackage{enumerate}
+#+LATEX_HEADER:\usepackage{tcolorbox}
+#+LATEX_HEADER:\usepackage{cancel}
 :END:

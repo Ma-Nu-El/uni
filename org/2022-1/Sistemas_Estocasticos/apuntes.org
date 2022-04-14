@@ -235,7 +235,7 @@ E \cap F = \{ (R,N) \} = E
 
 ** Ayudantías :assistantship:
 * Resúmenes para evaluaciones
-- link-to-resumen-eval1.org
+- [[id:e5186f3b-5afe-4938-b481-201915dfea4d][link-to-resumen-eval1.org]]
 - link-to-resumen-eval2.org
 - link-to-resumen-eval3.org
 * Local variables :noexport:
