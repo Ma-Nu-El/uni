@@ -35,10 +35,12 @@
 
 
 - Nuevos: cluster (no conectado al internet).
-- La antigua: red punto a punto (carpeta compartida), no require de acceso
-  a un servidor externo. Puede usar una red local.
+- La antigua: red punto a punto (carpeta compartida),
+  no require de acceso a un servidor externo.
+  Puede usar una red local.
 
 *** Transmisión de datos
+
 - Señal análoga
   - Línea contínua
   - Líneas de teléfono para tener internet,
@@ -46,6 +48,7 @@
     la interferencia cada vez que te llamaban.
 - Señal digital
   - Función discreta
+
 *** Medios guiados de transmisión: tipos de cables
 :PROPERTIES:
 :ID:       d5359e0b-2e2e-4802-910a-6f4b9eaf05fb
@@ -75,6 +78,7 @@
 
 - Submarine Cable Map.
   - https://www.submarinecablemap.com/
+
 *** Medios no guiados
 :PROPERTIES:
 :ID:       17104b3f-8f08-42b2-ba81-ab252830eb07
@@ -89,7 +93,9 @@
 - https://www.speedtest.net/global-index
 - Se compara la velocidad de internet alambica
   e inalámbrica de Chile con el resto del mundo.
+
 *** Dispositivos de interconexión
+
 - ISP: Internet Service Provider
   - Movistar.
   - Claro.
@@ -124,6 +130,7 @@
   - Hace el trabajo de traductor.
   - Para redes más complejas que una red de hogar
     se recomienda el gateway.
+
 ** Clase 4 (video 3): Software de Red
 *** Intro
 - Hoy: Software de red

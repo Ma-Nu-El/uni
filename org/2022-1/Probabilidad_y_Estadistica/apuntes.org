@@ -560,7 +560,7 @@ Acerca del error:
     - mo<me<pr
   - Negativa: cola hacia la izquierda
     - pr<me<mo
-  - 0.08<asimetría<0.08
+  - -0.08<asimetría<0.08
     - Se considera simétrica.
 
 * Resúmenes para evaluaciones
