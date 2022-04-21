@@ -539,6 +539,21 @@ Tipos de competencias:
    1) Revisión caso a caso.
    2) Entrevistas finales.
 
+
+-----
+Procesos de decisión
+- De colocación:
+  - Un postulante, un puesto.
+- De selección:
+  - Varios postulantes, un puesto:
+    - Se comparan.
+- De clasificación:
+  - Varios postulantes, varios puestos.
+    - Se comparan y se asignan distintos
+      postulantes a distintos posibles puestos,
+      dependiendo de las demandas del cargo
+      y las ofertas de cada postulante.
+
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
 # - Then =org-clone-subtree-with-time-shift= and repeat
