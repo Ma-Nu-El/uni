@@ -76,16 +76,16 @@
 - links a libros, videos, etc.
 * Contacto
 - Profesor
-|----------+------------|
-| Nombre   |            |
-| E-mail   |            |
-| Teléfono |       +569 |
-|----------+------------|
+|----------+------------------------------|
+| Nombre   | CARLOS RAUL JIMENEZ GALLARDO |
+| E-mail   |                              |
+| Teléfono |                         +569 |
+|----------+------------------------------|
 - Ayudante:
 |----------+------------------------------|
 | Nombre   | JORGE ESTEBAN MAINHARD BRAVO |
-| E-mail   |                              |
-| Teléfono |                         +569 |
+| E-mail   | j.mainhard01@ufromail.cl     |
+| Teléfono | +569                         |
 |----------+------------------------------|
 - Ayudante:
 |----------+-------------------------------|
