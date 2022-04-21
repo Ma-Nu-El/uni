@@ -12,6 +12,7 @@
   - [[#2022-04-05-tue-clase-4][[2022-04-05 Tue] Clase 4]]
   - [[#2022-04-12-tue-clase-5][[2022-04-12 Tue] Clase 5]]
   - [[#2022-04-14-thu-clase-6][[2022-04-14 Thu] Clase 6]]
+  - [[#2022-04-21-thu-clase][[2022-04-21 Thu] Clase]]
 - [[#ayudantías][Ayudantías]]
   - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
 - [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
@@ -504,6 +505,40 @@ Tipos de competencias:
   postulante se debe acomodar a las necesidades
   del cargo.
 
+** [2022-04-21 Thu] Clase
+
+1) Competencias
+2) Reclutamiento
+3) Selección
+
+-----
+
+1) Requerimiento: Necesidad de empresa.
+2) Definición del cargo:
+   1) Recopilación de información.
+   2) Validación.
+   3) Formación de perfil.
+3) Publicación y difusión de perfil.
+4) Recepción de postulaciones:
+   - Reclutamiento y selección.
+   - Head hunter.
+   - Hunting.
+5) Revisión curricular
+   1) Proceso de adecuación inicial
+   2) Revisión perfil
+   3) Orden x puntaje
+   4) Ranking
+6) Entrevistas
+   - También le ponen puntaje.
+   - Básicamente todo tiene puntaje.
+   - Preguntas de todo tipo.
+   - Evaluaciones psicológicas implícitas.
+   - Evaluación psico-laboral.
+     - Tambien con puntaje[fn:6].
+7) Selección de candidatos finales.
+   1) Revisión caso a caso.
+   2) Entrevistas finales.
+
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
 # - Then =org-clone-subtree-with-time-shift= and repeat
@@ -517,6 +552,8 @@ Tipos de competencias:
 - link-to-resumen-eval1.org
 - link-to-resumen-eval2.org
 - link-to-resumen-eval3.org
+
+* Local variables :noexport:
 
 * Footnotes
 
@@ -536,9 +573,11 @@ En entrevistas, no te preguntan directamente,
 te hacen contar una historia, y de esa historia
 los reclutadores van formando un modelo.
 
-#  LocalWords:  RRHH
-
-* Local variables :noexport:
+[fn:6]
+Entre el puntaje de la revisión curricular,
+entrevista y evaluación psico-laboral ya se tienen
+puntajes suficientes.
 # Local Variables:
 # ispell-local-dictionary: "espanol"
 # End:
+#  LocalWords:  RRHH Head hunter Hunting Ranking puntaje
