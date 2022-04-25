@@ -168,7 +168,20 @@ Por otro lado, con \(n=0\) y \(t=50\), tenemos:
   {
     \cancel{n!}
   }
-  &=0.5
+  &=0.5\\
+  e^{-\lambda_{1}t}
+  \cdot
+  e^{-\lambda_{2}t}
+  &=0.5\\
+  \ln{ e^{-\lambda_{1}t} }
+  +
+  \ln{ e^{-\lambda_{2}t} }
+  &=\ln{0.5}\\
+  -\lambda_{1}t
+  -\lambda_{2}t
+  &=\ln{0.5}\\
+  - \lambda_{1} - \lambda_{2}
+  &= \frac{ \ln{0.5} }{t}\\
 \end{align*}
 #+end_src
 
