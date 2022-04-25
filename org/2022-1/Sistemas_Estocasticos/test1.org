@@ -1,7 +1,8 @@
 # #+include: ~/org/uni/org/config.org
 #+TITLE: Desarrollo Ejercicio 17
-#+TITLE: \\
-#+TITLE: Sistemas Estocásticos
+#+subtitle: Test2
+#+subtitle: \\
+#+subtitle: Sistemas Estocásticos
 #+author: [[mailto:m.fuica01@ufromail.cl][Manuel Fuica Morales]]
 :sessions:
 #+PROPERTY: header-args:R :session code :exports both :results replace
