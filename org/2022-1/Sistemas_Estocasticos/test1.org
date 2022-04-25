@@ -189,9 +189,14 @@ Por otro lado, con \(n=0\) y \(t=50\), tenemos:
   \left [
   \frac{\text{fallas}}{\text{hora}}
   \right ]
-              \\
+  \rightarrow \approx
+               258.8
+               \left [
+               \frac{\text{horas}}{\text{falla}}
+               \right ]
 \end{align*}
 #+end_src
+
 
 * Local variables :noexport:
 # Local Variables:
