@@ -182,11 +182,16 @@ Por otro lado, con \(n=0\) y \(t=50\), tenemos:
   &=\ln{0.5}\\
   - \lambda_{1} - \lambda_{2}
   &= \frac{ \ln{0.5} }{t}\\
+  \\
+  \lambda_{2}&= \frac{- \ln{0.5} }{t} - \lambda_{1} \\
+  \lambda_{2}&= \frac{- \ln{0.5} }{50} - 0.01 \\
+  \lambda_{2}&= 3.86 \cdot 10^{-3}
+  \left [
+  \frac{\text{fallas}}{\text{hora}}
+  \right ]
+              \\
 \end{align*}
 #+end_src
-
-
-
 
 * Local variables :noexport:
 # Local Variables:
