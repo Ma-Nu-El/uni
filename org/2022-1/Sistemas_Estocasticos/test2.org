@@ -1,9 +1,7 @@
-#+title: Desarrollo Ejercicio 9
-#+subtitle: Test2
-#+subtitle: \\
-#+subtitle: Sistemas Estocasticos
+#+TITLE: Desarrollo Ejercicio 9
+#+SUBTITLE: Test2
 #+author: Manuel Fuica Morales
-#+date: 25 de abril de 2022
+#+DATE: 25 de abril de 2022
 
 #+LANGUAGE: es
 #+OPTIONS: toc:nil
@@ -11,28 +9,10 @@
 #+LATEX_HEADER:\usepackage[spanish]{babel}
 #+LATEX_HEADER:\usepackage[cancel]
 
-* Ejercicio N°9
-
-La asignatura de sistemas estocásticos compuesto por 50 estudiantes de la cual se elegirá un estudiante para presidente y otro para tesorero. Cuantas opciones diferentes son posibles si
-
-a) no hay restricciones \\
-   - Considerando que un alumno
-
-b) Don Matías participara solo si él es el presidente; asumiendo que el sale.
-
-c) Don Matías participara solo si él es el presidente; asumiendo que el curso prescindirá de su participación
-
-c) Matías y Monserrat participarán juntos o no lo harán;
-
-d) Ignacio y Diego no participaran juntos?
-* Problema N°17
-:PROPERTIES:
-:UNNUMBERED: t
-:END:
-
-"Una máquina de componentes A y B conectados en series de forma tal que la máquina solo funcione si todos sus componentes funcionan y si ellos tienen vida útil aleatoria independientemente exponenciales, Si el valor esperado de a E(A) = 100 horas ¿Cuál debe ser el valor esperado de la vida útil de B para que la máquina siga   operando después de 50 horas sin fallar sea igual a =0,5?"
 
 * Local Variables :noexport:
 # Local Variables:
 # ispell-local-dictionary: "espanol"
 # End:
+
+#  LocalWords:  Matías Monserrat
