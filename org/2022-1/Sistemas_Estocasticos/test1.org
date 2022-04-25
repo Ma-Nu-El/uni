@@ -197,6 +197,10 @@ Por otro lado, con \(n=0\) y \(t=50\), tenemos:
 \end{align*}
 #+end_src
 
+Para que el sistema entero siga funcionando durante
+50 horas con 50% de probabilidad, es necesario
+que la vida útil de la máquina B sea de
+aproximadamente \(258\) horas.
 
 * Local variables :noexport:
 # Local Variables:
