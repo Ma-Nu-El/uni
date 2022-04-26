@@ -1,0 +1,18 @@
+#+TITLE: Desarrollo Ejercicio 9
+#+SUBTITLE: Test2
+#+author: Manuel Fuica Morales
+#+DATE: 25 de abril de 2022
+
+#+LANGUAGE: es
+#+OPTIONS: toc:nil
+
+#+LATEX_HEADER:\usepackage[spanish]{babel}
+#+LATEX_HEADER:\usepackage[cancel]
+
+
+* Local Variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
+
+#  LocalWords:  Matías Monserrat
