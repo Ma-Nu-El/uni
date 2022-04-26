@@ -3,7 +3,6 @@
 #+subtitle: Test2
 #+subtitle: \\
 #+subtitle: Sistemas Estocásticos
-#+author: [[mailto:m.fuica01@ufromail.cl][Manuel Fuica Morales]]
 :sessions:
 #+PROPERTY: header-args:R :session code :exports both :results replace
 :end:
@@ -111,7 +110,7 @@ d) "Matías y Monserrat participarán juntos o no lo harán":
    \]
    Sumando todo:
    \[
-   2 + 48 \cdot 47 = 2258 \text{escenarios diferentes}
+   2+48 \cdot 47 = 2258 \text{ escenarios diferentes.}
    \]
 e) "Ignacio y Diego no participaran juntos?": Si sale
    Diego, tenemos 48 escenarios exitosos. Si sale
@@ -147,7 +146,7 @@ Por otro lado, con \(n=0\) y \(t=50\), tenemos:
 
 #+begin_src latex
 \begin{align*}
-  P(N_{1+2}(50)=0)&=0.5 \\
+  P(N_{1,2}(50)=0)&=0.5 \\
   P(N_{1}(50)=0) \cdot P(N_{2}(50)=0) &=0.5\\
   \\
   \frac
