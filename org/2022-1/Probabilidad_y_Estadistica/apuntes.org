@@ -1,5 +1,7 @@
 #+INCLUDE: "~/org/uni/org/config.org"
 #+FILETAGS: :university:
+#+LATEX_HEADER: \usepackage{venndiagram}
+
 
 
 * TOC :TOC_2:noexport:
@@ -9,6 +11,7 @@
   - [[#2022-04-05-tue-clase][[2022-04-05 Tue] Clase]]
   - [[#2022-04-08-fri-clase][[2022-04-08 Fri] Clase]]
   - [[#2022-04-12-tue][[2022-04-12 Tue]]]
+  - [[#2022-04-26-tue-primera-clase-después-de-la-1-prueba][[2022-04-26 Tue] Primera clase después de la 1 prueba]]
 - [[#ayudantías][Ayudantías]]
   - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
   - [[#2022-04-13-wed-ayudantía-1][[2022-04-13 Wed] Ayudantía 1]]
@@ -509,6 +512,64 @@ Acerca del error:
 - Datos -> Proceso -> Información.
   - Para info correcta, datos y proceso correctos.
 - Datos buenos y proceso malo?
+
+** [2022-04-26 Tue] Primera clase después de la 1 prueba
+
+"Probabilidad: es la medida de verosimilitud
+de ocurrencia de un EVENTO cuando se realice
+el EXPERIMENTO (ξ).
+
+Según Laplace está medida de ocurrencia
+se obtiene como la relación entre los
+CASOS FAVORABLES a la ocurrencia del
+EVENTO o SUCESO y todos posibles casos
+que puedan ocurrir o los casos pertenecientes
+al ESPACIO MUESTRAL (Ω)."
+
+- Conceptos basicos:
+  - Experimento
+    - situación realizable o proceso acontecido,
+      el cual debe ser evaluado de manera numérica.
+  - Probabilidad
+    - medida de ocurrencia.
+  - Suceso
+    - resultado mínimo en el resultado
+      de un experimento.
+  - Evento
+    - conjunto específico de sucesos simples.
+  - Espacio Muestral
+    - conjunto de todos los posibles resultados
+      del experimento.
+
+
+*Pregunta de prueba*: ¿Cuáles deben ser las
+condiciones para que los resultados tengan sentido?
+- "¿Cuál es el experimento?"
+- "¿Cuáles son las condiciones del experimento?"
+
+
+Teoremas:
+#+begin_src latex
+\begin{align*}
+  P(\varnothing)=\frac{\#\varnothing}{\#\Omega}=0 \\
+  P(\Omega)=\frac{\#\Omega}{\#\Omega}=1 \\
+  0 \leq P(A) \leq 1 \\
+  \sum_{i=1}^{n}P(A_{i})=1\\
+\end{align*}
+#+end_src
+
+
+Combinaciones y Permutaciones.
+
+*Eventos dependientes*.
+
+#+begin_src latex
+\begin{venndiagram2sets}[labelOnlyA{A},labelonlyB{B},labelNotAB{aoeu}]
+  \fillACapB
+\end{venndiagram2sets}
+#+end_src
+
+*Probabilidad intersección de eventos*.
 
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
