@@ -1,7 +1,8 @@
 #+INCLUDE: "~/org/uni/org/config.org"
 #+FILETAGS: :university:
 #+TITLE: Gestión de Recursos Humanos
-#+SUBTITLE: RRHH
+#+SUBTITLE: Apuntes de la clase
+#+option: toc:2
 
 * TOC :TOC_2:noexport:
 - [[#clases][Clases]]
@@ -14,9 +15,6 @@
   - [[#2022-04-14-thu-clase-6][[2022-04-14 Thu] Clase 6]]
   - [[#2022-04-21-thu-clase][[2022-04-21 Thu] Clase]]
   - [[#2022-04-26-tue-clase-resumen-para-primera-prueba][[2022-04-26 Tue] Clase resumen para primera prueba]]
-- [[#ayudantías][Ayudantías]]
-  - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
-- [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
 - [[#footnotes][Footnotes]]
 
 * Clases :lecture:
@@ -25,7 +23,8 @@
 - Pegalo en esta sección
 - Elimina el dia, dejando las clases únicamente
 - Selecciona visualmente las clases
-  + Tambien puedes seleccionar el contenido del heading "Clases", es lo mismo.
+  + Tambien puedes seleccionar el contenido del
+    heading "Clases", es lo mismo.
     - Se hace con =v i R=: "visual inside R"
       + La R hace referencia al contenido interior de un heading
 - =org-sort= alpha
@@ -278,7 +277,7 @@ CLOCK: [2022-03-31 Thu 08:46]--[2022-03-31 Thu 09:58] =>  1:12
 Rol y KPI en la Gestión de RRHH.
 
 -----
-Sub-sistemas de RRHH
+Subsistemas de RRHH
 - Integración
   - Reclutamiento, selección, inducción,
     contratación y desvinculación.
@@ -414,7 +413,7 @@ Unidad 3: Provisión/Integración de RRHH.
 - Solución: puestos o cargos.
   - Conjunto de funciones predefinidas
     en una estructura organizacional.
-- Perfil = puesto + extras.
+- Perfil = cargo + extras.
   - extras: habilidades blandas, información
     específica del puesto, etc.
 - Evolución de los perfiles.
@@ -429,8 +428,8 @@ mencionados en la clase.
 Etapas de selección:
 1) Relevamiento de la información. Análisis del
    puesto de trabajo:
-   - ¿Cómo recopilamos la información?
    - ¿Qué información recopilamos?
+   - ¿Cómo recopilamos la información?
 2) Confirmación de la información. 
 3) Descripción del puesto[fn:3].
    - Generación del documento.
@@ -583,8 +582,70 @@ Las personas tienen *necesidades* diversas.
 - ¿Cómo evaluamos la centralización o
   descentralización de los procesos?
 - ¿Por qué es importante el control?
+- ¿Etapas del proceso de selección?
+- ¿Por qué elaborar bases de reclutamiento
+  y selección?:
+  - Las bases son la fundación del
+    proceso de reclutamiento y selección.
+- ¿Qué aspectos debemos considerar en una
+  entrevista de selección?
+  - Cosas que no se pueden preguntar en
+    una entrevista:
+    - por la vida privada en general.
+    - por la orientación sexual.
+    - por los hijos.
+    - por su estado civil.
+    - por la religión.
+    - por los hobbies.
+    - por política.
+    - por enfermedades.
+      - Los requisitos del trabajo están tipificados
+        en las bases del puesto.
+      - No se debe preguntar sobre ellos pues se
+        supone que ya están considerados en otras
+        secciones.
+- Subsistemas de RRHH
+  - Auditoría: ej: verificación del
+    funcionamiento no solo correcto si no
+    que también ético del software.
+- Tipos de autoridad de RRHH: Línea vs Staff.
+- ¿Cómo relacionamos la estrategia y la gestion?
+  - Con los indicadores. KPI.
+- ¿Qué tipos de control considera lo que
+  están haciendo otras organizaciones
+  en materia de personas?
+  - Control de mercado. También los hay /burocrático/
+    y de /clan/.
+- ¿Qué actividades puedes mencionar en el
+  modelo de Dave Ulrich para las labores
+  de RRHH?
+  - Gráfico de "Rol de Recursos Humanos".
+- ¿En qué momento se efectúa el control?
+  - Anticipado.
+  - Recurrente.
+  - Retroalimentado.
+- ¿Para qué sirven los KPI?
+- ¿Qué aspectos son orientados por un tablero
+  de comando o un /Balance/ /Score/ /Card/?
+- ¿Diferencia entre micro y macro entorno?
+- ¿PEST-PESTAC?
+- ¿SMART KPIs?
+- ¿Qué datos compara el control?
+  - Variación entre el desempeño real y esperado.
+- ¿Cómo levantamos un perfil de cargo?
+  1) Relevamiento de la información.
+  2) Confirmación de la información.
+  3) Descripción y publicación del puesto.
+- ¿Cuál es la diferencia entre reclutamiento
+  y selección?
 
-* Ayudantías :assistantship:
+
+
+Maestros de pabellones:
+- R: Salamana
+- D: Molina.
+
+* Ayudantías :assistantship:noexport:
 ** inactive-time-stamp clase x
 # - Then =org-clone-subtree-with-time-shift= and repeat
 - log link by ID
@@ -593,7 +654,7 @@ Las personas tienen *necesidades* diversas.
 
 < your_notes >
 
-* Resúmenes para evaluaciones
+* Resúmenes para evaluaciones :noexport:
 - link-to-resumen-eval1.org
 - link-to-resumen-eval2.org
 - link-to-resumen-eval3.org
@@ -622,6 +683,7 @@ los reclutadores van formando un modelo.
 Entre el puntaje de la revisión curricular,
 entrevista y evaluación psico-laboral ya se tienen
 puntajes suficientes.
+
 # Local Variables:
 # ispell-local-dictionary: "espanol"
 # End:
