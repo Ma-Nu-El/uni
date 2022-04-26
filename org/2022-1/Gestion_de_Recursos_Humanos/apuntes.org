@@ -13,6 +13,7 @@
   - [[#2022-04-12-tue-clase-5][[2022-04-12 Tue] Clase 5]]
   - [[#2022-04-14-thu-clase-6][[2022-04-14 Thu] Clase 6]]
   - [[#2022-04-21-thu-clase][[2022-04-21 Thu] Clase]]
+  - [[#2022-04-26-tue-clase-resumen-para-primera-prueba][[2022-04-26 Tue] Clase resumen para primera prueba]]
 - [[#ayudantías][Ayudantías]]
   - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
 - [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
@@ -45,7 +46,7 @@ Contexto-conceptos y gestión de RRHH.
 Complejidades para análisis en RRHH.
 
 -----
-*Sistema*
+*Sistema abierto*
 
 Ejemplo empresa de venta de papas fritas;
 verlo como un /sistema/ /abierto/
@@ -541,7 +542,7 @@ Tipos de competencias:
 
 
 -----
-Procesos de decisión
+Procesos de decisión de postulantes y puestos:
 - De colocación:
   - Un postulante, un puesto.
 - De selección:
@@ -553,6 +554,35 @@ Procesos de decisión
       postulantes a distintos posibles puestos,
       dependiendo de las demandas del cargo
       y las ofertas de cada postulante.
+
+** [2022-04-26 Tue] Clase resumen para primera prueba
+
+¿Por qué el analisis de RRHH es complejo?:
+Por el micro y macro entorno en el que desenvuelven
+las empresas.
+
+
+- Sistema abierto: la org se relaciona
+  con otras orgs.
+- Socios: a quienes les interesa que a la
+  empresa le vaya bien. Partes interesadas
+  en la empresa.
+
+
+Proveedores vs acreedores: los proveedores
+te entregan bienes y servicios directamente
+relacionados con el proceso productivo.
+Los acreedores te entregan otras formas
+para facilitar el proceso productivo.
+Por ejemplo: el acreedor te entrega dinero,
+y el proveedor te entrega materia prima.
+
+Las personas tienen *necesidades* diversas.
+
+- ¿Cómo reconocemos la misión de las organizaciones?
+- ¿Cómo evaluamos la centralización o
+  descentralización de los procesos?
+- ¿Por qué es importante el control?
 
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
