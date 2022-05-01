@@ -1,16 +1,153 @@
-#+TITLE: Desarrollo Ejercicio 9
-#+SUBTITLE: Test2
-#+author: Manuel Fuica Morales
-#+DATE: 25 de abril de 2022
+#+TITLE: Test 2
+#+subtitle: \\
+#+subtitle: Sistemas Estocásticos
 
-#+LANGUAGE: es
 #+OPTIONS: toc:nil
-
 #+LATEX_HEADER:\usepackage[spanish]{babel}
-#+LATEX_HEADER:\usepackage[cancel]
+#+LATEX_HEADER:\usepackage{cancel}
 
+* Ejercicio N°9 :noexport:
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
 
-* Local Variables :noexport:
+"La asignatura de sistemas estocásticos compuesto por 50 estudiantes de la cual se elegirá un estudiante para presidente y otro para tesorero. Cuantas opciones diferentes son posibles si"
+
+a) "no hay restricciones" \\
+   - Considerando que un alumno /no/ puede ocupar
+     dos puestos y /no/ es lo mismo que un alumno
+     sea elegido para presidente que para tesorero,
+     entonces estamos en un escenario de permutaciones:
+     \(50 \cdot 49= 2450\) permutaciones distintas
+     si elegimos 2 alumnos de un universo de 50
+     sin repetir puestos y distinguiendo
+     entre puestos.
+
+b) "Don Matías participara solo si él es el presidente; asumiendo que el sale": Considerando que Matías es elegido:
+   - Si es presidente, entonces solo tenemos que
+     elegir otro alumno mas para el puesto de tesorero,
+     con 49 opciones.
+   - Si no es presidente, entonces tenemos que
+     descartarlo y empezar el proceso nuevamente:
+     \(49 \cdot 48\).
+   - Sumando todo: \(49 + 49 \cdot 48 = 2401\)
+     escenarios diferentes.
+
+c) "Don Matías participara solo si él es el presidente; asumiendo que el curso prescindirá de su participación": Si en
+   realidad, el curso prescinde de Matías, entonces
+   hay que realizar el sorteo sin él:
+   \[
+   49 \cdot 48 = 2352 \text{ opciones}
+   \]
+
+d) "Matías y Monserrat participarán juntos o no lo harán":
+   Que Matías y Monserrat participen involucra dos
+   escenarios:
+   | 1 | Matias    | Presidente |
+   |   | Monserrat | Tesorero   |
+   |---+-----------+------------|
+   | 2 | Matias    | Tesorero   |
+   |   | Monserrat | Presidente |
+   Las otras opciones son sin considerarlos a ellos
+   enteramente:
+   \[
+     48 \cdot 47 = 2256
+   \]
+   Sumando todo:
+   \[
+   2+48 \cdot 47 = 2258 \text{ escenarios diferentes.}
+   \]
+e) "Ignacio y Diego no participaran juntos?": Si sale
+   Diego, tenemos 48 escenarios exitosos. Si sale
+   Ignacio, tenemos otros 48 escenarios exitosos.
+
+   Si no sale ninguno, eso compone \(48 \cdot 47=2256\)
+   escenarios posibles.
+
+   Sumando todo:
+   \[
+   48 + 48 + 2256 = 2352 \text{ escenarios diferentes.}
+   \]
+
+* Problema N°17
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+
+"Una máquina de componentes A y B conectados en series de forma tal que la máquina solo funcione si todos sus componentes funcionan y si ellos tienen vida útil aleatoria independientemente exponenciales, Si el valor esperado de a E(A) = 100 horas ¿Cuál debe ser el valor esperado de la vida útil de B para que la máquina siga   operando después de 50 horas sin fallar sea igual a =0,5?"
+
+Sabemos que \(E(A)=100\) horas. Entonces
+#+begin_src latex
+\begin{align*}
+E(A)=\frac{1}{\lambda_{1}=100} \text{ horas}
+\rightarrow \lambda_{1} = 0.01
+  \left [
+  \frac{\text{fallas}}{\text{hora}}
+  \right ]
+\end{align*}
+#+end_src
+
+Por otro lado, con \(n=0\) y \(t=50\), tenemos:
+
+#+begin_src latex
+\begin{align*}
+  P(N_{1,2}(50)=0)&=0.5 \\
+  P(N_{1}(50)=0) \cdot P(N_{2}(50)=0) &=0.5\\
+  \\
+  \frac
+  {
+    \cancel{(\lambda_{1} \cdot t)^{n}}
+    \cdot
+    e^{-\lambda_{1}t}
+  }
+  {
+    \cancel{n!}
+  }
+  \cdot
+  \frac
+  {
+    \cancel{(\lambda_{2} \cdot t)^{n}}
+    \cdot
+    e^{-\lambda_{2}t}
+  }
+  {
+    \cancel{n!}
+  }
+  &=0.5\\
+  e^{-\lambda_{1}t}
+  \cdot
+  e^{-\lambda_{2}t}
+  &=0.5\\
+  \ln{ e^{-\lambda_{1}t} }
+  +
+  \ln{ e^{-\lambda_{2}t} }
+  &=\ln{0.5}\\
+  -\lambda_{1}t
+  -\lambda_{2}t
+  &=\ln{0.5}\\
+  - \lambda_{1} - \lambda_{2}
+  &= \frac{ \ln{0.5} }{t}\\
+  \\
+  \lambda_{2}&= \frac{- \ln{0.5} }{t} - \lambda_{1} \\
+  \lambda_{2}&= \frac{- \ln{0.5} }{50} - 0.01 \\
+  \lambda_{2}&= 3.86 \cdot 10^{-3}
+  \left [
+  \frac{\text{fallas}}{\text{hora}}
+  \right ]
+  \rightarrow \approx
+               258.8
+               \left [
+               \frac{\text{horas}}{\text{falla}}
+               \right ]
+\end{align*}
+#+end_src
+
+Para que el sistema entero siga funcionando durante
+50 horas con 50% de probabilidad, es necesario
+que la vida útil de la máquina B sea de
+aproximadamente \(258\) horas.
+
+* Local variables :noexport:
 # Local Variables:
 # ispell-local-dictionary: "espanol"
 # End:
