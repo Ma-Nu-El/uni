@@ -1,0 +1,1265 @@
+#+TITLE: Notas de clase: Resumen de Distribuciones de Probabilidad Discretas y ejemplos en R
+#+INCLUDE: "~/org/uni/org/config.org"
+#+date: Abril 2022
+#+author: Manuel Fuica Morales
+:sessions:
+#+PROPERTY: header-args:R :session code :exports both :results replace
+:end:
+
+@@latex:\clearpage@@
+
+#+begin_src R :session code :exports results :results silent
+library("extraDistr")
+#+end_src
+
+* Atención
+
+Éstas son las notas personales de un
+estudiante de Ingeniería Civil Industrial
+con mención en Informática. No se deben
+considerar como demostraciones o
+fuentes revisadas por terceros.
+
+** Créditos
+
+La mayoría de los ejemplos utilizados en estas
+notas están obtenidos del canal de Youtube
+[[https://www.youtube.com/user/jbstatistics][jbstatistics]]. 
+
+* Prerrequisitos
+** Factorial
+
+\begin{align}
+n!=n (n-1) (n-2) \cdots 1
+\end{align}
+
+Note:
+- \(1!=0!=1\)
+
+
+También, \(x!\ \forall\ x<0\) no está definido.
+-----
+** Técnicas de conteo
+*** Permutación
+
+Desde un punto de vista de conteo de elementos,
+específicamente la /permutación/, \(\{a,b\}\) *no*
+es lo mismo que \(\{b,a\}\).
+
+Así, para calcular la cantidad de diferentes
+permutaciones que podría formar si selecciono
+\(r\) elementos de un universo que contiene
+\(n\) elementos se denota \(nPr\) y se
+calcula:
+
+\begin{align}
+nPr=\frac{n!}{(n-r)!}
+\end{align}
+
+*** Combinación
+
+Desde un punto de vista de conteo de elementos,
+específicamente la /combinación/, \(\{a,b\}\)
+*es* lo mismo que \(\{b,a\}\).
+
+Combinaciones diferentes serían \(\{a,b\}\) y
+\(\{a,c\}\).
+
+Así, si tenemos una /combinación/ con \(n\)
+elementos, y queremos saber cuantas
+/permutaciones/ diferentes podemos formar
+con esos \(n\) elementos, simplemente
+calculamos el /factorial/ del número de elementos;
+en este caso las permutaciones posibles serían
+\(n!\)
+
+
+Ahora, supongamos que tenemos un universo de
+\(n\) elementos diferentes y seleccionamos
+\(r\) elementos.
+
+Queremos saber: ¿Cuántas combinaciones diferentes
+de \(r\) elementos podemos formar?
+
+\begin{align}
+nCr = \frac{nPr}{r!} =
+\frac{n!}{(n-r)!} \cdot \frac{1}{r!} =
+\frac{n!}{r!(n-r)!} = \binom{n}{r}
+\end{align}
+
+*** Permutación y Combinación con repetición
+
+Usualmente, nosotros sacamos objetos de un
+universo sin devolverlos después, al menos
+en las clases le dan énfasis a esos escenarios.
+
+Pero es conveniente saber que también existen
+modelos matemáticos para cuando tu
+sacas objetos de un universo y los devuelves,
+para luego volver a sacar un elemento y se
+repite el proceso.
+
+Sin más preámbulo, las ecuaciones para esos
+escenarios son: también considérese un
+universo de \(n\) elementos de los cuales
+se sacan \(r\) elementos, pero considerando
+que devuelves cada elemento una vez que lo
+sacas del universo:
+
+- Permutaciones
+  \begin{align}
+    n^{r}
+  \end{align}
+- Combinaciones
+  \begin{align}
+    \frac{(r+n-1)!}{r!(n-1)!}
+  \end{align}
+
+
+Puedes averiguar más en el siguiente enlace:
+- [[https://www.mathsisfun.com/combinatorics/combinations-permutations.html][mathsisfun.com/combinatorics/combinations-permutations]]
+
+** Independencia de eventos
+
+Dos eventos se dicen mutuamente independientes
+si la probabilidad de que ocurra uno *no*
+es afectada por el hecho de que ocurra o
+no ocurra otro.
+
+** Multinomial vs Multivariado
+
+Multinomial significa que una variable puede
+tomar múltiples valores. Multivariado significa
+que hay múltiples variables involucradas.
+
+Un caso puntual de Multinomial es Binomial,
+que significa que una variable puede tomar
+específicamente dos valores.
+
+Un caso puntual de Multivariado es Bivariado,
+que significa que hay específicamente dos
+variables involucradas.
+
+** Partición
+:PROPERTIES:
+:ID:       3ef5916d-eadb-474e-8105-55e76ba50f61
+:END:
+
+Igualmente que en el contexto informático,
+una partición representa una porción de
+un conjunto. La particularidad de las particiones
+es que /no/ tienen elementos en común, y además,
+la suma de las particiones representan el
+conjunto total.
+
+Por lo tanto, al elegir un elemento que pertenece
+a una partición, tenemos garantizado que ese
+elemento pertenece únicamente a esa porción
+y no se repite en otra, y además la suma
+de las particiones forman el universo entero.
+
+Representación matemática: si \(k_{1}\) y \(k_{2}\)
+son particiones de un universo \(\Omega\),
+entonces tenemos que la intersección de las
+particiones es vacía, y la unión de las particiones
+es el universo entero \(\Omega\):
+
+\begin{align*}
+  k_{1} \cap k_{2} = \emptyset \qquad
+  &\text{Intersección} \\
+  k_{1} \cup k_{2} = \Omega \qquad
+  &\text{Unión}
+\end{align*}
+
+** Universo vs muestra
+
+El universo es la totalidad de los elementos,
+mientras que la muestra es cuando seleccionas
+ciertos elementos de dicho universo.
+
+En la práctica, tomar muestras es más
+económico que medir la población entera.
+Por eso los censos son cada 10 años
+en vez de mas seguido.
+
+** Esperanza y Varianza
+
+La Esperanza en este documento se denota \(\mu\)
+y la varianza se denota \(\sigma^{2}\).
+
+-----
+@@latex:\clearpage@@
+* Distribuciones discretas
+** Bernoulli
+:PROPERTIES:
+:ID:       4cff17cf-8b2e-4668-a553-a1f00c9c24ed
+:END:
+
+*** Contexto
+
+Se define un evento --- o ensayo o intento ---
+/Bernoulli/ cuando tenemos una situación donde una
+variable puede tomar específicamente dos valores
+--- usualmente denominados "éxito" y "fracaso" ---.
+Además, que un evento /Bernoulli/ ocurra,
+no entrega información respecto del resultado
+de otros eventos /Bernoulli/.
+
+*** Definición
+
+La probabilidad de éxito de un evento es \(p\).
+Se define la variable aleatoria \(X\) como
+el número de éxitos en un evento.
+
+Así, \(X\) tiene una distribución /Bernoulli/
+que se calcula:
+
+
+\begin{align}
+X \sim \textit{Bernoulli}:
+P(X=x)= P(x) = p^{x} \cdot (1-p)^{1-x}
+\end{align}
+
+
+- para \(x = \{0,1\}\) número de éxitos.
+
+
+\begin{align*}
+P(x=1) &= p^{(1)} q^{1-(1)}=p \\
+P(x=0) &= p^{(0)} q^{1-(0)}=q=1-p
+\end{align*}
+
+\begin{align*}
+\mu &= p \\
+\sigma^{2} &= p(1-p)
+\end{align*}
+
+** Distribuciones basadas en intentos Bernoulli
+- [[id:eba6d6d6-7b9d-4365-bab9-185f216dbda7][Binomial: generalización de Bernoulli]]
+- [[id:bc0dda10-999e-4cbc-82c9-1be3122fb7a9][Geométrica]]
+- [[id:57844672-cbbf-4796-9104-f54eb0bcda6d][Binomial Negativa: generalización de Geométrica]]
+- [[id:8a29df63-eebc-4ddc-b3e2-3ecdca0c7f4d][Poisson]]
+** Binomial: generalización de Bernoulli
+:PROPERTIES:
+:ID:       eba6d6d6-7b9d-4365-bab9-185f216dbda7
+:END:
+*** Contexto
+
+El intento [[id:4cff17cf-8b2e-4668-a553-a1f00c9c24ed][Bernoulli]] involucra /un/ intento en
+específico. Se define la variable aleatoria \(X\)
+como el número de éxitos para \(n\) intentos
+/Bernoulli/ con probabilidad de éxito \(p\).
+La distribución de \(X\) se calcula:
+
+*** Definición
+:PROPERTIES:
+:ID:       f5d97470-4829-46ba-8fda-9349fbbd507c
+:END:
+
+\begin{align}
+  X \sim \textit{Binomial}:
+  P(X=x) =
+  \underbrace{
+    \binom{n}{x}
+  }_{
+    \substack{
+      \text{Combinaciones} \\
+      \text{de éxitos} \\
+      \text{posibles.}
+    }
+  }
+  \cdot
+  \underbrace{
+    p^{x} \cdot q^{n-x}
+  }_{
+    \substack{
+      \text{Parte } \\
+      \text{Bernoulli}
+    }
+  }
+\end{align}
+
+- para \(x=\{0,1, \cdots, n\}\) número de éxitos.
+- note que \(n-x\) es el número de fracasos.
+- note que \(q=1-p\) es la probabilidad de fracaso.
+
+
+\begin{align*}
+\mu &= np \\
+\sigma^{2} &= np(1-p)
+\end{align*}
+
+** Multinomial: generalización de Binomial
+:PROPERTIES:
+:ID:       288c060a-4b71-4261-ba11-1176c956af9b
+:END:
+
+*** Contexto
+
+De la misma forma, así como la distribución
+/Binomial/ es una generalización de la distribución
+/Bernoulli/, la distribución /Multinomial/ es
+una generalización de la distribución /Binomial/.
+
+Específicamente para \(n\) intentos con una
+variable aleatoria que puede tomar /más/ de dos
+valores. Diferente de la /Binomial/ que son \(n\)
+intentos donde la variable aleatoria puede tomar
+solo dos valores.
+
+Ahora, los valores que puede tomar la variable
+aleatoria son mutuamente excluyentes y exhaustivos,
+igualmente que la [[id:3ef5916d-eadb-474e-8105-55e76ba50f61][particiones]].
+
+El escenario que se puede resolver utilizando
+la distribución Multinomial es: si tienes un
+universo con \(k\) particiones, donde
+la partición \(i\)-ésima posee un \(P(k_{i})\)
+porcentaje del total, tu seleccionas
+\(n\) elementos del universo y quieres saber
+la probabilidad de que de los \(n\) elementos
+que seleccionaste, \(x_{i}\) correspondan
+a la partición \(k_{i}\).
+
+*** Definición
+:PROPERTIES:
+:ID:       fc380635-117b-435b-9dc4-2f77cc6defc8
+:END:
+
+
+La variable aleatoria \(X\) representa al
+vector de éxitos seleccionados de los \(n\)
+elementos seleccionados y se distribuye de
+la forma:
+
+\begin{align}
+  X \sim \textit{Multinomial }:
+  P(X_{1}=x_{1},\cdots,X_{k}=x_{k}) &=
+    \frac{n!}{x_{1}! \cdots x_{k}!}
+    p_{1}^{x_{1}} \cdots p_{k}^{x_{k}}
+\end{align}
+
+\begin{align*}
+\mu_{i} &= np_{i} \\
+\sigma^{2}_{i} &= np(1-p)_{i}
+\end{align*}
+
+El subíndice \(i\) en la Esperanza y Varianza
+son porque \(\mu_{i}\) y \(\sigma^{2}_{i}\) son para
+cada una de las \(i\)-ésimas variables involucradas.
+
+*** Ejemplo
+:PROPERTIES:
+:ID:       4f590b01-66c5-4af2-b87b-7a2dd37b1ea2
+:END:
+
+Tienes un universo de personas donde el tipo
+de sangre esta distribuido:
+
+| Tipo de sangre | O     | A     | B     | AB    |
+|----------------+-------+-------+-------+-------|
+| Probabilidad   | =.44= | =.42= | =.10= | =.04= |
+
+Eliges 10 personas, ¿Cuál es la probabilidad
+de que de esas 10 personas =6= sean de tipo
+=O=, =2= de tipo =A=, =1B= y =1AB=?
+
+\begin{align*}
+P(x_{1}=6,x_{2}=2,x_{3}=1,x_{4}=1)=
+\frac{10!}{6!\ 2!\ 1!\ 1!}
+0.44^{6}\ 0.42^{2}\ 0.10^{1}\ 0.04^{1}
+\approx 0.01290
+\end{align*}
+
+Esa probabilidad es de un =1.29%= approx.
+
+** Geométrica
+:PROPERTIES:
+:ID:       bc0dda10-999e-4cbc-82c9-1be3122fb7a9
+:END:
+*** Contexto
+
+La pregunta que responde la [[id:eba6d6d6-7b9d-4365-bab9-185f216dbda7][Binomial]] es:
+dada una tasa de éxito \(p\), ¿Cuál es
+la probabilidad que en \(n\) intentos
+haya tenido \(x\) éxitos?
+
+La pregunta que responde la Geométrica
+es: dada una tasa de éxito \(p\), ¿Cuál es la
+probabilidad que el /primer/ éxito lo
+obtenga al \(x\)-ésimo intento?
+
+Aunque, dependiendo del software que se use
+o incluso del libro que se lea, la formulación
+puede ser diferente, por ejemplo, basada en los
+fracasos acumulados antes del primer éxito,
+pero el trasfondo es el mismo.
+
+Si definimos la variable aleatoria \(X\)
+como el número de intentos necesarios antes
+del primer éxito, entonces podemos
+calcular la probabilidad de que el primer
+éxito lo obtengamos al \(x\)-ésimo intento como:
+
+*** Definición
+
+\begin{align}
+X \sim \textit{Geométrica}:
+P(x) = p \cdot (1-p)^{x-1}
+\end{align}
+
+
+- \(p\), tasa de éxito.
+- \(x\), número del intento en el que obtenemos el
+  primer éxito.
+- \(x-1\), número de fracasos antes del primer
+  éxito.
+
+
+\begin{align*}
+\mu &= \frac{1-p}{p}\\
+\sigma^{2} &= \frac{1-p}{p^{2}}
+\end{align*}
+
+*** Explicación
+
+Para el primer éxito ocurra en el \(x\)-ésimo
+intento, necesitamos dos condiciones:
+1. Los primeros \((x-1)\) intentos deben ser
+   fallos.
+2. El \(x\)-ésimo intento debe ser un éxito.
+
+
+Si calculamos la probabilidad de que estas
+dos cosas ocurran, tenemos:
+
+\begin{align*}
+P(x) =
+\underbrace{
+  (1-p)^{x-1}
+}_{
+  \substack{
+    \text{los primeros } x-1 \\
+    \text{fracasos con tasa de fracaso}\\
+    1-p
+  }
+}
+\cdot
+\underbrace{
+  p
+}_{
+  \substack{
+    \text{el } x \text{-ésimo intento} \\
+    \text{con tasa de éxito} \\
+    p
+  }
+}
+\end{align*}
+
+*** Ejemplo
+
+El 30% de la población tiene entrenamiento
+de Reanimación Cardio-Pulmonar (RCP). ¿Cuál es la
+probabilidad que eligiendo personas al
+azar, la sexta persona seleccionada sea
+la primera en tener entrenamiento RCP?
+
+Eso significa que las primeras 5 personas
+/no/ poseen entrenamiento RCP.
+
+\begin{align*}
+P(x) =
+\underbrace{
+  (1-(0.3))^{(6)-1}
+}_{\text{no tiene entrenamiento}}
+\cdot
+\underbrace{
+  (0.3)
+}_{\text{sí tiene entrenamiento}}
+\approx 0.0504
+\end{align*}
+
+
+La probabilidad de que la sexta persona
+seleccionada sea la primera en poseer
+entrenamiento RCP es de aproximadamente
+un 5.04%
+
+** Binomial Negativa: generalización de Geométrica
+:PROPERTIES:
+:ID:       57844672-cbbf-4796-9104-f54eb0bcda6d
+:END:
+
+*** Contexto
+
+Nuevamente, como la [[id:288c060a-4b71-4261-ba11-1176c956af9b][Multinomial]] es la generalización
+de la [[id:eba6d6d6-7b9d-4365-bab9-185f216dbda7][Binomial]], la Binomial Negativa es la
+generalización de la [[id:bc0dda10-999e-4cbc-82c9-1be3122fb7a9][Geométrica]].
+
+La Geométrica responde la pregunta: ¿Cuál es
+la probabilidad que el /primer/ éxito lo
+obtenga al \(x\)-ésima intento?
+
+La Binomial Negativa responde la pregunta:
+¿Cuál es la probabilidad que el \(r\)-ésimo
+éxito lo obtenga al \(x\)-ésimo intento?
+
+*** Definición
+
+Definamos la variable aleatoria \(X\)
+como el número del intento en el cual obtenemos
+el \(r\)-ésimo éxito, entonces la variable
+aleatoria \(X\) se distribuye
+Binomial Negativa y se calcula como:
+
+
+\begin{align}
+P(x)=
+\binom{x-1}{r-1} (1-p)^{x-r} p^{r}
+\end{align}
+
+
+- \(x\) es el número del intento en el cual
+  obtenemos el \(r\)-ésimo éxito con
+  tasa de éxito \(p\) para cada intento.
+
+
+Dependiendo de como se defina la variable
+aleatoria \(X\), el valor de la Esperanza
+y Varianza cambian. Prefiero omitirla.
+Además, nunca te la preguntan en las pruebas
+así que esta eso también.
+
+*** Explicación
+
+Para que el \(r\)-ésimo éxito ocurra en el
+\(x\)-ésimo intento con tasa de éxito \(p\)
+para cada intento[fn:1], se deben cumplir
+las siguientes condiciones:
+- Los primeros \(x-1\) intentos deben contener
+  \(r-1\) éxitos.
+  - Esta parte es simplemente Binomial.
+- El \(x\)-ésimo intento debe ser un éxito.
+
+La probabilidad de que ocurran estas dos
+condiciones se calcula multiplicándolas:
+
+\begin{align*}
+  \underbrace{
+    \underbrace{
+      \binom{x-1}{r-1}
+    }_{
+      \substack{
+        \text{Combinaciones de } r-1
+          \text{ éxitos} \\
+        \text{obtenidos en los primeros } x-1 \\
+        \text{intentos.} \\
+      }
+    }
+    \underbrace{
+      p^{r-1} (1-p)^{(x-1)-(r-1)}
+    }_{
+      \substack{
+        \text{Parte Bernoulli.}
+      }
+    }
+  }_{
+    \text{Parte Binomial.}
+  }
+  \underbrace{
+    p
+  }_{
+    \substack{
+      \text{Tasa de éxito } p \\
+      \text{de el } x \text{-ésimo intento.}
+    }
+  }
+\end{align*}
+
+Desarrollando, terminamos teniendo:
+
+\begin{align*}
+P(x)=
+\binom{x-1}{r-1} (1-p)^{x-r} p^{r}
+\end{align*}
+
+*** Ejemplo
+:PROPERTIES:
+:ID:       d160ff79-b9da-48d1-96e8-70d376ca0c19
+:END:
+
+Un encuestador necesita 3 o más personas
+encuestadas para finalizar el día. 9 de cada
+100 personas llamadas responden la encuesta.
+¿Cuál es la probabilidad de que la tercera
+encuesta completada se alcance en la
+décima llamada?
+
+- Probabilidad de éxito de cada llamada \(p=0.09\).
+- Tercera encuesta completada \((r=3)\) en el
+  décimo intento \((x=10)\).
+
+\begin{align*}
+P(x)=
+\binom{x-1}{r-1} (1-p)^{x-r} p^{r}
+\end{align*}
+
+\begin{align*}
+P(x=10)=
+\binom{(10)-1}{(3)-1}
+(1-(0.09))^{(10)-(3)}(0.09)^{(3)}
+\approx 0.0135
+\end{align*}
+
+La probabilidad de que la tercera encuesta
+sea completada al décimo intento es de
+aproximadamente un 1.35%.
+
+** Poisson
+:PROPERTIES:
+:ID:       8a29df63-eebc-4ddc-b3e2-3ecdca0c7f4d
+:END:
+
+De lo que he leído, la distribución Poisson
+parece venir de un origen diferente, pero
+llega a un modelo similar a los vistos hasta
+el momento. Aunque honestamente soy ignorante
+al respecto, así que me limito a entregar
+el contexto en el que se usa esta distribución
+y un ejemplo.
+
+*** Contexto
+
+Cuando tienes eventos que están pasando
+de forma aleatoria y de forma independiente,
+a cierto número de eventos por unidad de
+medición.
+
+Ejemplos: número de choques por hora, número de
+nacimientos en un día, llamadas por hora desde
+un centro de llamados, llegadas por minuto a
+un restaurante, visitas por hora a un sitio web,
+número de fallas de una network por año,
+número de peces por cada 1000 litros
+en una piscicultura.
+
+Básicamente siempre que tengas una tasa de
+eventos por unidad de medición,
+ya sea tiempo, espacio o cualquier otra
+unidad de medición, y que la ocurrencia de
+un evento no afecta las probabilidades de
+ocurrencia o no ocurrencia de otro, entonces
+se dice que esos eventos se están
+distribuyendo Poisson.
+
+En la práctica, siempre sabes la
+tasa promedio de ocurrencia de estos eventos,
+comúnmente anotada con la letra \(\lambda\).
+
+*** Definición
+
+Si definimos la variable aleatoria \(X\) como
+el número de eventos en una unidad de medición
+dada una tasa de ocurrencia promedio
+\(\lambda=(\text{eventos}/\text{unidad de medición})\)
+entonces podemos calcular la probabilidad
+de \(X\) como:
+
+\begin{align}
+P(X=x)=P(x)=
+\frac
+{\lambda^{x}e^{-\lambda}}
+{x!}
+;\quad
+\forall x \in \mathbb{N}_{0}
+\end{align}
+
+\begin{align*}
+\mu = \sigma^{2} = \lambda
+\end{align*}
+
+*** Ejemplo
+
+Un nanogramo \(ng\) de Plutonio-239 tiene
+2.3 "decays" por segundo[fn:2]. Y dichos
+decays se distribuyen Poisson.
+
+¿Cuál es la probabilidad de que en un periodo
+de dos segundos, hayan exactamente 3 decays?
+
+Como el "decays por segundo" es de 2.3,
+y nos preguntan por un periodo de /2/ segundos,
+entonces nuestro lambda \(\lambda\) a
+poner en la ecuación es de \(2.3 \cdot 2=4.6\).
+
+\begin{align*}
+  P(3)=\frac
+  {
+    4.6^{3}e^{-4.6}
+  }
+  {
+    3!
+  }
+  \approx 0.16307 
+\end{align*}
+
+La probabilidad de tener 3 decays en 2 segundos
+es de aproximadamente 16.30%.
+
+** Hipergeométrica
+:PROPERTIES:
+:ID:       4f33bad8-7720-4585-8063-267a3f231a58
+:END:
+
+Todas las vistas hasta el momento involucran
+eventos independientes, sin embargo, las
+/hipergeométricas/ se destacan porque
+la ocurrencia de un evento /sí/ afecta
+las probabilidades de ocurrencia o no
+ocurrencia de otros eventos.
+
+*** Contexto
+
+Generalmente, cuando el universo es relativamente
+pequeño en relación a la muestra, --- cosa que
+se menciona [[id:8a8055e6-8613-4225-9fe3-464501094508][en detalle más adelante]]
+en este documento--- las distribuciones
+hipergeométricas e hipergeométricas multivariadas
+son las que se ocupan.
+
+Sin embargo, para universos relativamente
+grandes en comparación a la muestra, las
+hipergeométricas se pueden aproximar a
+distribuciones más amigables de calcular a
+mano.
+
+La situación que resuelve la distribución
+hipergeométrica es: dado un universo que
+contiene \(N\) elementos de los cuales \(a\)
+son éxitos y \(N-a\) son fracasos,
+si seleccionamos /sin/ /devolución/[fn:3]
+\(n\) de esos \(N\) elementos, ¿Cuál es la
+probabilidad de que en esos \(n\) elementos
+seleccionados, hayan \(x\) éxitos?
+
+*** Definición
+:PROPERTIES:
+:ID:       034c8943-24c7-4146-a55c-989291d71361
+:END:
+
+Se define la variable aleatoria \(X\) como 
+el número de éxitos \(x\) contenidos en una muestra
+de tamaño \(n\) obtenida /sin/ /devolución/ de
+un universo de \(a\) éxitos y \(N-a\)
+fracasos; siendo el universo entero conformado
+por \(N\) elementos:
+
+\begin{align}
+  X \sim \textit{Hipergeométrica}:
+  P(x)=\frac
+  {
+    \binom{a}{x}
+    \binom{N-a}{n-x}
+  }
+  {
+    \binom{N}{n}
+  }
+\end{align}
+
+\begin{align*}
+\mu &= n \frac{a}{N}\\
+\end{align*}
+
+La varianza es ligeramente larga, y
+nunca la preguntan en las pruebas.
+
+*** Ejemplo
+:PROPERTIES:
+:ID:       a4c556c6-9245-4f4b-bbb2-70165bbfaa94
+:END:
+
+Un colegio tiene 2000 estudiantes, 1100 mujeres
+y 900 hombres. 10 estudiantes son seleccionados
+al azar, ¿Cuál es la probabilidad de que
+de los 10 estudiantes seleccionados, 7 sean
+mujeres?:
+
+
+- N=2000
+- a=1100
+- N-a=900
+- n=10
+- x=7
+
+\begin{align*}
+P_{\textit{Hipergeométrica}}(7)=\frac
+{
+  \binom{1100}{7}
+  \binom{900}{3}
+}
+{
+  \binom{2000}{10}
+}
+\approx 16.65\%
+\end{align*}
+
+Dicha probabilidad es de un 16.65% aproximadamente.
+
+** Hipergeométrica Multivariada: generalización de la Hipergeométrica
+:PROPERTIES:
+:ID:       e0f06c88-3a83-4ac3-a3e3-3c83803cb0b5
+:END:
+
+*** Contexto
+
+Asimismo, como la [[id:288c060a-4b71-4261-ba11-1176c956af9b][Multinomial]] es la generalización
+de la [[id:eba6d6d6-7b9d-4365-bab9-185f216dbda7][Binomial]], la Hipergeométrica Multivariada
+es la generalización de la Hipergeométrica.
+
+Ahora, el universo no está constituido de
+solo dos tipos de elementos, sino que nuevamente,
+esta constituido de particiones.
+
+El escenario que resuelve la Hipergeométrica
+Multivariada es: dado un universo de \(N\)
+elementos que se divide en \(k\) particiones
+con cada partición teniendo un \(P(k_{i})\)
+porcentaje de \(N\), si elegimos \(n\)
+elementos del universo, ¿Cuál es
+la probabilidad de que de los \(n\) elementos
+seleccionados, \(x_{i}\) elementos
+correspondan a la partición \(k_{i}\)?
+
+*** Definición
+
+Se define la variable aleatoria \(X\) como
+el vector éxito dentro de la muestra tomada
+de la población y se distribuye de la siguiente
+forma:
+
+\begin{align}
+P(X_{1}=x_{1}, \cdots, X_{k}=x_{k})=
+\frac
+  {
+    \binom{k_{1}}{x_{1}}
+    \cdots
+    \binom{k_{k}}{x_{k}}
+  }
+  {
+    \binom{N}{n}
+  }
+P(k_{1})^{x_{1}} \cdots
+P(k_{k})^{x_{k}} 
+\end{align}
+
+\begin{align*}
+\text{con } \sum_{i=1}^{k} k_{i}=N
+\qquad \& \qquad
+\sum_{i=1}^{k} x_{i}=n
+\end{align*}
+
+
+Al igual que la [[id:fc380635-117b-435b-9dc4-2f77cc6defc8][Multinomial]], la Esperanza es
+la misma que la de la función que generaliza,
+la [[id:f5d97470-4829-46ba-8fda-9349fbbd507c][Binomial]] para el caso de la Multinomial,
+y la [[id:034c8943-24c7-4146-a55c-989291d71361][Hipergeométrica]] para el caso
+de la Hipergeométrica Multivariada.
+
+\begin{align*}
+\mu_{i} &= n \frac{a_{i}}{N}\\
+\end{align*}
+
+*** Ejemplo
+:PROPERTIES:
+:ID:       bb8c0ca5-1de2-4108-956e-575741826a73
+:END:
+
+Tienes una caja con =8= bolas rojas, =3= amarillas
+y =9= blancas. ¿Cuál es la probabilidad de
+sacar al azar /sin/ /devolver/ =2= rojas,
+=1= amarilla y =3= blancas?
+
+
+- \(N=8+3+9=20\)
+- \(n=2+1+3=6\)
+- \(P(k_{1})=(8/20)\)
+- \(P(k_{2})=(3/20)\)
+- \(P(k_{3})=(9/20)\)
+  
+  
+\begin{align*}
+  P(x_{1}=2,x_{2}=1,x_{3}=3)=
+  \frac{(2+1+3)!}{2!\ 1!\ 3!}
+  (8/20)^{2}\ (3/20)^{1}\ (9/20)^{3}
+  \approx 0.18204
+\end{align*}
+
+Dicha probabilidad es de aproximadamente un
+18.20%.
+
+-----
+@@latex:\clearpage@@
+* Aproximaciones entre distribuciones discretas
+:PROPERTIES:
+:ID:       8a8055e6-8613-4225-9fe3-464501094508
+:END:
+
+A veces, se puede sacrificar la precisión
+del cálculo en beneficio de la facilidad del
+cálculo en si. Estos son algunos de
+esos casos; recuerda siempre usar el criterio
+y el sentido común, las aproximaciones
+no dejan de involucran errores.
+
+** Hipergeométrica a Binomial
+:PROPERTIES:
+:ID:       8dfe74f8-c0de-40b3-8363-cbf64c939da9
+:END:
+
+Específicamente para este caso, cuando la
+muestra no supera el 5% de la población total,
+puedes usar el modelo Binomial en vez del
+Hipergeométrico y el error va a ser pequeño.
+
+En el siguiente enlace puedes leer más al respecto:
+- [[https://www.geo.fu-berlin.de/en/v/soga/Basics-of-statistics/Discrete-Random-Variables/The-Binomial-Distribution/Binomial-Approximation-to-the-Hypergeometric-Distribution/index.html][Binomial Approximation to the Hypergeometric Distribution]]
+
+** Hipergeométrica Multivariada a Multinomial
+
+Por la misma razón descrita en
+[[id:8dfe74f8-c0de-40b3-8363-cbf64c939da9][Hipergeométrica a Binomial]], la Hiper-Multivariada
+puede ser aproximada a la Multinomial.
+
+En el siguiente enlace puedes leer más al respecto:
+- [[https://stats.libretexts.org/Bookshelves/Probability_Theory/Probability_Mathematical_Statistics_and_Stochastic_Processes_(Siegrist)/12%3A_Finite_Sampling_Models/12.03%3A_The_Multivariate_Hypergeometric_Distribution][The Multivariate Hypergeometric Distribution]] 
+  - específicamente en la sección "Convergence to
+    the Multinomial Distribution".
+
+** Binomial a Poisson
+
+La aproximación aquí viene de otro origen, y
+el resumen de dicha aproximación es: si en el
+modelo [[id:eba6d6d6-7b9d-4365-bab9-185f216dbda7][Binomial]], el número de intentos \(n\)
+tiende a infinito y si la probabilidad de
+éxito de cada intento tiende a 0, entonces
+utilizando un \(\lambda=np\) podemos
+calcular una situación Binomial con
+un modelo Poisson. 
+
+De la misma forma, la facilidad de cálculo
+pesa más que el error en el resultado final.
+
+-----
+@@latex:\clearpage@@
+* Ejemplos en R
+** Acerca de
+
+A modo de aprendizaje, aprender a usar =R= para
+calcular probabilidades hizo que me enfocara
+más en entender /cuando/ ocupar cual distribución,
+y dejarle el trabajo numérico a la máquina.
+
+Las funciones de =R= para calcular probabilidades
+tienen distintos prefijos de los cuales utilizo
+dos: el prefijo =d= es el que ocupas
+cuando quieres obtener la probabilidad
+de un \(X=x\), y el =p= es el que usas
+cuando quieres calcular la probabilidad
+de un \(X \leq x\).
+
+A continuación, se revisan los ejemplos calculados
+paso a paso previamente, pero ahora usando =R=.
+
+** Binomial
+
+Sin ejemplo en este caso, es la más popular y
+hay muchos ejemplos en internet.
+
+La sintaxis en R para calcular la Binomial es:
+
+1) \(P(X=x)\)
+   : dbinom(x,size,prob)
+   : sum(dbinom(x1:x2,size,prob)) # con rango
+
+   - =size=: el número de intentos.
+   - =prob=: probabilidad de cada intento. 
+   - El =sum(...)= te entrega el valor total,
+     si evalúas =dbinom(x1:x2,size,prob)= sin
+     rodearlo con el =sum(...)=, =R= te entrega
+     los valores de la probabilidad en cada
+     uno de los puntos del rango.
+     
+2) \(P(X \leq x)\)
+   : pbinom(q,size,prob)
+
+   - =q=, lo mismo que el =x= en el punto =1=,
+     pero =R= lo necesita denominado como =q=.
+     Un =q=3= sería lo mismo que un =x=0:3=
+
+   #+begin_src R :session code
+   binomial_con_d <- sum(dbinom(x=0:4, size=12, prob=0.2))
+   binomial_con_p <- pbinom(q=4, size=12, prob=0.2)
+
+   (binomial_con_d) - (binomial_con_d)
+   #+end_src
+
+   #+RESULTS:
+   : 0
+
+** Multinomial
+
+Referencia:
+- [[id:288c060a-4b71-4261-ba11-1176c956af9b][Multinomial: generalización de Binomial]]
+  - [[id:4f590b01-66c5-4af2-b87b-7a2dd37b1ea2][Ejemplo]] 
+
+    
+Tienes un universo de personas donde el tipo
+de sangre esta distribuido:
+
+| Tipo de sangre | O     | A     | B     | AB    |
+|----------------+-------+-------+-------+-------|
+| Probabilidad   | =.44= | =.42= | =.10= | =.04= |
+
+Eliges 10 personas, ¿Cuál es la probabilidad
+de que de esas 10 personas =6= sean de tipo
+=O=, =2= de tipo =A=, =1B= y =1AB=?
+
+\begin{align*}
+P(x_{1}=6,x_{2}=2,x_{3}=1,x_{4}=1)=
+\frac{10!}{6!\ 2!\ 1!\ 1!}
+0.44^{6}\ 0.42^{2}\ 0.10^{1}\ 0.04^{1}
+\approx 0.01290
+\end{align*}
+
+Eso en =R= se calcula con la siguiente sintaxis:
+
+#+begin_src R :session code
+freq <- c(6, 2, 1, 1)
+particiones <- c(.44, .42, .10, .04)
+dmultinom(x=freq,prob=particiones)
+#+end_src
+
+#+RESULTS:
+: 0.0129025387431199
+
+** Binomial Negativa
+
+Referencia:
+- [[id:57844672-cbbf-4796-9104-f54eb0bcda6d][Binomial Negativa: generalización de Geométrica]]
+  - [[id:d160ff79-b9da-48d1-96e8-70d376ca0c19][Ejemplo]]
+
+
+Un encuestador necesita 3 o más personas
+encuestadas para finalizar el día. 9 de cada
+100 personas llamadas responden la encuesta.
+¿Cuál es la probabilidad de que la tercera
+encuesta completada se alcance en la
+décima llamada?
+
+- Probabilidad de éxito de cada llamada \(p=0.09\).
+- Tercera encuesta completada \((r=3)\) en el
+  décimo intento \((x=10)\).
+
+\begin{align*}
+P(x)=
+\binom{x-1}{r-1} (1-p)^{x-r} p^{r}
+\end{align*}
+
+\begin{align*}
+P(x=10)=
+\binom{(10)-1}{(3)-1}
+(1-(0.09))^{(10)-(3)}(0.09)^{(3)}
+\approx 0.0135
+\end{align*}
+
+Sin embargo, la sintaxis de =R= para
+un escenario Binomial Negativo entiende
+la variable aleatoria \(X\), denotada
+como \(n\), como el número de /fracasos/
+/acumulados/ antes de el \(r\)-ésimo éxito.
+
+#+begin_src R :session code
+p=0.09
+r=3 # éxitos
+n=10-r # (fracasos) = (total de intentos) - (éxitos)
+dnbinom(x = n, size = r, prob = p)
+#+end_src
+
+#+RESULTS:
+: 0.0135618761920132
+
+** Hipergeométrica
+
+Referencia:
+- [[id:4f33bad8-7720-4585-8063-267a3f231a58][Hipergeométrica]]
+  - [[id:a4c556c6-9245-4f4b-bbb2-70165bbfaa94][Ejemplo]]
+
+
+Un colegio tiene 2000 estudiantes, 1100 mujeres
+y 900 hombres. 10 estudiantes son seleccionados
+al azar, ¿Cuál es la probabilidad de que
+de los 10 estudiantes seleccionados, 7 sean
+mujeres?:
+
+
+: m=1100: éxitos en la población total
+: n=900 : fallos en la población total
+: k=10  : elementos seleccionados
+: x=7   : número de éxitos seleccionados
+
+#+begin_src R :session code
+x <- 7
+m <- 1100
+n <- 900
+k <- 10
+dhyper(x, m, n, k)
+#+end_src
+
+#+RESULTS:
+: 0.166490057068677
+
+** Hipergeométrica Multivariada
+*** Preámbulo
+
+Por razones que desconozco, la distribución
+Hipergeométrica Multivariada no es parte
+del núcleo de =R=; hay que activar una
+librería específica, eso se hace ejecutando
+el siguiente comando:
+
+: library("extraDistr")
+
+Además, si es que no estas ejecutando =R= desde
+un intérprete online[fn:4] es probable que tengas
+que instalar dicha librería antes de activarla.
+
+Para hacer eso, simplemente inicia una instancia
+de =R= desde el terminal:
+
+: R
+
+y luego instala la librería[fn:5].
+
+: > install.packages("extraDistr")
+
+Una vez instalada la librería, actívala con
+el comando mencionado unos párrafos más
+arriba y procede como siempre.
+
+*** Ejemplo
+
+Referencia:
+- [[id:e0f06c88-3a83-4ac3-a3e3-3c83803cb0b5][Hipergeométrica Multivariada: generalización de la Hipergeométrica]]
+  - [[id:bb8c0ca5-1de2-4108-956e-575741826a73][Ejemplo]]
+
+
+Tienes una caja con =8= bolas rojas, =3= amarillas
+y =9= blancas. ¿Cuál es la probabilidad de
+sacar al azar /sin/ /devolver/ =2= rojas,
+=1= amarilla y =3= blancas?
+
+La sintaxis de esta distribución para R es:
+: dmvhyper(x=muestra,n=freq,k=6)
+donde:
+- =x=: vector éxito en la muestra
+- =n=: vector éxito en la población
+- =k=: número de elementos de la muestra[fn:6]
+
+#+begin_src R :session code
+muestra<-c('rojo' = 2, 'amarillo' = 1, 'blanco' = 3)
+freq<-c('rojo' = 8, 'amarillo' = 3, 'blanco' = 9)
+dmvhyper(x=muestra,n=freq,k=6)
+#+end_src
+
+#+RESULTS:
+: 0.18204334365325
+
+Otro ejemplo online:
+- [[https://avrilomics.blogspot.com/2017/11/multivariate-hypergeometric.html][avrilomics.blogspot.com/2017/11/multivariate-hypergeometric.html]]
+
+-----
+@@latex:\clearpage@@
+* Acerca de este documento
+
+A mi me costó aprender a diferenciar cuando
+usar cuál distribución, así que hice este
+documento pensando en responder la pregunta,
+¿Cuándo uso la Binomial o la Geométrica?
+¿Qué tiene que ver la Binomial Negativa?
+Y cosas de ese estilo.
+
+Entiendo que esto lo puede terminal leyendo
+otra persona aparte de mi yo del futuro
+así que le puse un /poco/ de seriedad.
+
+Aunque aquí me limito a las distribuciones
+discretas. De las continuas únicamente
+entiendo la normal por el momento.
+
+Además, agrego un anexo de cómo calcularlas en =R=
+pues es más rápido y estoy estudiando
+Ingeniería Civil Industrial y no Ingeniería
+Civil Matemática.
+
+* Revisiones
+
+- Miguel Flores.
+  - Revisión de sección de
+    Prerrequisitos/Técnicas de conteo/Combinación.
+
+* Footnotes
+
+[fn:1] No olvidemos que cada intento
+singular es /Bernoulli/, por lo que cada
+uno de los intentos tiene tasa de éxito \(p\).
+
+[fn:2] Supongo que los "decays" corresponden
+a la vida media ... desconozco.
+
+[fn:3] Se hace énfasis en que sea sin devolución,
+de esta forma las probabilidades de un hecho /sí/
+afectan las probabilidades de ocurrencia de los
+próximos eventos.
+
+[fn:4] Esos generalmente ya traen todas las
+librerías instaladas, por lo que solo las tienes
+que activar.
+
+[fn:5] La máquina en mi versión por lo menos,
+te pide que selecciones un servidor desde
+el cual instalar la librería. El servidor
+de Chile es el número 16.
+
+[fn:6]
+Si me preguntas a mi, especificar el =k= es
+redundante dado que el =k= siempre va a ser la
+suma de los distintos elementos del éxito de la
+muestra, pero puede que exista un escenario
+en que no es así. Recomiendo preguntar
+a un profesor.
+
+[fn:7] También lo puedes hacer en Python o
+el que quieras, pero R trae las librerías
+en el mismo paquete así que no tienes
+que instalar librerías externas; es
+un trabajo más fluido. Además en
+Probabilidad y Estadística nos están
+haciendo trabajar con R así que otro
+punto para R en cuanto a pura Probabilidad
+y Estadística --- los tutoriales y guías
+que he visto trabajan con R también.
+
+#  LocalWords:  begin src session code library extraDistr end align cdots nPr
+#  LocalWords:  forall nCr cdot center sum binom Multinomial vs Multivariado mu
+#  LocalWords:  Bivariado cap emptyset qquad text cup Bernoulli sim textit np
+#  LocalWords:  PROPERTIES underbrace substack ésimas TITLE INCLUDE author args
+#  LocalWords:  sessions PROPERTY header exports both results replace silent AB
+#  LocalWords:  approx Cardio RCP Poisson network quad in mathbb nanogramo ng
+#  LocalWords:  decays fn hipergeométricas multivariadas hipergeométrica the
+#  LocalWords:  Hypergeometric Distribution leq dbinom size prob pbinom freq
+#  LocalWords:  dmultinom dnbinom dhyper online dmvhyper Python tutoriales
+
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
+#  LocalWords:  ésima
