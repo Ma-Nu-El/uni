@@ -1,0 +1,31 @@
+#+TITLE: 2022 1
+
+* Inicio
+- [2022-03-14 Mon]
+* Término
+- [2022-07-08 Fri]
+* Semanas [7/16][43%]
+- No se cuenta la semana de receso del 9 de mayo.
+
+
+1) [X]
+2) [X]
+3) [X]
+4) [X]
+5) [X]
+6) [X]
+7) [X]
+8) [ ]
+9) [ ]
+10) [ ]
+11) [ ]
+12) [ ]
+13) [ ]
+14) [ ]
+15) [ ]
+16) [ ]
+
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:

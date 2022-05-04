@@ -1,0 +1,174 @@
+:PROPERTIES:
+:ID:       e5186f3b-5afe-4938-b481-201915dfea4d
+:END:
+#+TITLE: Resumen Eval1
+#+LANGUAGE: es
+#+LATEX_HEADER:\usepackage[spanish]{babel}
+#+OPTIONS: toc:nil
+
+
+* Técnicas de conteo
+- Permutación.
+- Combinación.
+
+* Distribuciones: del PTT.
+1. Binomial
+2. Multinomial
+3. Geométrica
+4. Hipergeometrica
+5. Hipergeometrica Multivariada
+6. Poisson
+
+
+1. Normal
+2. Exponencial
+
+* Distribuciones en procesos de Poisson
+** Incrementos independientes
+
+#+begin_src latex
+\begin{align*}
+  P\Big(\, N(t+s)-N(t)=k \, ,\, N(u)=r\, \Big)
+  =
+  P\Big(N(t+s)-N(t)=k\Big) \cdot P\Big(N(u)=r\Big)
+\end{align*}
+#+end_src
+
+** Incrementos estacionarios
+
+#+begin_src latex
+\begin{align*}
+  P\Big( N(t+s)-N(t)=k \Big ) = P(N(s)=k
+\end{align*}
+#+end_src
+
+** Poisson
+
+#+begin_src latex
+\begin{align*}
+  P(x)=
+  \frac
+  {\lambda^{x} e^{- \lambda}}
+  {x!}
+\end{align*}
+\begin{align*}
+  \mu = \sigma^{2} = \lambda
+\end{align*}
+#+end_src
+
+#+begin_src latex
+\begin{align*}
+  P(N(t)=n)=
+  \frac
+  {(\lambda t )^{n} e^{- \lambda t}}
+  {n!}
+\end{align*}
+#+end_src
+
+** Exponencial
+
+#+begin_src latex
+\begin{center}
+\begin{align*}
+
+f(x)=P(x) =
+     \begin{cases}
+       \lambda e^{- \lambda x}&\quad x > 0 \\
+       0                      &\quad\text{otro caso}
+     \end{cases}
+\end{align*}
+\begin{align*}
+
+  F(x)=1 - e^{- \lambda x}
+
+\end{align*}
+\begin{align*}
+
+  \mu &= \frac{1}{\lambda} \\
+  \sigma^{2} &= \frac{1}{\lambda^{2}}
+
+\end{align*}
+\end{center}
+#+end_src
+
+Si en cualquier instante \(u\) han ocurrido
+\(n\) eventos tal que \(n<M\), entonces la
+probabilidad de que en un instante \(u+s\)
+los eventos \(n\) pasen el límite \(M\);
+\(n>M\), es calculada como:
+
+#+begin_src latex
+\begin{center}
+\begin{align*}
+  \sum_{i=M-n+1}^{M}
+  \frac
+  {(\lambda s)^{i} \cdot e^{- \lambda s}}
+  {i!}
+\end{align*}
+\end{center}
+#+end_src
+
+El hecho que de dicha probabilidad no dependa de
+\(u\) resuena con la falta de memoria de la
+función exponencial.
+
+** Gamma
+
+La distribución exponencial representa la
+distribución del tiempo de ocurrencia del primer
+evento: la distribución gamma representa la
+distribución del tiempo del \(n\)-ésimo evento.
+
+#+begin_src latex
+\begin{align*}
+   P(x)=f(x)&=
+   \frac{ \lambda^{n} t^{n-1} }{ (n-1)! }
+   e^{- \lambda t}
+   \;
+   \forall t,n > 0
+   \\
+   F(x)&=
+   \int_{0}^{\infty}
+   \lambda e^{- \lambda x}
+   \frac
+   {(\lambda x)^{n-1}}
+   {(n-1)!}
+   dx
+   \\
+   \mu &= \frac{n}{\lambda} \\
+   \sigma^{2} &= \frac{n}{\lambda^{2}}
+\end{align*}
+#+end_src
+
+** Binomial: Distribución condicional de los tiempos entre eventos
+
+Sabiendo que hasta el instante \(t\), han
+ocurrido \(n\) eventos Poisson, nos preguntamos
+acerca de la distribucion del tiempo de ocurrencia
+\(u<t\) entre los \(k<n\) eventos que ocurrieron.
+
+Sea \(N(t)=n, t \geq 0\) un proceso Poisson, entonces:
+
+#+begin_src latex
+\begin{align*}
+  P\Big( N(u)=k / N(t)=n \Big)&=
+  \binom{n}{k}
+  \cdot
+  \left(
+  \frac{u}{t}
+  \right)^{k}
+  \cdot
+  \left(1 -
+  \frac{u}{t}
+  \right)^{n-k}
+  \\
+  &\forall \qquad 0 < u < t\; ,\; 0 < k < n
+\end{align*}
+#+end_src
+
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
+
+#  LocalWords:  ésimo

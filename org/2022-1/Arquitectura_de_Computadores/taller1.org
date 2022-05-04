@@ -1,0 +1,131 @@
+#+TITLE: Taller1
+#+subtitle: Arquitectura de Computadores
+#+author: Manuel Fuica Morales
+#+options: toc:2
+
+#+LANGUAGE: es
+#+LATEX_HEADER:\usepackage[spanish]{babel}
+#+LATEX_HEADER:\usepackage{cancel}
+
+
+* Compotentes iniciales
+
+1) Tarjeta gráfica
+2) Procesador
+3) Placa madre
+4) Memoria(1)
+5) Memoria(2)
+6) Disco Duro(1)
+7) Fuente de poder
+8) Disco Duro(2)
+9) Pasta térmica
+
+* Errores nombrados
+
+- El procesador tiene que ser del mismo socket
+  que la placa madre. En tu cotización el
+  procesador es socket LGA 1151 (8va / 9na gen)
+  y la placa madre es socket AM4
+- El procesador de tu cotización no incluye
+  cooler de fábrica y tu cotización no considera
+  un cooler dedicado.
+- La placa madre no entra en el gabinete,
+  el formato del gabinete (ITX, Micro ATX, ATX,
+  Extended ATX) tiene que ser más grande que
+  el de la placa madre.
+
+* Errores no nombrados
+
+- Las memorias RAM incluidas son de distinta marca,
+  distinta memoria y distinta velocidad: siempre
+  se recomienda comprar la memoria RAM en pares
+  iguales, para evitar errores de compatibilidad
+  entre las memorias.
+
+* Corregidos
+
+Considerando que los errores son de compatibilidad
+entre el procesador y la placa madre, y la
+placa madre con el gabinete, se decide corregir
+el procesador y gabinete en función de la placa
+madre.
+
+
+** procesador
+
+Nuestra placa madre es:
+- [[https://www.solotodo.cl/products/65776-gigabyte-x570-aorus-elite-wifi][Gigabyte X570 AORUS ELITE WiFi - SoloTodo]]
+
+
+Que posee un chipset AMD por lo que nuestro
+procesador tiene que ser un AMD compatible con
+[[https://www.solotodo.cl/processors?brands=106379&sockets=590711&ordering=offer_price_usd][socket AM4]].
+
+Buscamos un procesador con el mismo socket AM4.
+
+La alternativa AMD similar al original es
+el AMD Ryzen 7 2700X [fn:1], aunque el intel
+sigue siendo levemente superior. Sin embargo
+para actividades de no alto rendimiento, ambos
+cumplen.
+
+Ahora, el Ryzen 7 2700X parece estar
+descontinuado [fn:2], por lo que la alternativa
+que le sigue es un AMD Ryzen 7 3800X [fn:3],
+tambien hay opciones más actualizadas, pero
+suben el precio del computador: las versiones
+Ryzen 5 y 7 de quinta generacion, 5XXX,
+pueden tambien ser compatibles.
+
+Procesador:
+ - [[https://www.solotodo.cl/products/63564-amd-ryzen-7-3700x-100-100000071box][AMD Ryzen 7 3700X [100-100000071BOX] - SoloTodo]]
+
+** gabinete
+
+Ahora, tenemos que buscar un gabinete que pueda
+contener una placa madre del [[https://www.solotodo.cl/computer_cases?motherboard_formats=251389][tipo ATX]]:
+los modelos Dinon [[https://www.solotodo.cl/products/103239-dinon-model-2][2]], [[https://www.solotodo.cl/products/103241-dinon-model-3][3]], [[https://www.solotodo.cl/products/103243-dinon-model-4][4]] y [[https://www.solotodo.cl/products/103244-dinon-model-5][5]] son compatibles
+con la placa.
+
+Gabinete:
+- [[https://www.solotodo.cl/products/103244-dinon-model-5][Dinon Model 5 - SoloTodo]]
+
+** cooler
+
+El procesador corregido posee un sistema
+de enfriamiento integrado.
+
+** extras
+
+Las memorias incluidas son distintas:
+se recomienda que las memorias sean iguales,
+independiente del número de memorias instaladas.
+
+La distinción aquí es que son memorias
+para computador tipo "[[https://www.solotodo.cl/rams?types=130774&formats=130758][Desktop]]".
+
+Con 2 memorias
+[[https://www.solotodo.cl/products/51000-crucial-ct8g4dfs8266-1-x-8gb-dimm-ddr4-2666][Crucial CT8G4DFS8266 (1 x 8GB | DIMM DDR4-2666)]]
+el computador debería atender con facilidad
+muchas tareas simultaneas.
+
+La placa madre permite expandirlas hasta 4 memorias.
+
+
+Además, los 6 puertos SATA, permiten a la placa
+madre conectar los dos discos duros mencionados
+en el documento, brindando al computador de
+1.5 TB de almacenamiento.
+
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
+
+* Footnotes
+
+[fn:1] [[https://www.tomshardware.com/news/ryzen-7-vs-core-i7-9700k,38046.html]]
+
+[fn:2] [[https://www.reddit.com/r/Amd/comments/gmxkbm/ryzen_7_2700x_discontinued/][Ryzen 7 2700X Discontinued? : Amd]]
+
+[fn:3] https://www.cpuagent.com/cpu/amd-ryzen-7-2700x/rivals/nvidia-geforce-rtx-2080-super

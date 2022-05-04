@@ -1,0 +1,92 @@
+#+TITLE: Comunicación de Datos
+#+subtitle: Tarea
+#+author: [[mailto:m.fuica01@ufromail.cl][Manuel Fuica Morales]]
+#+author: \\
+#+author: 18.959.392-9 19
+#+date: Martes 19 de abril de 2022
+#+options: toc:nil
+
+* TOC :TOC_2:noexport:
+- [[#tipos-de-cables][Tipos de cables]]
+- [[#frecuencia-y-de-transmisión-nominal][Frecuencia y de transmisión nominal]]
+- [[#desventajas-de-los-cables][Desventajas de los cables]]
+- [[#normas-de-cableado-a-y-b][Normas de cableado A y B]]
+  - [[#a][A]]
+  - [[#b][B]]
+- [[#footnotes][Footnotes]]
+
+* Tipos de cables
+
+- Pares no trenzados.
+- Pares trenzados.
+  - UTP.
+  - FTP.
+  - STP.
+- Fibra óptica
+
+* Frecuencia y de transmisión nominal
+
+| Tipo de cable | Frecuencia | Transmisión |
+|               | máxima     | nominal     |
+|               | en MHz     | máxima en   |
+|               |            | Mbps        |
+|---------------+------------+-------------|
+| UTP           | 600[fn:1]  | 40000[fn:1] |
+
+* Desventajas de los cables
+
+Los cables son medios guiados, por lo que necesitan
+de un receptor conectado a través del cable.
+Diferente de los medios no guiados como por ejemplo
+el internet por Wifi, o el Bluetooth.
+
+Un cable te hace dependiente del largo del cable,
+tienes que tener cuidado de no pasar a
+llevar cosas con el cable, mantención del cable
+para una buena calidad en la transmisión de
+los datos como lo son la velocidad de transmisión
+y estabilidad de la conexión.
+
+A menos que la velocidad y estabilidad
+de conexión sean una prioridad, siempre que
+no se puedan conseguir con una buena conexión
+por Wifi, entonces solo ahí considera
+una conexión por cable.
+
+En 2022 las conexiones inalámbricas
+cumplen para la mayoría de los usos hogareños.
+
+* Normas de cableado A y B
+ - https://elcapored.jimdofree.com/normas-568a-568b/
+ - https://com4746.wordpress.com/2015/11/22/norma-a-y-b/
+ - https://es.wikipedia.org/wiki/TIA-568B#Cableado
+** A
+1) Blanco-Verde
+2) Verde
+3) Blanco-Naranja
+4) Azul
+5) Blanco-Azul
+6) Naranja
+7) Blanco-Cafe
+8) Cafe
+
+** B
+1) Blanco-Naranja
+2) Naranja
+3) Blanco-Verde
+4) Azul
+5) Blanco-Azul
+6) Verde
+7) Blanco-Cafe
+8) Cafe
+
+* Footnotes
+
+[fn:1]
+https://www.strategicconnections.net/a-quick-reference-guide-to-ethernet-cables/
+
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
+
+#  LocalWords:  Wifi Bluetooth

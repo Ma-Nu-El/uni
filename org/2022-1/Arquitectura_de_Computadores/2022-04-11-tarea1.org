@@ -1,0 +1,104 @@
+#+include: "~/org/uni/org/config.org"
+#+TITLE: 2022 04 11 Tarea: Cotización de Computador de Escritorio  para Laboratorio de Programación.
+#+author: Nicolás Montecinos
+#+author: \\
+#+author: 19.957.230-K-17
+#+author: \\
+#+author: Manuel Fuica Morales
+#+author: \\
+#+author: 18.959.392-9-19
+#+subtitle: No evaluado.
+#+options: toc:nil
+
+* Caso
+
+- 16 alumnos más un profesor = 17 equipos.
+- Uso universitario.
+  - Navegacion en internet.
+  - Simulaciones pequeñas.
+- Sin límite de precio.
+
+* Componentes necesarios
+
+- Gabinete
+- Placa madre
+- Procesador
+- RAM
+- Almacenamiento
+- Tarjetas gráficas (de ser necesario)
+- Teclado
+- Mouse
+
+* Tabla
+- Cotizaciones desde [[https://www.pcfactory.cl/armatupc][pcfactory]].
+
+
+- Se recomienda por empezar eligiendo la placa
+  madre.
+
+
+| Componente       | Modelo                                | Precio por unidad |
+|------------------+---------------------------------------+-------------------|
+| Placa madre      | [[https://www.pcfactory.cl/producto/30633][ASUS AMD sAM4]]                         |             62990 |
+| Gabinete         | [[https://www.pcfactory.cl/producto/32956][Gabinete Deepcool]]                     |             35990 |
+| Procesador       | [[https://www.pcfactory.cl/producto/34051][CPU Ryzen 5 3600 (AM4)]]                |            242090 |
+| RAM              | [[https://www.pcfactory.cl/producto/32318][G.Skill DDR4 8GB 2666MHz]]              |             35990 |
+| Almacenamiento   | [[https://www.pcfactory.cl/producto/43857][Kingston SSD 250GB PCIe NVMe M.2 NV1]]  |             37990 |
+| Teclado          | [[https://www.pcfactory.cl/producto/31439-genius-teclado-smart-kb-101-negro-usb][Genius Teclado Smart KB-101 Negro USB]] |              8990 |
+| Mouse            | [[https://www.pcfactory.cl/producto/20906-genius-mouse-dx-110-optico-usb-negro][Genius Mouse DX-110 Óptico USB Negro]]  |              4990 |
+|------------------+---------------------------------------+-------------------|
+| Neto             |                                       |            429030 |
+| IVA              |                                       |           81515.7 |
+| Total por equipo |                                       |          510545.7 |
+| Total 17 equipos |                                       |         8679276.9 |
+#+TBLFM: @>>>>$>=vsum(@I..II) :: @>>>$>=@>>>>$>*0.19 :: @>>$>=@>>>$>+@>>>>$> :: @>$>=@>>$>*17
+
+* Conclusión
+
+Se buscaron opciones más baratas para el procesador
+vía [[https://www.solotodo.cl/products/117431-amd-ryzen-5-5600g-100-100000252box][solotodo.cl]], sin embargo, el precio era similar
+en todas las opciones.
+
+Se espera que el equipo rinda con las tareas
+diarias de un laboratorio de computación; esto es,
+navegación por internet, uso de las aplicaciones
+de Office, programación de software de
+complejidad universitaria y simulaciones de
+pequeña a mediana escala.
+
+Con un equipo de estas características,
+con 6 núcleos, 12 hilos, velocidad base de 3.6 GHz
+con un máximo de 4.2 GHz --- 4.2 GHz que nunca
+se alcanzarán en tareas comunes, tendrías que
+correr un juego exigente o simulaciones medianas
+a grandes para que el procesador empiece a
+exigirse más --- se espera
+que tenga un funcionamiento óptimo por encima
+de 5 años desde la fecha de compra.
+
+Lo que garantiza un buen funcionamiento durante
+los próximos años, es el buen procesador del equipo.
+El procesador es la parte fundamental del computador,
+hace que las tareas se ejecuten de forma
+ininterrumpida. Las tareas más comunes como la
+navegación por internet o el uso de aplicaciones
+de Office, no harán que el procesador se exija
+más de lo normal.
+
+"Tradicionalmente la serie X600X ha sido la
+más atractivas de AMD para equipos gaming
+catalogada como “la compra inteligente”[fn:1].
+
+"Su 10600K cuesta unos 50 euros menos,
+permite overclocking y es una bestia en
+juegos[fn:1]"
+
+* Local variables :noexport:
+
+* Footnotes
+
+[fn:1]
+Fuente: [[https://www.profesionalreview.com/2020/11/05/amd-ryzen-5-5600x-review/][AMD Ryzen 5 5600X Review en Español (Análisis completo)]]
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:

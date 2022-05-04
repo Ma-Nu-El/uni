@@ -1,0 +1,155 @@
+#+TITLE: CASO ACEITES ORIENTE - KPI: Análisis de indicadores para el área de Gestión y Desarrollo de Personas
+#+SUBTITLE: Actividad 2022 04 07
+#+include: "~/org/uni/org/config.org"
+
+* Objetivos del taller
+1) Leer el documento.
+2) Crear 3 KPI relacionados con RRHH.
+
+
+Para ver si la empresa está avanzando o
+no en sus objetivos.
+
+* Qué es un indicador
+
+- Una relación entre dos cifras.
+
+
+Puede ser expresado en:
+- En porcetajes.
+- En cifras netas.
+- De cumplimiento de algo (boolean).
+
+* Contexto
+
+- Empresa aceite de 50 años.
+- Inicio: Ana María Messeguer Granadino llega
+  a Chile desde Europa y funda la empresa.
+- Origen: familia productora de aceite de
+  Maravilla.
+- Actualmente, Aceites Oriente poseen el
+  40% del mercado.
+
+* Situación actual de la empresa
+
+- Empresa dirigida por una de las hijas
+  de la fundadora.
+- El directorio esta compuesto por el resto
+  de los hijos de la fundadora.
+- Dos nietos de la fundadora estudian en
+  Europa para después integrarse al
+  directorio, en 1 y 3 años respectivamente.
+
+
+- Balance general.
+- Estado de resultados.
+
+
+- Durante los últimos años la empresa pierde
+  parte del mercado, en los 90s era el 70%
+  del mercado.
+
+
+- Se decide adelantar el retorno de
+  Cristóbal Cánovas Messeguer que estudiaba
+  en la Universidad de Barcelona, egresado
+  de ICI en la UFRO, cosa que le da ventaja.
+
+* Los aspectos más valorados por los trabajadores
+
+- Estabilidad laboral.
+- Flexibilidad horaria.
+- Respeto por la vida personal y laboral.
+- Formación para el trabajo.
+- Capacitaciones de equipo que incentivan
+  la motivación y la comunicación.
+
+* Objectivo actual de la empresa
+
+Dada la reducción en la producción y por
+lo tanto la disminución del número
+de trabajadores se pone como objetivo
+igualar la cantidad de trabajadores
+contratados que se tenía en 2019 en
+el plazo de un año.
+
+* Antecedentes de capacitaciones
+
+- Se mide número de asistentes y horas
+  efectivamente asistidas.
+
+
+- Asistencia sube en 40%, pero tasa
+  de abandono es alta.
+
+
+- 5.800 CLP por hora de capacitación.
+
+
+\(PC = PH \cdot PI \cdot TH\)
+- PC: precio curso
+- PH: precio hora
+- PI: personas inscritas
+- TH: total horas.
+
+
+- Faltan operativos. Hecho crítico en
+  tiempos de cosecha de los últimos 2 años.
+
+* Organigrama
+
+- Se repite en todas las sucursales, con
+  origen en central de Región de Ñuble.
+
+* Externalidades
+
+Guerra Rusia-Ucrania aumenta valores
+de la materia prima.
+
+* Licencias médicas
+
+- Aumentan cada año desde 2019 hasta 2021.
+
+* Objetivo que nos pide el gerente
+
+- Proponer indicadores en cuanto las
+  necesidades en el ámbito de las personas.
+- Proponer responsables del seguimiento e
+  implementación de los mismos.
+
+* Tabla
+** Contrataciones
+
+| Región   | AÑO 2019 | AÑO 2020 | AÑO 2021 |
+|----------+----------+----------+----------|
+| Coquimbo |      836 |      608 |      560 |
+| Bio Bio  |      585 |      513 |      500 |
+| Ñuble    |      323 |      247 |      250 |
+|----------+----------+----------+----------|
+| Total    |     1744 |     1368 |     1310 |
+#+TBLFM: @>=vsum(@I..II)
+
+** Capacitaciones
+** Objetivo
+
+| Ind | Frml | Cómo analizar | ¿por qué este | Respons |
+|     |      | el resultado  | indicador es  |         |
+|     |      |               | importante?   |         |
+|-----+------+---------------+---------------+---------|
+| Niv |      |               |               |         |
+| Emp |      |               |               |         |
+|     |      |               |               |         |
+| Lic |      |               |               |         |
+| Med |      |               |               |         |
+|     |      |               |               |         |
+| Num |      |               |               |         |
+| Cap |      |               |               |         |
+|     |      |               |               |         |
+
+* Local variables :noexport:
+
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
+
+#  LocalWords:  RRHH KPI Ñuble

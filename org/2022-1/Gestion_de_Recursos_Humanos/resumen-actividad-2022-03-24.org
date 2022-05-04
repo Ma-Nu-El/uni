@@ -1,0 +1,131 @@
+#+TITLE: Resumen Actividad 2022-03-24
+#+SUBTITLE: Gestión de Recursos Humanos
+#+DATE: Jueves 24 de marzo de 2022
+
+#+INCLUDE: "~/org/uni/org/config.org"
+
+* Los participantes de las organizaciones
+
+#+begin_quote
+La única constante, es el cambio.
+#+end_quote
+
+
+"Las organizaciones existen debido a que
+las personas tienen objetivos que solamente
+pueden alcanzarse mediante la actividad
+organizada. A medida que las organizaciones
+crecen, desarrollan sus propios objetivos que
+se vuelven independientes y hasta diferentes
+de los objetivos de las personas que las
+formaron."
+
+"Actualmente, la organización se concibe
+como un proceso estructurado en el que
+varios socios interactúan para lograr
+objetivos. Los socios causan un efecto
+sobre los procesos de toma de decisiones
+dentro de la organización."
+
+a) Accionistas, propietarios o inversionistas.
+b) Clientes, usuarios, consumidores o
+   contribuyentes.
+c) Gerentes y empleados.
+d) Proveedores (de materias primas, tecnología,
+   servicios, créditos, financiamientos,
+   etcétera).
+e) Gobierno.
+f) Comunidad y sociedad.
+
+
+Dependiendo del tipo de decisión que la
+empresa deba tomar, las fronteras
+organizacionales de una empresa pueden
+variar para ajustarse a la decisión.
+
+Los socios cuya participación es relevante
+en la toma de una decisión se les llama
+grupos de interés.
+
+#+begin_quote
+La misión de la organización está definida
+en términos de la satisfacción de alguna
+necesidad del ambiente externo y no de
+ofrecer un simple producto o servicio.
+#+end_quote
+
+
+#+begin_quote
+El negocio debe ser visto como un proceso
+de satisfacción del cliente y no como un
+proceso de producción de mercancías.
+Los productos son transitorios,
+pero las necesidades básicas y los grupos
+de socios son eternos.
+#+end_quote
+
+#+begin_quote
+/Eficacia/ es una medida normativa del logro
+de resultados, mientras que /eficiencia/ es
+una medida normativa de la utilización de
+los recursos en los procesos.
+#+end_quote
+
+
+#+begin_quote
+A pesar de todo, la eficacia y la eficiencia
+no siempre van de la mano. Una organización
+puede ser eficiente en sus operaciones y
+no ser eficaz, o viceversa. También puede
+no ser eficiente ni eficaz. Lo ideal sería
+una empresa que sea eficiente y eficaz.
+#+end_quote
+
+-----
+* Niveles organizacionales
+** 1: Institucional
+- "Nivel estratégico"
+- "Nivel periférico"
+** 2: Intermedio
+- "Nivel táctico"
+- "Nivel mediador"
+- "Nivel gerencial"
+** 3: Operacional
+-----
+* Entorno de las organizaciones: Macro-ambiente
+- "Ambiente general"
+
+-----
+* Ambientes de Trabajo: Micro-ambiente
+- Más cercano e inmediato a la organización.
+
+
+- Complejidad + Cambio Constante =
+  Incertidumbre.
+
+
+Variables:
+- Estabilidad
+- Homogeneidad
+
+
+De estas dos variables se crean un gráfico
+con 4 cuadrantes para representar
+distintos escenarios organizacionales.
+
+
+|-------------+-------------|
+| Estable     | Inestable   |
+| Homogéneo   | Homogéneo   |
+|-------------+-------------|
+| Estable     | Inestable   |
+| Heterogéneo | Heterogéneo |
+|-------------+-------------|
+
+-----
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
+
+#  LocalWords:  RRHH
