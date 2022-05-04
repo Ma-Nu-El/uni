@@ -1,0 +1,14 @@
+#+title: 20xx-x
+
+* Start 20xx-x
+# SCHEDULED: <2022-03-14 Mon>
+* End 20xx-x
+# SCHEDULED: <2022-07-08 Fri>
+* Semanas [1/1][100%]
+** DONE Semana 1 [1/1][100%]
+*** DONE asignatura
+- dia y hora
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:

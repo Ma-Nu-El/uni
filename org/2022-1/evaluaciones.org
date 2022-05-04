@@ -1,13 +1,20 @@
 #+TITLE: Evaluaciones
+#+FILETAGS: :university:evaluation:
 
 * Arquitectura de Computadores
 ** DONE taller 1
 SCHEDULED: <2022-04-29 Fri>
-** taller 2
+** NEXT taller 2
 SCHEDULED: <2022-05-06 Fri 12:00-13:00>
+:LOGBOOK:
+- State "NEXT"       from "TODO"       [2022-05-04 Wed 12:18]
+:END:
 * Comunicación de Datos
-** prueba1
+** NEXT prueba1
 SCHEDULED: <2022-05-06 Fri 18:00-19:00>
+:LOGBOOK:
+- State "NEXT"       from "TODO"       [2022-05-04 Wed 12:18]
+:END:
 * Probabilidad y Estadística
 ** DONE prueba 1 (25%)
 CLOSED: [2022-04-23 Sat 22:27] SCHEDULED: <2022-04-20 Wed 10:50>
@@ -15,11 +22,14 @@ CLOSED: [2022-04-23 Sat 22:27] SCHEDULED: <2022-04-20 Wed 10:50>
 - State "DONE"       from              [2022-04-23 Sat 22:27]
 :END:
 - Apr 20
-** prueba 2 (35%)
+** NEXT prueba 2 (35%)
 SCHEDULED: <2022-06-03 Fri 10:50>
+:LOGBOOK:
+- State "NEXT"       from "TODO"       [2022-05-04 Wed 12:18]
+:END:
 - Con computador.
 - Jun 03
-** prueba 3 (40%)
+** TODO prueba 3 (40%)
 SCHEDULED: <2022-07-06 Wed 10:50>
 - Jul 06
 * Sistemas Estocásticos
@@ -31,7 +41,7 @@ CLOSED: [2022-05-04 Wed 11:04] SCHEDULED: <2022-05-03 Tue 16:50-19:00>
 :END:
 - Mayo 3
 
-*** Certamen 2
+*** TODO Certamen 2
 SCHEDULED: <2022-06-21 Tue>
 ** Tests
 *** DONE Test1
@@ -51,11 +61,14 @@ CLOSED: [2022-04-23 Sat 22:28] SCHEDULED: <2022-04-22 Fri>
 
 - No bivariados.
 
-*** Test3
+*** NEXT Test3
 SCHEDULED: <2022-05-26 Thu>
+:LOGBOOK:
+- State "NEXT"       from "TODO"       [2022-05-04 Wed 12:18]
+:END:
 - Mayo 26
 
-*** Test4
+*** TODO Test4
 SCHEDULED: <2022-06-15 Wed>
 - Junio 15
 
@@ -67,11 +80,11 @@ CLOSED: [2022-05-01 Sun 15:22] SCHEDULED: <2022-04-28 Thu 08:30>
 :END:
 - 25%
 - 28 abril.
-** Prueba2
+** TODO Prueba2
 SCHEDULED: <2022-06-30 Thu 08:30>
 - 20%
 - 30 abril.
-** Promedio de tareas y controles
+** NEXT Promedio de tareas y controles
 SCHEDULED: <2022-06-07 Tue 16:50>
 - 30%
 - 07 junio
