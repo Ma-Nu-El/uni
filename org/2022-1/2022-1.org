@@ -13,7 +13,7 @@ SCHEDULED: <2022-07-08 Fri>
 ** DONE Semana 5
 ** DONE Semana 6
 ** DONE Semana 7
-** TODO Semana 8 [6/9][66%]
+** TODO Semana 8 [9/9][100%]
 *** CANCELED Comunicación de Datos
 CLOSED: [2022-05-02 Mon 15:20] SCHEDULED: <2022-05-03 Tue 09:00-10:30>
 :LOGBOOK:
@@ -37,17 +37,26 @@ CLOSED: [2022-05-02 Mon 15:24] SCHEDULED: <2022-05-03 Tue 16:50-19:00>
   Gonna have to pass this up.
 :END:
 
-*** TODO Ayudantía Proba
-SCHEDULED: <2022-05-04 Wed 14:30-16:30>
-*** TODO Gestión de RRHH
-SCHEDULED: <2022-05-05 Thu 08:30-10:40>
+*** DONE Ayudantía Proba
+CLOSED: [2022-05-04 Wed 16:11] SCHEDULED: <2022-05-04 Wed 14:30-16:30>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-05-04 Wed 16:11]
+:END:
+*** DONE Gestión de RRHH
+CLOSED: [2022-05-06 Fri 10:35] SCHEDULED: <2022-05-05 Thu 08:30-10:40>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-05-06 Fri 10:35]
+:END:
 *** CANCELED Comunicación de Datos
 CLOSED: [2022-05-02 Mon 15:24] SCHEDULED: <2022-05-05 Thu 09:00-10:30>
 :LOGBOOK:
 - State "CANCELED"   from              [2022-05-02 Mon 15:24]
 :END:
-*** TODO Probabilidad
-SCHEDULED: <2022-05-06 Fri 08:30-10:40>
+*** DONE Probabilidad
+CLOSED: [2022-05-06 Fri 10:43] SCHEDULED: <2022-05-06 Fri 08:30-10:40>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-05-06 Fri 10:43]
+:END:
 *** CANCELED Arquitectura de Comp
 CLOSED: [2022-05-02 Mon 15:27] SCHEDULED: <2022-05-06 Fri 12:00-13:00>
 :LOGBOOK:
