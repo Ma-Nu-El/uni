@@ -4,15 +4,17 @@
 * Arquitectura de Computadores
 ** DONE taller 1
 SCHEDULED: <2022-04-29 Fri>
-** NEXT taller 2
-SCHEDULED: <2022-05-06 Fri 12:00-13:00>
+** DONE taller 2
+CLOSED: [2022-05-06 Fri 11:19] SCHEDULED: <2022-05-06 Fri 12:00-13:00>
 :LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-05-06 Fri 11:19]
 - State "NEXT"       from "TODO"       [2022-05-04 Wed 12:18]
 :END:
 * Comunicación de Datos
-** NEXT prueba1
-SCHEDULED: <2022-05-06 Fri 18:00-19:00>
+** DONE prueba1
+CLOSED: [2022-05-06 Fri 20:34] SCHEDULED: <2022-05-06 Fri 18:00-19:00>
 :LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-05-06 Fri 20:34]
 - State "NEXT"       from "TODO"       [2022-05-04 Wed 12:18]
 :END:
 * Probabilidad y Estadística
