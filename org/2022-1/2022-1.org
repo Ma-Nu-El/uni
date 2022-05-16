@@ -67,11 +67,17 @@ CLOSED: [2022-05-02 Mon 15:27] SCHEDULED: <2022-05-06 Fri 12:00-13:00>
 - State "CANCELED"   from              [2022-05-02 Mon 15:27] \\
   Workshop instead.
 :END:
-** TODO Semana 9 [0/11][0%]
-*** TODO Sistemas Estocásticos
-SCHEDULED: <2022-05-16 Mon 08:30-10:40>
-*** TODO Arquitectura de Comp
-SCHEDULED: <2022-05-16 Mon 16:50-19:00>
+** TODO Semana 9 [2/11][18%]
+*** DONE Sistemas Estocásticos
+CLOSED: [2022-05-16 Mon 18:49] SCHEDULED: <2022-05-16 Mon 08:30-10:40>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-05-16 Mon 18:49]
+:END:
+*** DONE Arquitectura de Comp
+CLOSED: [2022-05-16 Mon 18:49] SCHEDULED: <2022-05-16 Mon 16:50-19:00>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-05-16 Mon 18:49]
+:END:
 *** TODO Comunicación de Datos
 SCHEDULED: <2022-05-17 Tue 09:00-10:30>
 *** TODO Probabilidad
@@ -277,6 +283,9 @@ CLOSED: [2022-04-23 Sat 22:27] SCHEDULED: <2022-04-20 Wed 10:50>
 :END:
 - Apr 20
 *** NEXT prueba 2 (35%)
+:PROPERTIES:
+:TRIGGER:  chain-siblings(NEXT)
+:END:
 SCHEDULED: <2022-06-03 Fri 10:50>
 :LOGBOOK:
 - State "NEXT"       from "TODO"       [2022-05-04 Wed 12:18]
@@ -287,23 +296,12 @@ SCHEDULED: <2022-06-03 Fri 10:50>
 SCHEDULED: <2022-07-06 Wed 10:50>
 - Jul 06
 ** Sistemas Estocásticos
-*** Certámenes
-**** DONE Certamen 1
-CLOSED: [2022-05-04 Wed 11:04] SCHEDULED: <2022-05-03 Tue 16:50-19:00>
-:LOGBOOK:
-- State "DONE"       from              [2022-05-04 Wed 11:04]
-:END:
-- Mayo 3
-
-**** TODO Certamen 2
-SCHEDULED: <2022-06-21 Tue>
-*** Tests
-**** DONE Test1
+*** DONE Test1
 CLOSED: [2022-04-11 Mon 11:33] SCHEDULED: <2022-04-04 Mon 08:30-10:40>
 :LOGBOOK:
 - State "DONE"       from              [2022-04-11 Mon 11:33]
 :END:
-**** DONE Test2
+*** DONE Test2
 CLOSED: [2022-04-23 Sat 22:28] SCHEDULED: <2022-04-22 Fri>
 :LOGBOOK:
 - State "DONE"       from              [2022-04-23 Sat 22:28]
@@ -315,37 +313,31 @@ CLOSED: [2022-04-23 Sat 22:28] SCHEDULED: <2022-04-22 Fri>
 
 - No bivariados.
 
-**** NEXT Test3
-SCHEDULED: <2022-05-26 Thu>
+*** DONE Certamen 1
+CLOSED: [2022-05-04 Wed 11:04] SCHEDULED: <2022-05-03 Tue 16:50-19:00>
+:LOGBOOK:
+- State "DONE"       from              [2022-05-04 Wed 11:04]
+:END:
+- Mayo 3
+
+*** NEXT Test3
+SCHEDULED: <2022-05-28 Sat 10:00-12:00>
+:PROPERTIES:
+:TRIGGER:  chain-siblings(NEXT)
+:END:
 :LOGBOOK:
 - State "NEXT"       from "TODO"       [2022-05-04 Wed 12:18]
 :END:
 - Mayo 26
+- Update: saturday 28, 10:00-12:00.
 
-**** TODO Test4
+*** TODO Test4
 SCHEDULED: <2022-06-15 Wed>
 - Junio 15
 
+*** TODO Certamen 2
+SCHEDULED: <2022-06-21 Tue>
 ** Gestión de RRHH
-*** DONE Prueba1
-CLOSED: [2022-05-01 Sun 15:22] SCHEDULED: <2022-04-28 Thu 08:30>
-:LOGBOOK:
-- State "DONE"       from              [2022-05-01 Sun 15:22]
-:END:
-- 25%
-- 28 abril.
-*** TODO Prueba2
-SCHEDULED: <2022-06-30 Thu 08:30>
-- 20%
-- 30 abril.
-*** NEXT Promedio de tareas y controles
-SCHEDULED: <2022-06-07 Tue 16:50>
-- 30%
-- 07 junio
-*** Trabajo grupal
-SCHEDULED: <2022-07-05 Tue 16:50>
-- 25%
-- 05 julio
 *** DONE Taller grupal en clase: formación perfiles
 CLOSED: [2022-04-23 Sat 22:28] SCHEDULED: <2022-04-19 Tue>
 :LOGBOOK:
@@ -353,6 +345,28 @@ CLOSED: [2022-04-23 Sat 22:28] SCHEDULED: <2022-04-19 Tue>
 :END:
 - abril 19.
 - leer documento en campus previamente.
+*** DONE Prueba1
+CLOSED: [2022-05-01 Sun 15:22] SCHEDULED: <2022-04-28 Thu 08:30>
+:LOGBOOK:
+- State "DONE"       from              [2022-05-01 Sun 15:22]
+:END:
+- 25%
+- 28 abril.
+*** NEXT Promedio de tareas y controles
+:PROPERTIES:
+:TRIGGER:  chain-siblings(NEXT)
+:END:
+SCHEDULED: <2022-06-07 Tue 16:50>
+- 30%
+- 07 junio
+*** TODO Prueba2
+SCHEDULED: <2022-06-30 Thu 08:30>
+- 20%
+- 30 abril.
+*** Trabajo grupal
+SCHEDULED: <2022-07-05 Tue 16:50>
+- 25%
+- 05 julio
 * Local variables :noexport:
 # Local Variables:
 # ispell-local-dictionary: "espanol"

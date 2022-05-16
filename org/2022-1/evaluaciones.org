@@ -1,7 +1,0 @@
-#+TITLE: Evaluaciones
-#+FILETAGS: :university:evaluation:
-
-* Local variables :noexport:
-# Local Variables:
-# ispell-local-dictionary: "espanol"
-# End:
