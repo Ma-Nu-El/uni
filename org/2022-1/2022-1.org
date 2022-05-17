@@ -67,7 +67,10 @@ CLOSED: [2022-05-02 Mon 15:27] SCHEDULED: <2022-05-06 Fri 12:00-13:00>
 - State "CANCELED"   from              [2022-05-02 Mon 15:27] \\
   Workshop instead.
 :END:
-** TODO Semana 9 [2/11][18%]
+** NEXT Semana 9 [4/11][36%]
+:PROPERTIES:
+:TRIGGER:  chain-siblings(NEXT)
+:END:
 *** DONE Sistemas Estocásticos
 CLOSED: [2022-05-16 Mon 18:49] SCHEDULED: <2022-05-16 Mon 08:30-10:40>
 :LOGBOOK:
@@ -78,12 +81,25 @@ CLOSED: [2022-05-16 Mon 18:49] SCHEDULED: <2022-05-16 Mon 16:50-19:00>
 :LOGBOOK:
 - State "DONE"       from "TODO"       [2022-05-16 Mon 18:49]
 :END:
-*** TODO Comunicación de Datos
-SCHEDULED: <2022-05-17 Tue 09:00-10:30>
-*** TODO Probabilidad
+*** CANCELED Comunicación de Datos
+CLOSED: [2022-05-17 Tue 16:05] SCHEDULED: <2022-05-17 Tue 09:00-10:30>
+:LOGBOOK:
+- State "CANCELED"   from "TODO"       [2022-05-17 Tue 16:05]
+:END:
+*** DONE Probabilidad
+CLOSED: [2022-05-17 Tue 16:05]
+:PROPERTIES:
+:TRIGGER:  chain-siblings(NEXT)
+:END:
 SCHEDULED: <2022-05-17 Tue 10:50-13:00>
-*** TODO Sistemas Estocásticos
+*** NEXT Sistemas Estocásticos
 SCHEDULED: <2022-05-17 Tue 14:30-16:40>
+:PROPERTIES:
+:TRIGGER:  chain-siblings(NEXT)
+:END:
+:LOGBOOK:
+- State "NEXT"       from "TODO"       [2022-05-17 Tue 16:05]
+:END:
 *** TODO Gestión de RRHH
 SCHEDULED: <2022-05-17 Tue 16:50-19:00>
 *** TODO Ayudantía Proba
