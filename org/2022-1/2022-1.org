@@ -67,7 +67,7 @@ CLOSED: [2022-05-02 Mon 15:27] SCHEDULED: <2022-05-06 Fri 12:00-13:00>
 - State "CANCELED"   from              [2022-05-02 Mon 15:27] \\
   Workshop instead.
 :END:
-** NEXT Semana 9 [7/11][63%]
+** NEXT Semana 9 [8/11][72%]
 :PROPERTIES:
 :TRIGGER:  chain-siblings(NEXT)
 :END:
@@ -118,15 +118,19 @@ SCHEDULED: <2022-05-18 Wed 14:30-16:30>
 :END:
 *** TODO Gestión de RRHH
 SCHEDULED: <2022-05-19 Thu 08:30-10:40>
-*** TODO Comunicación de Datos
-SCHEDULED: <2022-05-19 Thu 09:00-10:30>
+*** CANCELED Comunicación de Datos
+CLOSED: [2022-05-18 Wed 12:32] SCHEDULED: <2022-05-19 Thu 09:00-10:30>
+:LOGBOOK:
+- State "CANCELED"   from "TODO"       [2022-05-18 Wed 12:32] \\
+  No voy a esa clase.
+:END:
 *** TODO Probabilidad
 SCHEDULED: <2022-05-20 Fri 08:30-10:40>
 *** CANCELED Arquitectura de Comp
 CLOSED: [2022-05-18 Wed 12:18] SCHEDULED: <2022-05-20 Fri 12:00-13:00>
 :LOGBOOK:
 - State "CANCELED"   from "TODO"       [2022-05-18 Wed 12:18] \\
-  From professor's email.
+  Profe envió correo.
 :END:
 ** TODO Semana 10 [1/11][9%]
 *** TODO Sistemas Estocásticos
@@ -135,7 +139,7 @@ SCHEDULED: <2022-05-23 Mon 08:30-10:40>
 CLOSED: [2022-05-18 Wed 12:19] SCHEDULED: <2022-05-23 Mon 16:50-19:00>
 :LOGBOOK:
 - State "CANCELED"   from "TODO"       [2022-05-18 Wed 12:19] \\
-  From professor's email.
+  Profe envió correo.
 :END:
 *** TODO Comunicación de Datos
 SCHEDULED: <2022-05-24 Tue 09:00-10:30>
