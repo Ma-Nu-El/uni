@@ -67,11 +67,8 @@
 ** Teórico ab%
 ** Práctico cd%
 * Links
-- (links only)
-- zoom link
-- link to whatsapp group
-- recorded lectures
-- etc
+- https://us04web.zoom.us/j/8255579826?pwd=dXJsRUp5bkdKWWZrd1MyWGJBdFVxQT09
+- https://drive.google.com/drive/folders/1cwltGvOcqTRkImhXawHJMm-xO1lqy9u4?usp=sharing
 * Recursos
 - links a libros, videos, etc.
 * Contacto
