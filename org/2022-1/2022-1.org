@@ -67,7 +67,7 @@ CLOSED: [2022-05-02 Mon 15:27] SCHEDULED: <2022-05-06 Fri 12:00-13:00>
 - State "CANCELED"   from              [2022-05-02 Mon 15:27] \\
   Workshop instead.
 :END:
-** NEXT Semana 9 [4/11][36%]
+** NEXT Semana 9 [7/11][63%]
 :PROPERTIES:
 :TRIGGER:  chain-siblings(NEXT)
 :END:
