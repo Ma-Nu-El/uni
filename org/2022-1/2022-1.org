@@ -156,6 +156,7 @@ SCHEDULED: <2022-05-26 Thu 09:00-10:30>
 SCHEDULED: <2022-05-27 Fri 08:30-10:40>
 *** TODO Arquitectura de Comp
 SCHEDULED: <2022-05-27 Fri 12:00-13:00>
+- Clase con Alex.
 ** TODO Semana 11 [0/11][0%]
 *** TODO Sistemas Estocásticos
 SCHEDULED: <2022-05-30 Mon 08:30-10:40>
@@ -305,11 +306,15 @@ CLOSED: [2022-05-06 Fri 11:19] SCHEDULED: <2022-05-06 Fri 12:00-13:00>
 - State "NEXT"       from "TODO"       [2022-05-04 Wed 12:18]
 :END:
 *** NEXT taller 3
+SCHEDULED: <2022-06-03 Fri>
 :PROPERTIES:
 :TRIGGER:  chain-siblings(NEXT)
 :END:
-SCHEDULED: <2022-05-23 Mon>
 - Sistemas Operativos.
+- Era 23 mayo.
+  - Se cambia a 03 junio.
+- En parejas.
+  - Soy con Javiera Vergara.
 *** TODO global
 SCHEDULED: <2022-06-20 Mon>
 *** TODO Revisión avance proyecto
@@ -404,6 +409,7 @@ SCHEDULED: <2022-05-28 Sat 10:00-12:00>
 :END:
 - Mayo 26
 - Update: saturday 28, 10:00-12:00.
+- En parejas.
 
 *** TODO Test4
 SCHEDULED: <2022-06-15 Wed>
