@@ -67,7 +67,7 @@ CLOSED: [2022-05-02 Mon 15:27] SCHEDULED: <2022-05-06 Fri 12:00-13:00>
 - State "CANCELED"   from              [2022-05-02 Mon 15:27] \\
   Workshop instead.
 :END:
-** NEXT Semana 9 [8/10][80%]
+** NEXT Semana 9 [8/9][88%]
 :PROPERTIES:
 :TRIGGER:  chain-siblings(NEXT)
 :END:
@@ -116,16 +116,22 @@ CLOSED: [2022-05-18 Wed 15:30] SCHEDULED: <2022-05-18 Wed 14:30-16:30>
 :LOGBOOK:
 - State "NEXT"       from "TODO"       [2022-05-18 Wed 11:16]
 :END:
-*** NEXT Gestión de RRHH
-SCHEDULED: <2022-05-19 Thu 08:30-10:40>
+*** DONE Gestión de RRHH
+CLOSED: [2022-05-19 Thu 12:50] SCHEDULED: <2022-05-19 Thu 08:30-10:40>
 :PROPERTIES:
 :TRIGGER:  chain-siblings(NEXT)
 :END:
 :LOGBOOK:
 - State "NEXT"       from "TODO"       [2022-05-18 Wed 15:30]
 :END:
-*** TODO Probabilidad
+*** NEXT Probabilidad
 SCHEDULED: <2022-05-20 Fri 08:30-10:40>
+:PROPERTIES:
+:TRIGGER:  chain-siblings(NEXT)
+:END:
+:LOGBOOK:
+- State "NEXT"       from "TODO"       [2022-05-19 Thu 12:50]
+:END:
 ** TODO Semana 10 [1/11][9%]
 *** TODO Sistemas Estocásticos
 SCHEDULED: <2022-05-23 Mon 08:30-10:40>

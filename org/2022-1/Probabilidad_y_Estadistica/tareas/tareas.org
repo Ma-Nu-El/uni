@@ -64,6 +64,7 @@
     \draw (above right relay) circle [radius=5pt];
     \draw (below left relay)  circle [radius=5pt];
     \draw (below right relay) circle [radius=5pt];
+
 \end{tikzpicture}
 #+end_src
 
