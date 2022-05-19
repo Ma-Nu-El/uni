@@ -1,0 +1,73 @@
+:PROPERTIES:
+:header-args:latex: :exports results
+:END:
+#+TITLE: Tareas
+#+SUBTITLE: Probabilidad y Estadística
+#+author: Manuel Fuica Morales
+#+date: 2022-1
+#+OPTIONS: toc:2
+#+LATEX_HEADER: \usepackage{tikz}
+#+LATEX_HEADER: \usetikzlibrary{fit,positioning}
+
+* Circuitos
+** 1
+
+#+begin_src latex
+\begin{tikzpicture}
+  % Lines
+    % center line
+    \coordinate (center) at (0,0);
+    \coordinate [left=4cm of center]  (leftmost node);
+    \coordinate [left=3cm of center] (left node);
+    \coordinate [right=3cm of center] (right node);
+    \coordinate [right=4cm of center] (rightmost node);
+
+    % above
+    \coordinate [above left=2cm and  2cm of center] (above leftmost);
+    \coordinate [above right=2cm and 2cm of center] (above rightmost);
+    % below
+    \coordinate [below left=2cm and  2cm of center] (below leftmost);
+    \coordinate [below right=2cm and 2cm of center] (below rightmost);
+
+    % draw positions:
+    % \node at (center)         [circle,draw] {};
+    % \node at (leftmost node)  [circle,fill] {};
+    % \node at (left node)      [circle,fill] {};
+    % \node at (right node)     [circle,fill] {};
+    % \node at (rightmost node) [circle,fill] {};
+    % \node at (above leftmost) [circle,fill] {};
+    % \node at (above rightmost)[circle,fill] {};
+    % \node at (below leftmost) [circle,fill] {};
+    % \node at (below rightmost)[circle,fill] {};
+
+    % draw lines
+    % center line
+    \draw [--] (leftmost node)--(rightmost node);
+    % above and below
+    \draw [--] (above leftmost)--(above rightmost);
+    \draw [--] (below leftmost)--(below rightmost);
+    % diagonals
+    \draw [--] (left node)--(above leftmost);
+    \draw [--] (left node)--(below leftmost);
+    \draw [--] (right node)--(above rightmost);
+    \draw [--] (right node)--(below rightmost);
+
+  % The actual relays
+
+    \coordinate (center relay) at (0,0);
+    \coordinate [above left =2cm and 1cm of center]  (above left relay);
+    \coordinate [above right=2cm and 1cm of center]  (above right relay);
+    \coordinate [below left =2cm and 1cm of center]  (below left relay);
+    \coordinate [below right=2cm and 1cm of center]  (below right relay);
+    \draw (center relay)      circle [radius=5pt];
+    \draw (above left relay)  circle [radius=5pt];
+    \draw (above right relay) circle [radius=5pt];
+    \draw (below left relay)  circle [radius=5pt];
+    \draw (below right relay) circle [radius=5pt];
+\end{tikzpicture}
+#+end_src
+
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
