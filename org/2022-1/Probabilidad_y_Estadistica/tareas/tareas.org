@@ -126,9 +126,9 @@ funcionen.
 #+begin_src latex
 \begin{tikzpicture}
   % grid
-  \draw[step=1cm,color=lightgray] (-8,-5) grid (8,5);
-  \coordinate (center) at (0,0);
-  \draw (center) circle [radius=5pt];
+  % \draw[step=1cm,color=lightgray] (-8,-5) grid (8,5);
+  % \coordinate (center) at (0,0);
+  % \draw (center) circle [radius=5pt];
 
   % main lines
     % center
