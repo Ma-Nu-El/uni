@@ -42,17 +42,17 @@
 
     % draw lines
     % center line
-    \draw [--] (leftmost node)--(rightmost node);
+    \draw [-] (leftmost node)--(rightmost node);
     % above and below
-    \draw [--] (above leftmost)--(above rightmost);
-    \draw [--] (below leftmost)--(below rightmost);
+    \draw [-] (above leftmost)--(above rightmost);
+    \draw [-] (below leftmost)--(below rightmost);
     % diagonals
-    \draw [--] (left node)--(above leftmost);
-    \draw [--] (left node)--(below leftmost);
-    \draw [--] (right node)--(above rightmost);
-    \draw [--] (right node)--(below rightmost);
+    \draw [-] (left node)--(above leftmost);
+    \draw [-] (left node)--(below leftmost);
+    \draw [-] (right node)--(above rightmost);
+    \draw [-] (right node)--(below rightmost);
 
-  % The actual relays
+  % Relays
 
     \coordinate (center relay) at (0,0);
     \coordinate [above left =2cm and 1cm of center]  (above left relay);
@@ -67,6 +67,111 @@
 
 \end{tikzpicture}
 #+end_src
+
+*** Desarrollo
+** 2
+*** Diagrama
+
+#+begin_src latex
+\begin{tikzpicture}
+  % Lines
+    % center line
+    \coordinate (center) at (0,0);
+    \coordinate [left=4cm of center]  (leftmost node);
+    \coordinate [left=2cm of center] (left node);
+    \coordinate [right=2cm of center] (right node);
+    \coordinate [right=4cm of center] (rightmost node);
+
+    \coordinate [above=2cm of center] (above center);
+    % below
+    \coordinate [below=2cm of center] (below center);
+
+    % draw lines
+    \draw [-] (leftmost node)--(left node);
+    \draw [-] (rightmost node)--(right node);
+
+    \draw [-] (left node)--(above center);
+    \draw [-] (left node)--(below center);
+
+    \draw [-] (right node)--(above center);
+    \draw [-] (right node)--(below center);
+
+    \draw [-] (above center)--(below center);
+
+  % Relays
+
+    \coordinate (center relay) at (0,0);
+    \coordinate [above right =1cm and 1cm of left node]  (above left relay);
+    \coordinate [above left=1cm and 1cm of right node]  (above right relay);
+    \coordinate [below right =1cm and 1cm of left node]  (below left relay);
+    \coordinate [below left=1cm and 1cm of right node]  (below right relay);
+
+    \draw (center relay)      circle [radius=5pt];
+    \draw (above left relay)  circle [radius=5pt];
+    \draw (above right relay) circle [radius=5pt];
+    \draw (below left relay)  circle [radius=5pt];
+    \draw (below right relay) circle [radius=5pt];
+
+\end{tikzpicture}
+#+end_src
+
+** 3
+*** Diagrama
+
+#+begin_src latex
+\begin{tikzpicture}
+  % grid
+  % \draw[step=1cm] (-8,-5) grid (8,5);
+  % \coordinate (center) at (0,0);
+  % \draw (center) circle [radius=5pt];
+
+  % lines
+  % center
+  \coordinate(leftmost node) at (-8,0);
+  \coordinate(left node) at (-7,0);
+  \coordinate(right node) at (7,0);
+  \coordinate(rightmost node) (-8,0);
+
+  % above
+  \coordinate [above=3cm of leftmost node](above leftmost);
+  \coordinate [above=3cm of left node](above left);
+  \coordinate [above left=3cm and 1cm of center](above center left);
+
+  \coordinate [above=3cm of rightmost node](above rightmost);
+  \coordinate [above=3cm of right node](above right);
+  \coordinate [above right=3cm and 1cm of center](above center right);
+
+  % below
+  \coordinate [below=3cm of left node](below left);
+  \coordinate [below=3cm of right node](below right);
+
+  %draw
+  \draw [-] (leftmost node)--(left node);
+  \draw [-] (rightmost node)--(right node);
+
+  % \draw [-] (above leftmost)--(above left);
+  % \draw [-] (above center left)--(above center right);
+  % \draw [-] (above right)--(above rightmost);
+
+\end{tikzpicture}
+#+end_src
+
+** 4
+*** Diagrama
+
+#+begin_src latex
+\begin{tikzpicture}
+\end{tikzpicture}
+#+end_src
+
+** 5
+*** Diagrama
+
+#+begin_src latex
+\begin{tikzpicture}
+\end{tikzpicture}
+#+end_src
+
 
 * Local variables :noexport:
 # Local Variables:
