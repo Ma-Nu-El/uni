@@ -126,38 +126,85 @@ funcionen.
 #+begin_src latex
 \begin{tikzpicture}
   % grid
-  % \draw[step=1cm] (-8,-5) grid (8,5);
-  % \coordinate (center) at (0,0);
-  % \draw (center) circle [radius=5pt];
+  \draw[step=1cm,color=lightgray] (-8,-5) grid (8,5);
+  \coordinate (center) at (0,0);
+  \draw (center) circle [radius=5pt];
 
-  % lines
-  % center
-  \coordinate(leftmost node) at (-8,0);
-  \coordinate(left node) at (-7,0);
-  \coordinate(right node) at (7,0);
-  \coordinate(rightmost node) (-8,0);
+  % main lines
+    % center
+    \coordinate(leftmost node) at (-8,0);
+    \coordinate(left node) at     (-7,0);
+    \coordinate(right node) at     (7,0);
+    \coordinate(rightmost node) at (8,0);
 
-  % above
-  \coordinate [above=3cm of leftmost node](above leftmost);
-  \coordinate [above=3cm of left node](above left);
-  \coordinate [above left=3cm and 1cm of center](above center left);
+    % above
+    \coordinate [above=3cm of left node]               (above leftmost);
+    \coordinate [above right=3cm and 1cm of left node]     (above left);
+    \coordinate [above left=3cm and 1cm of center]  (above center left);
 
-  \coordinate [above=3cm of rightmost node](above rightmost);
-  \coordinate [above=3cm of right node](above right);
-  \coordinate [above right=3cm and 1cm of center](above center right);
+    \coordinate [above=3cm of right node]             (above rightmost);
+    \coordinate [above left=3cm and 1cm of right node]    (above right);
+    \coordinate [above right=3cm and 1cm of center](above center right);
 
-  % below
-  \coordinate [below=3cm of left node](below left);
-  \coordinate [below=3cm of right node](below right);
+    % below
+    \coordinate [below=3cm of left node]                   (below left);
+    \coordinate [below=3cm of right node]                 (below right);
 
-  %draw
-  \draw [-] (leftmost node)--(left node);
-  \draw [-] (rightmost node)--(right node);
+  %draw main lines
+    \draw [-] (leftmost node)--(left node);
+    \draw [-] (right node)--(rightmost node);
 
-  % \draw [-] (above leftmost)--(above left);
-  % \draw [-] (above center left)--(above center right);
-  % \draw [-] (above right)--(above rightmost);
+    \draw [-] (above leftmost)--(below left);
+    \draw [-] (above rightmost)--(below right);
 
+    \draw [-] (above leftmost)--(above left);
+    \draw [-] (above center left)--(above center right);
+    \draw [-] (above right)--(above rightmost);
+    \draw [-] (below left)--(below right);
+
+  %subsistems
+  % subsistem1
+    \coordinate[above=1cm of above left]         (subsistem1 above leftmost node);
+    \coordinate[above=1cm of above center left]  (subsistem1 above rightmost node);
+    \coordinate[below=1cm of above left]         (subsistem1 below leftmost node);
+    \coordinate[below=1cm of above center left]  (subsistem1 below rightmost node);
+
+    % horizontal lines
+    \draw [-] (subsistem1 above leftmost node)--(subsistem1 above rightmost node);
+    \draw [-] (subsistem1 below leftmost node)--(subsistem1 below rightmost node);
+    % vertical lines
+    \draw [-] (subsistem1 above leftmost node)--(subsistem1 below leftmost node);
+    \draw [-] (subsistem1 above rightmost node)--(subsistem1 below rightmost node);
+
+  % subsistem2
+    \coordinate[above=1cm of above center right]   (subsistem2 above leftmost node);
+    \coordinate[above=1cm of above right]         (subsistem2 above rightmost node);
+    \coordinate[below=1cm of above center right]   (subsistem2 below leftmost node);
+    \coordinate[below=1cm of above right]         (subsistem2 below rightmost node);
+
+    % horizontal lines
+    \draw [-] (subsistem2 above leftmost node)--(subsistem2 above rightmost node);
+    \draw [-] (subsistem2 below leftmost node)--(subsistem2 below rightmost node);
+    % vertical lines
+    \draw [-] (subsistem2 above leftmost node)--(subsistem2 below leftmost node);
+    \draw [-] (subsistem2 above rightmost node)--(subsistem2 below rightmost node);
+
+  % Relays
+  % subsistem1
+    \coordinate [right=1cm of subsistem1 above leftmost node] (subsistem1 above left relay);
+    \coordinate [left=1cm of subsistem1 above rightmost node] (subsistem1 above right relay);
+    \coordinate [right=2.5cm of subsistem1 below leftmost node] (subsistem1 below center relay);
+    \draw (subsistem1 above left relay)   circle [radius=5pt];
+    \draw (subsistem1 above right relay)  circle [radius=5pt];
+    \draw (subsistem1 below center relay) circle [radius=5pt];
+  % subsistem2
+    \coordinate [right=2.5cm of subsistem2 above leftmost node] (subsistem2 above center relay);
+    \coordinate [right=2.5cm of subsistem2 below leftmost node] (subsistem2 below center relay);
+    \draw (subsistem2 above center relay)  circle [radius=5pt];
+    \draw (subsistem2 below center relay)  circle [radius=5pt];
+  % below relay
+    \coordinate [below=3cm of center] (below center relay);
+    \draw (below center relay)  circle [radius=5pt];
 \end{tikzpicture}
 #+end_src
 
