@@ -5,12 +5,17 @@
 #+SUBTITLE: Probabilidad y Estadística
 #+author: Manuel Fuica Morales
 #+date: 2022-1
-#+OPTIONS: toc:2
+#+OPTIONS: toc:3
 #+LATEX_HEADER: \usepackage{tikz}
 #+LATEX_HEADER: \usetikzlibrary{fit,positioning}
 
 * Circuitos
+
+Calcular la probabilidad de que los circuitos
+funcionen.
+
 ** 1
+*** Diagrama
 
 #+begin_src latex
 \begin{tikzpicture}
