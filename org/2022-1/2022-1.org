@@ -67,7 +67,7 @@ CLOSED: [2022-05-02 Mon 15:27] SCHEDULED: <2022-05-06 Fri 12:00-13:00>
 - State "CANCELED"   from              [2022-05-02 Mon 15:27] \\
   Workshop instead.
 :END:
-** NEXT Semana 9 [8/9][88%]
+** NEXT Semana 9 [9/9][100%]
 :PROPERTIES:
 :TRIGGER:  chain-siblings(NEXT)
 :END:
@@ -124,12 +124,13 @@ CLOSED: [2022-05-19 Thu 12:50] SCHEDULED: <2022-05-19 Thu 08:30-10:40>
 :LOGBOOK:
 - State "NEXT"       from "TODO"       [2022-05-18 Wed 15:30]
 :END:
-*** NEXT Probabilidad
-SCHEDULED: <2022-05-20 Fri 08:30-10:40>
+*** DONE Probabilidad
+CLOSED: [2022-05-20 Fri 15:48] SCHEDULED: <2022-05-20 Fri 08:30-10:40>
 :PROPERTIES:
 :TRIGGER:  chain-siblings(NEXT)
 :END:
 :LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-05-20 Fri 15:48]
 - State "NEXT"       from "TODO"       [2022-05-19 Thu 12:50]
 :END:
 ** TODO Semana 10 [1/11][9%]
