@@ -5,7 +5,7 @@
 SCHEDULED: <2022-03-14 Mon>
 * End 2022-1
 SCHEDULED: <2022-07-08 Fri>
-* Semanas [8/16][50%] :lecture:
+* Semanas [9/16][56%] :lecture:
 ** DONE Semana 1
 ** DONE Semana 2
 ** DONE Semana 3
@@ -67,7 +67,8 @@ CLOSED: [2022-05-02 Mon 15:27] SCHEDULED: <2022-05-06 Fri 12:00-13:00>
 - State "CANCELED"   from              [2022-05-02 Mon 15:27] \\
   Workshop instead.
 :END:
-** NEXT Semana 9 [9/9][100%]
+** DONE Semana 9 [9/9][100%]
+CLOSED: [2022-05-20 Fri 16:20]
 :PROPERTIES:
 :TRIGGER:  chain-siblings(NEXT)
 :END:
@@ -133,7 +134,10 @@ CLOSED: [2022-05-20 Fri 15:48] SCHEDULED: <2022-05-20 Fri 08:30-10:40>
 - State "DONE"       from "NEXT"       [2022-05-20 Fri 15:48]
 - State "NEXT"       from "TODO"       [2022-05-19 Thu 12:50]
 :END:
-** TODO Semana 10 [1/11][9%]
+** NEXT Semana 10 [1/11][9%]
+:PROPERTIES:
+:TRIGGER:  chain-siblings(NEXT)
+:END:
 *** TODO Sistemas Estocásticos
 SCHEDULED: <2022-05-23 Mon 08:30-10:40>
 *** CANCELED Arquitectura de Comp
