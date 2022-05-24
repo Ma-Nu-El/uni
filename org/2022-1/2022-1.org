@@ -134,27 +134,42 @@ CLOSED: [2022-05-20 Fri 15:48] SCHEDULED: <2022-05-20 Fri 08:30-10:40>
 - State "DONE"       from "NEXT"       [2022-05-20 Fri 15:48]
 - State "NEXT"       from "TODO"       [2022-05-19 Thu 12:50]
 :END:
-** NEXT Semana 10 [1/11][9%]
+** NEXT Semana 10 [6/11][54%]
 :PROPERTIES:
 :TRIGGER:  chain-siblings(NEXT)
 :END:
-*** TODO Sistemas Estocásticos
-SCHEDULED: <2022-05-23 Mon 08:30-10:40>
+*** CANCELED Sistemas Estocásticos
+CLOSED: [2022-05-23 Mon 16:08] SCHEDULED: <2022-05-23 Mon 08:30-10:40>
+:LOGBOOK:
+- State "CANCELED"   from "TODO"       [2022-05-23 Mon 16:08]
+:END:
 *** CANCELED Arquitectura de Comp
 CLOSED: [2022-05-18 Wed 12:19] SCHEDULED: <2022-05-23 Mon 16:50-19:00>
 :LOGBOOK:
 - State "CANCELED"   from "TODO"       [2022-05-18 Wed 12:19] \\
   Profe envió correo.
 :END:
-*** TODO Comunicación de Datos
-SCHEDULED: <2022-05-24 Tue 09:00-10:30>
-*** TODO Probabilidad
-SCHEDULED: <2022-05-24 Tue 10:50-13:00>
-*** TODO Sistemas Estocásticos
-SCHEDULED: <2022-05-24 Tue 14:30-16:40>
+*** CANCELED Comunicación de Datos
+CLOSED: [2022-05-23 Mon 09:44] SCHEDULED: <2022-05-24 Tue 09:00-10:30>
+:LOGBOOK:
+- State "CANCELED"   from "TODO"       [2022-05-23 Mon 09:44]
+:END:
+*** DONE Probabilidad
+CLOSED: [2022-05-24 Tue 12:59] SCHEDULED: <2022-05-24 Tue 10:50-13:00>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-05-24 Tue 12:59]
+:END:
+*** CANCELED Sistemas Estocásticos
+CLOSED: [2022-05-24 Tue 16:24] SCHEDULED: <2022-05-24 Tue 14:30-16:40>
+:LOGBOOK:
+- State "CANCELED"   from "TODO"       [2022-05-24 Tue 16:24]
+:END:
 
-*** TODO Gestión de RRHH
-SCHEDULED: <2022-05-24 Tue 16:50-19:00>
+*** CANCELED Gestión de RRHH
+CLOSED: [2022-05-23 Mon 09:44] SCHEDULED: <2022-05-24 Tue 16:50-19:00>
+:LOGBOOK:
+- State "CANCELED"   from "TODO"       [2022-05-23 Mon 09:44]
+:END:
 *** TODO Ayudantía Proba
 SCHEDULED: <2022-05-25 Wed 14:30-16:30>
 *** TODO Gestión de RRHH
