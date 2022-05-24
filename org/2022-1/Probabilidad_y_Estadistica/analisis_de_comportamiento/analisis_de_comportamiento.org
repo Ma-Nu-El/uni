@@ -1,0 +1,27 @@
+#+TITLE: Analisis de Comportamiento
+#+OPTIONS: toc:2
+#+LANGUAGE: es
+#+LATEX_HEADER:\usepackage[spanish]{babel}
+
+* 0: Importar datos sanos
+- Buen formato.
+* 1: DescriptY para descartar anomalias
+- Análisis de valores atípicos.
+* 2: Comparar con diferentes modelos
+- Weibull
+- Gamma
+- Normal
+- Lognormal
+- Exponencial
+- Pareto
+- Uniforme
+- Coachi
+- etc
+* 3: Goodness of Statistics: Criterio Akaike
+: ks.test(v_dependiente, modelo_de_comparacion,param1,param2)
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
+
+#  LocalWords:  relays ésimo ésima ésimas ésimos
