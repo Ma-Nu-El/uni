@@ -5,9 +5,13 @@
 
 * 0: Importar datos sanos
 - Buen formato.
-* 1: DescriptY para descartar anomalias
+* 1: DescriptY para descartar anomalías
 - Análisis de valores atípicos.
 * 2: Comparar con diferentes modelos
+
+[[file:~/Downloads/uni/2022-1/proba/scripts-r/SCRIPT P02 Analisis de Distribucion.r]]
+
+
 - Weibull
 - Gamma
 - Normal
@@ -17,6 +21,12 @@
 - Uniforme
 - Coachi
 - etc
+
+
+También puedes:
+
+: hist(data2$`Tiempos de reparacion`)
+
 * 3: Goodness of Statistics: Criterio Akaike
 : ks.test(v_dependiente, modelo_de_comparacion,param1,param2)
 * Local variables :noexport:
