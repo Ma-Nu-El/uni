@@ -360,13 +360,13 @@ CLOSED: [2022-05-06 Fri 11:19] SCHEDULED: <2022-05-06 Fri 12:00-13:00>
 - State "NEXT"       from "TODO"       [2022-05-04 Wed 12:18]
 :END:
 *** NEXT taller 3
-SCHEDULED: <2022-06-03 Fri>
+SCHEDULED: <2022-06-06 Mon>
 :PROPERTIES:
 :TRIGGER:  chain-siblings(NEXT)
 :END:
 - Sistemas Operativos.
 - Era 23 mayo.
-  - Se cambia a 03 junio.
+  - Se cambia a 06 junio.
 - En parejas.
   - Soy con Javiera Vergara.
 *** TODO global
