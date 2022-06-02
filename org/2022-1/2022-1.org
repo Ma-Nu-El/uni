@@ -5,7 +5,7 @@
 SCHEDULED: <2022-03-14 Mon>
 * End 2022-1
 SCHEDULED: <2022-07-08 Fri>
-* Semanas [9/16][56%] :lecture:
+* Semanas [10/16][62%] :lecture:
 ** DONE Semana 1
 ** DONE Semana 2
 ** DONE Semana 3
@@ -134,7 +134,7 @@ CLOSED: [2022-05-20 Fri 15:48] SCHEDULED: <2022-05-20 Fri 08:30-10:40>
 - State "DONE"       from "NEXT"       [2022-05-20 Fri 15:48]
 - State "NEXT"       from "TODO"       [2022-05-19 Thu 12:50]
 :END:
-** NEXT Semana 10 [11/11][100%]
+** DONE Semana 10 [11/11][100%]
 :PROPERTIES:
 :TRIGGER:  chain-siblings(NEXT)
 :END:
