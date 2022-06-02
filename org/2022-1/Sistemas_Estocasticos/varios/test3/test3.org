@@ -1,0 +1,203 @@
+#+TITLE: Test3
+#+SUBTITLE: Sistemas Estocásticos
+#+AUTHOR: Tomas Muñoz
+#+AUTHOR: \\
+#+AUTHOR: Manuel Fuica Morales
+#+DATE: 2022 mayo 28
+#+OPTIONS: toc:3
+:R:
+#+PROPERTY: header-args:R :session code :exports both :results replace
+:END:
+
+#+LANGUAGE: es
+#+LATEX_HEADER:\usepackage[spanish]{babel}
+
+* Ejercicio 4
+
+** Enunciado
+
+Problema 3 (15 puntos): Una automotora
+conocida en el ámbito nacional, decide
+abrir una sucursal en la ciudad de Temuco.
+Como la entidad comercial esta incursionando
+en la compra y venta de vehículos en dicha
+localidad, decide arrendar un espacio para
+sus operaciones donde solo hay capacidad
+para 5 vehículos. Los datos estadísticos
+elaborado por analistas de la entidad
+comercial han determinado que la demanda
+de vehículos que recibirá la sucursal
+describe un proceso de Poisson con una
+tasa de 1 vehículo al mes. Además la
+posibilidad de proveer de vehículos a la
+sucursal, en caso de que se haya vendido
+alguno, es de 1 vehículo en el 60%,
+y de 2 vehículos en el 40% de los casos.
+
+En un instante inicial, la automotora
+cuenta con una oferta de 5 vehículos,
+durante el mes dará solución a la demanda
+que presenten los clientes y al final
+del mes se proveerá el inventario
+según las condiciones especificadas.
+
+Para lo cual se pide determinar lo siguiente:
+
+a) Modelar este problema como una Cadena De
+   Markov, definiendo claramente los estados,
+   la matriz de transición y las variables del sistema.
+
+b) ¿Cuál es la proporción de vehículos que tiene
+   en oferta la sucursal en el largo plazo?
+
+c) SI vender un vehiculo genera ingresos
+   promedio de $12.000.000, y proveer de vehiculos
+   a la sucursal significan un coste aproximado
+   de $8.000.000, ¿cual es el margen anual
+   esperado por la automotora?
+
+d) ¿Cuál es la demanda mensual esperada
+   en esta situación?
+
+-----
+** Desarrollo
+*** Letra A
+
+Considerando un inventario máximo de 5 vehículos,
+si en cualquier mes terminamos con ventas,
+la probabilidad de reponer 1 vehículo
+es 60%, y la probabilidad de reponer 2
+vehículos es 40%.
+
+Considerando esto, podemos definir la matriz
+de transición que representa el pasar
+de un mes a otro con un inventario actual
+de un número de \(i-1\) vehículos, representado
+en la \(i\)-ésima fila a un inventario
+para el próximo mes con un número de
+vehículos \(j-1\) representado en la
+\(j\)-esima columna.
+
+#+begin_src R :session code
+matriz <- rbind(c(0,0.6,0.4,0,0,0),
+                c(0,0,0.6,0.4,0,0),
+                c(0,0,0,0.6,0.4,0),
+                c(0,0,0,0,0.6,0.4),
+                c(0,0,0,0,0,0.6),
+                c(0,0,0,0,0,1))
+#+end_src
+
+#+RESULTS:
+| 0 | 0.6 | 0.4 |   0 |   0 |   0 |
+| 0 |   0 | 0.6 | 0.4 |   0 |   0 |
+| 0 |   0 |   0 | 0.6 | 0.4 |   0 |
+| 0 |   0 |   0 |   0 | 0.6 | 0.4 |
+| 0 |   0 |   0 |   0 |   0 | 0.6 |
+| 0 |   0 |   0 |   0 |   0 |   1 |
+
+- La \(i\)-esima fila representa el numero
+  de vehículos, \(i-1\), con el que se
+  termina el mes actual.
+- La \(j\)-esima columna representa
+  el número de vehículos, \(j-1\), con el
+  que se empieza el mes próximo.
+
+
+Ejemplo, en la fila 4, la probabilidad
+de habiendo terminado el mes con 3 vehículos
+en inventario, la probabilidad de empezar
+el próximo mes con 5 vehículos en inventario
+es de un 40%, y la probabilidad de empezar
+el mes próximo con 4 vehículos en inventario
+es de un 60%.
+
+Naturalmente, si en un mes no se registran
+ventas, y como la capacidad de la sucursal
+es 5, entonces el mes próximo se empieza con
+la misma cantidad de vehículos con
+la que se termino el anterior.
+
+El estado 6, que representa haber terminado
+el mes con 5 vehículos en inventario, es
+un estado absorbente. Los demás
+son estados transitorios.
+-----
+*** Letra B :noexport:
+
+"Probabilidades del estado estable"
+
+#+begin_src R :session code
+matriz
+#+end_src
+
+#+RESULTS:
+| 0 | 0.6 | 0.4 |   0 |   0 |   0 |
+| 0 |   0 | 0.6 | 0.4 |   0 |   0 |
+| 0 |   0 |   0 | 0.6 | 0.4 |   0 |
+| 0 |   0 |   0 |   0 | 0.6 | 0.4 |
+| 0 |   0 |   0 |   0 |   0 | 0.6 |
+| 0 |   0 |   0 |   0 |   0 |   1 |
+
+#+begin_src R :session code
+extra <- rbind (c(.3,.6,.1),c(.1,.6,.3),c(.05,.4,.55),c(1,1,1))
+extra_update <- extra + rbind(c(-1,0,0),c(0,-1,0),c(0,0,-1),c(0,0,0))
+#+end_src
+
+#+RESULTS:
+| -0.7 |  0.6 |   0.1 |
+|  0.1 | -0.4 |   0.3 |
+| 0.05 |  0.4 | -0.45 |
+|    1 |    1 |     1 |
+
+#+begin_src R :session code
+## solve(extra)
+## solve(extra_update)
+#+end_src
+
+#+RESULTS:
+
+** Matriz :noexport:
+
+#+begin_src R :session code
+matriz <- rbind(c(.3,.6,.1), c(.1,.6,.3), c(.05,.4,.55))
+matriz_t <- t(matriz)
+#+end_src
+
+#+RESULTS:
+| 0.3 | 0.1 | 0.05 |
+| 0.6 | 0.6 |  0.4 |
+| 0.1 | 0.3 | 0.55 |
+
+** Inversa :noexport:
+
+#+begin_src R :session code
+solve(matriz)
+#+end_src
+
+#+RESULTS:
+| 5.25 | -7.25 |  3 |
+|   -1 |     4 | -2 |
+| 0.25 | -2.25 |  3 |
+
+** Simplex :noexport:
+
+#+begin_src R :session code
+objective <- c(1,2)
+#+end_src
+
+#+RESULTS:
+| 1 |
+| 2 |
+
+#+begin_src R :session code
+library("boot")
+#+end_src
+
+#+RESULTS:
+
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
+
+#  LocalWords:  ésimo ésima ésimas ésimos

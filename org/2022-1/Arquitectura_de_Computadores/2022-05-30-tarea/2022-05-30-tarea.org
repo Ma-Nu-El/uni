@@ -1,0 +1,121 @@
+#+TITLE: Arquitectura de Computadores y Sistemas Operativos
+#+SUBTITLE: Tarea
+#+AUTHOR: Manuel Fuica Morales
+#+DATE: 2022 05 30
+#+LANGUAGE: es
+#+OPTIONS: toc:2
+
+#+LATEX_HEADER:\usepackage[spanish]{babel}
+
+* Actividad
+Busque información sobre lo siguiente y redacte
+CON SUS PALABRAS basado en la lectura:
+
+- ¿Qué es el Kernel?
+- ¿Cómo ingresar al kernel en un S.O. Linux?
+
+@@latex:\clearpage@@
+** ¿Qué es el Kernel?
+
+El kernel, parte del sistema operativo,
+es el puente entre el hardware que compone
+el computador y el resto del sistema operativo.
+
+#+begin_example
+                          (Sistema Operativo)
++----------+     +-------+--------------------------+
+| Hardware |<--> :Kernel | Aplicaciónes del Usuario |
++----------+     +-------+--------------------------+
+
+#+end_example
+
+El sistema operativo es el encargado de
+administrar tareas internas del computador[fn:1]
+para que el usuario, sin tener conocimiento ni
+entendimiento de estas tareas, sea capaz de
+instalar y utilizar distintas aplicaciones como
+calculadoras, juegos, navegadores de internet,
+reproductores y editores de audio y video,
+simuladores, programas de contabilidad, etc.
+
+Como analogía, el kernel vendría siendo el motor
+de un vehículo, y el vehículo en si seria el
+sistema operativo: el conductor no requiere de
+conocer el funcionamiento interno del vehículo
+--- aunque es una buena habilidad conocerlo ---
+para poder usar el vehículo para transportarse
+de un lugar a otro[fn:2].
+
+En pocas palabras, el kernel es la parte del
+sistema operativo que está más comunicada
+con los componentes, y esta encargado de
+realizar tareas administrativas para un
+funcionamiento y comunicación óptimo entre
+las diferentes partes del computador.
+
+¿Podría funcionar un sistema operativo sin el
+kernel?
+
+Dado que el sistema operativo se construye a
+partir del kernel,
+
+** ¿Cómo ingresar al kernel en un S.O. Linux?
+# - [[https://superuser.com/questions/462737/where-can-i-find-the-linux-kernel-file][Where can I find the Linux kernel file? - Super User]]
+# - [[https://askubuntu.com/questions/359574/how-do-i-find-out-the-kernel-version-i-am-running][command line - How do I find out the kernel version I am running? - Ask Ubuntu]]
+
+Como todas las cosas Unix, /todo/ /es/
+/un/ /archivo/[fn:3], por lo tanto, ingresar al
+kernel es simplemente abrir el archivo de texto
+que contiene las instrucciones de operación
+de kernel.
+
+Es más, en https://kernel.org/, se suben
+diariamente diferentes ediciones del kernel de
+GNU Linux: para ver esos códigos, solo descarga los
+archivos y ábrelos con un editor de texto.
+
+Para usuarios avanzados, probar dicha versión
+del kernel consiste en compilar dichos archivos
+de texto para que el computador los pueda
+entender[fn:4], y luego instalar dichos archivos
+compilados.
+
+Para un sistema GNU Linux, por ejemplo [[https://ubuntu.com/][Ubuntu]] dada
+su popularidad y facilidad de uso para usuarios
+nuevos, acceder a los archivos del kernel actual
+consiste en:
+
+: cat /proc/cmdline
+
+Este comando te dará un resultado, y dicho
+resultado lo buscas en el directorio =/boot=:
+ese resultado es el archivo del kernel que estás
+usando actualmente[fn:5].
+
+* Footnotes
+
+[fn:1]
+Como por ejemplo: administración de memoria,
+administración de procesos,
+llamadas y comunicación con periféricos.
+
+[fn:2] [[https://stackoverflow.com/questions/3315730/what-is-the-difference-between-the-operating-system-and-the-kernel][What is the difference between the operating system and the kernel? - Stack Overflow]]
+
+[fn:3]
+- [[https://en.wikipedia.org/wiki/Everything_is_a_file][Everything is a file - Wikipedia]]
+- [[https://askubuntu.com/questions/1103937/explain-in-linux-and-unix-everything-is-a-file][Explain "In Linux and UNIX, everything is a file" - Ask Ubuntu]]
+- [[https://unix.stackexchange.com/questions/225537/everything-is-a-file][linux - Everything is a file? - Unix & Linux Stack Exchange]]
+
+[fn:4]
+Recordemos que para que un computador pueda
+entender lo que queremos comunicarle, se lo debemos
+entregar en binario, convertir un archivo escrito
+en lenguaje natural a lenguaje de computador
+se conoce como /compilación/.
+- [[https://www.computerhope.com/jargon/c/compilat.htm][What is Compilation?]]
+
+[fn:5]
+https://superuser.com/questions/462737/where-can-i-find-the-linux-kernel-file
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:

@@ -193,7 +193,7 @@ CLOSED: [2022-05-31 Tue 23:10] SCHEDULED: <2022-05-27 Fri 12:00-13:00>
 - State "DONE"       from "TODO"       [2022-05-31 Tue 23:10]
 :END:
 - Clase con Alex.
-** TODO Semana 11 [8/11][72%]
+** TODO Semana 11 [6/11][54%]
 *** DONE Sistemas Estocásticos
 CLOSED: [2022-05-31 Tue 23:10] SCHEDULED: <2022-05-30 Mon 08:30-10:40>
 :LOGBOOK:
@@ -226,32 +226,23 @@ CLOSED: [2022-05-31 Tue 23:09] SCHEDULED: <2022-05-31 Tue 16:50-19:00>
 :END:
 *** TODO Ayudantía Proba
 SCHEDULED: <2022-06-01 Wed 14:30-16:30>
-*** DONE Gestión de RRHH
-CLOSED: [2022-06-02 Thu 15:51] SCHEDULED: <2022-06-02 Thu 08:30-10:40>
-:LOGBOOK:
-- State "DONE"       from "TODO"       [2022-06-02 Thu 15:51]
-:END:
-*** CANCELED Comunicación de Datos
-CLOSED: [2022-06-02 Thu 15:51] SCHEDULED: <2022-06-02 Thu 09:00-10:30>
-:LOGBOOK:
-- State "CANCELED"   from "TODO"       [2022-06-02 Thu 15:51]
-:END:
+*** TODO Gestión de RRHH
+SCHEDULED: <2022-06-02 Thu 08:30-10:40>
+*** TODO Comunicación de Datos
+SCHEDULED: <2022-06-02 Thu 09:00-10:30>
 *** TODO Probabilidad
 SCHEDULED: <2022-06-03 Fri 08:30-10:40>
 *** TODO Arquitectura de Comp
 SCHEDULED: <2022-06-03 Fri 12:00-13:00>
-** TODO Semana 12 [1/11][9%]
+** TODO Semana 12 [0/11][0%]
 *** TODO Sistemas Estocásticos
 SCHEDULED: <2022-06-06 Mon 08:30-10:40>
 *** TODO Arquitectura de Comp
 SCHEDULED: <2022-06-06 Mon 16:50-19:00>
 *** TODO Comunicación de Datos
 SCHEDULED: <2022-06-07 Tue 09:00-10:30>
-*** CANCELED Probabilidad
-CLOSED: [2022-06-02 Thu 15:53] SCHEDULED: <2022-06-07 Tue 10:50-13:00>
-:LOGBOOK:
-- State "CANCELED"   from "TODO"       [2022-06-02 Thu 15:53]
-:END:
+*** TODO Probabilidad
+SCHEDULED: <2022-06-07 Tue 10:50-13:00>
 *** TODO Sistemas Estocásticos
 SCHEDULED: <2022-06-07 Tue 14:30-16:40>
 *** TODO Gestión de RRHH
