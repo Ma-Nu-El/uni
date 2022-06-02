@@ -419,15 +419,16 @@ CLOSED: [2022-04-23 Sat 22:27] SCHEDULED: <2022-04-20 Wed 10:50>
 :END:
 - Apr 20
 *** NEXT prueba 2 (35%)
+SCHEDULED: <2022-06-07 Tue 10:50>
 :PROPERTIES:
 :TRIGGER:  chain-siblings(NEXT)
 :END:
-SCHEDULED: <2022-06-03 Fri 10:50>
 :LOGBOOK:
 - State "NEXT"       from "TODO"       [2022-05-04 Wed 12:18]
 :END:
 - Con computador.
 - Jun 03
+- [2022-06-02 Thu] Se cambia a Jun 07.
 *** TODO prueba 3 (40%)
 SCHEDULED: <2022-07-06 Wed 10:50>
 - Jul 06
