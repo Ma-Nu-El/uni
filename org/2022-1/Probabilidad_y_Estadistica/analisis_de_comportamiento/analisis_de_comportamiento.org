@@ -1,7 +1,6 @@
 #+TITLE: Analisis de Comportamiento
 #+OPTIONS: toc:2
-#+LANGUAGE: es
-#+LATEX_HEADER:\usepackage[spanish]{babel}
+#+INCLUDE: "~/org/config-spanish.org"
 
 * 0: Importar datos sanos
 - Buen formato.
