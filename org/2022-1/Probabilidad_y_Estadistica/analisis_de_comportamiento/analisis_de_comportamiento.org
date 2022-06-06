@@ -5,6 +5,14 @@
 #+OPTIONS: toc:2
 #+INCLUDE: "~/org/config-spanish.org"
 
+* TOC :TOC_1:noexport:
+- [[#declaración][Declaración]]
+- [[#0-importar-datos-sanos][0: Importar datos sanos]]
+- [[#1-descripty-para-descartar-anomalías][1: DescriptY para descartar anomalías]]
+- [[#2-comparar-con-diferentes-modelos][2: Comparar con diferentes modelos]]
+- [[#3-goodness-of-fit-criterio-akaike][3: Goodness of Fit: Criterio Akaike]]
+- [[#4-prueba-kolmogorov-smirnov][4: Prueba Kolmogorov-Smirnov]]
+
 * Declaración
 :PROPERTIES:
 :UNNUMBERED: t
