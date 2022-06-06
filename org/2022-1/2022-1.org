@@ -193,7 +193,7 @@ CLOSED: [2022-05-31 Tue 23:10] SCHEDULED: <2022-05-27 Fri 12:00-13:00>
 - State "DONE"       from "TODO"       [2022-05-31 Tue 23:10]
 :END:
 - Clase con Alex.
-** TODO Semana 11 [8/11][72%]
+** TODO Semana 11 [9/11][81%]
 *** DONE Sistemas Estocásticos
 CLOSED: [2022-05-31 Tue 23:10] SCHEDULED: <2022-05-30 Mon 08:30-10:40>
 :LOGBOOK:
@@ -236,8 +236,11 @@ CLOSED: [2022-06-02 Thu 16:22] SCHEDULED: <2022-06-02 Thu 09:00-10:30>
 :LOGBOOK:
 - State "CANCELED"   from "TODO"       [2022-06-02 Thu 16:22]
 :END:
-*** TODO Probabilidad
-SCHEDULED: <2022-06-03 Fri 08:30-10:40>
+*** DONE Probabilidad
+CLOSED: [2022-06-03 Fri 16:23] SCHEDULED: <2022-06-03 Fri 08:30-10:40>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-06-03 Fri 16:23]
+:END:
 *** TODO Arquitectura de Comp
 SCHEDULED: <2022-06-03 Fri 12:00-13:00>
 ** TODO Semana 12 [0/11][0%]

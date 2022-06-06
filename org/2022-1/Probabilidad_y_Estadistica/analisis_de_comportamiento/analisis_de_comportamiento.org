@@ -54,6 +54,36 @@ evaluarla guarda los parametros en
 
 
 
+* Script
+
+#+begin_example R
+# Pregunta 6
+
+# Los que necesitan reemplazo varian entre 18 y 24
+reemplazos_leq24<-data[data$`Tiempos de reparacion`<=24,]
+reemplazos<-reemplazos_leq24[reemplazos_leq24$`Tiempos de reparacion`>=18,]
+
+# output <- input[data$varibale<24 $ data$variable >=18,]
+
+descripY(reemplazos,reemplazos$`Tiempos de reparacion`)
+
+fw<-fitdist(reemplazos$`Tiempos de reparacion`, "weibull")
+fg<-fitdist(reemplazos$`Tiempos de reparacion`, "gamma")
+fln<-fitdist(reemplazos$`Tiempos de reparacion`, "lnorm")
+fn<-fitdist(reemplazos$`Tiempos de reparacion`,"norm")
+plot.legend<-c("Weibull","LogNormal","Gamma","Normal")
+denscomp(list(fw,fln,fg,fn), legendtext=plot.legend)
+qqcomp(list(fw,fln,fg,fn), legendtext=plot.legend)
+cdfcomp(list(fw,fln,fg,fn), legendtext=plot.legend)
+ppcomp(list(fw,fln,fg,fn), legendtext=plot.legend)
+
+gofstat(list(fg,fn,fln,fw))
+
+ks.test(reemplazos$`Tiempos de reparacion`,"pnorm",fn$estimate[1],fn$estimate[2])
+
+1-pnorm(19,fn$estimate[1],fn$estimate[2])
+#+end_example
+
 * Local variables :noexport:
 # Local Variables:
 # ispell-local-dictionary: "espanol"
