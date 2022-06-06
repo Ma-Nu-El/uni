@@ -425,8 +425,11 @@ CLOSED: [2022-05-31 Tue 23:10] SCHEDULED: <2022-05-30 Mon>
 - State "DONE"       from "TODO"       [2022-05-31 Tue 23:10]
 :END:
 - Clasificación de redes LAN - MAN - WAN
-*** TODO taller 3
-SCHEDULED: <2022-06-06 Mon>
+*** CANCELED taller 3
+CLOSED: [2022-06-06 Mon 17:08] SCHEDULED: <2022-06-06 Mon>
+:LOGBOOK:
+- State "CANCELED"   from "TODO"       [2022-06-06 Mon 17:08]
+:END:
 - Topologías de red: Malla - Bus - Anillo - Estrella - Árbol
 *** TODO taller 4
 SCHEDULED: <2022-06-13 Mon>
