@@ -12,6 +12,7 @@
 - [[#2-comparar-con-diferentes-modelos][2: Comparar con diferentes modelos]]
 - [[#3-goodness-of-fit-criterio-akaike][3: Goodness of Fit: Criterio Akaike]]
 - [[#4-prueba-kolmogorov-smirnov][4: Prueba Kolmogorov-Smirnov]]
+- [[#ejemplo][Ejemplo]]
 
 * Declaración
 :PROPERTIES:
@@ -187,7 +188,10 @@ por lo que uno puede empezar a hacer
 inferencias sobre los datos usando
 el modelo escogido.
 
-* Ejemplo :noexport:
+* Ejemplo
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
 # # Pregunta 6
 
 # # Los que necesitan reemplazo varian entre 18 y 24
