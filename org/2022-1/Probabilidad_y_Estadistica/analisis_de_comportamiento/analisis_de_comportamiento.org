@@ -197,7 +197,7 @@ el modelo escogido.
 # # output <- input[data$varibale<24 $ data$variable >=18,]
 
 Este es el script usado en un dataset que
-despues de los analisis se determina que
+después de los análisis se determina que
 está distribuido normal.
 
 #+begin_example R
