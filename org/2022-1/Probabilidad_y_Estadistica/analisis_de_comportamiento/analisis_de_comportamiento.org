@@ -1,68 +1,198 @@
-#+TITLE: Analisis de Comportamiento
+#+TITLE: Análisis de Comportamiento: notas de la clase
+#+SUBTITLE: Probabilidad y Estadística
+#+DATE: Junio 2022
+#+AUTHOR: Manuel Fuica Morales
 #+OPTIONS: toc:2
 #+INCLUDE: "~/org/config-spanish.org"
 
+* Declaración
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+
+Soy un estudiante y todavía no tengo muy claros
+algunos conceptos: este es un resumen para
+una prueba intentando usar un lenguaje
+más coloquial.
+
+Durante la prueba se usará RStudio, y
+el desarrollo se puede hacer en cualquier
+[[https://es.libreoffice.org/][plataforma]] (no necesariamente MS Word, gracias
+profe).
+
 * 0: Importar datos sanos
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
 - Buen formato.
+- csv, excel, etc.
 * 1: DescriptY para descartar anomalías
-- Análisis de valores atípicos.
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+- Lo de la primera prueba.
+  - Análisis de valores atípicos.
+  - Análisis de posición y forma.
+    - Medidas de tendencia central.
+    - Medidas de dispersión.
+
+
+: descripY(DATOS,DATOS$VARIABLE)
+
 * 2: Comparar con diferentes modelos
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
 
-[[file:~/Downloads/uni/2022-1/proba/scripts-r/SCRIPT P02 Analisis de Distribucion.r]]
+# [[file:~/Downloads/uni/2022-1/proba/scripts-r/SCRIPT P02 Analisis de Distribucion.r]]
+
+# - Weibull
+# - Gamma
+# - Normal
+# - Lognormal
+# - Exponencial
+# - Pareto
+# - Uniforme
+# - Coachi
+# - etc
+
+# : hist(data2$`Tiempos de reparacion`)
+# : hist(data$variable)
+
+Dependiendo de lo que te entregue el
+=descrypY=, puedes descartar algunas
+distribuciones: por ejemplo, si te da una
+asimetría muy alta o muy baja --- > |0.08| ---
+entonces descartas la distribución normal.
+
+Equivalentemente, si te da una:
+\[-0.08 \leq \text{asimetría} \leq +0.08\]
+entonces puedes descartar la distribución
+exponencial.
+
+Una vez hecho el descarte inicial, puedes
+empezar a probar distintas distribuciones
+y comparar cuales se ajustan mejor al
+escenario actual.
+
+: fw <-fitdist(DATOS$VARIABLE,"weibull")
+: fg <-fitdist(DATOS$VARIABLE,"gamma")
+: fln<-fitdist(DATOS$VARIABLE,"lnorm")
+: fn <-fitdist(DATOS$VARIABLE,"norm")
+: plot.legend<-c("Weibull","LogNormal","Gamma","Normal")
+
+Una vez declarado esto, empiezas a generar
+los gráficos --- lo puedes hacer corriendo
+cada línea uno por uno o puedes generarlos
+todos enseguida y hacer el análisis después.
+
+: denscomp(list(fw,fln,fg,fn), legendtext=plot.legend)
+: qqcomp(list(fw,fln,fg,fn), legendtext=plot.legend)
+: cdfcomp(list(fw,fln,fg,fn), legendtext=plot.legend)
+: ppcomp(list(fw,fln,fg,fn), legendtext=plot.legend)
 
 
-- Weibull
-- Gamma
-- Normal
-- Lognormal
-- Exponencial
-- Pareto
-- Uniforme
-- Coachi
-- etc
+Una vez comparados los modelos, puedes hacer
+más descartes, por ejemplo que de los 4 modelos,
+descartas 2 y te quedas con duda entre otras
+dos, la Weibull y la Gamma.
+
+Dado que la visualización no te permite descartar
+entre la Weibull o la Gamma puedes acudir al
+criterio Akaike.
+
+* 3: Goodness of Fit: Criterio Akaike
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
+
+El criterio Akaike lo usas cuando aún
+tienes dudas entre modelos que visualmente
+no soy muy diferentes.
+
+: gofstat(list(fg,fn,fln,fw))
 
 
-También puedes:
+En el criterio Akaike, tienes que escoger
+la función que te entregue un número menor,
+eso significa que dicha función se ajusta mejor
+al escenario actual.
 
-: hist(data2$`Tiempos de reparacion`)
-: hist(data$variable)
+Considerando esto, estás listo para hacer
+una prueba de ajuste.
 
-* 3: Goodness of Statistics: Criterio Akaike
-: ks.test(v_dependiente, modelo_de_comparacion,param1,param2)
-* 4: Prueba de Hipótesis
+* 4: Prueba Kolmogorov-Smirnov
+:PROPERTIES:
+:UNNUMBERED: t
+:END:
 
-: ks.test(data$variable,"distribution",parameters)
-: ks.test(data$variable,"distribution",dist$variable)
-: ks.test(d$v,"dist",dist$param[1],dist$param[2])
+Dado que escoges un modelo, quieres verificar
+que dicho modelo efectivamente
+refleja el comportamiento de los datos que
+tienes a mano.
 
+(Las siguientes líneas son pseudocódigo que
+significan lo mismo):
+: ks.test(DATA$VARIABLE, MODELO_DE_COMPARACION,PARAM1,PARAM2)
+: ks.test(DATA$VARIABLE,"DISTRIBUTION",PARAMETERS)
+: ks.test(DATA$VARIABLE,"DISTRIBUTION",DIST$VARIABLE)
+: ks.test(DATA$VARIABLE,"DIST",DIST$PARAM[1],DIST$PARAM[2])
 
-El número de parámetros depende de la función:
+El número de parámetros que acepta el =ks.test=
+depende de la función con la que se esté
+invocando:
 
 Considerando datos guardados en =data= con
-variables guardadas en =data$var=, la funcion
-=gamma= se guarda en funcion =fg=, que al
-evaluarla guarda los parametros en
-=fg$estimate[i]=, donde =i=:{1,2}.
+variables guardadas en =data$var=, la función
+=gamma= y sus propiedades se guardan en
+la función =fg=:
 
 - Ejemplo con distribucion gamma:
 : ks.test(data$var,"pgamma",fg$estimate[1],fg$estimate[2])
+
+Otros ejemplos:
 - Ejemplo con distribucion exponencial:
 : ks.test(data$var,"pexp",fe$estimate[1])
 - Ejemplo con distribucion normal:
 : ks.test(data$var,"pnorm",fn$estimate[1],fn$estimate[2])
 
 
+Esta prueba te debe dar un valor =p=, conocido
+como =p-value= que indica la probabilidad
+de que el modelo y los datos sean
+congruentes.
 
-* Script
+- [[https://stats.stackexchange.com/questions/423571/kolmogorov-smirnov-ks-2samp-p-value-not-as-expected-wrong-test-or-understand][hypothesis testing - Kolmogorov-Smirnov (ks_2samp) p-value not as expected - Wrong test or understanding? - Cross Validated]]
+
+
+Valores inferiores a cierto límite ---
+convencionalmente 0.05 --- indican que el
+modelo y los datos a mano /no/ se corresponden,
+por lo que decir que "los datos se ajustan al
+modelo" sería incorrecto.
+
+Por otro lado, si el =p-value= entregado
+por el =ks.test= supera el límite 0.05,
+entonces uno puede decir con seguridad
+que los datos si se ajustan al modelo,
+por lo que uno puede empezar a hacer
+inferencias sobre los datos usando
+el modelo escogido.
+
+* Ejemplo :noexport:
+# # Pregunta 6
+
+# # Los que necesitan reemplazo varian entre 18 y 24
+# reemplazos_leq24<-data[data$`Tiempos de reparacion`<=24,]
+# reemplazos<-reemplazos_leq24[reemplazos_leq24$`Tiempos de reparacion`>=18,]
+
+# # output <- input[data$varibale<24 $ data$variable >=18,]
+
+Este es el script usado en un dataset que
+despues de los analisis se determina que
+está distribuido normal.
 
 #+begin_example R
-# Pregunta 6
-
-# Los que necesitan reemplazo varian entre 18 y 24
-reemplazos_leq24<-data[data$`Tiempos de reparacion`<=24,]
-reemplazos<-reemplazos_leq24[reemplazos_leq24$`Tiempos de reparacion`>=18,]
-
-# output <- input[data$varibale<24 $ data$variable >=18,]
 
 descripY(reemplazos,reemplazos$`Tiempos de reparacion`)
 
@@ -76,16 +206,21 @@ qqcomp(list(fw,fln,fg,fn), legendtext=plot.legend)
 cdfcomp(list(fw,fln,fg,fn), legendtext=plot.legend)
 ppcomp(list(fw,fln,fg,fn), legendtext=plot.legend)
 
+# Se descarta la lognormal pero todavía hay dudas
 gofstat(list(fg,fn,fln,fw))
 
+# Los parametros requeridos para el ks.test de
+# una "pnorm" están contenidos en
+# fn$estimate[1] y fn$estimate[2]
 ks.test(reemplazos$`Tiempos de reparacion`,"pnorm",fn$estimate[1],fn$estimate[2])
 
-1-pnorm(19,fn$estimate[1],fn$estimate[2])
 #+end_example
+
+# 1-pnorm(19,fn$estimate[1],fn$estimate[2])
 
 * Local variables :noexport:
 # Local Variables:
 # ispell-local-dictionary: "espanol"
 # End:
 
-#  LocalWords:  relays ésimo ésima ésimas ésimos
+#  LocalWords:  relays ésimo ésima ésimas ésimos Akaike
