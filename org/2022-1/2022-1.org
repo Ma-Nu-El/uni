@@ -5,7 +5,7 @@
 SCHEDULED: <2022-03-14 Mon>
 * End 2022-1
 SCHEDULED: <2022-07-08 Fri>
-* Semanas [10/16][62%] :lecture:
+* Semanas [11/16][68%] :lecture:
 ** DONE Semana 1
 ** DONE Semana 2
 ** DONE Semana 3
@@ -193,7 +193,11 @@ CLOSED: [2022-05-31 Tue 23:10] SCHEDULED: <2022-05-27 Fri 12:00-13:00>
 - State "DONE"       from "TODO"       [2022-05-31 Tue 23:10]
 :END:
 - Clase con Alex.
-** TODO Semana 11 [9/11][81%]
+** DONE Semana 11 [11/11][100%]
+CLOSED: [2022-06-05 Sun 22:55]
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-06-05 Sun 22:55]
+:END:
 *** DONE Sistemas Estocásticos
 CLOSED: [2022-05-31 Tue 23:10] SCHEDULED: <2022-05-30 Mon 08:30-10:40>
 :LOGBOOK:
@@ -224,8 +228,11 @@ CLOSED: [2022-05-31 Tue 23:09] SCHEDULED: <2022-05-31 Tue 16:50-19:00>
 :LOGBOOK:
 - State "DONE"       from "TODO"       [2022-05-31 Tue 23:09]
 :END:
-*** TODO Ayudantía Proba
-SCHEDULED: <2022-06-01 Wed 14:30-16:30>
+*** DONE Ayudantía Proba
+CLOSED: [2022-06-05 Sun 22:45] SCHEDULED: <2022-06-01 Wed 14:30-16:30>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-06-05 Sun 22:45]
+:END:
 *** DONE Gestión de RRHH
 CLOSED: [2022-06-02 Thu 16:22] SCHEDULED: <2022-06-02 Thu 08:30-10:40>
 :LOGBOOK:
@@ -241,8 +248,11 @@ CLOSED: [2022-06-03 Fri 16:23] SCHEDULED: <2022-06-03 Fri 08:30-10:40>
 :LOGBOOK:
 - State "DONE"       from "TODO"       [2022-06-03 Fri 16:23]
 :END:
-*** TODO Arquitectura de Comp
-SCHEDULED: <2022-06-03 Fri 12:00-13:00>
+*** DONE Arquitectura de Comp
+CLOSED: [2022-06-05 Sun 22:46] SCHEDULED: <2022-06-03 Fri 12:00-13:00>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-06-05 Sun 22:46]
+:END:
 ** TODO Semana 12 [0/11][0%]
 *** TODO Sistemas Estocásticos
 SCHEDULED: <2022-06-06 Mon 08:30-10:40>
