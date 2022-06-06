@@ -70,7 +70,7 @@ profe).
 Dependiendo de lo que te entregue el
 =descrypY=, puedes descartar algunas
 distribuciones: por ejemplo, si te da una
-asimetría muy alta o muy baja --- > |0.08| ---
+asimetría muy alta o muy baja (\( > |0.08| \))
 entonces descartas la distribución normal.
 
 Equivalentemente, si te da una:
