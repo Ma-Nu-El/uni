@@ -2,7 +2,7 @@
 #+SUBTITLE: Probabilidad y Estadística
 #+DATE: Junio 2022
 #+AUTHOR: Manuel Fuica Morales
-#+OPTIONS: toc:2
+#+OPTIONS: toc:nil
 #+INCLUDE: "~/org/config-spanish.org"
 
 * TOC :TOC_1:noexport:
