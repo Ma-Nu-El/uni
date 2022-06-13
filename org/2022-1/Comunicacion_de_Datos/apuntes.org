@@ -7,6 +7,7 @@
   - [[#about][About]]
   - [[#inactive-timestamp-clase-x-nombre-ramo-abrev][[inactive timestamp] Clase X <nombre ramo abrev>]]
   - [[#2022-03-22-tue-clase-1][[2022-03-22 Tue] Clase 1]]
+  - [[#apuntes][Apuntes]]
 - [[#ayudantías][Ayudantías]]
   - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
 - [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
@@ -45,6 +46,8 @@ Proyecto final en grupos.
 - Talleres y cosas practicas son los jueves.
 - Los martes es teoría principalmente.
 
+** Apuntes
+- [[https://www.reddit.com/r/explainlikeimfive/comments/fxx4ac/eli5_differences_between_lan_man_and_wan/][ELI5: differences between LAN, MAN, and WAN : explainlikeimfive]]
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
 # - Then =org-clone-subtree-with-time-shift= and repeat
