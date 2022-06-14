@@ -1,0 +1,108 @@
+#+TITLE: Regresión
+#+INCLUDE: "~/org/config-spanish.org"
+
+* Scripts
+
+- SCRIPT_A01_4_descripY.R
+- SCRIPT P01 Analisis de Distribucion.r
+- SCRIPT P02 Analisis de Distribucion.r
+- SCRIPT REGRESION MULTIPLE.r
+
+* Correlación y calidad del modelo
+
+Una correlacion = |1| /no/ es existe.
+- Siempre hay errores.
+
+* Construcción y calidad del modelo
+- Modelos buenos bien construidos.
+- Modelos buenos mal construidos.
+- Modelos malos bien construidos.
+- Modelos malos mal construidos.
+
+* Supuestos para la realización de un modelo RLM (RLS)
+- u es el error.
+
+
+1. E(u)=\bar u = 0.
+2. V(u) es mínima.
+3. u \sim N(0,\sigma^{2}_{u})
+4. Los u's son independientes.
+5. No auto-correlación.
+6. Homocedasticidad.
+   - Cedasticidad=dispersión.
+7. No multicolinealidad.
+   - Si no es cero, entonces tengo variables
+     que están en función de otras variables.
+
+* Condición de cálculo
+- n: tamaño de la muestra.
+- k: número de parámetros.
+
+
+- n > k
+
+* Chart
+- 1 estrella
+  - sig > 0.01?
+- 2 estrellas
+  - sig > 0.01?
+- 3 estrellas
+  - sig > 0.05?
+* Simulaciones
+- phet
+  - [[https://phet.colorado.edu/sims/html/curve-fitting/latest/curve-fitting_en.html][Curve Fitting]]
+* Script de la clase
+- datos<-PSU_diagnostico_01
+
+#+begin_example R
+source ("~/Downloads/uni/2022-1/proba/scripts-r/SCRIPT_A01_4_descripY.R")
+source ("~/Downloads/uni/2022-1/proba/scripts-r/SCRIPT REGRESION MULTIPLE.r")
+
+# eliminamos los que no rindieron la prueba
+datos<-datos[datos$rend1>0,]
+
+# Analisis supuesto colinealidad
+chart.Correlation(datos)
+# se recomienda identificar la variable sensible: "la que
+# no tengo que tocar"
+
+# elimino las variables colineales
+datos<-dplyr::select(PSU_diagnostico_01,-PEM,-HIST,-PROMPSU,-PSUPOND,-LENG,-CS)
+# tienen que estar en el mismo orden
+
+model01<-lm(datos$rend1~.,data=datos)
+vif(model01) # el output: ojala 1, o lo mas cercano a 1
+summary(model01)
+
+# Analisis supuestos
+# S1
+# mean(model01$residuals)
+
+# S2
+# S3 errores se comportan normal
+# HO: los datos se comportan normal
+# shapiro.test(model01$residuals)
+
+# S4 errores independientes
+# plot(model01$residuals)
+
+# S5 no autocorrelacion
+# HO: no existe autocorrelacion
+# Test DurbinWatson
+# dwtest(model01)
+
+# S6 Homocedasticidad
+# HO: varianzas iguales
+# test BreuschPagan
+# bptest(model01)
+
+# S7 No multicolinealidad
+# HO: no hay variables colineales
+#+end_example
+
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
+
+#  LocalWords:  curtosis Cedasticidad
