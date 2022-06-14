@@ -309,17 +309,32 @@ CLOSED: [2022-06-11 Sat 16:25] SCHEDULED: <2022-06-10 Fri 12:00-13:00>
 :LOGBOOK:
 - State "DONE"       from "TODO"       [2022-06-11 Sat 16:25]
 :END:
-** TODO Semana 13 [0/11][0%]
-*** TODO Sistemas Estocásticos
-SCHEDULED: <2022-06-13 Mon 08:30-10:40>
-*** TODO Arquitectura de Comp
-SCHEDULED: <2022-06-13 Mon 16:50-19:00>
-*** TODO Comunicación de Datos
-SCHEDULED: <2022-06-14 Tue 09:00-10:30>
-*** TODO Probabilidad
-SCHEDULED: <2022-06-14 Tue 10:50-13:00>
-*** TODO Sistemas Estocásticos
-SCHEDULED: <2022-06-14 Tue 14:30-16:40>
+** TODO Semana 13 [5/11][45%]
+*** DONE Sistemas Estocásticos
+CLOSED: [2022-06-13 Mon 19:51] SCHEDULED: <2022-06-13 Mon 08:30-10:40>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-06-13 Mon 19:51]
+:END:
+*** DONE Arquitectura de Comp
+CLOSED: [2022-06-13 Mon 19:55] SCHEDULED: <2022-06-13 Mon 16:50-19:00>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-06-13 Mon 19:55]
+:END:
+*** DONE Comunicación de Datos
+CLOSED: [2022-06-14 Tue 13:42] SCHEDULED: <2022-06-14 Tue 09:00-10:30>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-06-14 Tue 13:42]
+:END:
+*** DONE Probabilidad
+CLOSED: [2022-06-14 Tue 13:42] SCHEDULED: <2022-06-14 Tue 10:50-13:00>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-06-14 Tue 13:42]
+:END:
+*** CANCELED Sistemas Estocásticos
+CLOSED: [2022-06-14 Tue 13:42] SCHEDULED: <2022-06-14 Tue 14:30-16:40>
+:LOGBOOK:
+- State "CANCELED"   from "TODO"       [2022-06-14 Tue 13:42]
+:END:
 *** TODO Gestión de RRHH
 SCHEDULED: <2022-06-14 Tue 16:50-19:00>
 *** TODO Ayudantía Proba
@@ -464,8 +479,11 @@ CLOSED: [2022-06-06 Mon 17:08] SCHEDULED: <2022-06-06 Mon>
 - State "CANCELED"   from "TODO"       [2022-06-06 Mon 17:08]
 :END:
 - Topologías de red: Malla - Bus - Anillo - Estrella - Árbol
-*** TODO taller 4
-SCHEDULED: <2022-06-13 Mon>
+*** DONE taller 4
+CLOSED: [2022-06-13 Mon 19:55] SCHEDULED: <2022-06-13 Mon>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-06-13 Mon 19:55]
+:END:
 - Esquema de conexión
 *** TODO Entrega proyecto seguridad
 SCHEDULED: <2022-07-04 Mon>
