@@ -52,6 +52,7 @@ Una correlacion = |1| /no/ es existe.
 - phet
   - [[https://phet.colorado.edu/sims/html/curve-fitting/latest/curve-fitting_en.html][Curve Fitting]]
 * Script de la clase
+** [2022-06-14 Tue]
 - datos<-PSU_diagnostico_01
 
 #+begin_example R
@@ -99,6 +100,95 @@ summary(model01)
 # S7 No multicolinealidad
 # HO: no hay variables colineales
 #+end_example
+
+** [2022-06-17 Fri]
+* Método de Mínimos Cuadrados Ordinarios(MMCO)
+- Relación con varianza y el supuesto 2?
+* Notas de la clase
+** [2022-06-17 Fri]
+*** Independencia de errores
+- [2022-06-17 Fri 09:25]
+- Contexto: supuesto 4: independencia de
+  los errores.
+
+
+- Aumenta el Ingreso \implies Aumenta el gasto.
+
+
+
+- Si el procedimiento de muestreo se hizo correctamente,
+  entonces no debería haber relación entre los
+  errores, por lo que cualquier supuesto patrón
+  existente seria una relación espurica.
+- Cuando existen pocos datos, es fácil encontrar
+  patrones, pero puede que no tengan sentido.
+- Ante la presencia de mas datos, encontrar un
+  patrón se hace mas difícil; encontrar un
+  patrón en ese caso, es mas probable que
+  tenga una explicación lógica.
+
+
+- [2022-06-17 Fri 09:34]
+  - Auto-Correlación:
+    - La variable tiempo puede no estar explícita,
+      pero si explícita.
+
+*** Pasos para un modelo bien construido
+1) Calidad del dato
+2) Construcción del modelo
+3) Análisis de supuestos
+4) Evaluar R (coeficientes)
+   : pearson
+     - todas continuas
+   : spearman
+     - una discreta u ordinal
+       - (generalmente la independiente)
+   : \Tau de Kendall
+     - dos discretas u ordinales
+   : V de Cramer
+     - ordinales
+   : \Chi -cuadrado
+     - nominal
+   - R
+   - R^2
+   - R^2_{ajustado}
+5) Evaluar modelo
+6) Evaluar parámetros
+
+
+- \beta_i =0 \iff significa que se debe construir
+  un nuevo modelo.
+
+*** Cantidad de estrellas y significancia
+- 1: \alpha < 0.001
+- 2: \alpha < 0.01
+- 3: \alpha < 0.05
+- 0: \alpha < 1
+
+
+- Mientras más estrellas, "más menor" que \alpha.
+
+
+: Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+*** Que tipo de variable?
+- La escala de medida determina el tipo de variable.
+  - "Rojo".
+    - Puede ser un color, estado de animo, nota,
+      o cualquier cosa.
+    - La unidad de medida determina a que nos
+      estamos refiriendo.
+*** Anova
+*** R^2
+- ¿Qué porcentaje de X puede explicar la varianza de Y.
+- O qué porcentaje de la varianza de Y puede
+  ser explicado por X.
+*** R^2_{aj}
+- Si R^2 > R^2_{aj}
+  - Si no puedes aumentar el tamano de la muestra,
+    entonces trabaja con el ajustado.
+*** Que es el residual?
+\(u = Y - \cap Y\)
 
 * Local variables :noexport:
 # Local Variables:
