@@ -675,6 +675,7 @@ SCHEDULED: <2022-06-24 Fri 20:00>
 :END:
 - Junio 15
 - Junio 24 at 20:00
+- 18 problemas.
 
 ** Gestión de RRHH
 *** DONE Taller grupal en clase: formación perfiles
