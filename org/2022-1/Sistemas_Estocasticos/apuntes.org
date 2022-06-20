@@ -8,6 +8,7 @@
   - [[#2022-03-15-tue-clase-2][[2022-03-15 Tue] Clase 2]]
   - [[#2022-03-21-mon-clase-3][[2022-03-21 Mon] Clase 3]]
   - [[#ayudantías][Ayudantías]]
+  - [[#teoría-de-colas][Teoría de colas]]
 - [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
 
 * Clases :lecture:
@@ -234,6 +235,8 @@ E \cap F = \{ (R,N) \} = E
 - Ejemplo caja con bolas (pag 122).
 
 ** Ayudantías :assistantship:
+** Teoría de colas
+*** Notación de Kendall
 * Resúmenes para evaluaciones
 - [[id:e5186f3b-5afe-4938-b481-201915dfea4d][link-to-resumen-eval1.org]]
 - link-to-resumen-eval2.org
