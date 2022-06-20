@@ -1,0 +1,169 @@
+#+TITLE: Sistemas Estocásticos
+#+SUBTITLE: Test4
+#+INCLUDE: "~/org/config-spanish.org"
+#+DATE: Junio 2022
+#+AUTHOR: Tomás Muñoz
+#+AUTHOR: \\
+#+AUTHOR: Manuel Fuica Morales
+
+
+* EJERCICIO N°1
+
+Suponga que a un restaurant de comida rápida llegan 100 clientes por hora, la capacidad de atención es en promedio 150 clientes por hora. Si se sabe que cada cliente en promedio espera 2 minutos en cola
+
+Calcule las medidas de desempeño del sistema
+
+1. ¿Cuál es la probabilidad que el sistema este vacío?
+2. ¿Cuál es la probabilidad que un cliente llegue y que tenga que esperar porque el sistema está ocupado?
+3. ¿Cuál es el N° promedio de Clientes en Cola?
+4. ¿Cuál es la probabilidad que hallan 10 clientes en la cola?
+
+* EJERCICIO N°2
+
+En un servidor de la universidad se mandan programas de ordenador para ser ejecutados. Los programas llegan al servidor con una tasa de 10 por minuto. El tiempo medio de ejecución de cada programa ´ es de 5 segundos y tanto los tiempos entre llegadas como los tiempos de ejecución se distribuyen exponencialmente.
+
+a) ¿Qué proporción de tiempo está el servidor desocupado?
+b) ¿Cuál es el tiempo esperado total de salida de un programa?
+c) ¿Cuál es el número medio de programas esperando en la cola del sistema?
+
+* EJERCICIO N°3
+
+Una tienda de alimentación es atendida por una persona. Aparentemente el patrón de llegadas de clientes durante los sábados se comporta siguiendo un proceso de Poisson con una tasa de llegadas de ´ 10 personas por hora. A los clientes se les atiende siguiendo un orden tipo FIFO y debido al prestigio de la tienda, una vez que llegan están dispuestos a esperar el servicio. Se estima que el tiempo que ´ se tarda en atender a un cliente se distribuye exponencialmente, con un tiempo medio de 4 minutos. Determina:
+
+a) La probabilidad de que haya línea de espera.
+b) La longitud media de la línea de espera.
+c) El tiempo medio que un cliente permanece en cola.
+
+* PROBLEMA N°4
+
+Una entidad bancaria considera la posibilidad de instalar una red de cajeros en una de sus oficinas.
+Dado que se desconoce la afluencia de público que va a demandar dicho servicio, coloca un único cajero durante un mes. Diariamente se recogen datos sobre los tiempos de llegadas de los clientes, así como de los tiempos de servicio. Suponiendo que la sucursal se encuentra emplazada en un barrio donde no existe otro servicio semejante, el cliente que llega prefiere esperar a poder utilizar el cajero, cuando este esté ocupado.
+
+Tras el oportuno análisis de los datos recogidos, se estima que:
+
+a) Las llegadas siguen un proceso de Poisson
+b) La distribución del tiempo de servicio es exponencial
+c) El tiempo medio transcurrido entre dos llegadas consecutivas es de 7.5 minutos
+d) El tiempo medio de servicio es de 5 minutos por cliente.
+
+Calcula:
+
+a) Tiempo medio de espera que debe sufrir cada cliente en cola.
+b) Tamaño medio de la cola y probabilidad de que al acudir al cajero ya haya alguna persona en la cola.
+
+* PROBLEMA N°5
+
+Un avión tarda unos 4 minutos de media en aterrizar a partir del momento en que la torre de control le da la señal de aterrizaje. Si las llegadas de los aviones se producen por término medio, a razón de 8 ´ por hora y siguiendo un proceso de Poisson, ¿cuánto va a esperar el piloto dando vueltas al aeropuerto antes de recibir la señal de tierra?
+
+* PROBLEMA N°6
+
+Una compañía ferroviaria pinta sus propios vagones, según se vayan necesitando, en sus propios ´ talleres donde se pinta a mano de uno en uno con una velocidad que se distribuye según una exponencial de media un cada 4 horas y un costo anual de 4 millones de euros. Se ha determinado que los vagones pueden llegar según un proceso de Poisson de media un cada 5 horas. Además, el coste por  cada vagón que no está activo es de 500 euros la hora. ´Se plantean otras dos posibilidades. Una es encargar dicho trabajo a una empresa de pintura que lo haría con aerosol con el consiguiente ahorro de tiempo. Sin embargo, el presupuesto para esta segunda alternativa es de 10 millones de euros anuales. En este caso, el proceso se aproxima a uno de Poisson con una tasa de uno cada 3 horas. La otra opción es poner otro taller exactamente igual al que hay ´actualmente, con igual tasa de servicio y coste anual que permita pintar dos vagones a la vez.
+
+En todos los casos el trabajo se considera ininterrumpido, esto es, se trabajan 24 × 365 = 8760 horas anuales. ¿Cuál de los tres procedimientos es preferible?
+
+* PROBLEMA N°7
+
+Una empresa de reparación de ordenadores recibe una media de 10 solicitudes de reparación al día, que se distribuyen según un proceso de Poisson. Se supone que  µ es la velocidad de reparación de la persona reparadora en ordenadores/día y el tiempo de reparación es exponencial. Cada unidad de velocidad de reparación supone un coste de 100 euros por semana. Además, se ha estimado que el costo de tener ordenadores no reparados supone 200 euros por ordenador y semana, siendo este costo proporcional al tiempo. Suponiendo que una semana tiene cinco días laborables, se pide:
+
+a) Que determines la velocidad de reparación optima.
+b) Que determines si sería más económico tener dos personas, cada una con la mitad de la velocidad determinada en el apartado anterior.
+
+
+* PROBLEMA N°8
+
+Una base de mantenimiento de aviones dispone de recursos para revisar únicamente un motor de avión a la vez. Por tanto, para devolver los aviones lo antes posible, la política que se sigue consiste en aplazar la revisión de los 4 motores de cada avión. En otras palabras, solamente se revisa un motor del avión cada vez que un avión llega a la base. Con esta política, los aviones llegan según una distribución de Poisson de tasa media uno al día. El tiempo requerido para revisar un motor (una vez que se empieza el trabajo) tiene una distribución exponencial de media 1/2 día. Se ha hecho una propuesta para cambiar la política de revisión de manera que los 4 motores se revisen de forma consecutiva cada vez que un avión llegue a la base. A pesar de que ello supondría cuadruplicar el tiempo esperado de servicio, cada avión necesitaría ser revisado únicamente con una frecuencia 4  veces menor. Utilizar la teoría de colas para comparar las 2 alternativas.
+
+* PROBLEMA N°9
+
+En el mostrador de facturación de una aerolínea llega un promedio de 45 clientes por hora, cuando su capacidad media es de 60 clientes por hora. Si un cliente espera una media de 3 minutos en la cola, se pide:
+
+a) Tiempo medio que un cliente pasa en la facturación.
+b) Número medio de clientes en la cola.
+c) Número medio de clientes en el sistema en un momento dado.
+
+* PROBLEMA N°10
+En un restaurante de carretera llega una media de 90 personas a la hora, cuando tiene disponibilidad de dar servicio a 120 clientes a la hora.  Sabiendo que los clientes esperan una media de 2 minutos en la cola, se pide:
+
+a) Probabilidad que el sistema se encentre sin ocupar.
+b) Probabilidad que un cliente tenga que esperar al encontrarse el sistema ocupado.
+c) Número medio de clientes en la cola.
+a) Probabilidad de que hay 4 clientes en la cola.
+
+* PROBLEMA N°11
+
+En un lavado a presión de coches la tasa media de llegadas es de 12 coches por hora y son atendidos a una tasa promedio de 15 coches por hora, con tiempos de servicios exponenciales. Se pide:
+
+a) Probabilidad de tener 0 clientes en el sistema.
+b) Número promedio de clientes que entran en el sistema de lavado.
+c) Número promedio de clientes en la cola.
+d) Tiempo promedio que un cliente espera en la cola.
+e) Probabilidad de tener una cola de más de 2 clientes.
+f) Probabilidad de esperar más de 25 minutos en la cola y en el sistema de lavado.
+
+* PROBLEMA N°12
+
+Un terminal de facturación dispone de dos operarios que atienden a los clientes que llegan según una distribución de Poisson de media ochenta clientes por hora, que esperan en una única cola hasta que alguno de los operarios esté libre. El tiempo requerido para atender a un cliente se distribuye exponencialmente con medía 1,2 minutos. Se pide:
+
+a) ¿Cuál es el número esperado de clientes en el terminal de facturación?
+b) ¿Cuál es el tiempo medio que un cliente pasa en el terminal de facturación?
+c) ¿Qué porcentaje de tiempo está libre un determinado operario?
+
+* PROBLEMA N°13
+
+En un ambulatorio con tres médicos, los pacientes llegan de forma aleatoria (tiempos de llegada exponenciales) a razón de 12 por hora.  Estos son atendidos en orden de llegada por el primer médico que esté libre. Cada médico tarda una media de 13 minutos en atender a cada paciente (tiempos de atención exponenciales). Se pide:
+
+1. Calcular la proporción de tiempo que está cada médico atendiendo a pacientes.
+2. Calcular el número promedio de pacientes que están en la sala de espera.      
+3. Calcular el tiempo promedio total de espera de un paciente.
+4. ¿Qué ocurriría en el ambulatorio si uno de los tres médicos se ausenta?
+
+* PROBLEMA N°14
+
+En un taller mecánico llegan vehículos para una puesta a punto antes de pasar la FRONTERA S.A, las llegadas siguen un proceso de Poisson de promedio 18 vehículos/hora. Las dimensiones del taller sólo permiten que haya 4 vehículos, y las ordenanzas municipales no permiten esperar en la vía pública. El taller despacha un promedio de 6 vehículos/hora de acuerdo con una distribución exponencial. Se pide:
+
+a) ¿Cuál es la probabilidad de que no haya ningún vehículo en el taller?
+b) ¿Cuál es el promedio de vehículos en el taller?
+a) ¿Cuánto tiempo pasa por término medio un vehículo en el taller?
+b) ¿Cuánto tiempo esperan por término medio los vehículos en la cola?
+e) ¿Cuál es la longitud media de la cola?
+
+* PROBLEMA N°15
+
+Un grupo de investigadores, formado por seis personas, dispone de dos terminales para Realizar cálculos. El trabajo promedio de cálculo requiere de 20 minutos de tiempo de terminal, y el tiempo promedio entre solicitudes de servicio es de 30 minutos. Se supone que estas solicitudes están distribuidas exponencialmente. Se desea saber:
+
+a) Número estimado de investigadores que esperan utilizar una terminal.
+b) Tiempo total perdido diariamente si se considera una jornada de 8 horas.
+c) Medidas de rendimiento.
+
+* PROBLEMA N°16
+
+Una empresa de FRONTERA S.A. en una localidad dispone de una superficie que consta de tres partes: Una caseta donde los clientes entregan la documentación del vehículo y realizan el pago de tasas, con un espacio físico para un máximo de quince vehículos. Una nave formada por dos circuitos (equipamiento y personal técnico) para revisar los vehículos, con una tasa de servicio medio de 45 clientes /hora. Una oficina con dos puestos donde los conductores recogen la documentación y la ficha de la inspección técnica. Acude a la nave una media de 57 clientes/hora, un mayor número de vehículos colapsaría el trabajo de la caseta, cuyo empleado atiende a un ritmo medio de 1 cliente/minuto; mientras que un oficinista tarda una media de 2 minutos/cliente. Las llegadas siguen una Poisson y el tiempo de servicio exponencialmente.
+
+Se pide:
+
+a) Longitud media de la cola de vehículos que habiendo pagado las tasas se encuentran esperando a la entrada de la nave.
+b) Tiempo medio que un cliente pasa en la oficina.
+a) Tiempo medio que un cliente se encuentra en la FRONTERA S.A
+d) Para agilizar el proceso la empresa estudia la posibilidad de ampliar el número de servidores en la caseta o en la oficina. Suponiendo que el coste de ampliación en uno u otro lugar fuera equivalente, ¿qué criterio sería más acertado para que el tiempo de servicio del sistema fuera menor?
+
+* Problema N° 17
+
+A los choferes que se integran a radio taxis la Frontera CO. nuevos se les pide pasar una prueba escrita, antes de hacer las pruebas de manejo. Los exámenes escritos suelen hacerse en el departamento de policía de la ciudad. Los registros  indican que la cantidad promedio de pruebas es de 100 por día de 8 horas. El tiempo necesario para contestar el examen es de 30 minutos, más o menos. Sin embargo, la llegada real de los aspirantes y el tiempo que tarda cada uno en contestar son totalmente aleatorios. Determine lo siguiente:
+
+a) La cantidad promedio de asientos que debe tener el departamento de policía en el salón de exámenes.
+b) La probabilidad de que los aspirantes rebasen la cantidad promedio de asientos que hay en el salón de exámenes.
+c) La probabilidad de que en un día no se haga examen alguno.
+
+* Problema N° 18
+
+Un programador  atiende a 5 máquinas automáticas. Cuando una máquina termina un lote, el programador  la debe restablecer para iniciar el siguiente lote. El tiempo para terminar un procesamiento de lote es exponencial, con 45 minutos de promedio. El tiempo de preparación de la máquina también es exponencial con un promedio de 8 minutos.
+
+a) Calcule la cantidad promedio de máquinas que esperan su restablecimiento, o que están siendo
+   restablecidas.
+a) Calcule la probabilidad de que todas las máquinas estén trabajando.
+b) Determine el tiempo promedio que una máquina está sin trabajar.
+
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
