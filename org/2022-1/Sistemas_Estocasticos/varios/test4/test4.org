@@ -1,34 +1,234 @@
 #+TITLE: Sistemas Estocásticos
 #+SUBTITLE: Test4
-#+INCLUDE: "~/org/config-spanish.org"
+#+INCLUDE: "~/org/config/config-spanish.org"
+#+INCLUDE: "~/org/config/config.org"
 #+DATE: Junio 2022
 #+AUTHOR: Tomás Muñoz
 #+AUTHOR: \\
 #+AUTHOR: Manuel Fuica Morales
 
-
 * EJERCICIO N°1
 
-Suponga que a un restaurant de comida rápida llegan 100 clientes por hora, la capacidad de atención es en promedio 150 clientes por hora. Si se sabe que cada cliente en promedio espera 2 minutos en cola
+** Enunciado
 
-Calcule las medidas de desempeño del sistema
+Suponga que a un restaurant de comida rápida
+llegan 100 clientes por hora, la capacidad
+de atención es en promedio 150 clientes por hora.
+Si se sabe que cada cliente en promedio
+espera 2 minutos en cola.
+
+Calcule las medidas de desempeño del sistema:
 
 1. ¿Cuál es la probabilidad que el sistema este vacío?
-2. ¿Cuál es la probabilidad que un cliente llegue y que tenga que esperar porque el sistema está ocupado?
+2. ¿Cuál es la probabilidad que un cliente llegue
+   y que tenga que esperar porque el sistema
+   está ocupado?
 3. ¿Cuál es el N° promedio de Clientes en Cola?
 4. ¿Cuál es la probabilidad que hallan 10 clientes en la cola?
 
-* EJERCICIO N°2
+** Desarrollo
 
-En un servidor de la universidad se mandan programas de ordenador para ser ejecutados. Los programas llegan al servidor con una tasa de 10 por minuto. El tiempo medio de ejecución de cada programa ´ es de 5 segundos y tanto los tiempos entre llegadas como los tiempos de ejecución se distribuyen exponencialmente.
+* DONE EJERCICIO N°2
+** Enunciado
 
-a) ¿Qué proporción de tiempo está el servidor desocupado?
-b) ¿Cuál es el tiempo esperado total de salida de un programa?
-c) ¿Cuál es el número medio de programas esperando en la cola del sistema?
+En un servidor de la universidad se mandan
+programas de ordenador para ser ejecutados.
+Los programas llegan al servidor con una
+tasa de 10 por minuto. El tiempo medio
+de ejecución de cada programa ´ es de
+5 segundos y tanto los tiempos entre
+llegadas como los tiempos de ejecución
+se distribuyen exponencialmente.
+
+a) ¿Qué proporción de tiempo está el
+   servidor desocupado?
+b) ¿Cuál es el tiempo esperado total de
+   salida de un programa?
+c) ¿Cuál es el número medio de programas
+   esperando en la cola del sistema?
+
+** Desarrollo
+*** a
+En este contexto contamos con un solo servidor
+y considerando las capacidades de los sistemas
+informáticos, se puede considerar la
+capacidad de la cola como infinita. Por lo
+tanto este sistema se puede acomodar a
+un modelo de colas M/M/1.
+- Entrada y salida como proceso de Poisson.
+- Un solo servidor.
+- Cola infinita.
+
+
+Desde este fundamento, realizamos los cálculos:
+
+#+begin_quote
+a) ¿Qué proporción de tiempo está el
+   servidor desocupado?
+#+end_quote
+
+De la materia vista en clases, la probabilidad
+de encontrar 0 clientes en el sistema para un
+modelo M/M/1 se calcula con:
+
+\begin{align*}
+  P_0=1-\frac{\lambda}{\mu}
+\end{align*}
+
+Contamos con los datos de entrada al
+sistema \lambda=10 \(\frac{programa}{minuto}\)
+y tiempo promedio de ejecución
+\(\frac{1}{\mu}\) = 5 \(\frac{segundo}{programa}\).
+
+\begin{align*}
+  \frac{1}{\mu}=
+  5\ \frac{segundo}{programa}
+  \rightarrow
+  =
+  5\ \frac{1}{60}
+  \frac{minuto}{\cancel{segundo}}
+  \frac{\cancel{segundo}}{programa}
+  \rightarrow
+  12\ \frac{programa}{minuto}
+\end{align*}
+
+Por lo tanto nuestra tasa de servicio \mu
+es 12 \(\frac{programa}{segundo}\).
+
+De esta forma, la probabilidad de encontrar en
+cualquier momento el sistema desocupado es:
+
+#+name: idle_time_percentage
+#+begin_src R :session :exports both :results value
+input<-10
+service_rate<-12
+1-(input/service_rate)
+#+end_src
+
+#+RESULTS: idle_time_percentage
+: 0.166666666666667
+
+#+name: hours
+#+begin_src python :exports none :results output
+hours=10
+print(hours)
+#+end_src
+
+#+RESULTS: hours
+: 10
+
+Por lo tanto, se espera que de cada call_hours() {{{results(=10=)}}}
+horas que el servidor está funcionando:
+
+#+name: idle_time_in_minutes
+#+begin_src python :session :exports none :var percentage=idle_time_percentage :var hours=hours :results replace output
+print(int(hours)*percentage*60)
+#+end_src
+
+#+RESULTS: idle_time_in_minutes
+: 100.00000000000018
+
+#+begin_src python :exports results :session :var input=idle_time_in_minutes :results output
+time = int(float(input))
+import datetime
+print(datetime.timedelta(minutes=time))
+#+end_src
+
+#+RESULTS:
+: 1:40:00
+
+aproximadamente el servidor esté ocioso.
+
+*** b
+:PROPERTIES:
+:ID:       c50c5e40-be4a-4d05-83fb-874de1e06616
+:END:
+
+#+begin_quote
+b) ¿Cuál es el tiempo esperado total de
+   salida de un programa?
+#+end_quote
+
+Si consideramos el tiempo esperado total de salida
+de un programa como el tiempo que le toma
+esperar en la cola más el tiempo que le toma
+ser procesado, entonces podemos calcular
+dicho tiempo total como:
+
+\begin{align*}
+  W=\frac{1}{\mu - \lambda}
+\end{align*}
+
+#+name: total_time_percentage
+#+begin_src R :session :exports
+total_time=1/(service_rate-input)
+#+end_src
+
+#+RESULTS: total_time_percentage
+: 0.5
+
+#+name: total_time_in_seconds
+#+begin_src python :session :results output :exports both :var total_time=total_time_percentage
+print(float(total_time)*float(60))
+#+end_src
+
+#+RESULTS: total_time_in_seconds
+: 30.0
+
+Así, se espera que en promedio, cada programa
+tome call_total_time_in_seconds() {{{results(=30.0=)}}}
+segundos en ser procesado y ejecutado.
+
+*** c
+
+#+begin_quote
+c) ¿Cuál es el número medio de programas
+   esperando en la cola del sistema?
+#+end_quote
+
+Por teoría sabemos que la cantidad
+de labores promedio esperando a ser ejecutados
+se calcula:
+
+\begin{align*}
+L_q=\frac{\lambda^2}{\mu (\mu - \lambda)}
+\end{align*}
+
+Luego:
+
+#+name: labor_in_queue
+#+begin_src R :session :exports both
+labor_in_queue<-(input^2)/(service_rate*(service_rate-input))
+#+end_src
+
+#+RESULTS: labor_in_queue
+: 4.16666666666667
+
+#+name: labor_in_queue_approx
+#+begin_src python :session :exports none :var input=labor_in_queue :results output
+print(int(input))
+#+end_src
+
+Por lo tanto, en un momento cualquiera
+deberíamos esperar encontrarnos con
+aproximadamente call_labor_in_queue_approx()
+programas en fila esperando a ser ejecutados.
 
 * EJERCICIO N°3
 
-Una tienda de alimentación es atendida por una persona. Aparentemente el patrón de llegadas de clientes durante los sábados se comporta siguiendo un proceso de Poisson con una tasa de llegadas de ´ 10 personas por hora. A los clientes se les atiende siguiendo un orden tipo FIFO y debido al prestigio de la tienda, una vez que llegan están dispuestos a esperar el servicio. Se estima que el tiempo que ´ se tarda en atender a un cliente se distribuye exponencialmente, con un tiempo medio de 4 minutos. Determina:
+Una tienda de alimentación es atendida por
+una persona. Aparentemente el patrón de
+llegadas de clientes durante los sábados
+se comporta siguiendo un proceso de Poisson
+con una tasa de llegadas de 10 personas
+por hora. A los clientes se les atiende
+siguiendo un orden tipo FIFO y debido al
+prestigio de la tienda, una vez que
+llegan están dispuestos a esperar el
+servicio. Se estima que el tiempo que
+se tarda en atender a un cliente se
+distribuye exponencialmente, con un
+tiempo medio de 4 minutos. Determina:
 
 a) La probabilidad de que haya línea de espera.
 b) La longitud media de la línea de espera.
@@ -67,7 +267,6 @@ Una empresa de reparación de ordenadores recibe una media de 10 solicitudes de 
 
 a) Que determines la velocidad de reparación optima.
 b) Que determines si sería más económico tener dos personas, cada una con la mitad de la velocidad determinada en el apartado anterior.
-
 
 * PROBLEMA N°8
 

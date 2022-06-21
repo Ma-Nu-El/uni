@@ -237,8 +237,100 @@ E \cap F = \{ (R,N) \} = E
 ** Ayudantías :assistantship:
 ** Teoría de colas
 *** Notación de Kendall
+: A/S/M/K/N/Q
+1. A: Entrada:
+   - M: Markov, Exponencial.
+   - D: Determinista, Constante.
+   - G: General (cualquier otra distribución).
+2. S: Salida:
+   - M: Markov, Exponencial.
+   - D: Determinista, Constante.
+   - G: General.
+3. M: Número de servidores
+4. K: Tamaño máximo de la cola; Longitud del buffer;
+   Capacidad de almacenamiento.
+5. N: Tamaño de la población
+   - Finita
+   - Infinita
+6. Q: Disciplina del servicio:
+   - FIFO
+   - LIFO
+   - RANDOM
+   - Por Prioridad
+*** Medidas de rendimiento
+
+- L: número promedio de clientes en el sistema.
+- W: tiempo promedio de permanencia en el sistema.
+- L_q: promedio de clientes esperando en cola.
+- W_q: tiempo promedio de espera en cola.
+
+- \mu: clientes atendidos por unidad de tiempo.
+- \lambda: tasa de llegada.
+
+
+- n: clientes en sistema.
+- N: máximo posible de clientes en sistema.
+
+
+- \(P_w\): probabilidad que un cliente tenga que
+  esperar en cola.
+- \(P_n\): probabilidad que existan \(n\) clientes
+  en el sistema.
+- \(P_0\): probabilidad que no existan clientes
+  en el sistema.
+- \(P_d\): probabilidad que negación de servicio
+  dado que la cola está llena.
+
+*** Teorema de Little
+
+\[L=\lambda \cdot W\]
+
+#+begin_quote
+Los labores L siendo ejecutados en el sistema
+se pueden calcular como la multiplicación del
+tiempo promedio de permanencia dentro del
+sistema y la tasa de llegada al sistema.
+#+end_quote
+
+\[\text{labor}=\frac{\text{clientes}}{\text{tiempo}} \cdot \text{tiempo}\]
+
+*** Sistema M/M/1
+
+| \lamdba | Llegada  | \[\frac{\text{clientes}}{\text{tiempo}}\] |
+| \mu     | Servicio | \[\frac{\text{clientes}}{\text{tiempo}}\] |
+
+| \[\frac{1}{\lamdba}\] | Tiempo entre llegadas  |
+| \[\frac{1}{\mu}\]     | Tiempo entre servicios |
+
+#+begin_src latex
+\begin{align*}
+L=\frac{\lambda}{\mu - \lambda} \\
+W=\frac{1}{\mu - \lambda} \\
+L_q=\frac{\lambda^2}{\mu(\mu - \lambda)} \\
+W_q=\frac{\lambda}{\mu(\mu - \lambda)} \\
+\end{align*}
+#+end_src
+
+Factor de utilización del sistema:
+
+#+begin_src latex
+\begin{align*}
+\rho = \frac{\lambda}{\mu}
+\end{align*}
+#+end_src
+
+#+begin_src latex
+\begin{align*}
+P_0=1-p
+\end{align*}
+#+end_src
+
+
+*** Sistema M/M/1/K
+*** Sistema M/M/C
+*** Sistema M/M/C/K
 * Resúmenes para evaluaciones
-- [[id:e5186f3b-5afe-4938-b481-201915dfea4d][link-to-resumen-eval1.org]]
+- link-to-resumen-eval1.org
 - link-to-resumen-eval2.org
 - link-to-resumen-eval3.org
 * Local variables :noexport:
