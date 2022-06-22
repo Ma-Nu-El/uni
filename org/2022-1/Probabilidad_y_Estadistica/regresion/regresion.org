@@ -1,13 +1,69 @@
 #+TITLE: Regresión
-#+INCLUDE: "~/org/config-spanish.org"
+#+INCLUDE: "~/org/config/config-spanish.org"
+#+INCLUDE: "~/org/config/config.org"
+#+INCLUDE: "~/org/config/author-mfuica01.org"
 
+* Introducción
+- [[https://latexdraw.com/linear-regression-in-latex-using-tikz/][Linear Regression in LaTeX using TikZ - TikZBlog]]
+- [[https://tex.stackexchange.com/questions/119179/how-to-add-a-regression-line-to-randomly-generated-points-using-pgfplots-in-tikz][How to add a regression line to randomly generated points using pgfplots in Tikz? - TeX - LaTeX Stack Exchange]]
 * Scripts usados
-
+** para la materia
 - SCRIPT_A01_4_descripY.R
 - SCRIPT P01 Analisis de Distribucion.r
 - SCRIPT P02 Analisis de Distribucion.r
 - SCRIPT REGRESION MULTIPLE.r
 
+** ejemplos en clases
+*** [2022-06-14 Tue]
+- datos<-PSU_diagnostico_01
+
+#+begin_example R
+source ("~/Downloads/uni/2022-1/proba/scripts-r/SCRIPT_A01_4_descripY.R")
+source ("~/Downloads/uni/2022-1/proba/scripts-r/SCRIPT REGRESION MULTIPLE.r")
+
+# eliminamos los que no rindieron la prueba
+datos<-datos[datos$rend1>0,]
+
+# Analisis supuesto colinealidad
+chart.Correlation(datos)
+# se recomienda identificar la variable sensible: "la que
+# no tengo que tocar"
+
+# elimino las variables colineales
+datos<-dplyr::select(PSU_diagnostico_01,-PEM,-HIST,-PROMPSU,-PSUPOND,-LENG,-CS)
+# tienen que estar en el mismo orden
+
+model01<-lm(datos$rend1~.,data=datos)
+vif(model01) # el output: ojala 1, o lo mas cercano a 1
+summary(model01)
+
+# Analisis supuestos
+# S1
+# mean(model01$residuals)
+
+# S2
+# S3 errores se comportan normal
+# HO: los datos se comportan normal
+# shapiro.test(model01$residuals)
+
+# S4 errores independientes
+# plot(model01$residuals)
+
+# S5 no autocorrelacion
+# HO: no existe autocorrelacion
+# Test DurbinWatson
+# dwtest(model01)
+
+# S6 Homocedasticidad
+# HO: varianzas iguales
+# test BreuschPagan
+# bptest(model01)
+
+# S7 No multicolinealidad
+# HO: no hay variables colineales
+#+end_example
+
+*** [2022-06-17 Fri]
 * Correlación
 ** Correlación y calidad del modelo
 :PROPERTIES:
@@ -35,6 +91,19 @@ Una correlación = |1| /no/ es existe.
   - "De cada 100 pares de datos, R*100 tienen el
     mismo comportamiento".
 
+* Determinación
+** Coeficiente de determinación (R^{2})
+- porcentaje de variación de Y que es explicado
+  por X.
+** Coeficiente de determinación ajustado(R^{2}_{aj})
+- lo mismo que R^2, pero considera fallas
+  ocasionadas por el tamaño de la muestra.
+** R^2 vs R^2_aj
+- \(R^{2}_{aj} \leq R^{2}\)
+- Si no hay problemas por el tamaño de la muestra,
+  son iguales.
+- Si hay problemas, \(R^{2}_{aj}\) tiende a
+  ser menor.
 * Construcción y calidad del modelo
 - Un modelo bien construido procura cumplir la
   mayor cantidad de [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][supuestos]]. Un mal modelo
@@ -84,57 +153,6 @@ modelos:
 * Simulaciones
 - phet
   - [[https://phet.colorado.edu/sims/html/curve-fitting/latest/curve-fitting_en.html][Curve Fitting]]
-* Script de la clase
-** [2022-06-14 Tue]
-- datos<-PSU_diagnostico_01
-
-#+begin_example R
-source ("~/Downloads/uni/2022-1/proba/scripts-r/SCRIPT_A01_4_descripY.R")
-source ("~/Downloads/uni/2022-1/proba/scripts-r/SCRIPT REGRESION MULTIPLE.r")
-
-# eliminamos los que no rindieron la prueba
-datos<-datos[datos$rend1>0,]
-
-# Analisis supuesto colinealidad
-chart.Correlation(datos)
-# se recomienda identificar la variable sensible: "la que
-# no tengo que tocar"
-
-# elimino las variables colineales
-datos<-dplyr::select(PSU_diagnostico_01,-PEM,-HIST,-PROMPSU,-PSUPOND,-LENG,-CS)
-# tienen que estar en el mismo orden
-
-model01<-lm(datos$rend1~.,data=datos)
-vif(model01) # el output: ojala 1, o lo mas cercano a 1
-summary(model01)
-
-# Analisis supuestos
-# S1
-# mean(model01$residuals)
-
-# S2
-# S3 errores se comportan normal
-# HO: los datos se comportan normal
-# shapiro.test(model01$residuals)
-
-# S4 errores independientes
-# plot(model01$residuals)
-
-# S5 no autocorrelacion
-# HO: no existe autocorrelacion
-# Test DurbinWatson
-# dwtest(model01)
-
-# S6 Homocedasticidad
-# HO: varianzas iguales
-# test BreuschPagan
-# bptest(model01)
-
-# S7 No multicolinealidad
-# HO: no hay variables colineales
-#+end_example
-
-** [2022-06-17 Fri]
 * Método de Mínimos Cuadrados Ordinarios(MMCO)
 - Relación con varianza y el supuesto 2?
 * Notas de la clase
@@ -226,12 +244,12 @@ summary(model01)
 ** [2022-06-22 Wed]
 - Qué significa B0 igual a 0?
   - Que hay que hacer otro modelo ajustado.
-
-
 - [2022-06-22 Wed 12:00]
   - "Si el S de la media de los errores no se cumple
     y el supuesto de normalidad tampoco,
     entonces olvídate del modelo".
+- [2022-06-22 Wed 12:10]
+  - "De los modelos presentes, el menos malo es..."
 * Local variables :noexport:
 # Local Variables:
 # ispell-local-dictionary: "espanol"
