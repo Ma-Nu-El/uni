@@ -226,6 +226,12 @@ summary(model01)
 ** [2022-06-22 Wed]
 - Qué significa B0 igual a 0?
   - Que hay que hacer otro modelo ajustado.
+
+
+- [2022-06-22 Wed 12:00]
+  - "Si el S de la media de los errores no se cumple
+    y el supuesto de normalidad tampoco,
+    entonces olvídate del modelo".
 * Local variables :noexport:
 # Local Variables:
 # ispell-local-dictionary: "espanol"
