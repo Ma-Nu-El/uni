@@ -6,65 +6,16 @@
 * Introducción
 - [[https://latexdraw.com/linear-regression-in-latex-using-tikz/][Linear Regression in LaTeX using TikZ - TikZBlog]]
 - [[https://tex.stackexchange.com/questions/119179/how-to-add-a-regression-line-to-randomly-generated-points-using-pgfplots-in-tikz][How to add a regression line to randomly generated points using pgfplots in Tikz? - TeX - LaTeX Stack Exchange]]
-* Scripts usados
-** para la materia
-- SCRIPT_A01_4_descripY.R
-- SCRIPT P01 Analisis de Distribucion.r
-- SCRIPT P02 Analisis de Distribucion.r
-- SCRIPT REGRESION MULTIPLE.r
-
-** ejemplos en clases
-*** [2022-06-14 Tue]
-- datos<-PSU_diagnostico_01
-
-#+begin_example R
-source ("~/Downloads/uni/2022-1/proba/scripts-r/SCRIPT_A01_4_descripY.R")
-source ("~/Downloads/uni/2022-1/proba/scripts-r/SCRIPT REGRESION MULTIPLE.r")
-
-# eliminamos los que no rindieron la prueba
-datos<-datos[datos$rend1>0,]
-
-# Analisis supuesto colinealidad
-chart.Correlation(datos)
-# se recomienda identificar la variable sensible: "la que
-# no tengo que tocar"
-
-# elimino las variables colineales
-datos<-dplyr::select(PSU_diagnostico_01,-PEM,-HIST,-PROMPSU,-PSUPOND,-LENG,-CS)
-# tienen que estar en el mismo orden
-
-model01<-lm(datos$rend1~.,data=datos)
-vif(model01) # el output: ojala 1, o lo mas cercano a 1
-summary(model01)
-
-# Analisis supuestos
-# S1
-# mean(model01$residuals)
-
-# S2
-# S3 errores se comportan normal
-# HO: los datos se comportan normal
-# shapiro.test(model01$residuals)
-
-# S4 errores independientes
-# plot(model01$residuals)
-
-# S5 no autocorrelacion
-# HO: no existe autocorrelacion
-# Test DurbinWatson
-# dwtest(model01)
-
-# S6 Homocedasticidad
-# HO: varianzas iguales
-# test BreuschPagan
-# bptest(model01)
-
-# S7 No multicolinealidad
-# HO: no hay variables colineales
-#+end_example
-
-*** [2022-06-17 Fri]
 * Correlación
+** Coeficiente de correlación (aka R o r)
+- Es el nivel de relación existente entre
+  2 variables; se entiende como el porcentaje
+  de datos que poseen una asociación
+  directa o inversa.
+- Interpretación:
+  - "De cada 100 pares de datos, R*100 tienen el
+    mismo comportamiento".
+
 ** Correlación y calidad del modelo
 :PROPERTIES:
 :ID:       77f78879-51fa-4196-bdf0-15d43876b0a1
@@ -82,21 +33,12 @@ Una correlación = |1| /no/ es existe.
 
 - Profe Carlos trabaja con R>|0.7|.
 
-** Coeficiente de correlación (aka R o r)
-- es el nivel de relación existente entre
-  2 variables; se entiende como el porcentaje
-  de datos que poseen una asociación
-  directa o inversa.
-- Interpretación:
-  - "De cada 100 pares de datos, R*100 tienen el
-    mismo comportamiento".
-
 * Determinación
 ** Coeficiente de determinación (R^{2})
-- porcentaje de variación de Y que es explicado
+- Porcentaje de variación de Y que es explicado
   por X.
 ** Coeficiente de determinación ajustado(R^{2}_{aj})
-- lo mismo que R^2, pero considera fallas
+- Lo mismo que R^2, pero considera fallas
   ocasionadas por el tamaño de la muestra.
 ** R^2 vs R^2_aj
 - \(R^{2}_{aj} \leq R^{2}\)
@@ -250,6 +192,81 @@ modelos:
     entonces olvídate del modelo".
 - [2022-06-22 Wed 12:10]
   - "De los modelos presentes, el menos malo es..."
+- [2022-06-22 Wed 12:25]
+  - 11.3 del libro en campus.
+- [2022-06-22 Wed 12:33]
+  - Para un modelo simple, el Beta 1 tiene que
+    tener el mismo signo que el R.
+* Scripts usados
+** para la materia
+- SCRIPT_A01_4_descripY.R
+- SCRIPT P01 Analisis de Distribucion.r
+- SCRIPT P02 Analisis de Distribucion.r
+- SCRIPT REGRESION MULTIPLE.r
+
+** ejemplos en clases
+*** [2022-06-14 Tue]
+- datos<-PSU_diagnostico_01
+
+#+begin_example R
+source ("~/Downloads/uni/2022-1/proba/scripts-r/SCRIPT_A01_4_descripY.R")
+source ("~/Downloads/uni/2022-1/proba/scripts-r/SCRIPT REGRESION MULTIPLE.r")
+
+# eliminamos los que no rindieron la prueba
+datos<-datos[datos$rend1>0,]
+
+# Analisis supuesto colinealidad
+chart.Correlation(datos)
+# se recomienda identificar la variable sensible: "la que
+# no tengo que tocar"
+
+# elimino las variables colineales
+datos<-dplyr::select(PSU_diagnostico_01,-PEM,-HIST,-PROMPSU,-PSUPOND,-LENG,-CS)
+# tienen que estar en el mismo orden
+
+model01<-lm(datos$rend1~.,data=datos)
+vif(model01) # el output: ojala 1, o lo mas cercano a 1
+summary(model01)
+
+# Analisis supuestos
+# S1
+# mean(model01$residuals)
+
+# S2
+# S3 errores se comportan normal
+# HO: los datos se comportan normal
+# shapiro.test(model01$residuals)
+
+# S4 errores independientes
+# plot(model01$residuals)
+
+# S5 no autocorrelacion
+# HO: no existe autocorrelacion
+# Test DurbinWatson
+# dwtest(model01)
+
+# S6 Homocedasticidad
+# HO: varianzas iguales
+# test BreuschPagan
+# bptest(model01)
+
+# S7 No multicolinealidad
+# HO: no hay variables colineales
+#+end_example
+
+*** [2022-06-17 Fri]
+* Consulta al profe
+- Suponiendo que el tamaño de la muestra tiene un
+  impacto en el modelo, ¿Cuántas muestras más serían
+  necesarias para obtener un modelo bueno?
+  - Ejemplo, en las mineras, pocas muestras generan
+    problema, se necesita calcular cuánto se debe
+    invertir en más muestras y comparar si vale la
+    pena.
+* Libros
+- En campus hay 2 muy buenos.
+- Unidad 11: Regresión lineal simple y correlación.
+  - pag 389.
 * Local variables :noexport:
 # Local Variables:
 # ispell-local-dictionary: "espanol"
