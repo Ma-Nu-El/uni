@@ -85,13 +85,6 @@ modelos:
 
 - n > k
 
-* Chart
-- 1 estrella
-  - sig > 0.01?
-- 2 estrellas
-  - sig > 0.01?
-- 3 estrellas
-  - sig > 0.05?
 * Simulaciones
 - phet
   - [[https://phet.colorado.edu/sims/html/curve-fitting/latest/curve-fitting_en.html][Curve Fitting]]
@@ -109,9 +102,10 @@ modelos:
 
 
 
-- Si el procedimiento de muestreo se hizo correctamente,
-  entonces no debería haber relación entre los
-  errores, por lo que cualquier supuesto patrón
+- Si el procedimiento de muestreo se hizo
+  correctamente, entonces no debería
+  haber relación entre los errores,
+  por lo que cualquier supuesto patrón
   existente seria una relación espurica.
 - Cuando existen pocos datos, es fácil encontrar
   patrones, pero puede que no tengan sentido.
