@@ -195,8 +195,8 @@ modelos:
 - [2022-06-22 Wed 12:25]
   - 11.3 del libro en campus.
 - [2022-06-22 Wed 12:33]
-  - Para un modelo simple, el Beta 1 tiene que
-    tener el mismo signo que el R.
+  - "Para un modelo simple, el Beta 1 tiene que
+    tener el mismo signo que el R."
 * Scripts usados
 ** para la materia
 - SCRIPT_A01_4_descripY.R
