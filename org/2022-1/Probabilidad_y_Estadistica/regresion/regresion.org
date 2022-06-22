@@ -143,7 +143,7 @@ modelos:
 6) Evaluar parámetros
 
 
-- \beta_i =0 \iff significa que se debe construir
+- \beta_{i} = 0 \iff significa que se debe construir
   un nuevo modelo.
 
 *** Cantidad de estrellas y significancia
@@ -158,24 +158,24 @@ modelos:
 
 : Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-*** Que tipo de variable?
+*** Qué tipo de variable?
 - La escala de medida determina el tipo de variable.
   - "Rojo".
     - Puede ser un color, estado de animo, nota,
       o cualquier cosa.
-    - La unidad de medida determina a que nos
-      estamos refiriendo.
+    - La unidad de medida determina a que
+      tipo de variable nos estamos refiriendo.
 *** Anova
 *** R^2
 - ¿Qué porcentaje de X puede explicar la varianza de Y.
 - O qué porcentaje de la varianza de Y puede
   ser explicado por X.
 *** R^2_{aj}
-- Si R^2 > R^2_{aj}
-  - Si no puedes aumentar el tamano de la muestra,
+- Si \(R^2\) > \(R^2_{aj}\)
+  - Si no puedes aumentar el tamaño de la muestra,
     entonces trabaja con el ajustado.
-*** Que es el residual?
-\(u = Y - \cap Y\)
+*** Qué es el residual?
+- \(u = Y - \cap Y\)
 
 ** [2022-06-22 Wed]
 - Qué significa B0 igual a 0?
