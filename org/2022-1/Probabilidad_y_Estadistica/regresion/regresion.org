@@ -1,7 +1,7 @@
 #+TITLE: Regresión
+#+INCLUDE: "~/org/config/author-mfuica01.org"
 #+INCLUDE: "~/org/config/config-spanish.org"
 #+INCLUDE: "~/org/config/config.org"
-#+INCLUDE: "~/org/config/author-mfuica01.org"
 
 * Introducción
 - [[https://latexdraw.com/linear-regression-in-latex-using-tikz/][Linear Regression in LaTeX using TikZ - TikZBlog]]
@@ -187,7 +187,7 @@ modelos:
 - [2022-06-22 Wed 12:10]
   - "De los modelos presentes, el menos malo es..."
 - [2022-06-22 Wed 12:25]
-  - 11.3 del libro en campus.
+  - Ejemplo 11.3 del libro en campus.
 - [2022-06-22 Wed 12:33]
   - "Para un modelo simple, el Beta 1 tiene que
     tener el mismo signo que el R."
