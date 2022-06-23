@@ -28,7 +28,7 @@ Calcule las medidas de desempeño del sistema:
 
 ** Desarrollo
 
-* PROBLEMA N°2
+* DONE PROBLEMA N°2
 ** Enunciado
 
 En un servidor de la universidad se mandan
@@ -103,11 +103,11 @@ cualquier momento el sistema desocupado es:
 #+begin_src R :session :exports both :results value
 input<-10
 service_rate<-12
-1-(input/service_rate)
+round(1-(input/service_rate),5)
 #+end_src
 
 #+RESULTS: idle_time_percentage
-: 0.166666666666667
+: 0.16667
 
 #+name: hours
 #+begin_src python :exports none :results output
@@ -127,7 +127,7 @@ print(int(hours)*percentage*60)
 #+end_src
 
 #+RESULTS: idle_time_in_minutes
-: 100.00000000000018
+: 100.00200000000001
 
 #+begin_src python :exports results :session :var input=idle_time_in_minutes :results output
 time = int(float(input))
@@ -218,7 +218,7 @@ deberíamos esperar encontrarnos con
 aproximadamente call_labor_in_queue_approx() {{{results(=4=)}}}
 programas en fila esperando a ser ejecutados.
 
-* PROBLEMA N°3
+* DONE PROBLEMA N°3
 ** Enunciado
 
 Una tienda de alimentación es atendida por
@@ -423,7 +423,7 @@ esperar a ser atendida
 call_mean_wait_in_queue_approx() {{{results(=0:08:00=)}}}
 aproximadamente.
 
-* PROBLEMA N°4
+* DONE PROBLEMA N°4
 ** Enunciado
 
 Una entidad bancaria considera la
@@ -631,7 +631,8 @@ cajero,
 call_probability_of_n_clients_in_system_approx_no_decimals_4()
 veces nos encontramos con una fila.
 
-* PROBLEMA N°5 (M/M/1) :noexport:
+* DONE PROBLEMA N°5
+** Enunciado
 
 Un avión tarda unos 4 minutos de media en
 aterrizar a partir del momento en que
@@ -643,6 +644,92 @@ un proceso de Poisson, ¿cuánto va a
 esperar el piloto dando vueltas al
 aeropuerto antes de recibir la señal
 de tierra?
+
+** Desarrollo
+
+Este escenario se acomoda a un modelo M/M/1 dado
+que:
+
+- La entrada y servicio ocurren según un
+  proceso de Poisson.
+- Hay solo una torre que va dando las ordenes
+  de aterrizaje; por lo tanto cuenta como
+  un solo servidor.
+- No se indica que hayan otras opciones de
+  aterrizaje para los aviones, por lo que
+  se asume que los aviones simplemente
+  tienen que esperar su turno sin más opción.
+
+
+- Tasa de servicio: en este caso hace referencia
+  al tiempo que toma en aterrizar a partir
+  del momento en que la torre da la señal
+  de aterrizaje.
+
+
+\begin{align*}
+\frac{1}{\mu}= 4\ \frac{minuto}{aterrizaje}
+\rightarrow
+\frac{1}{4}\frac{aterrizaje}{minuto}=\mu
+\end{align*}
+
+- Tasa de entrada:
+
+
+\begin{align*}
+\lambda=8\ \frac{aterrizaje}{\cancel{hora}}
+\frac{\cancel{hora}}{minuto}
+\frac{1}{60}
+\rightarrow
+\frac{8}{60}
+\frac{aterrizaje}{minuto}=\lambda
+\end{align*}
+
+
+Declaramos las variables en el sistema:
+
+#+name: init_5
+#+begin_src R :session :exports code :results silent
+service_rate<-(1/4)
+input<-(8/60)
+#+end_src
+
+#+begin_quote
+¿cuánto va a
+esperar el piloto dando vueltas al
+aeropuerto antes de recibir la señal
+de tierra?
+#+end_quote
+
+El tiempo de espera promedio para
+un modelo M/M/1 se calcula:
+
+\begin{align*}
+W_q=\frac{\lambda}{\mu(\mu - \lambda)}
+\end{align*}
+
+#+name: mean_wait_in_queue_5
+#+begin_src R :session :results replace value :exports both
+i<-input
+s<-service_rate
+mean_wait_in_queue_5<-i/(s *(s - i))
+mean_wait_in_queue_5_rounded<-round(mean_wait_in_queue_5,5)
+#+end_src
+
+#+RESULTS: mean_wait_in_queue_5
+: 4.57143
+
+#+name: mean_wait_in_queue_approx_5
+#+begin_src python :exports none :results silent output :var input=mean_wait_in_queue_5
+time = round(float(input),1)
+import datetime
+print(datetime.timedelta(minutes=time))
+#+end_src
+
+Por lo que en promedio, cada avión deberá
+esperar aproximadamente
+call_mean_wait_in_queue_approx_5()
+antes de empezar el proceso de aterrizaje.
 
 * PROBLEMA N°6 (M/M/C) :noexport:
 
@@ -730,7 +817,9 @@ cada avión necesitaría ser revisado
 menor. Utilizar la teoría de colas
 para comparar las 2 alternativas.
 
-* PROBLEMA N°9 (M/M/1/K) :noexport:
+* PROBLEMA N°9 (M/M/1/K=60) :noexport:
+
+** Enunciado
 
 En el mostrador de facturación de una aerolínea
 llega un promedio de 45 clientes por hora,
@@ -742,6 +831,23 @@ a) Tiempo medio que un cliente pasa en la facturación.
 b) Número medio de clientes en la cola.
 c) Número medio de clientes en el sistema en
    un momento dado.
+
+** Desarrollo
+
+En este caso nos encontramos con un escenario
+del tipo M/M/1/K, pues:
+- Tanto la entrada como el servicio son procesos
+  de Poisson.
+- El servidor sigue siendo 1.
+- La capacidad máxima del sistema es 60.
+
+** a
+
+#+begin_quote
+1) [@1] Tiempo medio que un cliente pasa en la facturación.
+#+end_quote
+- Esto se refiere al servicio.
+
 
 * PROBLEMA N°10 (M/M/1/K) :noexport:
 
