@@ -28,7 +28,7 @@ Calcule las medidas de desempeño del sistema:
 
 ** Desarrollo
 
-* DONE PROBLEMA N°2
+* PROBLEMA N°2
 ** Enunciado
 
 En un servidor de la universidad se mandan
@@ -218,7 +218,7 @@ deberíamos esperar encontrarnos con
 aproximadamente call_labor_in_queue_approx() {{{results(=4=)}}}
 programas en fila esperando a ser ejecutados.
 
-* DONE PROBLEMA N°3
+* PROBLEMA N°3
 ** Enunciado
 
 Una tienda de alimentación es atendida por
@@ -423,7 +423,7 @@ esperar a ser atendida
 call_mean_wait_in_queue_approx() {{{results(=0:08:00=)}}}
 aproximadamente.
 
-* DONE PROBLEMA N°4
+* PROBLEMA N°4
 ** Enunciado
 
 Una entidad bancaria considera la
@@ -597,7 +597,7 @@ de tener 0 o 1 clientes y obtenemos el complemento:
 #+begin_src R :session :exports both :var clients=number_of_clients_in_system_4 :results silent
 clients_adjusted<-clients-1
 r<-usage_factor
-1-sum(probability_of_n_clients_in_system<-(1-r)*(r^(0:clients_adjusted)))
+round(1-sum(probability_of_n_clients_in_system<-(1-r)*(r^(0:clients_adjusted))),5)
 #+end_src
 
 #+name: probability_of_n_clients_in_system_approx_4
@@ -619,7 +619,7 @@ print(round(input_adjusted))
 #+end_src
 
 Por lo tanto, la probabilidad de que al
-acudir al cajero en cualquier momento
+acudir en cualquier momento
 al cajero nos encontremos con una fila
 es de aproximadamente un
 call_probability_of_n_clients_in_system_approx_4() %.
@@ -631,7 +631,7 @@ cajero,
 call_probability_of_n_clients_in_system_approx_no_decimals_4()
 veces nos encontramos con una fila.
 
-* DONE PROBLEMA N°5
+* PROBLEMA N°5
 ** Enunciado
 
 Un avión tarda unos 4 minutos de media en
