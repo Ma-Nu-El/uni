@@ -5,12 +5,18 @@
 #+INCLUDE: "~/org/config/config.org"
 #+INCLUDE: "~/org/config/author-mfuica01.org"
 
+* Acerca de
+
+- Este es un formulario de la unidad de
+  Teoría de Cola en la asignatura
+  Universidad de La Frontera.
+- Chile, 2022.
 
 * General
-* M/M/1
-* M/M/1/K
-* M/M/C
-* M/M/C/K
+* Sistema: M/M/1
+* Sistema: M/M/1/K
+* Sistema: M/M/C
+* Sistema: M/M/C/K
 * Local variables :noexport:
 # Local Variables:
 # ispell-local-dictionary: "espanol"
