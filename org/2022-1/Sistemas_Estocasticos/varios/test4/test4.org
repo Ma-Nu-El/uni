@@ -594,11 +594,16 @@ Por lo tanto calculamos la probabilidad acumulada
 de tener 0 o 1 clientes y obtenemos el complemento:
 
 #+name: probability_of_n_clients_in_system_4
-#+begin_src R :session :exports both :var clients=number_of_clients_in_system_4 :results silent
+#+begin_src R :session :exports both :var clients=number_of_clients_in_system_4 :results value
 clients_adjusted<-clients-1
 r<-usage_factor
-round(1-sum(probability_of_n_clients_in_system<-(1-r)*(r^(0:clients_adjusted))),5)
+prob_cum_of_n_clients_in_system<-sum((1-r)*(r^(0:clients_adjusted)))
+prob_cum<-prob_cum_of_n_clients_in_system
+round((1-prob_cum),5)
 #+end_src
+
+#+RESULTS: probability_of_n_clients_in_system_4
+: 0.44444
 
 #+name: probability_of_n_clients_in_system_approx_4
 #+begin_src python :session :exports none :var input=probability_of_n_clients_in_system_4 :results output silent
