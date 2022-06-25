@@ -7,7 +7,6 @@
 #+AUTHOR: \\
 #+AUTHOR: Manuel Fuica Morales
 
-@@latex:\clearpage@@
 * PROBLEMA N°1 :noexport:
 ** Enunciado
 

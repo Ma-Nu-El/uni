@@ -1,23 +1,194 @@
-#+TITLE: Formulario
-#+SUBTITLE: Test4
+#+TITLE: Formulario de Teoría de Colas
+#+SUBTITLE: Procesos Estocásticos
 #+DATE: Junio 2022
 #+INCLUDE: "~/org/config/config-spanish.org"
 #+INCLUDE: "~/org/config/config.org"
 #+INCLUDE: "~/org/config/author-mfuica01.org"
+#+latex_header: \usepackage{caption}
+
+#+INCLUDE: "~/org/config/clearpage.org"
 
 * Acerca de
 
-- Este es un formulario de la unidad de
-  Teoría de Cola en la asignatura
+- Este es un formulario hecho por un
+  estudiante de la unidad de
+  Teoría de Cola en la asignatura de
+  Procesos Estocásticos para estudiantes
+  de Ingeniería Civil Industrial en la
   Universidad de La Frontera.
-- Chile, 2022.
+- Chile, Junio 2022.
 
-* General
+* Términos Generales
+:PROPERTIES:
+:ID:       f1c2b3c5-b120-4c28-80ca-615ef605f45e
+:END:
+
+- Sistema: hace referencia al conjunto de procesos
+  que involucran la espera por el servicio y
+  el servicio en si.
+
+- Procesos puede hacer referencia a clientes
+  atendidos, procesos a ejecutar, o cualquier
+  otro evento de interés que del que se
+  pueda llevar cuenta sobre unidad de tiempo.
+
+- Llegada: hace referencia a la tasa de
+  llegada de procesos que percibe el sistema.
+  - La llegada al sistema se denota con la
+    letra \(\lambda \).
+
+  #+begin_quote
+  - Nótese que la tasa de /entrada/ /efectiva/
+    al sistema \(\lambda_{e} \) es diferente
+    de la tasa de /llegada/ al sistema \(\lambda\).
+    Esto ocurre porque hay escenarios donde el
+    tamaño de la cola es finito, por lo
+    que /no/ todos los procesos que /llegan/
+    al sistema /entran/ al sistema en
+    caso de que el sistema se encuentre
+    lleno.
+  #+end_quote
+
+- Servicio: hace referencia a la tasa de
+  servicios que ejecuta el sistema.
+  - La tasa de servicio del sistema se
+    denota con la letra \(\mu \).
+- Tanto \(\lambda \) como \(\mu \) se miden
+  en:
+  \begin{align*}
+  [ \lambda ] = [ \mu ] = \frac{procesos}{tiempo}
+  \end{align*}
+
+
+En base a esto podemos definir un
+/factor/ /de/ /utilización/ del sistema
+\(\rho \), que se puede calcular:
+
+\begin{figure}
+\[ \rho &= \frac{\lambda}{\mu} \]
+\caption*{Nótese que \(\rho\) es adimensional.}
+\end{figure}
+
+
+A partir de esto podemos esperar que
+si \(0 \leq \rho \leq 1\), entonces
+esto quiere decir que la tasa a la que
+los procesos son ejecutados es mayor a
+la tasa de llegada de los procesos al
+sistema, por lo tanto el sistema
+no genera colas de espera.
+
+
+Nuestro interés por lo tanto está con los
+casos en que \(\rho \geq 1\); el sistema
+tiene una tasa de atención de procesos
+inferior a la tasa de llegadas de los
+mismos, por lo que el sistema sí
+genera colas de espera.
+
+
+- En cuanto a los procesos esperando en cola
+  a ser ejecutados:
+  - L_{q} es la cantidad promedio de
+    labores esperando.
+    - /L/ de /labor/ y /q/ de /queue/.
+  - W_{q} es el tiempo promedio en que cada
+    labor espera en cola.
+    - /W/ de /waiting/.
+- En cuanto a los procesos siendo ejecutados:
+  - L_{s} es la cantidad promedio de
+    labores siendo ejecutados.
+    - /s/ de /service/.
+  - W_{s} es el tiempo promedio en que
+    cada labor es ejecutado.
+- Si el indicador no tiene subíndice, entonces
+  hace referencia al sistema entero;
+  de esta forma se pueden expresar los
+  labores del sistema y sus tiempos de
+  espera como:
+  #+NAME: eqn:2
+  \begin{equation}
+    L&=L_{q}+L_{s}
+  \end{equation}
+  #+NAME: eqn:3
+  \begin{equation}
+    W&=W_{q}+W_{s}
+  \end{equation}
+
+
+- Ecuación de Little: establece una relación
+  entre la tasa de llegada, los labores del
+  sistema y los tiempos del sistema:
+  #+NAME: eqn:1
+  \begin{equation}
+    L= \lambda \cdot W
+  \end{equation}
+
+
+- La probabilidad de encontrar \(n\) procesos
+  en un momento cualquiera en el sistema,
+  ya sea esperando en cola o siendo ejecutados,
+  se denota como \(P_{n}\).
+
+
 * Sistema: M/M/1
+
+\begin{align*}
+W&=\frac{1}{\mu - \lambda}                 \\
+\\
+W_{q}&=\frac{\lambda}{\mu (\mu - \lambda)} \\
+\\
+P_{n}&=(1-\rho)\rho^{n}
+\end{align*}
+
+- Por teorema de Little (ecuación [[eqn:1]])
+  se obtienen L y L_{q}.
+- Por teorema de Little (ecuación [[eqn:1]])
+  y álgebra (ecuaciones [[eqn:2]],[[eqn:3]]) se obtienen
+  los indicadores de servicio
+  \(L_{s}\) y \(W_{s}\).
+
 * Sistema: M/M/1/K
+
+- Si consideramos \(K\) como la capacidad
+  máxima del sistema; esto es, (procesos en
+  espera) + (procesos siendo atendidos), entonces
+  podemos definir la tasa de /entrada/ al
+  sistema \(\lambda_{e}\) como:
+
+  \begin{equation*}
+  \lambda_{e}= \lambda \cdot (1-P_{(n=K)})
+  \end{equation*}
+  - Donde \(\lambda\) es la tasa de llegada
+    y \(P_{(n=K)}\) es la probabilidad de que
+    hayan \(K\) procesos en el sistema, definida
+    a continuación.
+
+
+\begin{align*}
+L&=\frac{\rho}{1-\rho}-\frac{(K+1)\rho^{K+1}}{1-\rho^{K+1}} \\
+\\
+W_{s}&=\frac{\rho}{\lambda_{e}} \\
+\\
+P_{n}&=
+  \left(
+    \frac
+      {1-\rho}
+      {1-\rho^{(K+1)} }
+  \right)
+  \cdot
+    \rho ^{n}
+\end{align*}
+
+- Por teorema de Little y álgebra
+  (ecuaciones [[eqn:1]],[[eqn:2]] y [[eqn:3]])
+  se obtienen todos los demás indicadores.
+
 * Sistema: M/M/C
 * Sistema: M/M/C/K
 * Local variables :noexport:
 # Local Variables:
 # ispell-local-dictionary: "espanol"
 # End:
+
+#  LocalWords:  nótese Littl
