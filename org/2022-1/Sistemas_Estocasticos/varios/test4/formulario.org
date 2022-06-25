@@ -1,0 +1,17 @@
+#+TITLE: Formulario
+#+SUBTITLE: Test4
+#+DATE: Junio 2022
+#+INCLUDE: "~/org/config/config-spanish.org"
+#+INCLUDE: "~/org/config/config.org"
+#+INCLUDE: "~/org/config/author-mfuica01.org"
+
+
+* General
+* M/M/1
+* M/M/1/K
+* M/M/C
+* M/M/C/K
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
