@@ -832,7 +832,7 @@ b) Determine el tiempo promedio que una
 * Fuentes y Herramientas utilizadas para el desarrollo de este documento
 
 - Apuntes del profesor Ricardo Sepúlveda.
-- Sistema operativo
+- Sistema operativo:
   - [[https://pop.system76.com/][Pop!\under{}OS by System76]]
     - basado en [[https://ubuntu.com/][Ubuntu]].
 - Editor y ambiente de desarrollo:
@@ -842,10 +842,10 @@ b) Determine el tiempo promedio que una
       - [[https://www.youtube.com/watch?v=0g9BcZvQbXU][Consistent Technical Documents Using Emacs and Org Mode - YouTube]]
 - Lenguaje para cálculo de parametros:
   - [[https://www.r-project.org/][R: The R Project for Statistical Computing]]
-  - Librería
+  - Librería:
     - [[https://journal.r-project.org/archive/2017/RJ-2017-051/RJ-2017-051.pdf][queueing: A Package For Analysis Of Queueing Networks and Models in R.pdf]]
     - [[https://cran.r-project.org/web/packages/queueing/queueing.pdf][Package ‘queueing’.pdf]]
-- Calculador externo para redundancia.
+- Calculador externo para redundancia:
   - [[https://github.com/AbdeltwabMF/queueing-modelsim][GitHub - AbdeltwabMF/queueing-modelsim: Queueing Models Simulator.]]
 - Código fuente de este documento:
   - [[https://github.com/Ma-Nu-El/uni/blob/master/org/2022-1/Sistemas_Estocasticos/varios/test4/test4_version-2.org][uni/test4\under{}version-2.org at master · Ma-Nu-El/uni · GitHub]]
