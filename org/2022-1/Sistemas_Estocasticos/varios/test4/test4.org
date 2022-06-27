@@ -117,7 +117,8 @@ print(hours)
 #+RESULTS: hours
 : 10
 
-Por lo tanto, se espera que de cada call_hours() {{{results(=10=)}}}
+Por lo tanto, se espera que de cada
+call_hours() {{{results(=10=)}}}
 horas que el servidor está funcionando:
 
 #+name: idle_time_in_minutes
@@ -214,7 +215,8 @@ print(int(input))
 
 Por lo tanto, en un momento cualquiera
 deberíamos esperar encontrarnos con
-aproximadamente call_labor_in_queue_approx() {{{results(=4=)}}}
+aproximadamente
+call_labor_in_queue_approx() {{{results(=4=)}}}
 programas en fila esperando a ser ejecutados.
 
 * PROBLEMA N°3

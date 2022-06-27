@@ -3,12 +3,27 @@
 #+INCLUDE: "~/org/config/config-spanish.org"
 #+INCLUDE: "~/org/config/config.org"
 #+DATE: Junio 2022
-#+AUTHOR: Tomás Muñoz
+#+AUTHOR: [[mailto:t.munoz06@ufromail.cl][Tomás Muñoz]]
 #+AUTHOR: \\
-#+AUTHOR: Manuel Fuica Morales
+#+INCLUDE: "~/org/config/author-mfuica01.org"
+#+AUTHOR: \\
+#+AUTHOR: [[mailto:ricardo.sepulveda@ufrontera.cl][Profesor: Ricardo Sepúlveda]]
+:R:
+#+PROPERTY: header-args:R :session code :exports both :results value
+:END:
 
-* Enunciados
-** PROBLEMA N°1 :noexport:
+#+INCLUDE: "~/org/config/clearpage.org"
+
+* Ejercicios [13/18][72%]
+
+Importamos la librería =queueing= de =R=
+que nos asistirá en el cálculo de parámetros.
+
+#+begin_src R :session code :exports code :results silent
+library(queueing)
+#+end_src
+
+** DONE PROBLEMA N°1 :noexport:
 *** Enunciado
 
 Suponga que a un restaurant de comida rápida
@@ -26,13 +41,15 @@ Calcule las medidas de desempeño del sistema:
 3. ¿Cuál es el N° promedio de Clientes en Cola?
 4. ¿Cuál es la probabilidad que hallan 10 clientes en la cola?
 
-** PROBLEMA N°2
+#+INCLUDE: "~/org/config/clearpage.org"
+** DONE PROBLEMA N°2
+*** Enunciado
 
 En un servidor de la universidad se mandan
 programas de ordenador para ser ejecutados.
 Los programas llegan al servidor con una
 tasa de 10 por minuto. El tiempo medio
-de ejecución de cada programa ´ es de
+de ejecución de cada programa es de
 5 segundos y tanto los tiempos entre
 llegadas como los tiempos de ejecución
 se distribuyen exponencialmente.
@@ -44,7 +61,104 @@ b) ¿Cuál es el tiempo esperado total de
 c) ¿Cuál es el número medio de programas
    esperando en la cola del sistema?
 
-** PROBLEMA N°3
+*** Contexto
+
+En este contexto contamos con un solo servidor
+y considerando las capacidades de los sistemas
+informáticos, se puede considerar la
+capacidad de la cola como infinita. Por lo
+tanto este sistema se puede acomodar a
+un modelo de colas M/M/1.
+- Entrada y salida como proceso de Poisson.
+- Un solo servidor.
+- Cola infinita.
+
+
+Desde este fundamento, contamos con los datos
+de llegada (y entrada) al sistema
+\lambda=10 \(\frac{programa}{minuto}\)
+y tiempo promedio de ejecución
+\(\frac{1}{\mu}\) = 5 \(\frac{segundo}{programa}\).
+
+\begin{align*}
+  \frac{1}{\mu}=
+  5\ \frac{segundo}{programa}
+  \rightarrow
+  =
+  5\ \frac{1}{60}
+  \frac{minuto}{\cancel{segundo}}
+  \frac{\cancel{segundo}}{programa}
+  \rightarrow
+  12\ \frac{programa}{minuto}
+\end{align*}
+
+Por lo tanto nuestra tasa de servicio \mu
+es 12 \(\frac{programa}{segundo}\).
+
+Los parámetros de entrada se definen en
+la primera línea, se resuelve el modelo
+en la segunda línea, y la tercera
+linea nos entrega un resumen del
+modelo resuelto con los parámetros
+dados en la primera línea.
+
+#+begin_src R :session code :results output
+mm1_2 <- NewInput.MM1(lambda=(10),mu=(12))
+y_2 <- QueueingModel(mm1_2)
+summary(y_2)
+#+end_src
+
+#+RESULTS:
+:   lambda mu c  k  m        RO        P0       Lq        Wq  X L   W Wqq Lqq
+: 1     10 12 1 NA NA 0.8333333 0.1666667 4.166667 0.4166667 10 5 0.5 0.5   6
+
+*** a
+
+#+begin_quote
+a) ¿Qué proporción de tiempo está el
+   servidor desocupado?
+#+end_quote
+
+Eso se puede calcular como el
+complemento de la probabilidad de
+que el servidor esté ocupado:
+
+#+begin_src R :session code
+1 - y_2$RO
+#+end_src
+
+#+RESULTS:
+: 0.166666666666667
+
+*** b
+
+#+begin_quote
+b) ¿Cuál es el tiempo esperado total de
+   salida de un programa?
+#+end_quote
+
+#+begin_src R :session code
+y_2$W
+#+end_src
+
+#+RESULTS:
+: 0.5
+
+*** c
+
+#+begin_quote
+c) ¿Cuál es el número medio de programas
+   esperando en la cola del sistema?
+#+end_quote
+
+#+begin_src R :session code
+y_2$Lq
+#+end_src
+
+#+RESULTS:
+: 4.16666666666667
+
+** DONE PROBLEMA N°3
 *** Enunciado
 
 Una tienda de alimentación es atendida por
@@ -65,7 +179,123 @@ a) La probabilidad de que haya línea de espera.
 b) La longitud media de la línea de espera.
 c) El tiempo medio que un cliente permanece en cola.
 
-** PROBLEMA N°4
+*** Desarrollo
+
+Nuevamente es un escenario de modelo M/M/1 dado
+que:
+- Entrada y salida de acuerdo a un proceso de Poisson.
+- Existe un solo servidor.
+- No se habla del límite de una cola; incluso,
+  los clientes están dispuestos a hacer cola dada
+  la calidad del servicio.
+
+
+- Tasa de Entrada:
+
+\begin{align*}
+\lambda = 10 \frac{persona}{hora}
+\end{align*}
+
+- Tasa de Servicio:
+
+\begin{align*}
+\frac{1}{\mu} = 4 \frac{minuto}{persona}
+\rightarrow
+\mu = \frac{1}{4} \frac{persona}{\cancel{minuto}}
+\frac{\cancel{minuto}}{hora}
+\frac{60}{1}
+= 15 \frac{persona}{hora}
+\end{align*}
+
+Teniendo estos datos podemos modelar
+el escenario:
+
+#+begin_src R :session code :results output
+mm1_3 <- NewInput.MM1(lambda=(10),mu=(15))
+y_3 <- QueueingModel(mm1_3)
+summary(y_3)
+#+end_src
+
+#+RESULTS:
+:   lambda mu c  k  m        RO        P0       Lq        Wq  X L   W Wqq Lqq
+: 1     10 15 1 NA NA 0.6666667 0.3333333 1.333333 0.1333333 10 2 0.2 0.2   3
+
+*** a
+:PROPERTIES:
+:ID:       02bb4cf7-f019-46f4-a4e2-8d71527122ad
+:END:
+
+#+begin_quote
+1) [@1] La probabilidad de que haya línea de espera.
+#+end_quote
+
+Para que haya línea de espera, implica que hay
+un cliente siendo atendido y por lo menos
+otro haciendo la fila, por lo que la cantidad
+de individuos en el sistema es por lo menos
+2:
+
+Ésta se calcula con:
+
+\begin{align*}
+\sum_{n=2}^{\infty}P_{n}= (1-\rho) \rho^{n}
+=
+\sum_{n=0}^{1}P_{n}= (1-\rho) \rho^{n}
+\end{align*}
+
+Por lo tanto, calculamos la probabilidad
+acumulada desde 0 hasta 1 clientes:
+
+#+begin_src R :session code
+c<-1
+r<-y_3$RO
+a_3<-sum(P1<-(1-r)*(r^(0:c)))
+#+end_src
+
+#+RESULTS:
+: 0.555555555555556
+
+y obtenemos el complemento:
+
+#+name:3_a
+#+begin_src R :session code
+1-a_3
+#+end_src
+
+#+RESULTS: 3_a
+: 0.444444444444444
+
+Así, la probabilidad de que el sistema
+efectivamente perciba una fila es
+call_3_a() {{{results(=0.444444444444444=)}}}.
+
+*** b
+
+#+begin_quote
+2) [@2] La longitud media de la línea de espera.
+#+end_quote
+
+#+begin_src R :session code
+y_3$Lq
+#+end_src
+
+#+RESULTS:
+: 1.33333333333333
+
+*** c
+
+#+begin_quote
+3) [@3] El tiempo medio que un cliente permanece en cola.
+#+end_quote
+
+#+begin_src R :session code
+y_3$Wq
+#+end_src
+
+#+RESULTS:
+: 0.133333333333333
+
+** DONE PROBLEMA N°4
 *** Enunciado
 
 Una entidad bancaria considera la
@@ -103,7 +333,99 @@ b) Tamaño medio de la cola y probabilidad
    de que al acudir al cajero ya haya
    alguna persona en la cola.
 
-** PROBLEMA N°5
+*** Desarrollo
+
+Esto corresponde a un modelo MM1 dado que:
+- Entrada y servicio de acuerdo a un proceso
+  Poisson.
+- Un único cajero.
+- No hay otros cajeros cerca por lo
+  que la gente está obligada a hacer fila.
+
+
+- Entrada:
+\begin{align*}
+\frac{1}{\lambda}= 7.5\ \frac{minuto}{persona}
+\rightarrow
+\lambda=
+\frac{1}{7.5} \frac{persona}{minuto}
+\end{align*}
+
+- Servicio:
+\begin{align*}
+\frac{1}{\mu}= 5\ \frac{minuto}{persona}
+\rightarrow
+\mu=
+\frac{1}{5} \frac{persona}{minuto}
+\end{align*}
+
+#+begin_src R :session code :results output
+mm1_4 <- NewInput.MM1(lambda=(1/7.5),mu=(1/5))
+y_4 <- QueueingModel(mm1_4)
+summary(y_3)
+#+end_src
+
+#+RESULTS:
+:   lambda mu c  k  m        RO        P0       Lq        Wq  X L   W Wqq Lqq
+: 1     10 15 1 NA NA 0.6666667 0.3333333 1.333333 0.1333333 10 2 0.2 0.2   3
+
+*** a
+
+#+begin_quote
+1) Tiempo medio de espera que debe sufrir
+   cada cliente en cola.
+#+end_quote
+
+#+begin_src R :session code
+y_4$Wq
+#+end_src
+
+#+RESULTS:
+: 10
+
+*** b
+
+#+begin_quote
+2) [@2] Tamaño medio de la cola y probabilidad
+   de que al acudir al cajero ya haya
+   alguna persona en la cola.
+#+end_quote
+
+- Tamaño medio:
+  #+begin_src R :session code
+  y_4$Lq
+  #+end_src
+
+  #+RESULTS:
+  : 1.33333333333333
+
+- Probabilidad de cola:
+  1) La probabilidad de /no/ cola se calcula
+     (mismo procedimiento que en [[id:02bb4cf7-f019-46f4-a4e2-8d71527122ad][ejercicio 3]]):
+     #+begin_src R :session code
+     c<-1
+     r<-y_4$RO
+     b_4<-sum(P1<-(1-r)*(r^(0:c)))
+     #+end_src
+
+     #+RESULTS:
+     : 0.555555555555556
+
+  2) y obtenemos el complemento:
+
+     #+name:4_b
+     #+begin_src R :session code
+     1-b_4
+     #+end_src
+
+     #+RESULTS: 4_b
+     : 0.444444444444444
+
+     Así, la probabilidad de que el sistema
+     efectivamente perciba una fila es
+     call_4_b() {{{results(=0.444444444444444=)}}}.
+
+** DONE PROBLEMA N°5
 *** Enunciado
 
 Un avión tarda unos 4 minutos de media en
@@ -117,7 +439,75 @@ esperar el piloto dando vueltas al
 aeropuerto antes de recibir la señal
 de tierra?
 
-** PROBLEMA N°6 (M/M/C) :noexport:
+*** Desarrollo
+
+Este escenario se acomoda a un modelo M/M/1 dado
+que:
+
+- La entrada y servicio ocurren según un
+  proceso de Poisson.
+- Hay solo una torre que va dando las órdenes
+  de aterrizaje; por lo tanto cuenta como
+  un solo servidor.
+- No se indica que hayan otras opciones de
+  aterrizaje para los aviones, por lo que
+  se asume que los aviones simplemente
+  tienen que esperar su turno sin más opción.
+- Tasa de servicio: en este caso hace referencia
+  al tiempo que toma en aterrizar a partir
+  del momento en que la torre da la señal
+  de aterrizaje.
+
+
+\begin{align*}
+\frac{1}{\mu}= 4\ \frac{minuto}{aterrizaje}
+\rightarrow
+\frac{1}{4}\frac{aterrizaje}{minuto}=\mu
+\end{align*}
+
+- Tasa de entrada:
+
+
+\begin{align*}
+\lambda=8\ \frac{aterrizaje}{\cancel{hora}}
+\frac{\cancel{hora}}{minuto}
+\frac{1}{60}
+\rightarrow
+\frac{8}{60}
+\frac{aterrizaje}{minuto}=\lambda
+\end{align*}
+
+
+Declaramos las variables en el sistema:
+#+begin_src R :session code :results output
+mm1_5 <- NewInput.MM1(lambda=(8/60),mu=(1/4))
+y_5 <- QueueingModel(mm1_5)
+summary(y_5)
+#+end_src
+
+#+RESULTS:
+:      lambda   mu c  k  m        RO        P0        Lq       Wq         X
+: 1 0.1333333 0.25 1 NA NA 0.5333333 0.4666667 0.6095238 4.571429 0.1333333
+:          L        W      Wqq      Lqq
+: 1 1.142857 8.571429 8.571429 2.142857
+
+*** a
+
+#+begin_quote
+¿cuánto va a esperar el piloto dando vueltas al
+aeropuerto antes de recibir la señal
+de tierra?
+#+end_quote
+
+#+begin_src R :session code
+y_5$Wq
+#+end_src
+
+#+RESULTS:
+: 4.57142857142857
+
+** DONE PROBLEMA N°6 (M/M/C) :noexport:
+*** Enunciado
 
 Una compañía ferroviaria pinta sus
 propios vagones, según se vayan
@@ -153,7 +543,9 @@ se trabajan 24 × 365 = 8760 horas
 anuales. ¿Cuál de los tres
 procedimientos es preferible?
 
-** PROBLEMA N°7 (M/M/C) :noexport:
+*** Desarrollo
+
+** DONE PROBLEMA N°7 (M/M/C) :noexport:
 
 Una empresa de reparación de ordenadores
 recibe una media de 10 solicitudes de
@@ -176,7 +568,7 @@ b) Que determines si sería más económico tener
    dos personas, cada una con la mitad de la
    velocidad determinada en el apartado anterior.
 
-** PROBLEMA N°8 (duda) :noexport:
+** DONE PROBLEMA N°8 (duda) :noexport:
 
 Una base de mantenimiento de aviones
 dispone de recursos para revisar únicamente
@@ -203,7 +595,7 @@ cada avión necesitaría ser revisado
 menor. Utilizar la teoría de colas
 para comparar las 2 alternativas.
 
-** PROBLEMA N°9 (M/M/1/K=60) :noexport:
+** DONE PROBLEMA N°9 (M/M/1/K=60) :noexport:
 
 *** Enunciado
 
@@ -234,7 +626,7 @@ del tipo M/M/1/K, pues:
 #+end_quote
 - Esto se refiere al servicio.
 
-** PROBLEMA N°10 (M/M/1/K) :noexport:
+** DONE PROBLEMA N°10 (M/M/1/K) :noexport:
 
 En un restaurante de carretera llega
 una media de 90 personas a la hora,
@@ -250,7 +642,7 @@ b) Probabilidad que un cliente tenga que esperar
 c) Número medio de clientes en la cola.
 a) Probabilidad de que hay 4 clientes en la cola.
 
-** PROBLEMA N°11 (duda) :noexport:
+** DONE PROBLEMA N°11 (duda) :noexport:
 
 En un lavado a presión de coches la tasa
 media de llegadas es de 12 coches por hora
@@ -267,7 +659,7 @@ e) Probabilidad de tener una cola de más de 2 clientes.
 f) Probabilidad de esperar más de 25 minutos en
    la cola y en el sistema de lavado.
 
-** PROBLEMA N°12 (M/M/C=2) :noexport:
+** DONE PROBLEMA N°12 (M/M/C=2) :noexport:
 
 Un terminal de facturación dispone de dos
 operarios que atienden a los clientes
@@ -286,7 +678,7 @@ b) ¿Cuál es el tiempo medio que un cliente
 c) ¿Qué porcentaje de tiempo está libre
    un determinado operario?
 
-** PROBLEMA N°13 (M/M/C=3) :noexport:
+** DONE PROBLEMA N°13 (M/M/C=3) :noexport:
 
 En un ambulatorio con tres médicos,
 los pacientes llegan de forma aleatoria
@@ -307,7 +699,7 @@ Se pide:
 4. ¿Qué ocurriría en el ambulatorio si uno de
    los tres médicos se ausenta?
 
-** PROBLEMA N°14 (M/M/1/K=4) :noexport:
+** TODO PROBLEMA N°14 (M/M/1/K=4) :noexport:
 
 En un taller mecánico llegan vehículos
 para una puesta a punto antes de pasar
@@ -330,7 +722,7 @@ b) ¿Cuánto tiempo esperan por término medio
    los vehículos en la cola?
 e) ¿Cuál es la longitud media de la cola?
 
-** PROBLEMA N°15 (M/M/C=2/K=6) :noexport:
+** TODO PROBLEMA N°15 (M/M/C=2/K=6) :noexport:
 
 Un grupo de investigadores, formado por
 seis personas, dispone de dos terminales
@@ -348,7 +740,7 @@ b) Tiempo total perdido diariamente si se
    considera una jornada de 8 horas.
 c) Medidas de rendimiento.
 
-** PROBLEMA N°16 (M/M/C=3(serie)/K=15) :noexport:
+** TODO PROBLEMA N°16 (M/M/C=3(serie)/K=15) :noexport:
 
 Una empresa de FRONTERA S.A. en una
 localidad dispone de una superficie
@@ -390,7 +782,7 @@ d) Para agilizar el proceso la empresa estudia
    que el tiempo de servicio del
    sistema fuera menor?
 
-** Problema N°17 (M/M/C=?/K=?) :noexport:
+** TODO Problema N°17 (M/M/C=?/K=?) :noexport:
 
 A los choferes que se integran a radio
 taxis la Frontera CO. nuevos se les
@@ -417,7 +809,7 @@ b) La probabilidad de que los aspirantes
 c) La probabilidad de que en un día no se
    haga examen alguno.
 
-** Problema N°18 (M/M/C=5/K=5) :noexport:
+** TODO Problema N°18 (M/M/C=5/K=5) :noexport:
 
 Un programador atiende a 5 máquinas
 automáticas. Cuando una máquina
@@ -437,45 +829,26 @@ a) Calcule la probabilidad de que todas las
 b) Determine el tiempo promedio que una
    máquina está sin trabajar.
 
-* Desarrollo
-** DONE Ejercicio 1
-** Ejercicio 2
-*** contexto
+* Fuentes y Herramientas utilizadas para el desarrollo de este documento
 
-En este contexto contamos con un solo servidor
-y considerando las capacidades de los sistemas
-informáticos, se puede considerar la
-capacidad de la cola como infinita. Por lo
-tanto este sistema se puede acomodar a
-un modelo de colas M/M/1.
-- Entrada y salida como proceso de Poisson.
-- Un solo servidor.
-- Cola infinita.
-
-
-Desde este fundamento, realizamos los cálculos:
-*** a
-** Ejercicio 3
-** Ejercicio 4
-** Ejercicio 5
-** DONE Ejercicio 6
-** DONE Ejercicio 7
-** DONE Ejercicio 8
-** DONE Ejercicio 9
-** DONE Ejercicio 10
-** DONE Ejercicio 11
-** DONE Ejercicio 12
-** DONE Ejercicio 13
-** Ejercicio 14
-** Ejercicio 15
-** Ejercicio 16
-** Ejercicio 17
-** Ejercicio 18
-* Herramientas utilizadas para el desarrollo de este documento
-
-- [[https://github.com/doomemacs/doomemacs][GitHub - doomemacs/doomemacs: An Emacs framework for the stubborn martian hacker]]
-  - [[https://orgmode.org/][Org mode for Emacs]]
-- [[https://www.r-project.org/][R: The R Project for Statistical Computing]]
+- Apuntes del profesor Ricardo Sepúlveda.
+- Sistema operativo
+  - [[https://pop.system76.com/][Pop!\under{}OS by System76]]
+    - basado en [[https://ubuntu.com/][Ubuntu]].
+- Editor y ambiente de desarrollo:
+  - [[https://github.com/doomemacs/doomemacs][GitHub - doomemacs/doomemacs: An Emacs framework for the stubborn martian hacker]]
+    - [[https://orgmode.org/][Org mode for Emacs]]
+    - Demo
+      - [[https://www.youtube.com/watch?v=0g9BcZvQbXU][Consistent Technical Documents Using Emacs and Org Mode - YouTube]]
+- Lenguaje para cálculo de parametros:
+  - [[https://www.r-project.org/][R: The R Project for Statistical Computing]]
+  - Librería
+    - [[https://journal.r-project.org/archive/2017/RJ-2017-051/RJ-2017-051.pdf][queueing: A Package For Analysis Of Queueing Networks and Models in R.pdf]]
+    - [[https://cran.r-project.org/web/packages/queueing/queueing.pdf][Package ‘queueing’.pdf]]
+- Calculador externo para redundancia.
+  - [[https://github.com/AbdeltwabMF/queueing-modelsim][GitHub - AbdeltwabMF/queueing-modelsim: Queueing Models Simulator.]]
+- Código fuente de este documento:
+  - [[https://github.com/Ma-Nu-El/uni/blob/master/org/2022-1/Sistemas_Estocasticos/varios/test4/test4_version-2.org][uni/test4\under{}version-2.org at master · Ma-Nu-El/uni · GitHub]]
 
 * Local variables :noexport:
 # Local Variables:
