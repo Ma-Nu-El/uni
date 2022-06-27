@@ -132,6 +132,9 @@ genera colas de espera.
 
 
 * Sistema: M/M/1
+:PROPERTIES:
+:ID:       1c020a0e-73ed-4449-b56b-62bc225255c2
+:END:
 
 \begin{align*}
 W&=\frac{1}{\mu - \lambda}                 \\
@@ -185,6 +188,13 @@ P_{n}&=
   se obtienen todos los demás indicadores.
 
 * Sistema: M/M/C
+
+- Similar al sistema [[id:1c020a0e-73ed-4449-b56b-62bc225255c2][M/M/1]], la diferencia es
+  que ahora el sistema tiene \(c \in \mathbb{Z}\)
+  servidores en vez de 1, por lo que
+  el sistema ahora puede atender \(c\) procesos
+  simultáneamente.
+
 * Sistema: M/M/C/K
 * Local variables :noexport:
 # Local Variables:

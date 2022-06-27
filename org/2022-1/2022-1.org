@@ -421,14 +421,17 @@ CLOSED: [2022-06-18 Sat 14:17] SCHEDULED: <2022-06-24 Fri 12:00-13:00>
 :LOGBOOK:
 - State "CANCELED"   from "TODO"       [2022-06-18 Sat 14:17]
 :END:
-** TODO Semana 15 [2/11][18%]
+** TODO Semana 15 [3/11][27%]
 *** CANCELED Sistemas Estocásticos
 CLOSED: [2022-06-14 Tue 13:45] SCHEDULED: <2022-06-27 Mon 08:30-10:40>
 :LOGBOOK:
 - State "CANCELED"   from "TODO"       [2022-06-14 Tue 13:45]
 :END:
-*** TODO Arquitectura de Comp
-SCHEDULED: <2022-06-27 Mon 16:50-19:00>
+*** CANCELED Arquitectura de Comp
+CLOSED: [2022-06-27 Mon 11:16] SCHEDULED: <2022-06-27 Mon 16:50-19:00>
+:LOGBOOK:
+- State "CANCELED"   from "TODO"       [2022-06-27 Mon 11:16]
+:END:
 *** TODO Comunicación de Datos
 SCHEDULED: <2022-06-28 Tue 09:00-10:30>
 *** TODO Probabilidad
