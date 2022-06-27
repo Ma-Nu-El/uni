@@ -8,13 +8,23 @@
 #+INCLUDE: "~/org/config/author-mfuica01.org"
 #+AUTHOR: \\
 #+AUTHOR: [[mailto:ricardo.sepulveda@ufrontera.cl][Profesor: Ricardo Sepúlveda]]
+#+LATEX_HEADER: \usepackage{eurosym}
 :R:
 #+PROPERTY: header-args:R :session code :exports both :results value
 :END:
 
-#+INCLUDE: "~/org/config/clearpage.org"
+@@latex:\clearpage@@
 
-* Ejercicios [13/18][72%]
+* TOC :TOC_2:noexport:
+- [[#ejercicios][Ejercicios]]
+  - [[#problema-n2][PROBLEMA N°2]]
+  - [[#problema-n3][PROBLEMA N°3]]
+  - [[#problema-n4][PROBLEMA N°4]]
+  - [[#problema-n5][PROBLEMA N°5]]
+  - [[#problema-n14][PROBLEMA N°14]]
+- [[#fuentes-y-herramientas-utilizadas-para-el-desarrollo-de-este-documento][Fuentes y Herramientas utilizadas para el desarrollo de este documento]]
+
+* Ejercicios
 
 Importamos la librería =queueing= de =R=
 que nos asistirá en el cálculo de parámetros.
@@ -23,26 +33,7 @@ que nos asistirá en el cálculo de parámetros.
 library(queueing)
 #+end_src
 
-** DONE PROBLEMA N°1 :noexport:
-*** Enunciado
-
-Suponga que a un restaurant de comida rápida
-llegan 100 clientes por hora, la capacidad
-de atención es en promedio 150 clientes por hora.
-Si se sabe que cada cliente en promedio
-espera 2 minutos en cola.
-
-Calcule las medidas de desempeño del sistema:
-
-1. ¿Cuál es la probabilidad que el sistema este vacío?
-2. ¿Cuál es la probabilidad que un cliente llegue
-   y que tenga que esperar porque el sistema
-   está ocupado?
-3. ¿Cuál es el N° promedio de Clientes en Cola?
-4. ¿Cuál es la probabilidad que hallan 10 clientes en la cola?
-
-#+INCLUDE: "~/org/config/clearpage.org"
-** DONE PROBLEMA N°2
+** PROBLEMA N°2
 *** Enunciado
 
 En un servidor de la universidad se mandan
@@ -158,7 +149,7 @@ y_2$Lq
 #+RESULTS:
 : 4.16666666666667
 
-** DONE PROBLEMA N°3
+** PROBLEMA N°3
 *** Enunciado
 
 Una tienda de alimentación es atendida por
@@ -295,7 +286,7 @@ y_3$Wq
 #+RESULTS:
 : 0.133333333333333
 
-** DONE PROBLEMA N°4
+** PROBLEMA N°4
 *** Enunciado
 
 Una entidad bancaria considera la
@@ -425,7 +416,7 @@ y_4$Wq
      efectivamente perciba una fila es
      call_4_b() {{{results(=0.444444444444444=)}}}.
 
-** DONE PROBLEMA N°5
+** PROBLEMA N°5
 *** Enunciado
 
 Un avión tarda unos 4 minutos de media en
@@ -506,200 +497,8 @@ y_5$Wq
 #+RESULTS:
 : 4.57142857142857
 
-** DONE PROBLEMA N°6 (M/M/C) :noexport:
+** PROBLEMA N°14
 *** Enunciado
-
-Una compañía ferroviaria pinta sus
-propios vagones, según se vayan
-necesitando, en sus propios talleres
-donde se pinta a mano de uno en uno
-con una velocidad que se distribuye
-según una exponencial de media un
-cada 4 horas y un costo anual de
-4 millones de euros. Se ha determinado
-que los vagones pueden llegar según
-un proceso de Poisson de media un
-cada 5 horas. Además, el coste por
-cada vagón que no está activo es de
-500 euros la hora. Se plantean otras
-dos posibilidades. Una es encargar
-dicho trabajo a una empresa de pintura
-que lo haría con aerosol con el
-consiguiente ahorro de tiempo.
-Sin embargo, el presupuesto para esta
-segunda alternativa es de 10 millones
-de euros anuales. En este caso,
-el proceso se aproxima a uno de Poisson
-con una tasa de uno cada 3 horas.
-La otra opción es poner otro taller
-exactamente igual al que hay
-actualmente, con igual tasa de servicio
-y coste anual que permita pintar
-dos vagones a la vez.
-
-En todos los casos el trabajo se
-considera ininterrumpido, esto es,
-se trabajan 24 × 365 = 8760 horas
-anuales. ¿Cuál de los tres
-procedimientos es preferible?
-
-*** Desarrollo
-
-** DONE PROBLEMA N°7 (M/M/C) :noexport:
-
-Una empresa de reparación de ordenadores
-recibe una media de 10 solicitudes de
-reparación al día, que se distribuyen
-según un proceso de Poisson. Se supone
-que \mu es la velocidad de reparación de
-la persona reparadora en ordenadores/día
-y el tiempo de reparación es exponencial.
-Cada unidad de velocidad de reparación
-supone un coste de 100 euros por semana.
-Además, se ha estimado que el costo de
-tener ordenadores no reparados supone
-200 euros por ordenador y semana,
-siendo este costo proporcional al tiempo.
-Suponiendo que una semana tiene
-cinco días laborables, se pide:
-
-a) Que determines la velocidad de reparación optima.
-b) Que determines si sería más económico tener
-   dos personas, cada una con la mitad de la
-   velocidad determinada en el apartado anterior.
-
-** DONE PROBLEMA N°8 (duda) :noexport:
-
-Una base de mantenimiento de aviones
-dispone de recursos para revisar únicamente
-un motor de avión a la vez. Por tanto,
-para devolver los aviones lo antes posible,
-la política que se sigue consiste en aplazar
-la revisión de los 4 motores de cada avión.
-En otras palabras, solamente se revisa un
-motor del avión cada vez que un avión
-llega a la base. Con esta política,
-los aviones llegan según una distribución
-de Poisson de tasa media uno al día.
-El tiempo requerido para revisar un motor
-(una vez que se empieza el trabajo) tiene
-una distribución exponencial de media
-1/2 día. Se ha hecho una propuesta para
-cambiar la política de revisión de manera
-que los 4 motores se revisen de forma
-consecutiva cada vez que un avión llegue
-a la base. A pesar de que ello supondría
-cuadruplicar el tiempo esperado de servicio,
-cada avión necesitaría ser revisado
-únicamente con una frecuencia 4 veces
-menor. Utilizar la teoría de colas
-para comparar las 2 alternativas.
-
-** DONE PROBLEMA N°9 (M/M/1/K=60) :noexport:
-
-*** Enunciado
-
-En el mostrador de facturación de una aerolínea
-llega un promedio de 45 clientes por hora,
-cuando su capacidad media es de 60 clientes
-por hora. Si un cliente espera una media
-de 3 minutos en la cola, se pide:
-
-a) Tiempo medio que un cliente pasa en la facturación.
-b) Número medio de clientes en la cola.
-c) Número medio de clientes en el sistema en
-   un momento dado.
-
-*** Desarrollo
-
-En este caso nos encontramos con un escenario
-del tipo M/M/1/K, pues:
-- Tanto la entrada como el servicio son procesos
-  de Poisson.
-- El servidor sigue siendo 1.
-- La capacidad máxima del sistema es 60.
-
-*** a
-
-#+begin_quote
-1) [@1] Tiempo medio que un cliente pasa en la facturación.
-#+end_quote
-- Esto se refiere al servicio.
-
-** DONE PROBLEMA N°10 (M/M/1/K) :noexport:
-
-En un restaurante de carretera llega
-una media de 90 personas a la hora,
-cuando tiene disponibilidad de dar
-servicio a 120 clientes a la hora.
-Sabiendo que los clientes esperan
-una media de 2 minutos en la cola,
-se pide:
-
-a) Probabilidad que el sistema se encuentre sin ocupar.
-b) Probabilidad que un cliente tenga que esperar
-   al encontrarse el sistema ocupado.
-c) Número medio de clientes en la cola.
-a) Probabilidad de que hay 4 clientes en la cola.
-
-** DONE PROBLEMA N°11 (duda) :noexport:
-
-En un lavado a presión de coches la tasa
-media de llegadas es de 12 coches por hora
-y son atendidos a una tasa promedio de 15
-coches por hora, con tiempos de
-servicios exponenciales. Se pide:
-
-a) Probabilidad de tener 0 clientes en el sistema.
-b) Número promedio de clientes que entran en el
-   sistema de lavado.
-c) Número promedio de clientes en la cola.
-d) Tiempo promedio que un cliente espera en la cola.
-e) Probabilidad de tener una cola de más de 2 clientes.
-f) Probabilidad de esperar más de 25 minutos en
-   la cola y en el sistema de lavado.
-
-** DONE PROBLEMA N°12 (M/M/C=2) :noexport:
-
-Un terminal de facturación dispone de dos
-operarios que atienden a los clientes
-que llegan según una distribución de
-Poisson de media ochenta clientes por
-hora, que esperan en una única cola
-hasta que alguno de los operarios
-esté libre. El tiempo requerido para
-atender a un cliente se distribuye
-exponencialmente con medía 1,2 minutos. Se pide:
-
-a) ¿Cuál es el número esperado de clientes
-   en el terminal de facturación?
-b) ¿Cuál es el tiempo medio que un cliente
-   pasa en el terminal de facturación?
-c) ¿Qué porcentaje de tiempo está libre
-   un determinado operario?
-
-** DONE PROBLEMA N°13 (M/M/C=3) :noexport:
-
-En un ambulatorio con tres médicos,
-los pacientes llegan de forma aleatoria
-(tiempos de llegada exponenciales) a razón
-de 12 por hora. Estos son atendidos en
-orden de llegada por el primer médico
-que esté libre. Cada médico tarda una
-media de 13 minutos en atender a cada
-paciente (tiempos de atención exponenciales).
-Se pide:
-
-1. Calcular la proporción de tiempo que está
-   cada médico atendiendo a pacientes.
-2. Calcular el número promedio de pacientes
-   que están en la sala de espera. 
-3. Calcular el tiempo promedio total de
-   espera de un paciente.
-4. ¿Qué ocurriría en el ambulatorio si uno de
-   los tres médicos se ausenta?
-
-** TODO PROBLEMA N°14 (M/M/1/K=4) :noexport:
 
 En un taller mecánico llegan vehículos
 para una puesta a punto antes de pasar
@@ -716,17 +515,136 @@ exponencial. Se pide:
 a) ¿Cuál es la probabilidad de que no haya
    ningún vehículo en el taller?
 b) ¿Cuál es el promedio de vehículos en el taller?
-a) ¿Cuánto tiempo pasa por término medio
+c) ¿Cuánto tiempo pasa por término medio
    un vehículo en el taller?
-b) ¿Cuánto tiempo esperan por término medio
+d) ¿Cuánto tiempo esperan por término medio
    los vehículos en la cola?
 e) ¿Cuál es la longitud media de la cola?
 
+*** Desarrollo
+
+Nos encontramos en un sistema del tipo M/M/1/K
+dado que:
+- Entrada y salida de acuerdo a un proceso
+  de Poisson.
+- Un solo servidor.
+- Sistema con capacidad limitada.
+
+
+- Llegada:
+  \begin{align*}
+  18 \frac{proceso}{hora}
+  \end{align*}
+- Servicio:
+  \begin{align*}
+  6 \frac{proceso}{hora}
+  \end{align*}
+- Capacidad
+  \begin{equation*}
+  K=4
+  \end{equation*}
+
+Declaramos las variables en el sistema:
+#+begin_src R :session code :results output
+mm1k_14 <- NewInput.MM1K(lambda=18,mu=6,k=4)
+y_14 <- QueueingModel(mm1k_14)
+summary(y_14)
+#+end_src
+
+#+RESULTS:
+:   lambda mu c k  m        RO          P0       Lq    Wq        X        L
+: 1     18  6 1 4 NA 0.9917355 0.008264463 2.528926 0.425 5.950413 3.520661
+:           W       Wqq      Lqq
+: 1 0.5916667 0.4358974 2.615385
+
+*** a
+
+#+begin_quote
+1) [@1] ¿Cuál es la probabilidad de que no haya
+   ningún vehículo en el taller?
+#+end_quote
+
+La probabilidad de que el servidor esté trabajando
+es:
+#+begin_src R :session code
+y_14$RO
+#+end_src
+
+#+RESULTS:
+: 0.991735537190083
+
+Así, la probabilidad de que el servidor esté
+ocioso, significando que el taller está sin
+procesos pendientes es el complemento:
+
+#+begin_src R :session code
+1-y_14$RO
+#+end_src
+
+#+RESULTS:
+: 0.00826446280991733
+
+*** b
+
+#+begin_quote
+2) [@2] ¿Cuál es el promedio de vehículos en el taller?
+#+end_quote
+
+#+begin_src R :session code
+y_14$L
+#+end_src
+
+#+RESULTS:
+: 3.52066115702479
+
+*** c
+
+#+begin_quote
+3) [@3] ¿Cuánto tiempo pasa por término medio
+   un vehículo en el taller?
+#+end_quote
+
+#+begin_src R :session code
+y_14$W
+#+end_src
+
+#+RESULTS:
+: 0.591666666666667
+
+*** d
+
+#+begin_quote
+4) [@4] ¿Cuánto tiempo esperan por término medio
+   los vehículos en la cola?
+#+end_quote
+
+#+begin_src R :session code
+y_14$Wq
+#+end_src
+
+#+RESULTS:
+: 0.425
+
+*** e
+
+#+begin_quote
+5) [@5] ¿Cuál es la longitud media de la cola?
+#+end_quote
+
+#+begin_src R :session code
+y_14$Lq
+#+end_src
+
+#+RESULTS:
+: 2.52892561983471
+
+@@latex:\clearpage@@
 ** TODO PROBLEMA N°15 (M/M/C=2/K=6) :noexport:
+*** Enunciado
 
 Un grupo de investigadores, formado por
 seis personas, dispone de dos terminales
-para Realizar cálculos. El trabajo
+para realizar cálculos. El trabajo
 promedio de cálculo requiere de 20
 minutos de tiempo de terminal, y el
 tiempo promedio entre solicitudes de
@@ -739,6 +657,68 @@ a) Número estimado de investigadores que
 b) Tiempo total perdido diariamente si se
    considera una jornada de 8 horas.
 c) Medidas de rendimiento.
+
+*** Desarrollo
+
+- Llegada y servicios a Poisson.
+- 2 servidores.
+- 6 investigadores.
+
+
+#+begin_center
+Esto se asemeja a un escenario del tipo
+M/M/C=2/K=6.
+#+end_center
+
+
+- Entrada:
+  \begin{align*}
+  30 \frac{minuto}{proceso}
+  \end{align*}
+- Servicio:
+  \begin{align*}
+  20 \frac{minuto}{proceso}
+  \end{align*}
+- Servidores: 2.
+- Capacidad: 6.
+
+Declaramos las variables en el sistema:
+
+#+begin_src R :session code :results output
+mmck_15 <- NewInput.MMCK(lambda=(30),mu=(20),c=(2),k=(6))
+y_15 <- QueueingModel(mmck_15)
+summary(y_15)
+#+end_src
+
+#+RESULTS:
+: Warning messages:
+: 1: In formals(fun) : argument is not a function
+: 2: In formals(fun) : argument is not a function
+: 3: In formals(fun) : argument is not a function
+:   lambda mu c k  m        RO        P0        Lq         Wq        X        L
+: 1     30 20 2 6 NA 0.7049963 0.1685735 0.8356243 0.02963222 28.19985 2.245617
+:            W        Wqq      Lqq
+: 1 0.07963222 0.05371429 2.148571
+
+*** a
+
+#+begin_quote
+1) [@1] Número estimado de investigadores que
+   esperan utilizar una terminal.
+#+end_quote
+
+*** b
+
+#+begin_quote
+2) [@2] Tiempo total perdido diariamente si se
+   considera una jornada de 8 horas.
+#+end_quote
+
+*** c
+
+#+begin_quote
+3) [@3] Medidas de rendimiento.
+#+end_quote
 
 ** TODO PROBLEMA N°16 (M/M/C=3(serie)/K=15) :noexport:
 
@@ -831,7 +811,7 @@ b) Determine el tiempo promedio que una
 
 * Fuentes y Herramientas utilizadas para el desarrollo de este documento
 
-- Apuntes del profesor Ricardo Sepúlveda.
+- Apuntes del profesor.
 - Sistema operativo:
   - [[https://pop.system76.com/][Pop!\under{}OS by System76]]
     - basado en [[https://ubuntu.com/][Ubuntu]].
