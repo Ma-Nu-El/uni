@@ -70,7 +70,7 @@ modelos:
 - u es el error.
 
 
-1. E(u)=\bar u = 0.
+1. E(u) = \bar u = 0.
 2. V(u) es mínima.
 3. u \sim N(0,\sigma^{2}_{u})
 4. Los u's son independientes.
