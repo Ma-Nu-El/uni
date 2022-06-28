@@ -6,7 +6,7 @@
 * Introducción
 - [[https://latexdraw.com/linear-regression-in-latex-using-tikz/][Linear Regression in LaTeX using TikZ - TikZBlog]]
 - [[https://tex.stackexchange.com/questions/119179/how-to-add-a-regression-line-to-randomly-generated-points-using-pgfplots-in-tikz][How to add a regression line to randomly generated points using pgfplots in Tikz? - TeX - LaTeX Stack Exchange]]
-* Correlación
+* Correlación (R)
 ** Coeficiente de correlación (aka R o r)
 - Es el nivel de relación existente entre
   2 variables; se entiende como el porcentaje
@@ -33,7 +33,7 @@ Una correlación = |1| /no/ es existe.
 
 - Profe Carlos trabaja con R>|0.7|.
 
-* Determinación
+* Determinación (R^2)
 ** Coeficiente de determinación (R^{2})
 - Porcentaje de variación de Y que es explicado
   por X.
@@ -46,6 +46,9 @@ Una correlación = |1| /no/ es existe.
   son iguales.
 - Si hay problemas, \(R^{2}_{aj}\) tiende a
   ser menor.
+- Ante una diferencia, hay que usar el ajustado.
+- hasta 4% de diferencia es aceptable, luego,
+  se usa R2 ajustado.
 * Construcción y calidad del modelo
 - Un modelo bien construido procura cumplir la
   mayor cantidad de [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][supuestos]]. Un mal modelo
