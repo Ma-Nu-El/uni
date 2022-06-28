@@ -23,6 +23,8 @@
   - [[#problema-n5][PROBLEMA N°5]]
   - [[#problema-n14][PROBLEMA N°14]]
   - [[#problema-n15][PROBLEMA N°15]]
+  - [[#problema-n16][PROBLEMA N°16]]
+  - [[#problema-n18][Problema N°18]]
 - [[#fuentes-y-herramientas-utilizadas-para-el-desarrollo-de-este-documento][Fuentes y Herramientas utilizadas para el desarrollo de este documento]]
 - [[#footnotes][Footnotes]]
 
@@ -799,7 +801,8 @@ Ese es nuestro porcentaje.
   #+RESULTS:
   : 2.39175257731959
 
-** TODO PROBLEMA N°16 (M/M/C=3(serie)/K=15) :noexport:
+** PROBLEMA N°16
+*** Enunciado
 
 Una empresa de FRONTERA S.A. en una
 localidad dispone de una superficie
@@ -841,8 +844,306 @@ d) Para agilizar el proceso la empresa estudia
    que el tiempo de servicio del
    sistema fuera menor?
 
+*** Desarrollo
+
+Contexto: Superficie de 3 partes:
+1. Caseta de recepción de documentos y pago:
+   - Capacidad de 15 vehículos.
+   - Atiende a 1 cliente/minuto.
+2. [@2] Nave de 2 circuitos para revisar vehículo:
+   1. Equipamiento.
+   2. Personal.
+
+
+   - Recibe a 57 cliente/hora.
+     - 57/60 cliente/minuto.
+   - Atiende a 45 cliente/hora.
+     - 45/60 cliente/minuto.
+   - Caseta opera a un \(\rho\) máximo que
+     limita superiormente a \(\rho_{\text{Nave}}\).
+
+
+3. [@3] Oficina de entrega de documentos y vehículo.
+   - Dos servidores.
+   - Cada servidor atiende a 0.5 cliente/minuto.
+   - Ergo, oficina atiende a 1 cliente/minuto.
+
+
+Esto se puede modelar como un sistema
+de 3 sub-sistemas diferentes; suponemos
+que un cliente representa un vehículo:
+
+| Caseta  |            |                        |
+|         | Llegada    | ? cliente/minuto       |
+|         | Servicio   | 1 cliente/minuto       |
+|         | Capacidad  | 15 cliente             |
+| Nave    |            |                        |
+|         | Llegada    | (57/60) cliente/minuto |
+|         | Servicio   | (45/60) cliente/minuto |
+| Oficina |            |                        |
+|         | Llegada    | ? cliente/minuto       |
+|         | Servicio   | 0.5 cliente/minuto     |
+|         | Servidores | 2                      |
+
+
+Es prudente asumir que:
+- Los vehículos se atienden por orden de llegada.
+- A medida que los vehículos van saliendo de
+  Nave, el subsistema Oficina percibe una llegada.
+- La llegada que percibe el sistema Nave, es
+  producto de la salida del sistema Caseta.
+
+Por lo tanto nuestra tabla queda de la siguiente
+forma:
+
+| Caseta  |            |                        |
+|         | Llegada    | ? cliente/minuto       |
+|         | Servicio   | 1 cliente/minuto       |
+|         | Capacidad  | 15 cliente             |
+| Nave    |            |                        |
+|         | Llegada    | (57/60) cliente/minuto |
+|         | Servicio   | (45/60) cliente/minuto |
+| Oficina |            |                        |
+|         | Llegada    | (45/60) cliente/minuto |
+|         | Servicio   | 0.5 cliente/minuto     |
+|         | Servidores | 2                      |
+
+De esta forma solo debemos calcular la llegada
+de Caseta y podemos continuar con nuestros
+cálculos.
+
+Por enunciado sabemos que Caseta está
+funcionando al máximo de su capacidad:
+
+\begin{align*}
+\rho_{\text{Nave}} &\leq \rho_{\text{Caseta}}
+= \rho_{\text{max}}
+\\
+\frac{\lambda_{\text{Nave}}}{\mu_{\text{Nave}}}
+&\leq
+\frac{\lambda_{\text{Caseta}}}{\mu_{\text{Caseta}}} \\
+\frac{(57/60)}{(45/60)} &\leq \frac{\lambda_{\text{Caseta}}}{1}
+\rightarrow
+\frac{57}{45}\frac{cliente}{minuto}
+\leq \lambda_{\text{Caseta}}
+\\
+\end{align*}
+
+Así:
+
+| Caseta  |            |                        |
+|         | Llegada    | 57/45 cliente/minuto   |
+|         | Servicio   | 1 cliente/minuto       |
+|         | Capacidad  | 15 cliente             |
+| Nave    |            |                        |
+|         | Llegada    | (57/60) cliente/minuto |
+|         | Servicio   | (45/60) cliente/minuto |
+| Oficina |            |                        |
+|         | Llegada    | (45/60) cliente/minuto |
+|         | Servicio   | 0.5 cliente/minuto     |
+|         | Servidores | 2                      |
+
+Ahora estamos en condiciones de
+seguir de forma usual:
+
+- Caseta:
+#+begin_src R :session code :results output
+mm1k_16_caseta <- NewInput.MM1K(lambda=(57/45),mu=1,k=15)
+y_16_caseta <- QueueingModel(mm1k_16_caseta)
+summary(y_16_caseta)
+#+end_src
+
+#+RESULTS:
+:     lambda mu c  k  m        RO          P0       Lq       Wq         X
+: 1 1.266667  1 1 15 NA 0.9937859 0.006214059 10.62906 10.69552 0.9937859
+:          L        W      Wqq      Lqq
+: 1 11.62284 11.69552 10.78091 10.78091
+
+- Nave:
+#+begin_src R :session code :results output
+mm1k_16_nave <- NewInput.MM1K(lambda=(57/60),mu=(45/60),k=15)
+y_16_nave <- QueueingModel(mm1k_16_nave)
+summary(y_16_nave)
+#+end_src
+
+#+RESULTS:
+:   lambda   mu c  k  m        RO          P0       Lq       Wq         X
+: 1   0.95 0.75 1 15 NA 0.9937859 0.006214059 10.62906 14.26069 0.7453395
+:          L        W      Wqq      Lqq
+: 1 11.62284 15.59403 14.37455 10.78091
+
+- Oficina:
+#+begin_src R :session code :results output replace
+mmc_16_oficina <- NewInput.MMC(lambda=(45/60),mu=0.5,c=2)
+y_16_oficina <- QueueingModel(mmc_16_oficina)
+summary(y_16_oficina)
+#+end_src
+
+#+RESULTS:
+:   lambda  mu c  k  m   RO        P0       Lq       Wq    X        L        W
+: 1   0.75 0.5 2 NA NA 0.75 0.1428571 1.928571 2.571429 0.75 3.428571 4.571429
+:   Wqq Lqq
+: 1   4   4
+
+*** a
+
+#+begin_quote
+1) [@1] Longitud media de la cola de vehículos
+   que habiendo pagado las tasas se
+   encuentran esperando a la entrada de la nave.
+#+end_quote
+
+#+begin_src R :session code
+y_16_nave$Lq
+#+end_src
+
+#+RESULTS:
+: 10.6290576155833
+
+*** b
+
+#+begin_quote
+2) [@2] Tiempo medio que un cliente pasa en la
+   oficina.
+#+end_quote
+
+#+begin_src R :session code
+y_16_oficina$W
+#+end_src
+
+#+RESULTS:
+: 4.57142857142857
+
+*** c
+
+#+begin_quote
+3) [@3] Tiempo medio que un cliente se encuentra
+   en la FRONTERA S.A
+#+end_quote
+
+#+begin_src R :session code
+current_system_wait<-sum(y_16_caseta$W,y_16_nave$W,y_16_oficina$W)
+#+end_src
+
+#+RESULTS:
+: 31.8609757330531
+
+*** d
+
+#+begin_quote
+4) [@4] Para agilizar el proceso la empresa estudia
+   la posibilidad de ampliar el número de
+   servidores en la caseta o en la oficina.
+   Suponiendo que el coste de ampliación en uno
+   u otro lugar fuera equivalente,
+   ¿qué criterio sería más acertado para
+   que el tiempo de servicio del
+   sistema fuera menor?
+#+end_quote
+
+**** criterio 1
+:PROPERTIES:
+:ID:       b3878408-9e1b-49f0-83e6-282918f9cf4a
+:END:
+
+- Si aumentamos la cantidad de servidores en
+  la caseta, la caseta pasa de ser
+  un sistema M/M/C=1/K=15 a ser un sistema
+  M/M/C=2/K=15:
+
+#+begin_src R :session code :results output
+mmck_16_caseta_2 <- NewInput.MMCK(lambda=(57/45),mu=1,c=2,k=15)
+y_16_caseta_2 <- QueueingModel(mmck_16_caseta_2)
+summary(y_16_caseta_2)
+#+end_src
+
+#+RESULTS:
+: There were 11 warnings (use warnings() to see them)
+:     lambda mu c  k  m        RO        P0        Lq       Wq        X        L
+: 1 1.266667  1 2 15 NA 0.6330322 0.2246741 0.8361432 0.660427 1.266064 2.102208
+:          W      Wqq      Lqq
+: 1 1.660427 1.346446 2.692892
+
+Por lo que el tiempo de espera del sistema sería
+#+name: 16_option1
+#+begin_src R :session code :results silent
+option1<-sum(y_16_caseta_2$W, y_16_nave$W, y_16_oficina$W)
+round(option1_percent<-((1-(option1/current_system_wait))*100),3)
+#+end_src
+
+aproximadamente un
+call_16_option1() %
+menor.
+
+
+- Mientras que si aumentamos la cantidad
+  de servidores en la oficina,
+  la oficina pasa de ser
+  un sistema M/M/C=2 a ser un sistema
+  M/M/C=3:
+
+#+begin_src R :session code :results output replace
+mmc_16_oficina_2 <- NewInput.MMC(lambda=(45/60),mu=0.5,c=3)
+y_16_oficina_2 <- QueueingModel(mmc_16_oficina_2)
+summary(y_16_oficina_2)
+#+end_src
+
+#+RESULTS:
+:   lambda  mu c  k  m  RO        P0        Lq        Wq    X        L        W
+: 1   0.75 0.5 3 NA NA 0.5 0.2105263 0.2368421 0.3157895 0.75 1.736842 2.315789
+:        Wqq Lqq
+: 1 1.333333   2
+
+por lo que el tiempo de espera total sería
+
+#+name: 16_option2
+#+begin_src R :session code :results silent
+option2<-sum(y_16_caseta$W, y_16_nave$W, y_16_oficina_2$W)
+round(option2_percent<-((1-(option2/current_system_wait))*100),3)
+#+end_src
+
+aproximadamente un
+call_16_option2() %
+menor.
+
+Según este criterio, convendría aumentar la
+cantidad de servidores en la caseta.
+
+**** criterio 2
+
+Si vemos el estado actual del sistema y
+observamos los factores
+de uso de cada estación:
+
+#+begin_src R :session code :results value
+print(paste(y_16_caseta$RO,y_16_nave$RO,y_16_oficina$RO))
+#+end_src
+
+#+RESULTS:
+: 0.993785940728142 0.993785940728142 0.75
+
+Observamos que la caseta está funcionando
+al máximo, como se menciona en el enunciado;
+esto provoca un cuello de botella en todo
+el sistema que solo se arregla mejorando
+la sección con el factor de uso mayor.
+
+Mejorar la rapidez del sub-sistema Oficina
+no mejoraría notoriamente la rapidez del
+servicio general de forma notoria:
+el cuello de botella se seguiría
+manifestando en la caseta.
+
+Como comprueba el cálculo del [[id:b3878408-9e1b-49f0-83e6-282918f9cf4a][criterio 1]],
+sería más conveniente en primera instancia
+aumentar la cantidad de servidores
+de la caseta, así se descongestiona
+el sistema entero, disminuyendo el
+tiempo de espera total.
+
 ** TODO Problema N°17 (M/M/C=?/K=?) :noexport:
 *** Enunciado
+
 A los choferes que se integran a radio
 taxis la Frontera CO. nuevos se les
 pide pasar una prueba escrita,
@@ -868,7 +1169,7 @@ b) La probabilidad de que los aspirantes
 c) La probabilidad de que en un día no se
    haga examen alguno.
 
-** TODO Problema N°18 (M/M/C=5/K=5) :noexport:
+** Problema N°18
 *** Enunciado
 
 Un programador atiende a 5 máquinas
@@ -884,12 +1185,124 @@ con un promedio de 8 minutos.
 a) Calcule la cantidad promedio de máquinas
    que esperan su restablecimiento,
    o que están siendo restablecidas.
-a) Calcule la probabilidad de que todas las
+b) Calcule la probabilidad de que todas las
    máquinas estén trabajando.
-b) Determine el tiempo promedio que una
+c) Determine el tiempo promedio que una
    máquina está sin trabajar.
 
 *** Desarrollo
+Contexto:
+- 5 máquinas automáticas.
+- 1 mantenedor de las máquinas.
+- Cada maquina procesa con tiempo exponencial.
+  - 45 minutos por lote.
+- Tiempo de preparación exponencial.
+  - 8 minutos por preparación.
+
+Modelamiento:
+- En este escenario el servidor es la persona
+  que mantiene las máquinas.
+- Los procesos entrantes son las maquinas cuando
+  terminan su proceso.
+- El servicio es aquel que presta el mantenedor
+  a las máquinas.
+- La cantidad de maquinas es la capacidad
+  total del sistema.
+
+De esta forma:
+- Entrada
+  \begin{align*}
+  45 \frac{min}{lote} \rightarrow
+  \frac{1}{45} \frac{proceso}{minuto}
+  \end{align*}
+- Servicio:
+  \begin{align*}
+  8 \frac{min}{prep} \rightarrow
+  \frac{1}{8} \frac{proceso}{minuto}
+  \end{align*}
+- Servidor: \(c=1\)
+- Capacidad del sistema: \(k=5\)
+
+Variables iniciales:
+
+#+begin_src R :session code :results output replace
+mm1k_18 <- NewInput.MM1K(lambda=(1/45),mu=(1/8),k=5)
+y_18 <- QueueingModel(mm1k_18)
+summary(y_18)
+#+end_src
+
+#+RESULTS:
+:       lambda    mu c k  m        RO        P0         Lq       Wq          X
+: 1 0.02222222 0.125 1 5 NA 0.1777518 0.8222482 0.03827497 1.722625 0.02221898
+:           L        W      Wqq      Lqq
+: 1 0.2160268 9.722625 9.697734 1.212217
+
+*** a
+
+#+begin_quote
+1) [@1] Calcule la cantidad promedio de máquinas
+   que esperan su restablecimiento,
+   o que están siendo restablecidas.
+#+end_quote
+
+Eso hace referencia al total de maquinas
+en el sistema.
+
+#+begin_src R :session code
+y_18$L
+#+end_src
+
+#+RESULTS:
+: 0.216026794485546
+
+*** b
+
+#+begin_quote
+2) [@2] Calcule la probabilidad de que todas las
+   máquinas estén trabajando.
+#+end_quote
+
+Eso se interpreta como la probabilidad de
+que el mantenedor no esté manteniendo ninguna
+máquina; por lo tanto =P0= o \(1-\rho\)
+nos entrega esa probabilidad.
+
+#+begin_src R :session code
+1 - y_18$RO
+#+end_src
+
+#+RESULTS:
+: 0.822248180014944
+
+o utilizando =P0=:
+
+#+begin_src R :session code :results value
+Pn(y_18)[1]
+#+end_src
+
+#+RESULTS:
+: 0.822248180014944
+
+*** c
+
+#+begin_quote
+3) [@3] Determine el tiempo promedio que una
+   máquina está sin trabajar.
+#+end_quote
+
+Cuando la máquina termina su proceso,
+automáticamente ingresa en la cola de mantenimiento
+del programador, por lo que el tiempo
+promedio que una máquina está sin trabajar
+es equivalente al tiempo promedio
+de la cola del sistema.
+
+#+begin_src R :session code
+y_18$Wq
+#+end_src
+
+#+RESULTS:
+: 1.72262537750476
 
 * Fuentes y Herramientas utilizadas para el desarrollo de este documento
 
