@@ -252,6 +252,12 @@ summary(model01)
 #+end_example
 
 *** [2022-06-17 Fri]
+*** [2022-06-28 Tue]
+- Datos:
+: "~/Downloads/uni/2022-1/proba/data/2/reg-2 variables ind.xlsx
+- Script de referencia:
+: ~/Downloads/uni/2022-1/proba/scripts-r/20220628/SCRIPT REG LINEAL SIMPLE v01-05.r
+
 * Consulta al profe
 - Suponiendo que el tamaño de la muestra tiene un
   impacto en el modelo, ¿Cuántas muestras más serían
