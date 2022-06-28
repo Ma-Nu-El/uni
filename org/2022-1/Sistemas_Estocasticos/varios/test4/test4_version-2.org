@@ -22,7 +22,9 @@
   - [[#problema-n4][PROBLEMA N°4]]
   - [[#problema-n5][PROBLEMA N°5]]
   - [[#problema-n14][PROBLEMA N°14]]
+  - [[#problema-n15][PROBLEMA N°15]]
 - [[#fuentes-y-herramientas-utilizadas-para-el-desarrollo-de-este-documento][Fuentes y Herramientas utilizadas para el desarrollo de este documento]]
+- [[#footnotes][Footnotes]]
 
 * Ejercicios
 
@@ -202,7 +204,7 @@ Teniendo estos datos podemos modelar
 el escenario:
 
 #+begin_src R :session code :results output
-mm1_3 <- NewInput.MM1(lambda=(10),mu=(15))
+mm1_3 <- NewInput.MM1(lambda=10,mu=15)
 y_3 <- QueueingModel(mm1_3)
 summary(y_3)
 #+end_src
@@ -235,22 +237,34 @@ de individuos en el sistema es por lo menos
 \end{align*}
 
 Por lo tanto, calculamos la probabilidad
-acumulada desde 0 hasta 1 clientes:
+desde 0 hasta 1 clientes:
 
-#+begin_src R :session code
-c<-1
-r<-y_3$RO
-a_3<-sum(P1<-(1-r)*(r^(0:c)))
+#+begin_src R :session code :results output replace
+mm1_3 <- NewInput.MM1(lambda=10,mu=15,n=1)
+y_3 <- QueueingModel(mm1_3)
+Pn(y_3)
+#+end_src
+
+#+RESULTS:
+: [1] 0.3333333 0.2222222
+
+El programa nos entrega las probabilidades
+para 0 y 1 clientes.
+
+Luego, sumamos estas dos para obtener la acumulada:
+
+#+begin_src R :session code :results value replace
+p_acum_3<-sum(Pn(y_3))
 #+end_src
 
 #+RESULTS:
 : 0.555555555555556
 
-y obtenemos el complemento:
+finalmente obtenemos el complemento:
 
 #+name:3_a
 #+begin_src R :session code
-1-a_3
+1-p_acum_3
 #+end_src
 
 #+RESULTS: 3_a
@@ -639,7 +653,7 @@ y_14$Lq
 : 2.52892561983471
 
 @@latex:\clearpage@@
-** TODO PROBLEMA N°15 (M/M/C=2/K=6) :noexport:
+** PROBLEMA N°15
 *** Enunciado
 
 Un grupo de investigadores, formado por
@@ -671,34 +685,44 @@ M/M/C=2/K=6.
 #+end_center
 
 
-- Entrada:
+- Llegada:
   \begin{align*}
   30 \frac{minuto}{proceso}
+  \rightarrow
+  \frac{1}{30}\frac{proceso}{minuto}
   \end{align*}
 - Servicio:
   \begin{align*}
   20 \frac{minuto}{proceso}
+  \rightarrow
+  \frac{1}{20}\frac{proceso}{minuto}
   \end{align*}
 - Servidores: 2.
 - Capacidad: 6.
 
 Declaramos las variables en el sistema:
 
-#+begin_src R :session code :results output
-mmck_15 <- NewInput.MMCK(lambda=(30),mu=(20),c=(2),k=(6))
+#+begin_src R :session code :results output replace
+mmck_15 <- NewInput.MMCK(lambda=(1/30),mu=(1/20),c=2,k=6)
 y_15 <- QueueingModel(mmck_15)
 summary(y_15)
+## y_15
 #+end_src
 
 #+RESULTS:
-: Warning messages:
-: 1: In formals(fun) : argument is not a function
-: 2: In formals(fun) : argument is not a function
-: 3: In formals(fun) : argument is not a function
-:   lambda mu c k  m        RO        P0        Lq         Wq        X        L
-: 1     30 20 2 6 NA 0.7049963 0.1685735 0.8356243 0.02963222 28.19985 2.245617
-:            W        Wqq      Lqq
-: 1 0.07963222 0.05371429 2.148571
+: There were 19 warnings (use warnings() to see them)
+:       lambda   mu c k  m        RO        P0         Lq       Wq          X
+: 1 0.03333333 0.05 2 6 NA 0.3328758 0.5003432 0.07961565 2.391753 0.03328758
+:           L        W  Wqq  Lqq
+: 1 0.7453672 22.39175 14.5 1.45
+
+#+begin_quote
+Los mensajes /warning/ parecen ser un
+desajuste entre versiones de =R=[fn:1], pero
+no afectan el funcionamiento general de las
+librerias ni afecta el flujo de trabajo
+de este documento.
+#+end_quote
 
 *** a
 
@@ -707,6 +731,13 @@ summary(y_15)
    esperan utilizar una terminal.
 #+end_quote
 
+#+begin_src R :session code
+y_15$Lq
+#+end_src
+
+#+RESULTS:
+: 0.0796156485929993
+
 *** b
 
 #+begin_quote
@@ -714,11 +745,59 @@ summary(y_15)
    considera una jornada de 8 horas.
 #+end_quote
 
+Si consideramos tiempo perdido al tiempo en
+que el computador está sin hacer
+ningún cálculo:
+
+#+begin_src R :session code
+1-y_15$RO
+#+end_src
+
+#+RESULTS:
+: 0.667124227865477
+
+Ese es nuestro porcentaje.
+
 *** c
 
 #+begin_quote
 3) [@3] Medidas de rendimiento.
 #+end_quote
+
+
+- L: numero medio de procesos en el sistema.
+  #+begin_src R :session code :results value
+  y_15$L
+  #+end_src
+
+  #+RESULTS:
+  : 0.745367192862045
+
+- Lq: numero medio de procesos en la cola.
+  #+begin_src R :session code :results value
+  y_15$Lq
+  #+end_src
+
+  #+RESULTS:
+  : 0.0796156485929993
+
+- W: tiempo medio de permanencia de un proceso
+  en el sistema.
+  #+begin_src R :session code :results value
+  y_15$W
+  #+end_src
+
+  #+RESULTS:
+  : 22.3917525773196
+
+- Wq: tiempo medio de permanencia de un proceso
+  en la cola.
+  #+begin_src R :session code :results value
+  y_15$Wq
+  #+end_src
+
+  #+RESULTS:
+  : 2.39175257731959
 
 ** TODO PROBLEMA N°16 (M/M/C=3(serie)/K=15) :noexport:
 
@@ -763,7 +842,7 @@ d) Para agilizar el proceso la empresa estudia
    sistema fuera menor?
 
 ** TODO Problema N°17 (M/M/C=?/K=?) :noexport:
-
+*** Enunciado
 A los choferes que se integran a radio
 taxis la Frontera CO. nuevos se les
 pide pasar una prueba escrita,
@@ -790,6 +869,7 @@ c) La probabilidad de que en un día no se
    haga examen alguno.
 
 ** TODO Problema N°18 (M/M/C=5/K=5) :noexport:
+*** Enunciado
 
 Un programador atiende a 5 máquinas
 automáticas. Cuando una máquina
@@ -808,6 +888,8 @@ a) Calcule la probabilidad de que todas las
    máquinas estén trabajando.
 b) Determine el tiempo promedio que una
    máquina está sin trabajar.
+
+*** Desarrollo
 
 * Fuentes y Herramientas utilizadas para el desarrollo de este documento
 
@@ -831,6 +913,10 @@ b) Determine el tiempo promedio que una
   - [[https://github.com/Ma-Nu-El/uni/blob/master/org/2022-1/Sistemas_Estocasticos/varios/test4/test4_version-2.org][uni/test4\under{}version-2.org at master · Ma-Nu-El/uni · GitHub]]
 
 * Local variables :noexport:
+
+* Footnotes
+
+[fn:1] [[https://github.com/rstudio/shiny/issues/1676][R 3.4.0 gives warning on all Shiny apps · Issue #1676 · rstudio/shiny · GitHub]]
 # Local Variables:
 # ispell-local-dictionary: "espanol"
 # End:
