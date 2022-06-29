@@ -745,6 +745,8 @@ SCHEDULED: <2022-06-30 Thu 08:30>
 :END:
 - 20%
 - 30 junio.
+*** Entrevista Magasa
+SCHEDULED: <2022-07-01 Fri 15:10>
 *** Trabajo grupal
 SCHEDULED: <2022-07-12 Tue 16:50>
 - 25%
