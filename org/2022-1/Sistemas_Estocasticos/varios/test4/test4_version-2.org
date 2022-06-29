@@ -10,7 +10,7 @@
 #+AUTHOR: [[mailto:ricardo.sepulveda@ufrontera.cl][Profesor: Ricardo Sepúlveda]]
 #+LATEX_HEADER: \usepackage{eurosym}
 :R:
-#+PROPERTY: header-args:R :session code :exports both :results value
+#+PROPERTY: header-args:R :session code :exports both :results output
 :END:
 
 @@latex:\clearpage@@
@@ -24,6 +24,7 @@
   - [[#problema-n14][PROBLEMA N°14]]
   - [[#problema-n15][PROBLEMA N°15]]
   - [[#problema-n16][PROBLEMA N°16]]
+  - [[#problema-n17][Problema N°17]]
   - [[#problema-n18][Problema N°18]]
 - [[#fuentes-y-herramientas-utilizadas-para-el-desarrollo-de-este-documento][Fuentes y Herramientas utilizadas para el desarrollo de este documento]]
 - [[#footnotes][Footnotes]]
@@ -1141,7 +1142,7 @@ de la caseta, así se descongestiona
 el sistema entero, disminuyendo el
 tiempo de espera total.
 
-** TODO Problema N°17 (M/M/C=?/K=?) :noexport:
+** Problema N°17
 *** Enunciado
 
 A los choferes que se integran a radio
@@ -1168,6 +1169,167 @@ b) La probabilidad de que los aspirantes
    que hay en el salón de exámenes.
 c) La probabilidad de que en un día no se
    haga examen alguno.
+
+*** Desarrollo
+
+#+begin_quote
+El tiempo
+necesario para contestar el examen
+es de 30 minutos, más o menos.
+#+end_quote
+
+Nuestra tabla luce de la siguiente forma:
+
+| \lambda | Llegada                | ?         | prueba/hora |
+| \mu     | Servicio cada servidor | \approx 2 | prueba/hora |
+| C       | Servidores             | ?         | sillas      |
+
+#+begin_quote
+Los registros indican que la
+cantidad promedio de pruebas es de
+100 por día de 8 horas.
+#+end_quote
+
+Esto significa que en promedio, el sistema
+percibe una tasa de salida de
+\(100/8 = 12.5 \frac{prueba}{hora}\).
+
+Por otro lado, si sabemos que cada servidor
+atiende a una tasa \(\mu \frac{prueba}{hora}\),
+y sabemos que el sistema tiene \(C\) servidores,
+entonces podemos establecer la relación
+
+\begin{align*}
+  C \cdot \mu \frac{prueba}{hora} = X \frac{prueba}{hora}
+\end{align*}
+
+Donde X representa la cantidad de pruebas
+completadas por hora que percibe el
+sistema entero.
+
+Pero de los párrafos previos sabemos que
+\(X=12.5 \frac{prueba}{hora}\),
+por lo tanto
+
+\begin{align*}
+  C \cdot 2 \frac{prueba}{hora} = 12.5 \frac{prueba}{hora}
+  \rightarrow
+  C = 6.25
+\end{align*}
+
+Siendo una variable discreta, el error
+se puede explicar por el error en la medición
+del tiempo de completitud de la prueba
+de cada aspirante.
+
+De ahora en adelante se consideraran 7
+sillas en sala para compensar dicho error.
+
+Ahora nuestra tabla luce así:
+
+| \lambda | Llegada                | ?         | personas/hora |
+| \mu     | Servicio cada servidor | \approx 2 | prueba/hora   |
+| C       | Servidores             | 7         | sillas        |
+
+Dado que el sistema percibe una salida de
+12.5 pruebas por hora, y considerando
+que el sistema está funcionando a un
+factor de uso menor que 0, es necesario considerar
+que la tasa de llegada al sistema debe
+ser también 12.5, de otra forma el sistema
+no alcanzaría las 100 pruebas cada 8 horas
+registradas previamente o el sistema estaría
+generando una cola que crece infinitamente.
+
+Por lo tanto podemos modelar nuestro
+sistema de la siguiente forma:
+
+#+begin_src R :session code :results output
+mmc_17 <- NewInput.MMC(12.5,2,7)
+y_17 <- QueueingModel(mmc_17)
+summary(y_17)
+#+end_src
+
+#+RESULTS:
+:   lambda mu c  k  m        RO          P0       Lq        Wq    X        L
+: 1   12.5  2 7 NA NA 0.8928571 0.001017113 5.847284 0.4677827 12.5 12.09728
+:           W       Wqq      Lqq
+: 1 0.9677827 0.6666667 9.333333
+
+*** a
+
+#+begin_quote
+1) [@1] La cantidad promedio de asientos que
+   debe tener el departamento de policía
+   en el salón de exámenes.
+#+end_quote
+
+La cantidad promedio de asientos, calculada
+previamente es de 6.25 asientos. Sin embargo
+por los datos entregados en el enunciado
+este número se debe aproximar a 7 en vez
+de 6 pues de
+otra forma implicaría que los que rinden
+la prueba en realidad se demoran más
+de 30 minutos y/o que los registros
+en realidad no alcanzan las 100
+pruebas por día.
+
+*** b
+
+#+begin_quote
+2) [@2] La probabilidad de que los aspirantes
+   rebasen la cantidad promedio de asientos
+   que hay en el salón de exámenes.
+#+end_quote
+
+El promedio es 6.25, por lo que los aspirantes
+deben ser 7 o mas, que es lo mismo que
+el complemento de 0 hasta 6.
+
+#+name: y_17_b
+#+begin_src R :session code :results value
+hasta_n_aspirantes<-6
+mmc_17 <- NewInput.MMC(lambda=12.5,mu=2,c=7,n=hasta_n_aspirantes)
+y_17 <- QueueingModel(mmc_17)
+round((sum(Pn(y_17))*100),2)
+#+end_src
+
+#+RESULTS: y_17_b
+: 29.83
+
+Dicha probabilidad es aproximadamante un
+call_y_17_b() {{{results(=[1] 29.83=)}}} %.
+
+*** c
+
+#+begin_quote
+3) [@3] La probabilidad de que en un día no se
+   haga examen alguno.
+#+end_quote
+
+La llegada es un proceso Poisson con
+tasa 100 prueba/dia.
+
+La variable aleatoria \(X\) representa
+la probabilidad de que ocurran \(x=0\)
+eventos en el periodo descrito por la tasa
+\(\lambda=100 \frac{eventos}{\text{d\'ia}}\)
+
+#+begin_src R :session code
+dpois(x=0,lambda=100)
+#+end_src
+
+#+RESULTS:
+: [1] 3.720076e-44
+
+De forma predecible, la probabilidad de que
+en un día no lleguen personas a tomar el examen
+converge a cero.
+
+\begin{align*}
+  P(x=0) \to 0
+\end{align*}
 
 ** Problema N°18
 *** Enunciado
@@ -1324,8 +1486,6 @@ y_18$Wq
   - [[https://github.com/AbdeltwabMF/queueing-modelsim][GitHub - AbdeltwabMF/queueing-modelsim: Queueing Models Simulator.]]
 - Código fuente de este documento:
   - [[https://github.com/Ma-Nu-El/uni/blob/master/org/2022-1/Sistemas_Estocasticos/varios/test4/test4_version-2.org][uni/test4\under{}version-2.org at master · Ma-Nu-El/uni · GitHub]]
-
-* Local variables :noexport:
 
 * Footnotes
 
