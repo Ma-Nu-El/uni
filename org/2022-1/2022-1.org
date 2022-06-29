@@ -700,13 +700,10 @@ CLOSED: [2022-06-18 Sat 14:13] SCHEDULED: <2022-06-21 Tue>
 - State "CANCELED"   from "NEXT"       [2022-06-18 Sat 14:13]
 - State "NEXT"       from "TODO"       [2022-06-18 Sat 14:12]
 :END:
-*** DONE Test4
-CLOSED: [2022-06-25 Sat 01:07] SCHEDULED: <2022-06-24 Fri 20:00>
+*** TODO Test4
+SCHEDULED: <2022-06-24 Fri 20:00>
 :PROPERTIES:
 :TRIGGER:  chain-siblings(NEXT)
-:END:
-:LOGBOOK:
-- State "DONE"       from              [2022-06-25 Sat 01:07]
 :END:
 - Junio 15
 - Junio 24 at 20:00
