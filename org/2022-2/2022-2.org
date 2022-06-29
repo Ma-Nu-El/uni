@@ -3,6 +3,7 @@
 
 * Start 2022-2
 SCHEDULED: <2022-08-16 Tue>
+
 * End 2022-2
 SCHEDULED: <2022-12-09 Fri>
 
