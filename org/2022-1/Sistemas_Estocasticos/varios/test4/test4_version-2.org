@@ -160,7 +160,7 @@ y_2$W
 #+RESULTS: 2_b
 : 0.5
 
-Y como estamos trabajando en segundos, entonces
+Y como estamos trabajando en minutos, entonces
 dicho valor se interpreta como:
 
 #+begin_src python :session code :var input=2_b
