@@ -344,7 +344,6 @@ print(hours_of_work)
 hours_of_work_adjusted=hours_of_work*60
 input_adjusted=input*hours_of_work_adjusted
 time = int(float(input_adjusted))
-import datetime
 print(datetime.timedelta(minutes=time))
 #+end_src
 
@@ -415,7 +414,6 @@ mean_wait_in_queue<- i/(s *(s-i))
 #+name: mean_wait_in_queue_approx
 #+begin_src python :session :exports none :results silent output :var input=mean_wait_in_queue
 time = float(input)
-import datetime
 print(datetime.timedelta(hours=time))
 #+end_src
 
@@ -511,7 +509,6 @@ mean_wait_in_queue<-i/(s *(s - i))
 #+name: mean_wait_in_queue_approx_4
 #+begin_src python :exports none :results silent output :var input=mean_wait_in_queue_4
 time = float(input)
-import datetime
 print(datetime.timedelta(minutes=time))
 #+end_src
 
@@ -728,7 +725,6 @@ mean_wait_in_queue_5_rounded<-round(mean_wait_in_queue_5,5)
 #+name: mean_wait_in_queue_approx_5
 #+begin_src python :exports none :results silent output :var input=mean_wait_in_queue_5
 time = round(float(input),1)
-import datetime
 print(datetime.timedelta(minutes=time))
 #+end_src
 

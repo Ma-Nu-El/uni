@@ -12,11 +12,15 @@
 :R:
 #+PROPERTY: header-args:R :session code :exports both :results output
 :END:
+:python:
+#+PROPERTY: header-args:python :session code :exports both :results output
+:end:
 
 @@latex:\clearpage@@
 
 * TOC :TOC_2:noexport:
 - [[#ejercicios][Ejercicios]]
+  - [[#librerías][Librerías]]
   - [[#problema-n2][PROBLEMA N°2]]
   - [[#problema-n3][PROBLEMA N°3]]
   - [[#problema-n4][PROBLEMA N°4]]
@@ -30,12 +34,21 @@
 - [[#footnotes][Footnotes]]
 
 * Ejercicios
+** Librerías
 
 Importamos la librería =queueing= de =R=
 que nos asistirá en el cálculo de parámetros.
 
 #+begin_src R :session code :exports code :results silent
 library(queueing)
+#+end_src
+
+La librería =datetime= de =python= nos
+asiste en la conversión de decimales a
+valores de tiempo.
+
+#+begin_src python :session code :exports code :results silent
+import datetime
 #+end_src
 
 ** PROBLEMA N°2
@@ -57,14 +70,15 @@ b) ¿Cuál es el tiempo esperado total de
 c) ¿Cuál es el número medio de programas
    esperando en la cola del sistema?
 
-*** Contexto
+*** Desarrollo
 
-En este contexto contamos con un solo servidor
-y considerando las capacidades de los sistemas
-informáticos, se puede considerar la
-capacidad de la cola como infinita. Por lo
-tanto este sistema se puede acomodar a
-un modelo de colas M/M/1.
+- Contexto:
+  Contamos con un solo servidor
+  y considerando las capacidades de los sistemas
+  informáticos, se puede considerar la
+  capacidad de la cola como infinita. Por lo
+  tanto este sistema se puede acomodar a
+  un modelo de colas M/M/1.
 - Entrada y salida como proceso de Poisson.
 - Un solo servidor.
 - Cola infinita.
@@ -119,12 +133,17 @@ Eso se puede calcular como el
 complemento de la probabilidad de
 que el servidor esté ocupado:
 
-#+begin_src R :session code
-1 - y_2$RO
+#+name: 2_a
+#+begin_src R :session code :results value
+round((1 - y_2$RO)*100,3)
 #+end_src
 
-#+RESULTS:
-: 0.166666666666667
+#+RESULTS: 2_a
+: 16.667
+
+Así, la proporción de tiempo que el servidor está
+ocupado es aproximadamente un
+call_2_a()[:results value] {{{results(=16.667=)}}} %.
 
 *** b
 
@@ -133,12 +152,24 @@ b) ¿Cuál es el tiempo esperado total de
    salida de un programa?
 #+end_quote
 
-#+begin_src R :session code
+#+name: 2_b
+#+begin_src R :session code :results value
 y_2$W
 #+end_src
 
-#+RESULTS:
+#+RESULTS: 2_b
 : 0.5
+
+Y como estamos trabajando en segundos, entonces
+dicho valor se interpreta como:
+
+#+begin_src python :session code :var input=2_b
+time = float(input)
+print(datetime.timedelta(minutes=time))
+#+end_src
+
+#+RESULTS:
+: 0:00:30
 
 *** c
 
@@ -147,12 +178,12 @@ c) ¿Cuál es el número medio de programas
    esperando en la cola del sistema?
 #+end_quote
 
-#+begin_src R :session code
-y_2$Lq
+#+begin_src R :session code :results value
+round(y_2$Lq,5)
 #+end_src
 
 #+RESULTS:
-: 4.16666666666667
+: 4.16667
 
 ** PROBLEMA N°3
 *** Enunciado
@@ -236,7 +267,7 @@ de individuos en el sistema es por lo menos
 \begin{align*}
 \sum_{n=2}^{\infty}P_{n}= (1-\rho) \rho^{n}
 =
-\sum_{n=0}^{1}P_{n}= (1-\rho) \rho^{n}
+1 - \sum_{n=0}^{1}P_{n}= (1-\rho) \rho^{n}
 \end{align*}
 
 Por lo tanto, calculamos la probabilidad
@@ -251,8 +282,10 @@ Pn(y_3)
 #+RESULTS:
 : [1] 0.3333333 0.2222222
 
+#+begin_quote
 El programa nos entrega las probabilidades
 para 0 y 1 clientes.
+#+end_quote
 
 Luego, sumamos estas dos para obtener la acumulada:
 
@@ -266,16 +299,16 @@ p_acum_3<-sum(Pn(y_3))
 finalmente obtenemos el complemento:
 
 #+name:3_a
-#+begin_src R :session code
-1-p_acum_3
+#+begin_src R :session code :results value
+round(1-p_acum_3,5) * 100
 #+end_src
 
 #+RESULTS: 3_a
-: 0.444444444444444
+: 44.444
 
 Así, la probabilidad de que el sistema
-efectivamente perciba una fila es
-call_3_a() {{{results(=0.444444444444444=)}}}.
+efectivamente perciba una fila es aproximadamente
+call_3_a()[:results value] {{{results(=44.444=)}}}%.
 
 *** b
 
@@ -288,7 +321,7 @@ y_3$Lq
 #+end_src
 
 #+RESULTS:
-: 1.33333333333333
+: [1] 1.333333
 
 *** c
 
@@ -296,12 +329,24 @@ y_3$Lq
 3) [@3] El tiempo medio que un cliente permanece en cola.
 #+end_quote
 
-#+begin_src R :session code
+#+name: 3_c
+#+begin_src R :session code :results value
 y_3$Wq
 #+end_src
 
-#+RESULTS:
+#+RESULTS: 3_c
 : 0.133333333333333
+
+y como estamos hablando de horas eso se traduce a
+que el cliente está esperando en cola aproximadamente
+
+#+begin_src python :session code :var input=3_c
+time = float(input)
+print(datetime.timedelta(hours=time))
+#+end_src
+
+#+RESULTS:
+: 0:08:00
 
 ** PROBLEMA N°4
 *** Enunciado
@@ -384,12 +429,12 @@ summary(y_3)
    cada cliente en cola.
 #+end_quote
 
-#+begin_src R :session code
-y_4$Wq
+#+begin_src R :session code :results value
+print(paste(c(y_4$Wq),"minutos"))
 #+end_src
 
 #+RESULTS:
-: 10
+: 10 minutos
 
 *** b
 
@@ -400,12 +445,12 @@ y_4$Wq
 #+end_quote
 
 - Tamaño medio:
-  #+begin_src R :session code
-  y_4$Lq
+  #+begin_src R :session code :results value
+  round(y_4$Lq,5)
   #+end_src
 
   #+RESULTS:
-  : 1.33333333333333
+  : 1.33333
 
 - Probabilidad de cola:
   1) La probabilidad de /no/ cola se calcula
@@ -417,21 +462,20 @@ y_4$Wq
      #+end_src
 
      #+RESULTS:
-     : 0.555555555555556
 
   2) y obtenemos el complemento:
 
      #+name:4_b
-     #+begin_src R :session code
-     1-b_4
+     #+begin_src R :session code :results value
+     prob_4<-round(1-b_4,5)*100
      #+end_src
 
      #+RESULTS: 4_b
-     : 0.444444444444444
+     : 44.444
 
      Así, la probabilidad de que el sistema
      efectivamente perciba una fila es
-     call_4_b() {{{results(=0.444444444444444=)}}}.
+     call_4_b()[:results value] {{{results(=44.444=)}}} %.
 
 ** PROBLEMA N°5
 *** Enunciado
@@ -507,12 +551,25 @@ aeropuerto antes de recibir la señal
 de tierra?
 #+end_quote
 
-#+begin_src R :session code
+#+name: 5_a
+#+begin_src R :session code :results value
 y_5$Wq
 #+end_src
 
-#+RESULTS:
+#+RESULTS: 5_a
 : 4.57142857142857
+
+Y como estamos hablando de minutos, ese valor
+se traduce a que el avión en promedio va a
+esperar la orden de aterrizaje aproximadamente:
+
+#+begin_src python :session code :var input=5_a
+time = round(float(input),1)
+print(datetime.timedelta(minutes=time))
+#+end_src
+
+#+RESULTS:
+: 0:04:36
 
 ** PROBLEMA N°14
 *** Enunciado
@@ -583,23 +640,23 @@ summary(y_14)
 
 La probabilidad de que el servidor esté trabajando
 es:
-#+begin_src R :session code
-y_14$RO
+#+begin_src R :session code :results value
+paste(c(round(y_14$RO * 100,3)),"%")
 #+end_src
 
 #+RESULTS:
-: 0.991735537190083
+: 99.174 %
 
 Así, la probabilidad de que el servidor esté
 ocioso, significando que el taller está sin
-procesos pendientes es el complemento:
+procesos pendientes es:
 
-#+begin_src R :session code
-1-y_14$RO
+#+begin_src R :session code :results value
+paste(c(round((1-y_14$RO)*100,5)),"%")
 #+end_src
 
 #+RESULTS:
-: 0.00826446280991733
+: 0.82645 %
 
 *** b
 
@@ -607,12 +664,12 @@ procesos pendientes es el complemento:
 2) [@2] ¿Cuál es el promedio de vehículos en el taller?
 #+end_quote
 
-#+begin_src R :session code
-y_14$L
+#+begin_src R :session code :results value
+round(y_14$L,5)
 #+end_src
 
 #+RESULTS:
-: 3.52066115702479
+: 3.52066
 
 *** c
 
@@ -621,12 +678,25 @@ y_14$L
    un vehículo en el taller?
 #+end_quote
 
-#+begin_src R :session code
+#+name: 14_c
+#+begin_src R :session code :results value
 y_14$W
 #+end_src
 
-#+RESULTS:
+#+RESULTS: 14_c
 : 0.591666666666667
+
+Y como hablamos de horas, entonces el
+tiempo promedio que un vehículo pasa en
+el taller es aproximadamente
+
+#+begin_src python :session code :var input=14_c
+time = round(float(input),2)
+print(datetime.timedelta(hours=time))
+#+end_src
+
+#+RESULTS:
+: 0:35:24
 
 *** d
 
@@ -635,12 +705,25 @@ y_14$W
    los vehículos en la cola?
 #+end_quote
 
-#+begin_src R :session code
+#+name: 14_d
+#+begin_src R :session code :results value
 y_14$Wq
 #+end_src
 
-#+RESULTS:
+#+RESULTS: 14_d
 : 0.425
+
+Y como estamos hablando de horas, entonces
+el tiempo promedio que un vehículo espera
+en cola es aproximadamente
+
+#+begin_src python :session code :var input=14_d
+time = round(float(input),3)
+print(datetime.timedelta(hours=time))
+#+end_src
+
+#+RESULTS:
+: 0:25:30
 
 *** e
 
@@ -648,15 +731,15 @@ y_14$Wq
 5) [@5] ¿Cuál es la longitud media de la cola?
 #+end_quote
 
-#+begin_src R :session code
-y_14$Lq
+#+begin_src R :session code :results value
+round(y_14$Lq,5)
 #+end_src
 
 #+RESULTS:
-: 2.52892561983471
+: 2.52893
 
 @@latex:\clearpage@@
-** PROBLEMA N°15
+** TODO PROBLEMA N°15
 *** Enunciado
 
 Un grupo de investigadores, formado por
@@ -739,7 +822,7 @@ y_15$Lq
 #+end_src
 
 #+RESULTS:
-: 0.0796156485929993
+: [1] 0.07961565
 
 *** b
 
@@ -757,7 +840,7 @@ ningún cálculo:
 #+end_src
 
 #+RESULTS:
-: 0.667124227865477
+: [1] 0.6671242
 
 Ese es nuestro porcentaje.
 
@@ -802,7 +885,7 @@ Ese es nuestro porcentaje.
   #+RESULTS:
   : 2.39175257731959
 
-** PROBLEMA N°16
+** TODO PROBLEMA N°16
 *** Enunciado
 
 Una empresa de FRONTERA S.A. en una
@@ -999,7 +1082,7 @@ y_16_nave$Lq
 #+end_src
 
 #+RESULTS:
-: 10.6290576155833
+: [1] 10.62906
 
 *** b
 
@@ -1013,7 +1096,7 @@ y_16_oficina$W
 #+end_src
 
 #+RESULTS:
-: 4.57142857142857
+: [1] 4.571429
 
 *** c
 
@@ -1027,7 +1110,6 @@ current_system_wait<-sum(y_16_caseta$W,y_16_nave$W,y_16_oficina$W)
 #+end_src
 
 #+RESULTS:
-: 31.8609757330531
 
 *** d
 
@@ -1142,7 +1224,7 @@ de la caseta, así se descongestiona
 el sistema entero, disminuyendo el
 tiempo de espera total.
 
-** Problema N°17
+** TODO Problema N°17
 *** Enunciado
 
 A los choferes que se integran a radio
@@ -1283,9 +1365,14 @@ pruebas por día.
    que hay en el salón de exámenes.
 #+end_quote
 
-El promedio es 6.25, por lo que los aspirantes
-deben ser 7 o mas, que es lo mismo que
+El promedio de aspirantes es 6.25,
+por lo que para que el sistema
+esté lleno los aspirantes
+en el sistema en cualquier momento
+deben ser 7 o más, que es lo mismo que
 el complemento de 0 hasta 6.
+
+Procedimiento similar al [[id:02bb4cf7-f019-46f4-a4e2-8d71527122ad][ejercicio 3]].
 
 #+name: y_17_b
 #+begin_src R :session code :results value
@@ -1298,7 +1385,7 @@ round((sum(Pn(y_17))*100),2)
 #+RESULTS: y_17_b
 : 29.83
 
-Dicha probabilidad es aproximadamante un
+Dicha probabilidad es aproximadamente un
 call_y_17_b() {{{results(=[1] 29.83=)}}} %.
 
 *** c
@@ -1331,7 +1418,7 @@ converge a cero.
   P(x=0) \to 0
 \end{align*}
 
-** Problema N°18
+** TODO Problema N°18
 *** Enunciado
 
 Un programador atiende a 5 máquinas
@@ -1415,7 +1502,7 @@ y_18$L
 #+end_src
 
 #+RESULTS:
-: 0.216026794485546
+: [1] 0.2160268
 
 *** b
 
@@ -1434,7 +1521,7 @@ nos entrega esa probabilidad.
 #+end_src
 
 #+RESULTS:
-: 0.822248180014944
+: [1] 0.8222482
 
 o utilizando =P0=:
 
@@ -1464,7 +1551,7 @@ y_18$Wq
 #+end_src
 
 #+RESULTS:
-: 1.72262537750476
+: [1] 1.722625
 
 * Fuentes y Herramientas utilizadas para el desarrollo de este documento
 
@@ -1493,3 +1580,5 @@ y_18$Wq
 # Local Variables:
 # ispell-local-dictionary: "espanol"
 # End:
+
+#  LocalWords:  proporcion
