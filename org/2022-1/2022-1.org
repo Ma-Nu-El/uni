@@ -654,8 +654,8 @@ SCHEDULED: <2022-07-06 Wed 10:50>
 - State "NEXT"       from "TODO"       [2022-06-07 Tue 13:45]
 :END:
 - Jul 06
-*** Recuperativa
-SCHEDULED: <2022-07-04 Mon>
+*** Global
+SCHEDULED: <2022-07-14 Thu>
 
 ** Sistemas Estocásticos
 *** DONE Test1
