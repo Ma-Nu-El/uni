@@ -429,7 +429,7 @@ CLOSED: [2022-06-18 Sat 14:17] SCHEDULED: <2022-06-24 Fri 12:00-13:00>
 :LOGBOOK:
 - State "CANCELED"   from "TODO"       [2022-06-18 Sat 14:17]
 :END:
-** TODO Semana 15 [0/0][0%]
+** TODO Semana 15 [7/11][63%]
 *** CANCELED Sistemas Estocásticos
 CLOSED: [2022-06-14 Tue 13:45] SCHEDULED: <2022-06-27 Mon 08:30-10:40>
 :LOGBOOK:
@@ -460,8 +460,11 @@ CLOSED: [2022-06-28 Tue 18:50] SCHEDULED: <2022-06-28 Tue 16:50-19:00>
 :LOGBOOK:
 - State "CANCELED"   from "TODO"       [2022-06-28 Tue 18:50]
 :END:
-*** TODO Ayudantía Proba
-SCHEDULED: <2022-06-29 Wed 14:30-16:30>
+*** CANCELED Ayudantía Proba
+CLOSED: [2022-06-29 Wed 12:23] SCHEDULED: <2022-06-29 Wed 14:30-16:30>
+:LOGBOOK:
+- State "CANCELED"   from "TODO"       [2022-06-29 Wed 12:23]
+:END:
 *** TODO Gestión de RRHH
 SCHEDULED: <2022-06-30 Thu 08:30-10:40>
 *** TODO Comunicación de Datos
