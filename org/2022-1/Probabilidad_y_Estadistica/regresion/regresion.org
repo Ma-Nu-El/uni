@@ -15,7 +15,6 @@
 - [[#método-de-mínimos-cuadrados-ordinariosmmco][Método de Mínimos Cuadrados Ordinarios(MMCO)]]
 - [[#notas-de-la-clase][Notas de la clase]]
 - [[#scripts-usados][Scripts usados]]
-- [[#consulta-al-profe][Consulta al profe]]
 - [[#libros][Libros]]
 
 * Introducción
@@ -362,14 +361,6 @@ summary(mod1)
 # explica el comportamiento de la dependiente.
 #+end_example
 
-* Consulta al profe
-- Suponiendo que el tamaño de la muestra tiene un
-  impacto en el modelo, ¿Cuántas muestras más serían
-  necesarias para obtener un modelo bueno?
-  - Ejemplo, en las mineras, pocas muestras generan
-    problema, se necesita calcular cuánto se debe
-    invertir en más muestras y comparar si vale la
-    pena.
 * Libros
 - En campus hay 2 muy buenos.
 - Unidad 11: Regresión lineal simple y correlación.
