@@ -286,80 +286,112 @@ summary(model01)
 
 *** [2022-07-01 Fri]
 
-#+begin_example R
-# Incendios forestales
-# Pasos para un modelo bien construido
-# 1) Calidad del dato
+- Pasos para un modelo bien construido.
 
-# # IncendiosForestales importado desde excel
-datos <- IncendiosForestales
-y <- datos$Ind_Combustibilidad
-x <- datos$temp
-# # primera visualizacion en busca de datos atipicos
-descripY(datos,y)
 
-# 2) Construcion un modelo
-mod1 <- lm(y~x,datos)
+1) Calidad del dato:
+   - =IncendiosForestales= importado desde excel:
+   #+begin_example R
+   datos <- IncendiosForestales
+   y <- datos$Ind_Combustibilidad
+   x <- datos$temp
+   #+end_example
 
-# - grafico4 (Residuals vs Leverage)
-# en el word pego estos dos
-plot(x,y)
-plot(mod1) # el (Residuals vs Leverage)
+   - primera visualización en busca de datos atípicos
+   #+begin_example R
+   descripY(datos,y)
+   #+end_example
 
-# 3) Supuestos
-# # 1) Promedio de los errores = 0
-mean(mod1$residuals)
-# # 2) Varianza de los errores minima
-# # 3) Los errores se comportan normalmente
-shapiro.test(mod1$residuals)
-# todos los test de la libreria 'nortest'
+2) Construcción un modelo
 
-# # 4) Independencia de los errores
-plot(mod1$fitted.values,mod1$residuals)
-# o el grafico 1 del
-# plot(mod1) # recuerda apretar ENTER en la consola
-# Si hay un patron en el grafico, entonces
-# menos independientes son los errores
-# Mientras menos datos, mas probable encontran un patron
-# que no tiene verdadero sentido
+   #+begin_example R
+   mod1 <- lm(y~x,datos)
+   #+end_example
+   - gráfico 4 (Residuals vs Leverage).
+     - (en el word pego estos dos).
+   #+begin_example R
+   plot(x,y)
+   plot(mod1) # el (Residuals vs Leverage)
+   #+end_example
 
-# # 5) Autocorrelacion=0
-dwtest(mod1)
-# como en supuesto 3, para este caso libreria 'AER'
+3) Supuestos:
+   1) Promedio de los errores = 0
 
-# # 6) Homocesdasticidad
-# H0: homocedastico
-# H1: heterocedastico
-bptest(mod1)
-# Requiere de un B0, por lo que si eliminamos el B0
-# podemos ocupar el grafico 3 del plot(mod1)
-# 'Scale-Location'
-# Cuando el grafico se abre, es probable la
-# heterocedasticidad
-# Si se mantiene en una manga, entonces
-# es homocedastico, independiente de la
-# forma de la mango.
-# Idealmente una manga con diametro constante.
-# Aunque no se abra, si el diametro aumenta
-# en algun momento, es probable la heterocedasticidad
+      #+begin_example R
+      mean(mod1$residuals)
+      #+end_example
 
-# 4) Evaluar modelo
-# # R:
-cor.test(y,x,method="pearson")
-# # Modelo
-anova(mod1)
-# Pr(F)=p-value                  : H0: modelo no existe
-# meansq(residuals)=sigma2_err   : H1 : modelo existe
-# Reporte
-summary(mod1)
-# intercept es la columna del B0
-# x es la columna del B1
-# Pr(t) es el p-value de cada uno donde el H0 es B_i = 0
-# con i=(0,1)
-# Si B0=0 entonces se propone un modelo nuevo
-# Si B1=0 entonces la variable independiente no
-# explica el comportamiento de la dependiente.
-#+end_example
+   2) Varianza de los errores minima:
+      - Justificación de Método de Mínimos
+        Cuadrados.
+   3) Los errores se comportan normalmente:
+      #+begin_example R
+      shapiro.test(mod1$residuals)
+      #+end_example
+      - todos los test de la libreria =nortest=.
+
+   4) Independencia de los errores:
+      #+begin_example R
+      plot(mod1$fitted.values,mod1$residuals)
+      #+end_example
+      - o el gráfico 1 del =plot(mod1)=.
+        - recuerda apretar ENTER en la consola.
+      - Si hay un patrón en el gráfico, entonces
+        menos independientes son los errores
+        Mientras menos datos, mas probable
+        encontrar un patrón que no
+        tiene verdadero sentido.
+
+   5) Autocorrelacion=0:
+      #+begin_example R
+      dwtest(mod1)
+      #+end_example
+      - como en supuesto 3, para este
+        caso libreria =AER=.
+
+   6) Homocesdasticidad
+      #+begin_example R
+      bptest(mod1)
+      #+end_example
+      - H0: homocedastico
+      - H1: heterocedastico
+
+      - Requiere de un B0, por lo que si
+        eliminamos el B0 podemos ocupar
+        el gráfico 3 del =plot(mod1)=.
+        =Scale-Location=.
+      - Cuando el gráfico se abre, es probable
+        la heterocedasticidad, si se mantiene
+        en una manga, entonces es homocedastico,
+        independiente de la forma de la mango.
+        Idealmente una manga con diámetro constante.
+        Aunque no se abra, si el diámetro aumenta
+        en algún momento, es probable la
+        heterocedasticidad.
+
+   7) Multicolinealidad:
+      - Como estamos trabajando con una variable,
+        este punto no aplica.
+4) Evaluar modelo
+   - R:
+   #+begin_example R
+   cor.test(y,x,method="pearson")
+   #+end_example
+   - Modelo
+   #+begin_example R
+   anova(mod1)
+   #+end_example
+     - Pr(F)=p-value                  : H0: modelo no existe
+     - meansq(residuals)=sigma2_err   : H1 : modelo existe
+   - Reporte
+   summary(mod1)
+   # intercept es la columna del B0
+   # x es la columna del B1
+   # Pr(t) es el p-value de cada uno donde el H0 es B_i = 0
+   # con i=(0,1)
+   # Si B0=0 entonces se propone un modelo nuevo
+   # Si B1=0 entonces la variable independiente no
+   # explica el comportamiento de la dependiente.
 
 * Libros
 - En campus hay 2 muy buenos.
