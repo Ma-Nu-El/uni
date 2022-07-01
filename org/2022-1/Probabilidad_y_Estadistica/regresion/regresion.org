@@ -4,7 +4,7 @@
 #+INCLUDE: "~/org/config/config-spanish.org"
 #+INCLUDE: "~/org/config/config.org"
 
-* TOC :TOC_1:noexport:
+* Índice :TOC_1:noexport:
 - [[#introducción][Introducción]]
 - [[#correlación-r][Correlación (R)]]
 - [[#determinación-r2][Determinación (R^2)]]
