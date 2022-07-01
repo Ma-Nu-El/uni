@@ -4,6 +4,20 @@
 #+INCLUDE: "~/org/config/config-spanish.org"
 #+INCLUDE: "~/org/config/config.org"
 
+* TOC :TOC_1:noexport:
+- [[#introducción][Introducción]]
+- [[#correlación-r][Correlación (R)]]
+- [[#determinación-r2][Determinación (R^2)]]
+- [[#construcción-y-calidad-del-modelo][Construcción y calidad del modelo]]
+- [[#supuestos-para-la-realización-de-un-modelo-rlm-rls][Supuestos para la realización de un modelo RLM (RLS)]]
+- [[#condición-de-cálculo][Condición de cálculo]]
+- [[#simulaciones][Simulaciones]]
+- [[#método-de-mínimos-cuadrados-ordinariosmmco][Método de Mínimos Cuadrados Ordinarios(MMCO)]]
+- [[#notas-de-la-clase][Notas de la clase]]
+- [[#scripts-usados][Scripts usados]]
+- [[#consulta-al-profe][Consulta al profe]]
+- [[#libros][Libros]]
+
 * Introducción
 - [[https://latexdraw.com/linear-regression-in-latex-using-tikz/][Linear Regression in LaTeX using TikZ - TikZBlog]]
 - [[https://tex.stackexchange.com/questions/119179/how-to-add-a-regression-line-to-randomly-generated-points-using-pgfplots-in-tikz][How to add a regression line to randomly generated points using pgfplots in Tikz? - TeX - LaTeX Stack Exchange]]
