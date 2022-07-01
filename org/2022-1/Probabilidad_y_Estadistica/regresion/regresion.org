@@ -1,4 +1,5 @@
-#+TITLE: Regresión
+#+TITLE: Probabilidad y Estadística
+#+SUBTITLE: Regresión
 #+INCLUDE: "~/org/config/author-mfuica01.org"
 #+INCLUDE: "~/org/config/config-spanish.org"
 #+INCLUDE: "~/org/config/config.org"
@@ -77,6 +78,7 @@ modelos:
 5. No auto-correlación.
 6. Homocedasticidad.
    - Cedasticidad=dispersión.
+   - De los errores.
 7. No multicolinealidad.
    - Si no es cero, entonces tengo variables
      que están en función de otras variables.
@@ -127,23 +129,23 @@ modelos:
 1) Calidad del dato
 2) Construcción del modelo
 3) Análisis de supuestos
-4) Evaluar R (coeficientes)
-   : pearson
-     - todas continuas
-   : spearman
-     - una discreta u ordinal
-       - (generalmente la independiente)
-   : \Tau de Kendall
-     - dos discretas u ordinales
-   : V de Cramer
-     - ordinales
-   : \Chi -cuadrado
-     - nominal
-   - R
-   - R^2
-   - R^2_{ajustado}
-5) Evaluar modelo
-6) Evaluar parámetros
+4) Evaluar el medole
+   1) Evaluar R
+      : pearson
+      - todas continuas
+      : spearman
+      - una discreta u ordinal
+        - (generalmente la independiente)
+      : \Tau de Kendall
+      - dos discretas u ordinales
+      : V de Cramer
+      - ordinales
+      : \Chi -cuadrado
+      - nominal
+   2) Modelo
+      : anova(mod1)
+   3) Evaluar R^2_{ajustado}
+5) Evaluar parámetros
 
 
 - \beta_{i} = 0 \iff significa que se debe construir
@@ -194,6 +196,9 @@ modelos:
 - [2022-06-22 Wed 12:33]
   - "Para un modelo simple, el Beta 1 tiene que
     tener el mismo signo que el R."
+** [2022-07-01 Fri]
+- Lunes, RA1002.
+
 * Scripts usados
 ** para la materia
 - SCRIPT_A01_4_descripY.R
@@ -230,9 +235,17 @@ summary(model01)
 # mean(model01$residuals)
 
 # S2
+# Metodo de minimos cuadrados
+
 # S3 errores se comportan normal
 # HO: los datos se comportan normal
 # shapiro.test(model01$residuals)
+# andersen
+# cramer
+# lilly
+# pearson
+# ks
+# todos lo de la libreria nortest
 
 # S4 errores independientes
 # plot(model01$residuals)
@@ -257,6 +270,83 @@ summary(model01)
 : "~/Downloads/uni/2022-1/proba/data/2/reg-2 variables ind.xlsx
 - Script de referencia:
 : ~/Downloads/uni/2022-1/proba/scripts-r/20220628/SCRIPT REG LINEAL SIMPLE v01-05.r
+
+*** [2022-07-01 Fri]
+
+#+begin_example R
+# Incendios forestales
+# Pasos para un modelo bien construido
+# 1) Calidad del dato
+
+# # IncendiosForestales importado desde excel
+datos <- IncendiosForestales
+y <- datos$Ind_Combustibilidad
+x <- datos$temp
+# # primera visualizacion en busca de datos atipicos
+descripY(datos,y)
+
+# 2) Construcion un modelo
+mod1 <- lm(y~x,datos)
+
+# - grafico4 (Residuals vs Leverage)
+# en el word pego estos dos
+plot(x,y)
+plot(mod1) # el (Residuals vs Leverage)
+
+# 3) Supuestos
+# # 1) Promedio de los errores = 0
+mean(mod1$residuals)
+# # 2) Varianza de los errores minima
+# # 3) Los errores se comportan normalmente
+shapiro.test(mod1$residuals)
+# todos los test de la libreria 'nortest'
+
+# # 4) Independencia de los errores
+plot(mod1$fitted.values,mod1$residuals)
+# o el grafico 1 del
+# plot(mod1) # recuerda apretar ENTER en la consola
+# Si hay un patron en el grafico, entonces
+# menos independientes son los errores
+# Mientras menos datos, mas probable encontran un patron
+# que no tiene verdadero sentido
+
+# # 5) Autocorrelacion=0
+dwtest(mod1)
+# como en supuesto 3, para este caso libreria 'AER'
+
+# # 6) Homocesdasticidad
+# H0: homocedastico
+# H1: heterocedastico
+bptest(mod1)
+# Requiere de un B0, por lo que si eliminamos el B0
+# podemos ocupar el grafico 3 del plot(mod1)
+# 'Scale-Location'
+# Cuando el grafico se abre, es probable la
+# heterocedasticidad
+# Si se mantiene en una manga, entonces
+# es homocedastico, independiente de la
+# forma de la mango.
+# Idealmente una manga con diametro constante.
+# Aunque no se abra, si el diametro aumenta
+# en algun momento, es probable la heterocedasticidad
+
+# 4) Evaluar modelo
+# # R:
+cor.test(y,x,method="pearson")
+# # Modelo
+anova(mod1)
+# Pr(F)=p-value                  : H0: modelo no existe
+# meansq(residuals)=sigma2_err   : H1 : modelo existe
+# Reporte
+summary(mod1)
+# intercept es la columna del B0
+# x es la columna del B1
+# Pr(t) es el p-value de cada uno donde el H0 es B_i = 0
+# con i=(0,1)
+# Si B0=0 entonces se propone un modelo nuevo
+# Si B1=0 entonces la variable independiente no
+# explica el comportamiento de la dependiente.
+#+end_example
 
 * Consulta al profe
 - Suponiendo que el tamaño de la muestra tiene un
