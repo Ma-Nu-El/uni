@@ -739,7 +739,7 @@ round(y_14$Lq,5)
 : 2.52893
 
 @@latex:\clearpage@@
-** TODO PROBLEMA N°15
+** PROBLEMA N°15
 *** Enunciado
 
 Un grupo de investigadores, formado por
@@ -817,12 +817,12 @@ de este documento.
    esperan utilizar una terminal.
 #+end_quote
 
-#+begin_src R :session code
-y_15$Lq
+#+begin_src R :session code :results value
+round(y_15$Lq,5)
 #+end_src
 
 #+RESULTS:
-: [1] 0.07961565
+: 0.07962
 
 *** b
 
@@ -835,14 +835,37 @@ Si consideramos tiempo perdido al tiempo en
 que el computador está sin hacer
 ningún cálculo:
 
-#+begin_src R :session code
+#+begin_src R :session code :results value
 1-y_15$RO
 #+end_src
 
 #+RESULTS:
-: [1] 0.6671242
+: 0.667124227865477
 
 Ese es nuestro porcentaje.
+
+Por lo tanto si consideramos dicho porcentaje
+de un turno de 8 horas equivalentes a
+\(8*60=480 \) minutos obtenemos:
+
+#+name: 15_b
+#+begin_src R :session code :results value
+(1-y_15$RO)*480
+#+end_src
+
+#+RESULTS: 15_b
+: 320.219629375429
+
+Así, de un turno de 8 horas, el computador
+estará ocioso aproximadamente
+
+#+begin_src python :session code :var input=15_b
+time = round(float(input),2)
+print(datetime.timedelta(minutes=time))
+#+end_src
+
+#+RESULTS:
+: 5:20:13.200000
 
 *** c
 
@@ -853,39 +876,58 @@ Ese es nuestro porcentaje.
 
 - L: numero medio de procesos en el sistema.
   #+begin_src R :session code :results value
-  y_15$L
+  round(y_15$L,5)
   #+end_src
 
   #+RESULTS:
-  : 0.745367192862045
+  : 0.74537
 
 - Lq: numero medio de procesos en la cola.
   #+begin_src R :session code :results value
-  y_15$Lq
+  round(y_15$Lq,5)
   #+end_src
 
   #+RESULTS:
-  : 0.0796156485929993
+  : 0.07962
 
 - W: tiempo medio de permanencia de un proceso
   en el sistema.
+  #+name: 15_c_W
   #+begin_src R :session code :results value
   y_15$W
   #+end_src
 
-  #+RESULTS:
+  #+RESULTS: 15_c_W
   : 22.3917525773196
+
+  #+begin_src python :session code :var input=15_c_W
+time = round(float(input),2)
+print(datetime.timedelta(minutes=time))
+  #+end_src
+
+  #+RESULTS:
+  : 0:22:23.400000
+
 
 - Wq: tiempo medio de permanencia de un proceso
   en la cola.
+  #+name: 15_c_Wq
   #+begin_src R :session code :results value
   y_15$Wq
   #+end_src
 
-  #+RESULTS:
+  #+RESULTS: 15_c_Wq
   : 2.39175257731959
 
-** TODO PROBLEMA N°16
+  #+begin_src python :session code :var input=15_c_Wq
+time = round(float(input),2)
+print(datetime.timedelta(minutes=time))
+  #+end_src
+
+  #+RESULTS:
+  : 0:02:23.400000
+
+** PROBLEMA N°16
 *** Enunciado
 
 Una empresa de FRONTERA S.A. en una
@@ -1077,12 +1119,12 @@ summary(y_16_oficina)
    encuentran esperando a la entrada de la nave.
 #+end_quote
 
-#+begin_src R :session code
-y_16_nave$Lq
+#+begin_src R :session code :results value
+round(y_16_nave$Lq,5)
 #+end_src
 
 #+RESULTS:
-: [1] 10.62906
+: 10.62906
 
 *** b
 
@@ -1091,12 +1133,23 @@ y_16_nave$Lq
    oficina.
 #+end_quote
 
-#+begin_src R :session code
+#+name: 16_b
+#+begin_src R :session code :results value
 y_16_oficina$W
 #+end_src
 
+#+RESULTS: 16_b
+: 4.57142857142857
+
+Traducido a minutos:
+
+#+begin_src python :session code :var input=16_b
+time = round(float(input),2)
+print(datetime.timedelta(minutes=time))
+#+end_src
+
 #+RESULTS:
-: [1] 4.571429
+: 0:04:34.200000
 
 *** c
 
@@ -1105,11 +1158,23 @@ y_16_oficina$W
    en la FRONTERA S.A
 #+end_quote
 
-#+begin_src R :session code
+#+name: 16_c
+#+begin_src R :session code :results value
 current_system_wait<-sum(y_16_caseta$W,y_16_nave$W,y_16_oficina$W)
 #+end_src
 
+#+RESULTS: 16_c
+: 31.8609757330531
+
+Traducido a minutos:
+
+#+begin_src python :session code :var input=16_c
+time = round(float(input),2)
+print(datetime.timedelta(minutes=time))
+#+end_src
+
 #+RESULTS:
+: 0:31:51.600000
 
 *** d
 
@@ -1199,11 +1264,15 @@ observamos los factores
 de uso de cada estación:
 
 #+begin_src R :session code :results value
-print(paste(y_16_caseta$RO,y_16_nave$RO,y_16_oficina$RO))
+caseta<-round(y_16_caseta$RO,5)
+nave<-round(y_16_nave$RO,5)
+oficina<-round(y_16_oficina$RO,5)
+
+print(paste(caseta,nave,oficina))
 #+end_src
 
 #+RESULTS:
-: 0.993785940728142 0.993785940728142 0.75
+: 0.99379 0.99379 0.75
 
 Observamos que la caseta está funcionando
 al máximo, como se menciona en el enunciado;
@@ -1224,7 +1293,7 @@ de la caseta, así se descongestiona
 el sistema entero, disminuyendo el
 tiempo de espera total.
 
-** TODO Problema N°17
+** Problema N°17
 *** Enunciado
 
 A los choferes que se integran a radio
@@ -1353,8 +1422,8 @@ este número se debe aproximar a 7 en vez
 de 6 pues de
 otra forma implicaría que los que rinden
 la prueba en realidad se demoran más
-de 30 minutos y/o que los registros
-en realidad no alcanzan las 100
+de 30 minutos en promedio y/o que los
+registros en realidad no alcanzan las 100
 pruebas por día.
 
 *** b
@@ -1386,7 +1455,7 @@ round((sum(Pn(y_17))*100),2)
 : 29.83
 
 Dicha probabilidad es aproximadamente un
-call_y_17_b() {{{results(=[1] 29.83=)}}} %.
+call_y_17_b()[:results value] {{{results(=29.83=)}}} %.
 
 *** c
 
@@ -1418,7 +1487,7 @@ converge a cero.
   P(x=0) \to 0
 \end{align*}
 
-** TODO Problema N°18
+** Problema N°18
 *** Enunciado
 
 Un programador atiende a 5 máquinas
@@ -1451,11 +1520,11 @@ Contexto:
 Modelamiento:
 - En este escenario el servidor es la persona
   que mantiene las máquinas.
-- Los procesos entrantes son las maquinas cuando
+- Los procesos entrantes son las máquinas cuando
   terminan su proceso.
 - El servicio es aquel que presta el mantenedor
   a las máquinas.
-- La cantidad de maquinas es la capacidad
+- La cantidad de máquinas es la capacidad
   total del sistema.
 
 De esta forma:
@@ -1494,15 +1563,15 @@ summary(y_18)
    o que están siendo restablecidas.
 #+end_quote
 
-Eso hace referencia al total de maquinas
+Eso hace referencia al total de máquinas
 en el sistema.
 
-#+begin_src R :session code
-y_18$L
+#+begin_src R :session code :results value
+round(y_18$L,5)
 #+end_src
 
 #+RESULTS:
-: [1] 0.2160268
+: 0.21603
 
 *** b
 
@@ -1516,21 +1585,21 @@ que el mantenedor no esté manteniendo ninguna
 máquina; por lo tanto =P0= o \(1-\rho\)
 nos entrega esa probabilidad.
 
-#+begin_src R :session code
-1 - y_18$RO
+#+begin_src R :session code :results value
+round(1 - y_18$RO,5)
 #+end_src
 
 #+RESULTS:
-: [1] 0.8222482
+: 0.82225
 
 o utilizando =P0=:
 
 #+begin_src R :session code :results value
-Pn(y_18)[1]
+round(Pn(y_18)[1],5)
 #+end_src
 
 #+RESULTS:
-: 0.822248180014944
+: 0.82225
 
 *** c
 
@@ -1546,12 +1615,23 @@ promedio que una máquina está sin trabajar
 es equivalente al tiempo promedio
 de la cola del sistema.
 
-#+begin_src R :session code
+#+name: 18_c
+#+begin_src R :session code :results value
 y_18$Wq
 #+end_src
 
+#+RESULTS: 18_c
+: 1.72262537750476
+
+que es equivalente a
+
+#+begin_src python :session code :var input=18_c
+time = round(float(input),2)
+print(datetime.timedelta(minutes=time))
+#+end_src
+
 #+RESULTS:
-: [1] 1.722625
+: 0:01:43.200000
 
 * Fuentes y Herramientas utilizadas para el desarrollo de este documento
 
@@ -1564,7 +1644,7 @@ y_18$Wq
     - [[https://orgmode.org/][Org mode for Emacs]]
     - Demo
       - [[https://www.youtube.com/watch?v=0g9BcZvQbXU][Consistent Technical Documents Using Emacs and Org Mode - YouTube]]
-- Lenguaje para cálculo de parametros:
+- Lenguaje para cálculo de parámetros:
   - [[https://www.r-project.org/][R: The R Project for Statistical Computing]]
   - Librería:
     - [[https://journal.r-project.org/archive/2017/RJ-2017-051/RJ-2017-051.pdf][queueing: A Package For Analysis Of Queueing Networks and Models in R.pdf]]
