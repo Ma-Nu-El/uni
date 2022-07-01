@@ -337,8 +337,8 @@ summary(model01)
       - o el gráfico 1 del =plot(mod1)=.
         - recuerda apretar ENTER en la consola.
       - Si hay un patrón en el gráfico, entonces
-        menos independientes son los errores
-        Mientras menos datos, mas probable
+        menos independientes son los errores.
+        Mientras menos datos, más probable
         encontrar un patrón que no
         tiene verdadero sentido.
 
@@ -381,17 +381,19 @@ summary(model01)
    #+begin_example R
    anova(mod1)
    #+end_example
-     - Pr(F)=p-value                  : H0: modelo no existe
-     - meansq(residuals)=sigma2_err   : H1 : modelo existe
+     | =Pr(F)=p-value=                  | H0: modelo no existe. |
+     | =meansq(residuals)= = sigma2_err | H1: modelo existe.    |
    - Reporte
+   #+begin_example R
    summary(mod1)
-   # intercept es la columna del B0
-   # x es la columna del B1
-   # Pr(t) es el p-value de cada uno donde el H0 es B_i = 0
-   # con i=(0,1)
-   # Si B0=0 entonces se propone un modelo nuevo
-   # Si B1=0 entonces la variable independiente no
-   # explica el comportamiento de la dependiente.
+   #+end_example
+   - intercept es la columna del =B0=.
+   - =x= es la columna del =B1=.
+   - =Pr(t)= es el =p-value= de cada uno donde
+     el =H0= es =B_i= = =0= con =i=(0,1)=.
+   - Si =B0=0= entonces se propone un modelo nuevo.
+   - Si =B1=0= entonces la variable independiente no
+     explica el comportamiento de la dependiente.
 
 * Libros
 - En campus hay 2 muy buenos.
