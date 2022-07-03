@@ -6,10 +6,9 @@
 
 * Índice :TOC_1:noexport:
 - [[#introducción][Introducción]]
-- [[#correlación-r][Correlación (R)]]
-- [[#determinación-r2][Determinación (R^2)]]
+- [[#conceptos][Conceptos]]
 - [[#construcción-y-calidad-del-modelo][Construcción y calidad del modelo]]
-- [[#supuestos-para-la-realización-de-un-modelo-rlm-rls][Supuestos para la realización de un modelo RLM (RLS)]]
+- [[#modelo-lineal][Modelo Lineal]]
 - [[#condición-de-cálculo][Condición de cálculo]]
 - [[#simulaciones][Simulaciones]]
 - [[#método-de-mínimos-cuadrados-ordinariosmmco][Método de Mínimos Cuadrados Ordinarios(MMCO)]]
@@ -20,8 +19,9 @@
 * Introducción
 - [[https://latexdraw.com/linear-regression-in-latex-using-tikz/][Linear Regression in LaTeX using TikZ - TikZBlog]]
 - [[https://tex.stackexchange.com/questions/119179/how-to-add-a-regression-line-to-randomly-generated-points-using-pgfplots-in-tikz][How to add a regression line to randomly generated points using pgfplots in Tikz? - TeX - LaTeX Stack Exchange]]
-* Correlación (R)
-** Coeficiente de correlación (aka R o r)
+* Conceptos
+** Correlación (R)
+*** Coeficiente de correlación (aka R o r)
 - Es el nivel de relación existente entre
   2 variables; se entiende como el porcentaje
   de datos que poseen una asociación
@@ -30,7 +30,7 @@
   - "De cada 100 pares de datos, R*100 tienen el
     mismo comportamiento".
 
-** Correlación y calidad del modelo
+*** Correlación y calidad del modelo
 :PROPERTIES:
 :ID:       77f78879-51fa-4196-bdf0-15d43876b0a1
 :END:
@@ -47,14 +47,14 @@ Una correlación = |1| /no/ es existe.
 
 - Profe Carlos trabaja con R>|0.7|.
 
-* Determinación (R^2)
-** Coeficiente de determinación (R^{2})
+** Determinación (R^2)
+*** Coeficiente de determinación (R^{2})
 - Porcentaje de variación de Y que es explicado
   por X.
-** Coeficiente de determinación ajustado(R^{2}_{aj})
+*** Coeficiente de determinación ajustado(R^{2}_{aj})
 - Lo mismo que R^2, pero considera fallas
   ocasionadas por el tamaño de la muestra.
-** R^2 vs R^2_aj
+*** R^2 vs R^2_aj
 - \(R^{2}_{aj} \leq R^{2}\)
 - Si no hay problemas por el tamaño de la muestra,
   son iguales.
@@ -63,6 +63,8 @@ Una correlación = |1| /no/ es existe.
 - Ante una diferencia, hay que usar el ajustado.
 - hasta 4% de diferencia es aceptable, luego,
   se usa R2 ajustado.
+** Homocedasticidad
+** Linealidad, colinealidad y autocolinealidad
 * Construcción y calidad del modelo
 - Un modelo bien construido procura cumplir la
   mayor cantidad de [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][supuestos]]. Un mal modelo
@@ -77,7 +79,35 @@ modelos:
 - Modelos malos bien construidos.
 - Modelos malos mal construidos.
 
-* Supuestos para la realización de un modelo RLM (RLS)
+* Modelo Lineal
+** Pasos para un modelo bien construido
+1) Calidad del dato
+   - Datos atípicos
+2) Construcción del modelo
+3) Análisis de [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][supuestos]]
+4) Evaluar el modelo
+   1) R
+      : pearson
+      - todas continuas
+      : spearman
+      - una discreta u ordinal
+        - (generalmente la independiente)
+      : \Tau de Kendall
+      - dos discretas u ordinales
+      : V de Cramer
+      - ordinales
+      : \Chi -cuadrado
+      - nominal
+   2) Varianza
+      : anova(mod1)
+   3) R^2 y R^2_{ajustado}
+5) Evaluar parámetros
+
+
+- \beta_{i} = 0 \iff significa que se debe construir
+  un nuevo modelo.
+
+** Supuestos para la realización de un modelo RLM (RLS)
 :PROPERTIES:
 :ID:       806ba6ae-fb8c-47cb-9635-8433a4b40d80
 :END:
@@ -137,32 +167,6 @@ modelos:
   - Auto-Correlación:
     - La variable tiempo puede no estar explícita,
       pero si explícita.
-
-*** Pasos para un modelo bien construido
-1) Calidad del dato
-2) Construcción del modelo
-3) Análisis de supuestos
-4) Evaluar el medole
-   1) Evaluar R
-      : pearson
-      - todas continuas
-      : spearman
-      - una discreta u ordinal
-        - (generalmente la independiente)
-      : \Tau de Kendall
-      - dos discretas u ordinales
-      : V de Cramer
-      - ordinales
-      : \Chi -cuadrado
-      - nominal
-   2) Modelo
-      : anova(mod1)
-   3) Evaluar R^2_{ajustado}
-5) Evaluar parámetros
-
-
-- \beta_{i} = 0 \iff significa que se debe construir
-  un nuevo modelo.
 
 *** Cantidad de estrellas y significancia
 - 1: \alpha < 0.001
@@ -404,4 +408,4 @@ summary(model01)
 # ispell-local-dictionary: "espanol"
 # End:
 
-#  LocalWords:  curtosis Cedasticidad
+#  LocalWords:  curtosis Homocedasticidad

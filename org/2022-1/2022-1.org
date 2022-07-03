@@ -429,7 +429,7 @@ CLOSED: [2022-06-18 Sat 14:17] SCHEDULED: <2022-06-24 Fri 12:00-13:00>
 :LOGBOOK:
 - State "CANCELED"   from "TODO"       [2022-06-18 Sat 14:17]
 :END:
-** TODO Semana 15 [9/11][81%]
+** TODO Semana 15 [11/11][100%]
 *** CANCELED Sistemas Estocásticos
 CLOSED: [2022-06-14 Tue 13:45] SCHEDULED: <2022-06-27 Mon 08:30-10:40>
 :LOGBOOK:
@@ -475,10 +475,16 @@ CLOSED: [2022-06-30 Thu 23:50] SCHEDULED: <2022-06-30 Thu 09:00-10:30>
 :LOGBOOK:
 - State "CANCELED"   from "TODO"       [2022-06-30 Thu 23:50]
 :END:
-*** TODO Probabilidad
-SCHEDULED: <2022-07-01 Fri 08:30-10:40>
-*** TODO Arquitectura de Comp
-SCHEDULED: <2022-07-01 Fri 12:00-13:00>
+*** DONE Probabilidad
+CLOSED: [2022-07-03 Sun 01:38] SCHEDULED: <2022-07-01 Fri 08:30-10:40>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-07-03 Sun 01:38]
+:END:
+*** DONE Arquitectura de Comp
+CLOSED: [2022-07-03 Sun 01:38] SCHEDULED: <2022-07-01 Fri 12:00-13:00>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-07-03 Sun 01:38]
+:END:
 ** TODO Semana 16 [2/11][18%]
 *** CANCELED Sistemas Estocásticos
 CLOSED: [2022-06-14 Tue 13:45] SCHEDULED: <2022-07-04 Mon 08:30-10:40>
@@ -629,7 +635,7 @@ CLOSED: [2022-06-18 Sat 14:19] SCHEDULED: <2022-07-25 Mon>
 :END:
 
 *** TODO Trabajo de redes
-SCHEDULED: <2022-07-02 Sat 12:00>
+SCHEDULED: <2022-07-03 Sun 12:00>
 - En cualquier momento antes del fin de semestre.
 ** Probabilidad y Estadística
 *** DONE prueba 1 (25%)
@@ -650,7 +656,8 @@ CLOSED: [2022-06-07 Tue 13:45] SCHEDULED: <2022-06-07 Tue 10:50>
 :END:
 - Con computador.
 - Jun 03
-- [2022-06-02 Thu] Se cambia a Jun 07.
+- [2022-06-02 Thu] Se cambia a:PROPERTIES:
+:END: Jun 07.
 *** NEXT prueba 3 (40%)
 SCHEDULED: <2022-07-06 Wed 10:50>
 :PROPERTIES:
@@ -709,12 +716,13 @@ CLOSED: [2022-06-18 Sat 14:13] SCHEDULED: <2022-06-21 Tue>
 - State "CANCELED"   from "NEXT"       [2022-06-18 Sat 14:13]
 - State "NEXT"       from "TODO"       [2022-06-18 Sat 14:12]
 :END:
-*** Test4
-SCHEDULED: <2022-07-01 Fri 20:00>
+*** DONE Test4
+CLOSED: [2022-07-03 Sun 01:38] SCHEDULED: <2022-07-01 Fri 20:00>
 :PROPERTIES:
 :TRIGGER:  chain-siblings(NEXT)
 :END:
 :LOGBOOK:
+- State "DONE"       from              [2022-07-03 Sun 01:38]
 - State "DONE"       from "TODO"       [2022-06-30 Thu 23:50]
 :END:
 - Junio 15
@@ -755,13 +763,18 @@ CLOSED: [2022-06-30 Thu 23:50] SCHEDULED: <2022-06-30 Thu 08:30>
 :END:
 - 20%
 - 30 junio.
-*** NEXT Entrevista Magasa
-SCHEDULED: <2022-07-01 Fri 15:10>
+*** DONE Entrevista Magasa
+CLOSED: [2022-07-03 Sun 01:38] SCHEDULED: <2022-07-01 Fri 15:10>
 :PROPERTIES:
 :TRIGGER:  chain-siblings(NEXT)
 :END:
-*** Trabajo grupal
+:LOGBOOK:
+- State "DONE"       from "DONE"       [2022-07-03 Sun 01:39]
+- State "DONE"       from "NEXT"       [2022-07-03 Sun 01:38]
+:END:
+*** NEXT Trabajo grupal
 SCHEDULED: <2022-07-12 Tue 16:50>
+
 - 25%
 - 12 julio
 * Local variables :noexport:
