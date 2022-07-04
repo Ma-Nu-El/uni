@@ -420,7 +420,7 @@ Por lo tanto, si:
   - entonces
 - =p-value= < \alpha.
   - entonces
-**** supuesto 6: bptest
+**** supuesto 6: =bptest=
 - =H0= : Errores dispersos homogéneamente.
 - =H1= : Errores dispersos no homogéneamente.
 Por lo tanto, si:
@@ -428,9 +428,9 @@ Por lo tanto, si:
   - entonces
 - =p-value= < \alpha.
   - entonces
-*** paso 4:
+*** paso 4: Evaluar el modelo
 - [[id:ab1dc4ae-fd1a-4010-a65d-8228cecf71a9][4 Evaluar el modelo]]
-**** correlación R: cor.test
+**** correlación R: =cor.test=
 : cor.test(y,x,method="pearson")
 - =H0= : Correlación igual a cero.
 - =H1= : Correlación distinta de cero.
