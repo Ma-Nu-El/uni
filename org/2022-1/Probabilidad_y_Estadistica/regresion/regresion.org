@@ -6,21 +6,19 @@
 
 * Índice :TOC_1:noexport:
 - [[#introducción][Introducción]]
-- [[#conceptos][Conceptos]]
-- [[#calidad-de-la-construcción-vs-calidad-del-modelo][Calidad de la construcción vs calidad del modelo]]
 - [[#modelo-lineal][Modelo Lineal]]
 - [[#notas-de-la-clase][Notas de la clase]]
-- [[#scripts-usados][Scripts usados]]
-- [[#simulaciones][Simulaciones]]
-- [[#libros][Libros]]
+- [[#otras-fuentes-y-herramientas][Otras fuentes y herramientas]]
+- [[#consultas-al-profe][Consultas al profe]]
 - [[#footnotes][Footnotes]]
 
 * Introducción
+** Representación visual
 - [[https://latexdraw.com/linear-regression-in-latex-using-tikz/][Linear Regression in LaTeX using TikZ - TikZBlog]]
 - [[https://tex.stackexchange.com/questions/119179/how-to-add-a-regression-line-to-randomly-generated-points-using-pgfplots-in-tikz][How to add a regression line to randomly generated points using pgfplots in Tikz? - TeX - LaTeX Stack Exchange]]
-* Conceptos
-** Correlación (R) y autocorrelación
-*** Coeficiente de correlación (aka =R= o =r=)
+** Conceptos
+*** Correlación (R) y autocorrelación
+**** Coeficiente de correlación (aka =R= o =r=)
 :PROPERTIES:
 :ID:       60c50020-54c2-4610-993a-4bb60512b250
 :END:
@@ -32,7 +30,7 @@
   - "De cada 100 pares de datos, \(R \cdot 100 \)
     tienen el mismo comportamiento".
 
-*** Correlación y calidad del modelo
+**** Correlación y calidad del modelo
 :PROPERTIES:
 :ID:       77f78879-51fa-4196-bdf0-15d43876b0a1
 :END:
@@ -56,7 +54,7 @@ Una correlación = |1| /no/ es existe.
 
 - Profe Carlos trabaja con R > |0.7|.
 
-*** Autocorrelación
+**** Autocorrelación
 - La autocorrelación mide el nivel
   de [[id:60c50020-54c2-4610-993a-4bb60512b250][correlación]] entre dos instancias
   de la misma variable, separadas por
@@ -81,17 +79,31 @@ Una correlación = |1| /no/ es existe.
   respecto a elementos más lejanos,
   solamente por el hecho de estar cerca."
 
-** Determinación (R^2)
-*** Coeficiente de determinación (R^{2})
-- Porcentaje de variación de Y que es explicado
-  por X.
-- ¿Qué porcentaje de X puede explicar la
-  varianza de Y?
-- ¿O qué porcentaje de la varianza de Y puede
-  ser explicado por X?
-*** Coeficiente de determinación ajustado(R^{2}_{aj})
-- Lo mismo que R^2, pero considera fallas
+*** Determinación (R^2)
+**** Coeficiente de determinación (R^{2})
+
+- Porcentaje de variación de =Y= que es explicado
+  por =X=.
+- ¿Qué porcentaje de =X= puede explicar la
+  varianza de =Y=?
+- ¿O qué porcentaje de la varianza de =Y= puede
+  ser explicado por =X=?
+
+**** Coeficiente de determinación ajustado(R^{2}_{aj})
+
+- Lo mismo que =R^2=, pero considera fallas
   ocasionadas por el tamaño de la muestra.
+
+**** R^2 vs R^2_aj
+
+- \(R^{2}_{aj} \leq R^{2}\)
+- Si no hay problemas por el tamaño de la muestra,
+  son iguales.
+- Si hay problemas, \(R^{2}_{aj}\) tiende a
+  ser menor.
+- Ante una diferencia, hay que usar el ajustado.
+- Hasta 4% de diferencia es aceptable, luego,
+  se usa R2 ajustado.
 - Si \(R^2\) > \(R^2_{aj}\)
   - Si no puedes aumentar el tamaño de la muestra,
     entonces trabaja con el ajustado.
@@ -99,29 +111,20 @@ Una correlación = |1| /no/ es existe.
   R^2 y R^2_{aj} importante cuando es
   superior al 3-4% [fn:1].
 
-*** R^2 vs R^2_aj
-- \(R^{2}_{aj} \leq R^{2}\)
-- Si no hay problemas por el tamaño de la muestra,
-  son iguales.
-- Si hay problemas, \(R^{2}_{aj}\) tiende a
-  ser menor.
-- Ante una diferencia, hay que usar el ajustado.
-- hasta 4% de diferencia es aceptable, luego,
-  se usa R2 ajustado.
-** Homocedasticidad
+*** Homocedasticidad
 - [[https://stats.stackexchange.com/questions/406509/is-there-any-difference-between-heteroscedasticity-and-homoscedasticity][Is there any difference between heteroscedasticity and homoscedasticity? - Cross Validated]]
 - [[https://www.scribbr.com/frequently-asked-questions/what-is-homoscedasticity/][What is homoscedasticity?]]
 
 
-En cuanto a modelos de regresión lineal simple:
-- Se busca que la dispersión, cedasticidad, de
-  los errores en una muestra, estén esparcidos
+En cuanto a [[id:38d60dbe-8e28-4cb5-8c57-7113f4027986][modelos de regresión lineal simple]]:
+- Se busca que la dispersión --- o cedasticidad ---,
+  de los errores en una muestra, estén esparcidos
   de forma homogénea, cumpliendo con el
-  supuesto de la normalidad de los errores,
+  [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][supuesto de la normalidad de los errores]],
   de otra forma en realidad no estaríamos
   hablando de un modelo lineal.
 
-** Linealidad, co-linealidad y multi-co-linealidad
+*** Linealidad, co-linealidad y multi-co-linealidad
 - Linealidad
   - Cuando existe una relación lineal entre
     2 variables.
@@ -148,7 +151,7 @@ En cuanto a modelos de regresión lineal simple:
 
 
 - [[https://www.youtube.com/watch?v=G1WX5GiFSWQ][Multicollinearity (in Regression Analysis) - YouTube]]
-* Calidad de la construcción vs calidad del modelo
+** Calidad de la construcción vs calidad del modelo
 
 - Un modelo bien construido procura cumplir la
   mayor cantidad de supuestos; por ejemplo,
@@ -171,10 +174,16 @@ Condición de cálculo:
 - n > k
 
 * Modelo Lineal
+:PROPERTIES:
+:ID:       38d60dbe-8e28-4cb5-8c57-7113f4027986
+:END:
 ** Pasos para un modelo bien construido
 *** 1 Calidad del dato
 - Análisis de valores atípicos
 *** 2 Construcción del modelo
+- Se le entrega la información al programa y
+  este lo construye.
+  - Ejemplo en R: [[id:db95037a-1538-4991-92f7-5b0170f5baa0][Paso 2: Construcción del modelo]].
 *** 3 Análisis de supuestos
 - [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][Supuestos]]
 *** 4 Evaluar el modelo
@@ -235,6 +244,9 @@ Condición de cálculo:
 :  descripY(datos,y)
 
 *** Paso 2: Construcción del modelo
+:PROPERTIES:
+:ID:       db95037a-1538-4991-92f7-5b0170f5baa0
+:END:
 
 :  mod1 <- lm(y~x,datos)
 :  plot(x,y)
@@ -264,7 +276,7 @@ Condición de cálculo:
   encontrar un patrón que no
   tiene verdadero sentido.
 
-**** 5 Autocorrelacion = 0
+**** 5 Autocorrelación = 0
 : dwtest(mod1)
 - como en supuesto 3, para este
   caso libreria =AER=.
@@ -334,6 +346,9 @@ Condición de cálculo:
 - [[https://www.youtube.com/watch?v=k964_uNn3l0][Regresión Lineal y Mínimos Cuadrados Ordinarios | DotCSV - YouTube]]
 
 ** Plots su interpretación
+:PROPERTIES:
+:ID:       4fbef882-7269-4f63-b12f-8dc05d47cb2a
+:END:
 *** Residuals vs Fitted
 *** Normal Q-Q
 - Comportamiento normal de los pares.
@@ -346,6 +361,9 @@ Condición de cálculo:
 
 *** Residuals vs Leverage
 ** Tests y sus hipótesis
+:PROPERTIES:
+:ID:       a0997225-c107-48fa-90a7-c26f46c71414
+:END:
 *** paso 3:
 **** supuesto 3: =shapiro.test=
 : shapiro.test(mod1$residuals)
@@ -402,99 +420,16 @@ Por lo tanto, si:
   - entonces
 
 * Notas de la clase
-** [2022-06-17 Fri]
-*** Independencia de errores
-- [2022-06-17 Fri 09:25]
-- Contexto: supuesto 4: independencia de
-  los errores.
-
-
-- Aumenta el Ingreso \implies Aumenta el gasto.
-
-
-
-- Si el procedimiento de muestreo se hizo
-  correctamente, entonces no debería
-  haber relación entre los errores,
-  por lo que cualquier supuesto patrón
-  existente sería una relación espúrica.
-- Cuando existen pocos datos, es fácil encontrar
-  patrones, pero puede que no tengan sentido.
-- Ante la presencia de más datos, encontrar un
-  patrón se hace más difícil; encontrar un
-  patrón en ese caso, es más probable que
-  tenga una explicación lógica.
-
-
-- [2022-06-17 Fri 09:34]
-  - Auto-Correlación:
-    - La variable tiempo puede no estar explícita,
-      pero sí explícita.
-
-*** Cantidad de estrellas y significancia
-
-- 1: \alpha < 0.001
-- 2: \alpha < 0.01
-- 3: \alpha < 0.05
-- 0: \alpha < 1
-
-
-- Mientras más estrellas, "más menor" que \alpha.
-
-
-: Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-
-*** Qué tipo de variable?
-- La escala de medida determina el tipo de variable.
-  - "Rojo".
-    - Puede ser un color, estado de ánimo, nota,
-      o cualquier cosa.
-    - La unidad de medida determina a qué
-      tipo de variable nos estamos refiriendo.
-
-*** Anova
-*** Qué es el residual?
-- \(u = Y - \cap Y\)
-
-** [2022-06-22 Wed]
-- Qué significa B0 igual a 0?
-  - Que hay que hacer otro modelo ajustado.
-- [2022-06-22 Wed 12:00]
-  - "Si el S de la media de los errores no se cumple
-    y el supuesto de normalidad tampoco,
-    entonces olvídate del modelo".
-- [2022-06-22 Wed 12:10]
-  - "De los modelos presentes, el menos malo es..."
-- [2022-06-22 Wed 12:25]
-  - Ejemplo 11.3 del libro en campus.
-- [2022-06-22 Wed 12:33]
-  - "Para un modelo simple, el Beta 1 tiene que
-    tener el mismo signo que el R."
-** [2022-07-01 Fri]
-- Lunes, RA1002.
-
-** [2022-07-04 Mon]
-:CLOCKBOOK:
-CLOCK: [2022-07-04 Mon 11:09]--[2022-07-04 Mon 11:34] =>  0:25
-:END:
-
-- Dados los gráficos, analice los pasos
-  para la construcción de un modelo lineal simple.
-
-*** Paso 1: Análisis de valores atípicos
-*** Paso 2: Crear modelo
-*** Paso 3: Análisis de supuestos
-*** Paso 4: Evaluar modelo
-* Scripts usados
-** para la materia
+** Scripts usados
+*** para la materia
 
 - =SCRIPT_A01_4_descripY.r=
 - =SCRIPT P01 Analisis de Distribucion.r=
 - =SCRIPT P02 Analisis de Distribucion.r=
 - =SCRIPT REGRESION MULTIPLE.r=
 
-** ejemplos en clases
-*** [2022-06-14 Tue]
+*** ejemplos en clases
+**** [2022-06-14 Tue]
 - datos<-PSU_diagnostico_01
 
 #+begin_example R
@@ -537,8 +472,8 @@ summary(model01)
 # S4 errores independientes
 # plot(model01$residuals)
 
-# S5 no autocorrelacion
-# HO: no existe autocorrelacion
+# S5 no autocorrelación
+# HO: no existe autocorrelación
 # Test DurbinWatson
 # dwtest(model01)
 
@@ -551,14 +486,14 @@ summary(model01)
 # HO: no hay variables colineales
 #+end_example
 
-*** [2022-06-28 Tue]
+**** [2022-06-28 Tue]
 
 - Datos:
 : "reg-2 variables ind.xlsx"
 - Script de referencia:
 : "SCRIPT REG LINEAL SIMPLE v01-05.r"
 
-*** [2022-07-01 Fri]
+**** [2022-07-01 Fri]
 
 - Pasos para un modelo bien construido.
 
@@ -669,14 +604,110 @@ summary(model01)
    - Si =B1=0= entonces la variable independiente no
      explica el comportamiento de la dependiente.
 
-* Simulaciones
+** [2022-06-17 Fri]
+*** Independencia de errores
+- [2022-06-17 Fri 09:25]
+- Contexto: supuesto 4: independencia de
+  los errores.
+
+
+- Aumenta el Ingreso \implies Aumenta el gasto.
+
+
+
+- Si el procedimiento de muestreo se hizo
+  correctamente, entonces no debería
+  haber relación entre los errores,
+  por lo que cualquier supuesto patrón
+  existente sería una relación espúrica.
+- Cuando existen pocos datos, es fácil encontrar
+  patrones, pero puede que no tengan sentido.
+- Ante la presencia de más datos, encontrar un
+  patrón se hace más difícil; encontrar un
+  patrón en ese caso, es más probable que
+  tenga una explicación lógica.
+
+
+- [2022-06-17 Fri 09:34]
+  - Auto-Correlación:
+    - La variable tiempo puede no estar explícita,
+      pero sí explícita.
+
+*** Cantidad de estrellas y significancia
+
+- 1: \alpha < 0.001
+- 2: \alpha < 0.01
+- 3: \alpha < 0.05
+- 0: \alpha < 1
+
+
+- Mientras más estrellas, "más menor" que \alpha.
+
+
+: Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+*** Qué tipo de variable?
+- La escala de medida determina el tipo de variable.
+  - "Rojo".
+    - Puede ser un color, estado de ánimo, nota,
+      o cualquier cosa.
+    - La unidad de medida determina a qué
+      tipo de variable nos estamos refiriendo.
+
+*** Anova
+*** Qué es el residual?
+- \(u = Y - \cap Y\)
+
+** [2022-06-22 Wed]
+- Qué significa B0 igual a 0?
+  - Que hay que hacer otro modelo ajustado.
+- [2022-06-22 Wed 12:00]
+  - "Si el S de la media de los errores no se cumple
+    y el supuesto de normalidad tampoco,
+    entonces olvídate del modelo".
+- [2022-06-22 Wed 12:10]
+  - "De los modelos presentes, el menos malo es..."
+- [2022-06-22 Wed 12:25]
+  - Ejemplo 11.3 del libro en campus.
+- [2022-06-22 Wed 12:33]
+  - "Para un modelo simple, el Beta 1 tiene que
+    tener el mismo signo que el R."
+** [2022-07-01 Fri]
+- Lunes, RA1002.
+
+** [2022-07-04 Mon]
+:CLOCKBOOK:
+CLOCK: [2022-07-04 Mon 11:09]--[2022-07-04 Mon 11:34] =>  0:25
+:END:
+
+- Dados los gráficos, analice los pasos
+  para la construcción de un modelo lineal simple.
+- M275-1 Clase 04 de julio 2022.
+  - Dos hojas más de ejercicios.
+
+*** Paso 1: Análisis de valores atípicos
+*** Paso 2: Crear modelo
+*** Paso 3: Análisis de supuestos
+*** Paso 4: Evaluar modelo
+* Otras fuentes y herramientas
+** Simulaciones
 - phet
   - [[https://phet.colorado.edu/sims/html/curve-fitting/latest/curve-fitting_en.html][Curve Fitting]]
-* Libros
+** Libros
 
 - En campus hay 2 muy buenos.
 - Unidad 11: Regresión lineal simple y correlación.
   - pag 389.
+
+* Consultas al profe
+- [[id:4fbef882-7269-4f63-b12f-8dc05d47cb2a][Plots su interpretación]]
+- [[id:a0997225-c107-48fa-90a7-c26f46c71414][Tests y sus hipótesis]]
+
+
+- ¿Los [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][supuestos]] 4 y 5 hacen referencia a la
+  correlación --- o "autocorrelación" ---
+  de los errores y autocorrelación
+  de la variable independiente respectivamente?
 
 * Footnotes
 
