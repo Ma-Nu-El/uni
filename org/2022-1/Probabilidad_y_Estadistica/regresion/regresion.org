@@ -18,6 +18,9 @@
 - [[https://tex.stackexchange.com/questions/119179/how-to-add-a-regression-line-to-randomly-generated-points-using-pgfplots-in-tikz][How to add a regression line to randomly generated points using pgfplots in Tikz? - TeX - LaTeX Stack Exchange]]
 ** Conceptos
 *** Correlación (R) y autocorrelación
+:PROPERTIES:
+:ID:       3619bdff-fc4c-42b2-ac89-5f01fde991ea
+:END:
 **** Coeficiente de correlación (aka =R= o =r=)
 :PROPERTIES:
 :ID:       60c50020-54c2-4610-993a-4bb60512b250
@@ -55,6 +58,9 @@ Una correlación = |1| /no/ es existe.
 - Profe Carlos trabaja con R > |0.7|.
 
 **** Autocorrelación
+:PROPERTIES:
+:ID:       8b45f010-c315-4329-9e9d-309d3ebba9cb
+:END:
 - La autocorrelación mide el nivel
   de [[id:60c50020-54c2-4610-993a-4bb60512b250][correlación]] entre dos instancias
   de la misma variable, separadas por
@@ -80,6 +86,9 @@ Una correlación = |1| /no/ es existe.
   solamente por el hecho de estar cerca."
 
 *** Determinación (R^2)
+:PROPERTIES:
+:ID:       6e453492-a76a-4bb2-8083-1c5a9e479f38
+:END:
 **** Coeficiente de determinación (R^{2})
 
 - Porcentaje de variación de =Y= que es explicado
@@ -112,6 +121,9 @@ Una correlación = |1| /no/ es existe.
   superior al 3-4% [fn:1].
 
 *** Homocedasticidad
+:PROPERTIES:
+:ID:       f9ea11c0-189c-4f2c-8c02-d9efb6274e1c
+:END:
 - [[https://stats.stackexchange.com/questions/406509/is-there-any-difference-between-heteroscedasticity-and-homoscedasticity][Is there any difference between heteroscedasticity and homoscedasticity? - Cross Validated]]
 - [[https://www.scribbr.com/frequently-asked-questions/what-is-homoscedasticity/][What is homoscedasticity?]]
 
@@ -125,6 +137,9 @@ En cuanto a [[id:38d60dbe-8e28-4cb5-8c57-7113f4027986][modelos de regresión lin
   hablando de un modelo lineal.
 
 *** Linealidad, co-linealidad y multi-co-linealidad
+:PROPERTIES:
+:ID:       9e9a0919-8748-423d-9d9f-8ddaf1819b77
+:END:
 - Linealidad
   - Cuando existe una relación lineal entre
     2 variables.
@@ -179,14 +194,20 @@ Condición de cálculo:
 :END:
 ** Pasos para un modelo bien construido
 *** 1 Calidad del dato
-- Análisis de valores atípicos
+- Análisis de valores atípicos.
 *** 2 Construcción del modelo
 - Se le entrega la información al programa y
-  este lo construye.
+  éste lo construye.
   - Ejemplo en R: [[id:db95037a-1538-4991-92f7-5b0170f5baa0][Paso 2: Construcción del modelo]].
 *** 3 Análisis de supuestos
+:PROPERTIES:
+:ID:       28fdff6b-7dd4-4699-a671-83d789c39355
+:END:
 - [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][Supuestos]]
 *** 4 Evaluar el modelo
+:PROPERTIES:
+:ID:       ab1dc4ae-fd1a-4010-a65d-8228cecf71a9
+:END:
 1) Correlacion: R
    : pearson
    - todas continuas
@@ -203,8 +224,6 @@ Condición de cálculo:
    : anova(mod1)
 3) R^2 y R^2_{ajustado}
    : summary(mod1)
-4) Evaluar parámetros
-
 
 
 - \beta_{i} = 0 \iff significa que se debe construir
@@ -226,13 +245,16 @@ Condición de cálculo:
 4. Los u's son independientes.
    - Los errores son independientes entre si.
 5. No auto-correlación.
+   - [[id:8b45f010-c315-4329-9e9d-309d3ebba9cb][Autocorrelación]].
 6. Homocedasticidad.
    - Los errores están dispersos de
      forma homogénea.
+   - [[id:f9ea11c0-189c-4f2c-8c02-d9efb6274e1c][Homocedasticidad]].
 7. No multicolinealidad.
    - Si no es cero, entonces tengo variables
      independientes que están en función
      de otras variables independientes.
+   - [[id:9e9a0919-8748-423d-9d9f-8ddaf1819b77][Linealidad, co-linealidad y multi-co-linealidad]].
 
 ** R script para los supuestos
 *** Preámbulo: Importación de los datos
@@ -351,7 +373,7 @@ Condición de cálculo:
 :END:
 *** Residuals vs Fitted
 *** Normal Q-Q
-- Comportamiento normal de los pares.
+- Comportamiento normal de los pares de datos.
 *** Scale-Location
 
 : bptest(mod1)
@@ -364,11 +386,13 @@ Condición de cálculo:
 :PROPERTIES:
 :ID:       a0997225-c107-48fa-90a7-c26f46c71414
 :END:
-*** paso 3:
+*** paso 3: Análisis de supuestos
+- [[id:28fdff6b-7dd4-4699-a671-83d789c39355][3 Análisis de supuestos]]
+  - [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][Supuestos para la realización de un modelo RLM (RLS)]]
 **** supuesto 3: =shapiro.test=
 : shapiro.test(mod1$residuals)
-- =H0= :
-- =H1= :
+- =H0= : Los errores se comportan normalmente.
+- =H1= : Los errores no se comportan normalmente.
 Por lo tanto, si:
 - =p-value= \geq \alpha
   - entonces
@@ -376,49 +400,32 @@ Por lo tanto, si:
   - entonces
 **** supuesto 5: =dwtest=
 : dwtest(mod1)
-- =H0= :
-- =H1= :
+- =H0= : Autocorrelación igual a cero.
+- =H1= : Autocorrelación distinta de cero.
 Por lo tanto, si:
 - =p-value= \geq \alpha
   - entonces
 - =p-value= < \alpha.
   - entonces
 **** supuesto 6: bptest
-- =H0= :
-- =H1= :
+- =H0= : Errores dispersos homogéneamente.
+- =H1= : Errores dispersos no homogéneamente.
 Por lo tanto, si:
 - =p-value= \geq \alpha
   - entonces
 - =p-value= < \alpha.
   - entonces
 *** paso 4:
+- [[id:ab1dc4ae-fd1a-4010-a65d-8228cecf71a9][4 Evaluar el modelo]]
 **** correlación R: cor.test
 : cor.test(y,x,method="pearson")
-- =H0= : =R=0=
-- =H1= : =R!=0=
+- =H0= : Correlación igual a cero.
+- =H1= : Correlación distinta de cero.
 Por lo tanto, si:
 - =p-value= \geq \alpha
   - entonces
 - =p-value= < \alpha.
   - entonces
-**** varianza: anova
-- =H0= :
-- =H1= :
-Por lo tanto, si:
-- =p-value= \geq \alpha
-  - entonces
-- =p-value= < \alpha.
-  - entonces
-**** =R^2= y =R^{2}_{aj}
-: summary(mod1)
-- =H0= :
-- =H1= :
-Por lo tanto, si:
-- =p-value= \geq \alpha
-  - entonces
-- =p-value= < \alpha.
-  - entonces
-
 * Notas de la clase
 ** Scripts usados
 *** para la materia
@@ -700,14 +707,12 @@ CLOCK: [2022-07-04 Mon 11:09]--[2022-07-04 Mon 11:34] =>  0:25
   - pag 389.
 
 * Consultas al profe
-- [[id:4fbef882-7269-4f63-b12f-8dc05d47cb2a][Plots su interpretación]]
-- [[id:a0997225-c107-48fa-90a7-c26f46c71414][Tests y sus hipótesis]]
-
-
 - ¿Los [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][supuestos]] 4 y 5 hacen referencia a la
   correlación --- o "autocorrelación" ---
   de los errores y autocorrelación
   de la variable independiente respectivamente?
+- [[id:4fbef882-7269-4f63-b12f-8dc05d47cb2a][Plots su interpretación]]
+- [[id:a0997225-c107-48fa-90a7-c26f46c71414][Tests y sus hipótesis]]
 
 * Footnotes
 
