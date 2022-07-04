@@ -730,6 +730,22 @@ CLOCK: [2022-07-04 Mon 11:09]--[2022-07-04 Mon 11:34] =>  0:25
 - [[id:4fbef882-7269-4f63-b12f-8dc05d47cb2a][Plots su interpretación]].
 - [[id:a0997225-c107-48fa-90a7-c26f46c71414][Tests y sus hipótesis]].
 
+
+- Calidad del modelo, ajuste del modelo,
+  efecto de la variable independiente y
+  valores atípicos.
+|                     |  <c>  | <c>  |
+|                     | Buena | Mala |
+| Ajuste\Construcción |       |      |
+|---------------------+-------+------|
+| Bueno               |   1   |  2   |
+| Malo                |   3   |  4   |
+
+1) Bingo.
+2) Considerar que cosas no se cumplen.
+3) Los valores atipicos pueden estar afectando mucho.
+4) word
+
 * Footnotes
 
 [fn:1]
