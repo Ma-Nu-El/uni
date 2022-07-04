@@ -100,7 +100,6 @@ todos enseguida y hacer el análisis después.
 : cdfcomp(list(fw,fln,fg,fn), legendtext=plot.legend)
 : ppcomp(list(fw,fln,fg,fn), legendtext=plot.legend)
 
-
 Una vez comparados los modelos, puedes hacer
 más descartes, por ejemplo que de los 4 modelos,
 descartas 2 y te quedas con duda entre otras

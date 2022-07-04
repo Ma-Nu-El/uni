@@ -9,19 +9,20 @@
 - [[#conceptos][Conceptos]]
 - [[#construcción-y-calidad-del-modelo][Construcción y calidad del modelo]]
 - [[#modelo-lineal][Modelo Lineal]]
-- [[#condición-de-cálculo][Condición de cálculo]]
-- [[#simulaciones][Simulaciones]]
-- [[#método-de-mínimos-cuadrados-ordinariosmmco][Método de Mínimos Cuadrados Ordinarios(MMCO)]]
 - [[#notas-de-la-clase][Notas de la clase]]
 - [[#scripts-usados][Scripts usados]]
+- [[#simulaciones][Simulaciones]]
 - [[#libros][Libros]]
 
 * Introducción
 - [[https://latexdraw.com/linear-regression-in-latex-using-tikz/][Linear Regression in LaTeX using TikZ - TikZBlog]]
 - [[https://tex.stackexchange.com/questions/119179/how-to-add-a-regression-line-to-randomly-generated-points-using-pgfplots-in-tikz][How to add a regression line to randomly generated points using pgfplots in Tikz? - TeX - LaTeX Stack Exchange]]
 * Conceptos
-** Correlación (R)
-*** Coeficiente de correlación (aka R o r)
+** Correlación (R) y autocorrelación
+*** Coeficiente de correlación (aka =R= o =r=)
+:PROPERTIES:
+:ID:       60c50020-54c2-4610-993a-4bb60512b250
+:END:
 - Es el nivel de relación existente entre
   2 variables; se entiende como el porcentaje
   de datos que poseen una asociación
@@ -36,24 +37,67 @@
 :END:
 
 Una correlación = |1| /no/ es existe.
-- Siempre hay errores.
+- Teóricamente sí, pero siempre hay errores.
 
 
-- R<|0.2-0.3| \iff no hay relación.
-- |0.4|<R<|0.6| \iff relación baja.
-- |0.6|<R<|0.8| \iff relación media.
-- |0.8|<R<|1.0| \iff relación alta.
+\begin{align*}
+  R < \vert{} 0.2 - 0.3 \vert{}
+    &\iff \text{no hay relación.} \\
+  \vert{} 0.4 \vert{} < R < \vert{} 0.6 \vert{}
+    &\iff \text{relación baja.} \\
+  \vert{} 0.6 \vert{} < R < \vert{} 0.8 \vert{}
+    &\iff \text{relación media.} \\
+  \vert{} 0.8 \vert{} < R < \vert{} 1.0 \vert{}
+    &\iff \text{relación alta.}
+\end{align*}
 
 
-- Profe Carlos trabaja con R>|0.7|.
+
+- Profe Carlos trabaja con R > |0.7|.
+
+*** Autocorrelación
+- La autocorrelación mide el nivel
+  de [[id:60c50020-54c2-4610-993a-4bb60512b250][correlación]] entre dos instancias
+  de la misma variable, separadas por
+  un intervalo de tiempo.
+- [[https://www.investopedia.com/terms/a/autocorrelation.asp][Autocorrelation Definition]]
+- [[https://corporatefinanceinstitute.com/resources/knowledge/other/autocorrelation/][Autocorrelation - Overview, How It Works, and Tests]]
+- Si existe autocorrelación, entonces
+  sabiendo el valor actual de una variable,
+  podemos predecir con cierta certeza el
+  valor futuro o pasado de la misma variable.
+- Ejemplo: si hoy llueve, entonces es más
+  probable que mañana también llueva; diferente
+  de que si hoy está despejado, entonces
+  es menos probable que mañana llueva.
+- La autocorrelación mide la relación entre
+  el valor actual de una variable y sus
+  valores pasados.
+- "La autocorrelación o dependencia secuencial
+  es una característica que consiste en que,
+  elementos cercanos en el espacio o en el
+  tiempo se parecen más entre sí que con
+  respecto a elementos más lejanos,
+  solamente por el hecho de estar cerca."
 
 ** Determinación (R^2)
 *** Coeficiente de determinación (R^{2})
 - Porcentaje de variación de Y que es explicado
   por X.
+- ¿Qué porcentaje de X puede explicar la
+  varianza de Y?
+- ¿O qué porcentaje de la varianza de Y puede
+  ser explicado por X?
 *** Coeficiente de determinación ajustado(R^{2}_{aj})
 - Lo mismo que R^2, pero considera fallas
   ocasionadas por el tamaño de la muestra.
+- Si \(R^2\) > \(R^2_{aj}\)
+  - Si no puedes aumentar el tamaño de la muestra,
+    entonces trabaja con el ajustado.
+- Se considera una diferencia entre
+  R^2 y R^2_{aj} importante cuando es
+  superior al 3-4%.
+
 *** R^2 vs R^2_aj
 - \(R^{2}_{aj} \leq R^{2}\)
 - Si no hay problemas por el tamaño de la muestra,
@@ -64,7 +108,45 @@ Una correlación = |1| /no/ es existe.
 - hasta 4% de diferencia es aceptable, luego,
   se usa R2 ajustado.
 ** Homocedasticidad
-** Linealidad, colinealidad y autocolinealidad
+- [[https://stats.stackexchange.com/questions/406509/is-there-any-difference-between-heteroscedasticity-and-homoscedasticity][Is there any difference between heteroscedasticity and homoscedasticity? - Cross Validated]]
+- [[https://www.scribbr.com/frequently-asked-questions/what-is-homoscedasticity/][What is homoscedasticity?]]
+
+
+En cuanto a modelos de regresión lineal simple:
+- Se busca que la dispersión, cedasticidad, de
+  los errores en una muestra, estén esparcidos
+  de forma homogénea, cumpliendo con el
+  supuesto de la normalidad de los errores,
+  de otra forma en realidad no estaríamos
+  hablando de un modelo lineal.
+
+** Linealidad, co-linealidad y multi-co-linealidad
+- Linealidad
+  - Cuando existe una relación lineal entre
+    2 variables.
+- Co-lineal
+  - Cuando 2 o más valores de una variable
+    pertenecen a una recta.
+- Multi-co-lineal
+  - Cuando 2 o más variables independientes
+    presentan [[id:60c50020-54c2-4610-993a-4bb60512b250][correlación]] lineal entre sí.
+  - Si presentan una correlación fuerte,
+    entonces en realidad una de ellas
+    puede ser considerada dependiente
+    de la otra, por lo que en realidad
+    no son independientes, ergo, pueden
+    ser consideradas independientes en la
+    suposición inicial pero co-lineales
+    entre si luego de realizar las pruebas de
+    multicolinealidad.
+  - Una consecuencia de la multicolinealidad
+    es que no se puede distinguir cúales
+    efectos son ocasionados por una variable
+    independiente y cúales son ocasionados
+    por otra.
+
+
+- [[https://www.youtube.com/watch?v=G1WX5GiFSWQ][Multicollinearity (in Regression Analysis) - YouTube]]
 * Construcción y calidad del modelo
 - Un modelo bien construido procura cumplir la
   mayor cantidad de [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][supuestos]]. Un mal modelo
@@ -78,6 +160,12 @@ modelos:
 - Modelos buenos mal construidos.
 - Modelos malos bien construidos.
 - Modelos malos mal construidos.
+
+
+Condición de cálculo:
+- n: tamaño de la muestra.
+- k: número de parámetros.
+- n > k
 
 * Modelo Lineal
 ** Pasos para un modelo bien construido
@@ -119,25 +207,120 @@ modelos:
 3. u \sim N(0,\sigma^{2}_{u})
 4. Los u's son independientes.
 5. No auto-correlación.
-6. Homocedasticidad.
+6. Homocedasticidad de los errores.
    - Cedasticidad=dispersión.
    - De los errores.
 7. No multicolinealidad.
    - Si no es cero, entonces tengo variables
-     que están en función de otras variables.
+     independientes que están en función
+     de otras variables independientes.
 
-* Condición de cálculo
-- n: tamaño de la muestra.
-- k: número de parámetros.
+** R para los supuestos
+*** Preámbulo: Importación de los datos
+:  datos <- origen_de_los_datos
+:  y <- datos$variable_dependiente
+:  x <- datos$variable_independiente
+
+*** Paso 1: Análisis de valores atípicos
+:  descripY(datos,y)
+
+*** Paso 2: Construcción del modelo
+
+:  mod1 <- lm(y~x,datos)
+:  plot(x,y)
+:  plot(mod1) # el (Residuals vs Leverage)
+
+*** Paso 3: Analisis de supuestos
+**** 1 Promedio de los errores = 0
+
+: mean(mod1$residuals)
+
+**** 2 Varianza de los errores minima:
+- Justificación de [[id:a08d2fa9-4dfc-4f3e-8280-1b67b760e40b][Método de Mínimos Cuadrados]].
+**** 3 Errores con comportamiento normal
+: shapiro.test(mod1$residuals)
+- Todos los test de la libreria =nortest=.
+- =HO= es que los errores se comportan normalmente,
+  por lo que en este caso, para cumplir el
+  supuesto nos sirve un =p-value= menor a \alpha.
+
+**** 4 Independencia de los errores:
+: plot(mod1$fitted.values,mod1$residuals)
+- o el gráfico 1 del =plot(mod1)=.
+  - recuerda apretar ENTER en la consola.
+- Si hay un patrón en el gráfico, entonces
+  menos independientes son los errores.
+  Mientras menos datos, más probable
+  encontrar un patrón que no
+  tiene verdadero sentido.
+
+**** 5 Autocorrelacion = 0
+: dwtest(mod1)
+- como en supuesto 3, para este
+  caso libreria =AER=.
+- =HO=: la
+
+**** 6 Homocesdasticidad de los errores
+: bptest(mod1)
+- =H0=: Errores homocedasticos.
+  - Para cumplir con el supuesto,
+    nos sirve un =p-value=.
+- =H1=: Errores heterocedasticos.
 
 
-- n > k
+- Requiere de un =B0=, por lo que si
+  eliminamos el =B0= podemos ocupar
+  el gráfico 3 del =plot(mod1)=.
+  =Scale-Location=.
+- Cuando el gráfico se abre, es probable
+  la heterocedasticidad, si se mantiene
+  en una manga, entonces es homocedastico,
+  independiente de la forma de la mango.
+  Idealmente una manga con diámetro constante.
+  Aunque no se abra, si el diámetro aumenta
+  en algún momento, es probable la
+  heterocedasticidad.
 
-* Simulaciones
-- phet
-  - [[https://phet.colorado.edu/sims/html/curve-fitting/latest/curve-fitting_en.html][Curve Fitting]]
-* Método de Mínimos Cuadrados Ordinarios(MMCO)
-- Relación con varianza y el supuesto 2?
+**** 7 Multicolinealidad:
+- Como estamos trabajando con una variable,
+  este punto no aplica.
+*** Paso 4: Evaluar modelo
+**** R de correlacion
+
+: cor.test(y,x,method="pearson")
+
+**** Varianza
+
+: anova(mod1)
+
+| =Pr(F)=p-value=                  | H0: modelo no existe. |
+| =meansq(residuals)= = sigma2_err | H1: modelo existe.    |
+
+**** Determinacion (R^{2} y R^{2}_{aj}
+
+: summary(mod1)
+- =Intercept= es la columna del =B0=.
+- =x= es la columna del =B1=.
+- =Pr(t)= es el =p-value= de cada uno donde
+  el =H0= es =B_i= = =0= con =i=(0,1)=.
+- Si =B0=0= entonces se propone un modelo nuevo.
+- Si =B1=0= entonces la variable independiente no
+  explica el comportamiento de la dependiente.
+
+** Método de Mínimos Cuadrados Ordinarios (MMCO)
+:PROPERTIES:
+:ID:       a08d2fa9-4dfc-4f3e-8280-1b67b760e40b
+:END:
+- ¿Relación con varianza y el supuesto 2?
+- El método de mínimos cuadrados se utiliza
+  para obtener una recta que aproxime
+  el comportamiento de pares de datos.
+  Por lo tanto, al estar obteniendo esta
+  recta con los pasos enseñados por el
+  profesor, estamos implícitamente
+  aplicando el método de mínimos cuadrados y,
+  por lo tanto, asegurando el [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][supuesto]] 2.
+
 * Notas de la clase
 ** [2022-06-17 Fri]
 *** Independencia de errores
@@ -154,21 +337,22 @@ modelos:
   correctamente, entonces no debería
   haber relación entre los errores,
   por lo que cualquier supuesto patrón
-  existente seria una relación espurica.
+  existente sería una relación espúrica.
 - Cuando existen pocos datos, es fácil encontrar
   patrones, pero puede que no tengan sentido.
-- Ante la presencia de mas datos, encontrar un
-  patrón se hace mas difícil; encontrar un
-  patrón en ese caso, es mas probable que
+- Ante la presencia de más datos, encontrar un
+  patrón se hace más difícil; encontrar un
+  patrón en ese caso, es más probable que
   tenga una explicación lógica.
 
 
 - [2022-06-17 Fri 09:34]
   - Auto-Correlación:
     - La variable tiempo puede no estar explícita,
-      pero si explícita.
+      pero sí explícita.
 
 *** Cantidad de estrellas y significancia
+
 - 1: \alpha < 0.001
 - 2: \alpha < 0.01
 - 3: \alpha < 0.05
@@ -183,19 +367,12 @@ modelos:
 *** Qué tipo de variable?
 - La escala de medida determina el tipo de variable.
   - "Rojo".
-    - Puede ser un color, estado de animo, nota,
+    - Puede ser un color, estado de ánimo, nota,
       o cualquier cosa.
-    - La unidad de medida determina a que
+    - La unidad de medida determina a qué
       tipo de variable nos estamos refiriendo.
+
 *** Anova
-*** R^2
-- ¿Qué porcentaje de X puede explicar la varianza de Y.
-- O qué porcentaje de la varianza de Y puede
-  ser explicado por X.
-*** R^2_{aj}
-- Si \(R^2\) > \(R^2_{aj}\)
-  - Si no puedes aumentar el tamaño de la muestra,
-    entonces trabaja con el ajustado.
 *** Qué es el residual?
 - \(u = Y - \cap Y\)
 
@@ -399,13 +576,18 @@ summary(model01)
    - Si =B1=0= entonces la variable independiente no
      explica el comportamiento de la dependiente.
 
+* Simulaciones
+- phet
+  - [[https://phet.colorado.edu/sims/html/curve-fitting/latest/curve-fitting_en.html][Curve Fitting]]
 * Libros
+
 - En campus hay 2 muy buenos.
 - Unidad 11: Regresión lineal simple y correlación.
   - pag 389.
+
 * Local variables :noexport:
 # Local Variables:
 # ispell-local-dictionary: "espanol"
 # End:
 
-#  LocalWords:  curtosis Homocedasticidad
+#  LocalWords:  curtosis Homocedasticidad autocorrelación espúrica cedasticidad
