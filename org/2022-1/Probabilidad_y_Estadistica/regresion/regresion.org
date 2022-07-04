@@ -703,6 +703,12 @@ CLOCK: [2022-07-04 Mon 11:09]--[2022-07-04 Mon 11:34] =>  0:25
   para la construcción de un modelo lineal simple.
 - M275-1 Clase 04 de julio 2022.
   - Dos hojas más de ejercicios.
+- Un modelo lineal puede fallar por dos cosas:
+  1. Muchos valores atípicos.
+  2. La variable independiente no puede explicar
+     el escenario.
+-
+  - Todo lo demás es ajustable.
 
 *** Paso 1: Análisis de valores atípicos
 *** Paso 2: Crear modelo
