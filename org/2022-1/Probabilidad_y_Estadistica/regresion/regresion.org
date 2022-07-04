@@ -394,6 +394,7 @@ Condición de cálculo:
   heterocedasticidad.
 
 *** Residuals vs Leverage
+- Entrega información acerca de valores atípicos.
 ** Tests y sus hipótesis
 :PROPERTIES:
 :ID:       a0997225-c107-48fa-90a7-c26f46c71414
@@ -628,12 +629,7 @@ summary(model01)
 - [2022-06-17 Fri 09:25]
 - Contexto: supuesto 4: independencia de
   los errores.
-
-
 - Aumenta el Ingreso \implies Aumenta el gasto.
-
-
-
 - Si el procedimiento de muestreo se hizo
   correctamente, entonces no debería
   haber relación entre los errores,
@@ -649,8 +645,10 @@ summary(model01)
 
 - [2022-06-17 Fri 09:34]
   - Auto-Correlación:
-    - La variable tiempo puede no estar explícita,
-      pero sí explícita.
+    - "La variable tiempo puede no estar explícita,
+      pero sí explícita."
+    - La variable tiempo puede explicar ciertos
+      patrones en los datos.
 
 *** Cantidad de estrellas y significancia
 
@@ -678,7 +676,7 @@ summary(model01)
 - \(u = Y - \cap Y\)
 
 ** [2022-06-22 Wed]
-- Qué significa B0 igual a 0?
+- Qué significa =B0= igual a 0?
   - Que hay que hacer otro modelo ajustado.
 - [2022-06-22 Wed 12:00]
   - "Si el S de la media de los errores no se cumple
@@ -729,8 +727,8 @@ CLOCK: [2022-07-04 Mon 11:09]--[2022-07-04 Mon 11:34] =>  0:25
   correlación --- o "autocorrelación" ---
   de los errores y autocorrelación
   de la variable independiente respectivamente?
-- [[id:4fbef882-7269-4f63-b12f-8dc05d47cb2a][Plots su interpretación]]
-- [[id:a0997225-c107-48fa-90a7-c26f46c71414][Tests y sus hipótesis]]
+- [[id:4fbef882-7269-4f63-b12f-8dc05d47cb2a][Plots su interpretación]].
+- [[id:a0997225-c107-48fa-90a7-c26f46c71414][Tests y sus hipótesis]].
 
 * Footnotes
 
