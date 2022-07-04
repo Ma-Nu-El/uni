@@ -13,6 +13,7 @@
 - [[#scripts-usados][Scripts usados]]
 - [[#simulaciones][Simulaciones]]
 - [[#libros][Libros]]
+- [[#footnotes][Footnotes]]
 
 * Introducción
 - [[https://latexdraw.com/linear-regression-in-latex-using-tikz/][Linear Regression in LaTeX using TikZ - TikZBlog]]
@@ -59,7 +60,7 @@ Una correlación = |1| /no/ es existe.
 - La autocorrelación mide el nivel
   de [[id:60c50020-54c2-4610-993a-4bb60512b250][correlación]] entre dos instancias
   de la misma variable, separadas por
-  un intervalo de tiempo.
+  un intervalo de tiempo o espacio.
 - [[https://www.investopedia.com/terms/a/autocorrelation.asp][Autocorrelation Definition]]
 - [[https://corporatefinanceinstitute.com/resources/knowledge/other/autocorrelation/][Autocorrelation - Overview, How It Works, and Tests]]
 - Si existe autocorrelación, entonces
@@ -96,7 +97,7 @@ Una correlación = |1| /no/ es existe.
     entonces trabaja con el ajustado.
 - Se considera una diferencia entre
   R^2 y R^2_{aj} importante cuando es
-  superior al 3-4%.
+  superior al 3-4% [fn:1].
 
 *** R^2 vs R^2_aj
 - \(R^{2}_{aj} \leq R^{2}\)
@@ -224,7 +225,7 @@ Condición de cálculo:
      independientes que están en función
      de otras variables independientes.
 
-** R para los supuestos
+** R script para los supuestos
 *** Preámbulo: Importación de los datos
 :  datos <- origen_de_los_datos
 :  y <- datos$variable_dependiente
@@ -267,7 +268,7 @@ Condición de cálculo:
 : dwtest(mod1)
 - como en supuesto 3, para este
   caso libreria =AER=.
-- =HO=: la
+- =HO=:
 
 **** 6 Homocesdasticidad de los errores
 : bptest(mod1)
@@ -294,7 +295,7 @@ Condición de cálculo:
 - Como estamos trabajando con una variable,
   este punto no aplica.
 *** Paso 4: Evaluar modelo
-**** R de correlacion
+**** =R= de correlacion
 
 : cor.test(y,x,method="pearson")
 
@@ -305,7 +306,7 @@ Condición de cálculo:
 | =Pr(F)=p-value=                  | H0: modelo no existe. |
 | =meansq(residuals)= = sigma2_err | H1: modelo existe.    |
 
-**** Determinacion (R^{2} y R^{2}_{aj}
+**** Determinación (R^{2} y R^{2}_{aj}
 
 : summary(mod1)
 - =Intercept= es la columna del =B0=.
@@ -340,20 +341,66 @@ Condición de cálculo:
 
 : bptest(mod1)
 - Si =mod1= es un modelo lineal, entonces el
-  gráfico Scale-Location describe la
+  gráfico =Scale-Location= describe la
   homocedasticidad de los errores.
 
 *** Residuals vs Leverage
 ** Tests y sus hipótesis
 *** paso 3:
-**** supuesto 3: shapiro.test
-**** supuesto 5: dwtest
+**** supuesto 3: =shapiro.test=
+: shapiro.test(mod1$residuals)
+- =H0= :
+- =H1= :
+Por lo tanto, si:
+- =p-value= \geq \alpha
+  - entonces
+- =p-value= < \alpha.
+  - entonces
+**** supuesto 5: =dwtest=
+: dwtest(mod1)
+- =H0= :
+- =H1= :
+Por lo tanto, si:
+- =p-value= \geq \alpha
+  - entonces
+- =p-value= < \alpha.
+  - entonces
 **** supuesto 6: bptest
+- =H0= :
+- =H1= :
+Por lo tanto, si:
+- =p-value= \geq \alpha
+  - entonces
+- =p-value= < \alpha.
+  - entonces
 *** paso 4:
 **** correlación R: cor.test
 : cor.test(y,x,method="pearson")
-
+- =H0= : =R=0=
+- =H1= : =R!=0=
+Por lo tanto, si:
+- =p-value= \geq \alpha
+  - entonces
+- =p-value= < \alpha.
+  - entonces
 **** varianza: anova
+- =H0= :
+- =H1= :
+Por lo tanto, si:
+- =p-value= \geq \alpha
+  - entonces
+- =p-value= < \alpha.
+  - entonces
+**** =R^2= y =R^{2}_{aj}
+: summary(mod1)
+- =H0= :
+- =H1= :
+Por lo tanto, si:
+- =p-value= \geq \alpha
+  - entonces
+- =p-value= < \alpha.
+  - entonces
+
 * Notas de la clase
 ** [2022-06-17 Fri]
 *** Independencia de errores
@@ -428,7 +475,7 @@ Condición de cálculo:
 
 ** [2022-07-04 Mon]
 :CLOCKBOOK:
-CLOCK: [2022-07-04 Mon 11:09]
+CLOCK: [2022-07-04 Mon 11:09]--[2022-07-04 Mon 11:34] =>  0:25
 :END:
 
 - Dados los gráficos, analice los pasos
@@ -631,9 +678,14 @@ summary(model01)
 - Unidad 11: Regresión lineal simple y correlación.
   - pag 389.
 
-* Local variables :noexport:
+* Footnotes
+
+[fn:1]
+[2022-07-04 Mon 11:41] "Casi que a gusto del
+consumidor". CJG.
 # Local Variables:
 # ispell-local-dictionary: "espanol"
 # End:
 
 #  LocalWords:  curtosis homocedasticidad autocorrelación espúrica cedasticidad
+#  LocalWords:  script
