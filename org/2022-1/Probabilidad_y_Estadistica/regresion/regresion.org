@@ -7,7 +7,7 @@
 * Índice :TOC_1:noexport:
 - [[#introducción][Introducción]]
 - [[#conceptos][Conceptos]]
-- [[#construcción-y-calidad-del-modelo][Construcción y calidad del modelo]]
+- [[#calidad-de-la-construcción-vs-calidad-del-modelo][Calidad de la construcción vs calidad del modelo]]
 - [[#modelo-lineal][Modelo Lineal]]
 - [[#notas-de-la-clase][Notas de la clase]]
 - [[#scripts-usados][Scripts usados]]
@@ -28,8 +28,8 @@
   de datos que poseen una asociación
   directa o inversa.
 - Interpretación:
-  - "De cada 100 pares de datos, R*100 tienen el
-    mismo comportamiento".
+  - "De cada 100 pares de datos, \(R \cdot 100 \)
+    tienen el mismo comportamiento".
 
 *** Correlación y calidad del modelo
 :PROPERTIES:
@@ -147,9 +147,11 @@ En cuanto a modelos de regresión lineal simple:
 
 
 - [[https://www.youtube.com/watch?v=G1WX5GiFSWQ][Multicollinearity (in Regression Analysis) - YouTube]]
-* Construcción y calidad del modelo
+* Calidad de la construcción vs calidad del modelo
+
 - Un modelo bien construido procura cumplir la
-  mayor cantidad de [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][supuestos]]. Un mal modelo
+  mayor cantidad de supuestos; por ejemplo,
+  los [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][supuestos]] del modelo lineal. Un mal modelo
   no cumple con muchos supuestos.
 - Un modelo bueno tiene una alta [[id:77f78879-51fa-4196-bdf0-15d43876b0a1][correlación]].
 
@@ -169,27 +171,30 @@ Condición de cálculo:
 
 * Modelo Lineal
 ** Pasos para un modelo bien construido
-1) Calidad del dato
-   - Datos atípicos
-2) Construcción del modelo
-3) Análisis de [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][supuestos]]
-4) Evaluar el modelo
-   1) R
-      : pearson
-      - todas continuas
-      : spearman
-      - una discreta u ordinal
-        - (generalmente la independiente)
-      : \Tau de Kendall
-      - dos discretas u ordinales
-      : V de Cramer
-      - ordinales
-      : \Chi -cuadrado
-      - nominal
-   2) Varianza
-      : anova(mod1)
-   3) R^2 y R^2_{ajustado}
-5) Evaluar parámetros
+*** 1 Calidad del dato
+- Análisis de valores atípicos
+*** 2 Construcción del modelo
+*** 3 Análisis de supuestos
+- [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][Supuestos]]
+*** 4 Evaluar el modelo
+1) Correlacion: R
+   : pearson
+   - todas continuas
+   : spearman
+   - una discreta u ordinal
+     - (generalmente la independiente)
+   : \Tau de Kendall
+   - dos discretas u ordinales
+   : V de Cramer
+   - ordinales
+   : \Chi -cuadrado
+   - nominal
+2) Varianza
+   : anova(mod1)
+3) R^2 y R^2_{ajustado}
+   : summary(mod1)
+4) Evaluar parámetros
+
 
 
 - \beta_{i} = 0 \iff significa que se debe construir
@@ -203,13 +208,17 @@ Condición de cálculo:
 
 
 1. E(u) = \bar u = 0.
+   - El promedio de los errores es cero.
 2. V(u) es mínima.
+   - La varianza de los errores es mínima.
 3. u \sim N(0,\sigma^{2}_{u})
+   - Los errores se comportan normalmente.
 4. Los u's son independientes.
+   - Los errores son independientes entre si.
 5. No auto-correlación.
-6. Homocedasticidad de los errores.
-   - Cedasticidad=dispersión.
-   - De los errores.
+6. Homocedasticidad.
+   - Los errores están dispersos de
+     forma homogénea.
 7. No multicolinealidad.
    - Si no es cero, entonces tengo variables
      independientes que están en función
@@ -320,7 +329,31 @@ Condición de cálculo:
   profesor, estamos implícitamente
   aplicando el método de mínimos cuadrados y,
   por lo tanto, asegurando el [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][supuesto]] 2.
+- [[https://www.youtube.com/watch?v=gUdU6BgnJ2c][Método de Mínimos cuadrados - YouTube]]
+- [[https://www.youtube.com/watch?v=k964_uNn3l0][Regresión Lineal y Mínimos Cuadrados Ordinarios | DotCSV - YouTube]]
 
+** Plots su interpretación
+*** Residuals vs Fitted
+*** Normal Q-Q
+- Comportamiento normal de los pares.
+*** Scale-Location
+
+: bptest(mod1)
+- Si =mod1= es un modelo lineal, entonces el
+  gráfico Scale-Location describe la
+  homocedasticidad de los errores.
+
+*** Residuals vs Leverage
+** Tests y sus hipótesis
+*** paso 3:
+**** supuesto 3: shapiro.test
+**** supuesto 5: dwtest
+**** supuesto 6: bptest
+*** paso 4:
+**** correlación R: cor.test
+: cor.test(y,x,method="pearson")
+
+**** varianza: anova
 * Notas de la clase
 ** [2022-06-17 Fri]
 *** Independencia de errores
@@ -393,12 +426,25 @@ Condición de cálculo:
 ** [2022-07-01 Fri]
 - Lunes, RA1002.
 
+** [2022-07-04 Mon]
+:CLOCKBOOK:
+CLOCK: [2022-07-04 Mon 11:09]
+:END:
+
+- Dados los gráficos, analice los pasos
+  para la construcción de un modelo lineal simple.
+
+*** Paso 1: Análisis de valores atípicos
+*** Paso 2: Crear modelo
+*** Paso 3: Análisis de supuestos
+*** Paso 4: Evaluar modelo
 * Scripts usados
 ** para la materia
-- SCRIPT_A01_4_descripY.R
-- SCRIPT P01 Analisis de Distribucion.r
-- SCRIPT P02 Analisis de Distribucion.r
-- SCRIPT REGRESION MULTIPLE.r
+
+- =SCRIPT_A01_4_descripY.r=
+- =SCRIPT P01 Analisis de Distribucion.r=
+- =SCRIPT P02 Analisis de Distribucion.r=
+- =SCRIPT REGRESION MULTIPLE.r=
 
 ** ejemplos en clases
 *** [2022-06-14 Tue]
@@ -458,12 +504,12 @@ summary(model01)
 # HO: no hay variables colineales
 #+end_example
 
-*** [2022-06-17 Fri]
 *** [2022-06-28 Tue]
+
 - Datos:
-: "~/Downloads/uni/2022-1/proba/data/2/reg-2 variables ind.xlsx
+: "reg-2 variables ind.xlsx"
 - Script de referencia:
-: ~/Downloads/uni/2022-1/proba/scripts-r/20220628/SCRIPT REG LINEAL SIMPLE v01-05.r
+: "SCRIPT REG LINEAL SIMPLE v01-05.r"
 
 *** [2022-07-01 Fri]
 
@@ -590,4 +636,4 @@ summary(model01)
 # ispell-local-dictionary: "espanol"
 # End:
 
-#  LocalWords:  curtosis Homocedasticidad autocorrelación espúrica cedasticidad
+#  LocalWords:  curtosis homocedasticidad autocorrelación espúrica cedasticidad
