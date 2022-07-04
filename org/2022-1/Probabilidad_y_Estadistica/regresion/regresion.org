@@ -304,9 +304,9 @@ Condición de cálculo:
   caso libreria =AER=.
 - =HO=:
 
-**** 6 Homocesdasticidad de los errores
+**** 6 Homocedasticidad de los errores
 : bptest(mod1)
-- =H0=: Errores homocedasticos.
+- =H0=: Errores homocedásticos.
   - Para cumplir con el supuesto,
     nos sirve un =p-value=.
 - =H1=: Errores heterocedasticos.
@@ -318,7 +318,7 @@ Condición de cálculo:
   =Scale-Location=.
 - Cuando el gráfico se abre, es probable
   la heterocedasticidad, si se mantiene
-  en una manga, entonces es homocedastico,
+  en una manga, entonces es homocedástico,
   independiente de la forma de la mango.
   Idealmente una manga con diámetro constante.
   Aunque no se abra, si el diámetro aumenta
@@ -380,6 +380,18 @@ Condición de cálculo:
 - Si =mod1= es un modelo lineal, entonces el
   gráfico =Scale-Location= describe la
   homocedasticidad de los errores.
+- Requiere de un =B0=, por lo que si
+  eliminamos el =B0= podemos ocupar
+  el gráfico 3 del =plot(mod1)=.
+  =Scale-Location=.
+- Cuando el gráfico se abre, es probable
+  la heterocedasticidad, si se mantiene
+  en una manga, entonces es homocedástico,
+  independiente de la forma de la mango.
+  Idealmente una manga con diámetro constante.
+  Aunque no se abra, si el diámetro aumenta
+  en algún momento, es probable la
+  heterocedasticidad.
 
 *** Residuals vs Leverage
 ** Tests y sus hipótesis
@@ -565,11 +577,11 @@ summary(model01)
       - como en supuesto 3, para este
         caso libreria =AER=.
 
-   6) Homocesdasticidad
+   6) Homocedasticidad
       #+begin_example R
       bptest(mod1)
       #+end_example
-      - H0: homocedastico
+      - H0: homocedástico
       - H1: heterocedastico
 
       - Requiere de un B0, por lo que si
@@ -578,7 +590,7 @@ summary(model01)
         =Scale-Location=.
       - Cuando el gráfico se abre, es probable
         la heterocedasticidad, si se mantiene
-        en una manga, entonces es homocedastico,
+        en una manga, entonces es homocedástico,
         independiente de la forma de la mango.
         Idealmente una manga con diámetro constante.
         Aunque no se abra, si el diámetro aumenta
@@ -723,5 +735,4 @@ consumidor". CJG.
 # ispell-local-dictionary: "espanol"
 # End:
 
-#  LocalWords:  curtosis homocedasticidad autocorrelación espúrica cedasticidad
-#  LocalWords:  script
+#  LocalWords:  curtosis autocorrelación espúrica script cedasticidad homocedasticidad homocedástico homocedástica homocedásticos homocedásticas
