@@ -6,10 +6,13 @@
 
 * Índice :TOC_1:noexport:
 - [[#introducción][Introducción]]
+- [[#pasos-para-un-modelo-bien-construido][Pasos para un modelo bien construido]]
 - [[#modelo-lineal][Modelo Lineal]]
+- [[#r-script-para-pasos-de-construcción-de-modelo][R Script para Pasos de Construcción de Modelo]]
 - [[#notas-de-la-clase][Notas de la clase]]
 - [[#otras-fuentes-y-herramientas][Otras fuentes y herramientas]]
 - [[#consultas-al-profe][Consultas al profe]]
+- [[#interpretación-p-value][Interpretación p-value]]
 - [[#footnotes][Footnotes]]
 
 * Introducción
@@ -188,48 +191,61 @@ Condición de cálculo:
 - k: número de parámetros.
 - n > k
 
-* Modelo Lineal
-:PROPERTIES:
-:ID:       38d60dbe-8e28-4cb5-8c57-7113f4027986
-:END:
-** Pasos para un modelo bien construido
-*** 1 Calidad del dato
+* Pasos para un modelo bien construido
+** 1 Calidad del dato
 - Análisis de valores atípicos.
-*** 2 Construcción del modelo
+** 2 Construcción del modelo
 - Se le entrega la información al programa y
   éste lo construye.
   - Ejemplo en R: [[id:db95037a-1538-4991-92f7-5b0170f5baa0][Paso 2: Construcción del modelo]].
-*** 3 Análisis de supuestos
-:PROPERTIES:
-:ID:       28fdff6b-7dd4-4699-a671-83d789c39355
-:END:
-- [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][Supuestos]]
-*** 4 Evaluar el modelo
+** 3 Análisis de Supuestos
+- [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][Supuestos Modelo Lineal Simple]]
+** 4 Evaluar el modelo
 :PROPERTIES:
 :ID:       ab1dc4ae-fd1a-4010-a65d-8228cecf71a9
 :END:
-1) Correlacion: R
-   : pearson
-   - todas continuas
-   : spearman
-   - una discreta u ordinal
-     - (generalmente la independiente)
-   : \Tau de Kendall
-   - dos discretas u ordinales
-   : V de Cramer
-   - ordinales
-   : \Chi -cuadrado
-   - nominal
+1) Correlación: R
 2) Varianza
    : anova(mod1)
 3) R^2 y R^2_{ajustado}
    : summary(mod1)
+4) Parámetros (B_i)
+   - \beta_{i} = 0 \iff significa que se
+     debe construir un nuevo modelo.
 
+** Conclusión
+- Calidad del modelo, ajuste del modelo,
+  efecto de la variable independiente y
+  valores atípicos.
 
-- \beta_{i} = 0 \iff significa que se debe construir
-  un nuevo modelo.
+|                     |  <c>  | <c>  |
+|                     | Bueno | Malo |
+| Construcción\Ajuste |       |      |
+|---------------------+-------+------|
+| Buena               |   1   |  2   |
+| Mala                |   3   |  4   |
 
-** Supuestos para la realización de un modelo RLM (RLS)
+1) Bingo.
+2) Bingo; una baja correlación se puede
+   explicar por alguna de o todas las
+   siguientes:
+   - Los valores atípicos pueden estar
+     afectando mucho; mientras más valores
+     atípicos, menos adecuado --- o
+     más distorsionado --- el modelo.
+   - La variable independiente en realidad
+     probablemente no explique el
+     comportamiento de la dependiente.
+3) Considerar qué cosas no se cumplen para
+   un uso adecuado del modelo.
+   - Qué supuestos se omiten.
+4) word.
+
+* Modelo Lineal
+:PROPERTIES:
+:ID:       38d60dbe-8e28-4cb5-8c57-7113f4027986
+:END:
+** Supuestos
 :PROPERTIES:
 :ID:       806ba6ae-fb8c-47cb-9635-8433a4b40d80
 :END:
@@ -255,17 +271,8 @@ Condición de cálculo:
      independientes que están en función
      de otras variables independientes.
    - [[id:9e9a0919-8748-423d-9d9f-8ddaf1819b77][Linealidad, co-linealidad y multi-co-linealidad]].
-
-** R script para los supuestos
-*** Preámbulo: Importación de los datos
-:  datos <- origen_de_los_datos
-:  y <- datos$variable_dependiente
-:  x <- datos$variable_independiente
-
-*** Paso 1: Análisis de valores atípicos
-:  descripY(datos,y)
-
-*** Paso 2: Construcción del modelo
+** R script de pasos para Modelo Lineal Simple
+*** Paso 2: Construcción del modelo lineal simple
 :PROPERTIES:
 :ID:       db95037a-1538-4991-92f7-5b0170f5baa0
 :END:
@@ -274,7 +281,10 @@ Condición de cálculo:
 :  plot(x,y)
 :  plot(mod1) # el (Residuals vs Leverage)
 
-*** Paso 3: Analisis de supuestos
+*** Paso 3: Análisis de supuestos
+:PROPERTIES:
+:ID:       332bc450-66e3-432c-add9-4b02b2e202f1
+:END:
 **** 1 Promedio de los errores = 0
 
 : mean(mod1$residuals)
@@ -329,27 +339,25 @@ Condición de cálculo:
 - Como estamos trabajando con una variable,
   este punto no aplica.
 *** Paso 4: Evaluar modelo
-**** =R= de correlacion
-
-: cor.test(y,x,method="pearson")
-
-**** Varianza
-
-: anova(mod1)
-
-| =Pr(F)=p-value=                  | H0: modelo no existe. |
-| =meansq(residuals)= = sigma2_err | H1: modelo existe.    |
-
-**** Determinación (R^{2} y R^{2}_{aj}
-
-: summary(mod1)
-- =Intercept= es la columna del =B0=.
-- =x= es la columna del =B1=.
-- =Pr(t)= es el =p-value= de cada uno donde
-  el =H0= es =B_i= = =0= con =i=(0,1)=.
-- Si =B0=0= entonces se propone un modelo nuevo.
-- Si =B1=0= entonces la variable independiente no
-  explica el comportamiento de la dependiente.
+1) Correlación: R
+   : pearson
+   - todas continuas
+   : spearman
+   - una discreta u ordinal
+     - (generalmente la independiente)
+   : \Tau de Kendall
+   - dos discretas u ordinales
+   : V de Cramer
+   - ordinales
+   : \Chi -cuadrado
+   - nominal
+2) Varianza
+   : anova(mod1)
+3) R^2 y R^2_{ajustado}
+   : summary(mod1)
+4) Parámetros (B_i)
+   - \(B_{i}\) = 0 \iff significa que se
+     debe construir un nuevo modelo.
 
 ** Método de Mínimos Cuadrados Ordinarios (MMCO)
 :PROPERTIES:
@@ -372,8 +380,25 @@ Condición de cálculo:
 :ID:       4fbef882-7269-4f63-b12f-8dc05d47cb2a
 :END:
 *** Residuals vs Fitted
+- Errores vs estimaciones.
+
+
+- Analiza la independencia de los errores.
+- No debería haber patrones para declarar
+  independencia de los errores.
+  - Si hay algún patrón, entonces
+    probablemente hay dependencia entre
+    los errores.
+- La línea roja es solo una tendencia;
+  no arroja información en cuanto a la
+  independencia de los errores.
+
 *** Normal Q-Q
+
 - Comportamiento normal de los pares de datos.
+- En el contexto de la prueba, se refiere
+  al comportamiento normal de los errores.
+
 *** Scale-Location
 
 : bptest(mod1)
@@ -385,11 +410,12 @@ Condición de cálculo:
   el gráfico 3 del =plot(mod1)=.
   =Scale-Location=.
 - Cuando el gráfico se abre, es probable
-  la heterocedasticidad, si se mantiene
-  en una manga, entonces es homocedástico,
-  independiente de la forma de la mango.
-  Idealmente una manga con diámetro constante.
-  Aunque no se abra, si el diámetro aumenta
+  la heterocedasticidad de los errores.
+- Si se mantiene en una manga, entonces
+  es homocedástico, independiente de la
+  forma de la mango.
+- Idealmente una manga con diámetro constante.
+- Aunque no se abra, si el diámetro aumenta
   en algún momento, es probable la
   heterocedasticidad.
 
@@ -400,8 +426,7 @@ Condición de cálculo:
 :ID:       a0997225-c107-48fa-90a7-c26f46c71414
 :END:
 *** paso 3: Análisis de supuestos
-- [[id:28fdff6b-7dd4-4699-a671-83d789c39355][3 Análisis de supuestos]]
-  - [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][Supuestos para la realización de un modelo RLM (RLS)]]
+- [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][Supuestos para la realización de un modelo RLM (RLS)]]
 **** supuesto 3: =shapiro.test=
 : shapiro.test(mod1$residuals)
 - =H0= : Los errores se comportan normalmente.
@@ -430,15 +455,58 @@ Por lo tanto, si:
   - entonces
 *** paso 4: Evaluar el modelo
 - [[id:ab1dc4ae-fd1a-4010-a65d-8228cecf71a9][4 Evaluar el modelo]]
-**** correlación R: =cor.test=
+**** Correlación R: =cor.test=
 : cor.test(y,x,method="pearson")
 - =H0= : Correlación igual a cero.
 - =H1= : Correlación distinta de cero.
-Por lo tanto, si:
-- =p-value= \geq \alpha
-  - entonces
-- =p-value= < \alpha.
-  - entonces
+**** Anova
+- =H0=: el modelo no existe.
+- =H1=: el modelo sí existe.
+**** R2 y R2a
+- Los =H0= están implícitos en sig(cor.test).
+
+**** Parámetros
+- =H0=: los =B_i= no existen.
+- =H1=: los =B_i= sí existen.
+
+* R Script para Pasos de Construcción de Modelo
+*** Preámbulo: Importación de los datos
+:  datos <- origen_de_los_datos
+:  y <- datos$variable_dependiente
+:  x <- datos$variable_independiente
+
+*** Paso 1: Análisis de valores atípicos
+:  descripY(datos,y)
+
+*** Paso 2: Construcción de Modelo
+- [[id:db95037a-1538-4991-92f7-5b0170f5baa0][Ejemplo Modelo Lineal Simple]]
+*** Paso 3: Análisis de Supuestos
+- [[id:332bc450-66e3-432c-add9-4b02b2e202f1][Ejemplo Modelo Lineal Simple]]
+*** Paso 4: Evaluar Modelo
+:PROPERTIES:
+:ID:       343a9520-a34d-425f-94ba-819cda3e675f
+:END:
+**** =R= de correlación
+
+: cor.test(y,x,method="pearson")
+
+**** Varianza
+
+: anova(mod1)
+
+| =Pr(F)=p-value=                  | H0: modelo no existe. |
+| =meansq(residuals)= = sigma2_err | H1: modelo existe.    |
+
+**** Determinación (R^{2} y R^{2}_{aj})
+
+: summary(mod1)
+- =Intercept= es la columna del =B0=.
+- =x= es la columna del =B1=.
+- =Pr(t)= es el =p-value= de cada uno donde
+  el =H0= es =B_i= = =0= con =i=(0,1)=.
+- Si =B0=0= entonces se propone un modelo nuevo.
+- Si =B1=0= entonces la variable independiente no
+  explica el comportamiento de la dependiente.
 * Notas de la clase
 ** Scripts usados
 *** para la materia
@@ -712,6 +780,83 @@ CLOCK: [2022-07-04 Mon 11:09]--[2022-07-04 Mon 11:34] =>  0:25
 *** Paso 2: Crear modelo
 *** Paso 3: Análisis de supuestos
 *** Paso 4: Evaluar modelo
+** [2022-07-05 Tue]
+:CLOCKBOOK:
+CLOCK: [2022-07-05 Tue 11:01]--[2022-07-05 Tue 13:17] =>  2:16
+:END:
+Preguntas tipo prueba.
+
+*** Enunciado
+- Respecto de los supuestos:
+- La media de los errores presenta un promedio
+  de 6.36 e-17, con una varianza de error 7.79,
+  mientras que la prueba de normalidad presenta
+  un sig de 0.000. La prueba de DurbinWatson
+  arroja un p-value de .4654, así como
+  la BPTEST 0.0117.
+
+- Respecto de los parámetros:
+- R=.6664 con un sig de 0.000, anova p-value
+  de 2.2e-15, tanto para B0 como B1
+  los sig son 0.0000.
+- R 2.4441 y R2a .4396
+
+- Modelo
+  - Humedad real = 10.15 + 0.7236 x medición por DI**.
+
+*** Desarrollo
+**** Pasos
+***** 1 Datos atípicos
+- Enunciado no presenta información respecto
+  de valores atípicos.
+***** 2 Construcción modelo
+- El modelo ya está construido.
+***** 3 Análisis Supuestos
+****** 1 Media de errores cero
+- Cumplido.
+- Se trabaja con 4 decimales.
+****** 2 Varianza mínima
+- 7.79.
+- Como el enunciado no dice el método de construcción,
+  se debe decir que "si el método de obtención
+  del modelo es el MMC (mínimos cuadrados ordinarios),
+  entonces la varianza tiende a ser mínima."
+
+****** 3 Errores normales
+- El =H0= de la =shapiro.test= es que los errores
+  se comportan normal.
+- Como el =sig= de la normalidad del enunciado
+  es =0.000=, inferior al \alpha = =0.05=,
+  se rechaza =H0=; por lo tanto que dice que
+  los errores /no/ se comportan normalmente.
+
+****** 4 Errores independientes
+- No entrega informacion.
+****** 5 No autocorrelación
+- El =H0= de la DurbinWatson es autocorrelación
+  igual a cero.
+- El p-value de la DurbinWatson del enunciado
+  es .4654; superior a un \alpha = 0.05 por
+  lo que se asume el H0 verdadero.
+
+****** 6 Homecedasticidad de los errores
+- El H0 de la bptest es errores dispersos
+  homogéneamente.
+- El bptest del enunciado tiene un sig
+  de 0.0117; inferior a \alpha = 0.05 por
+  lo que se rechaza H0.
+  - Por lo tanto, los errores están dispersos
+    heterogéneamente.
+****** 7 No Multicolinealidad
+***** 4 Evaluación Modelo
+****** R
+- El sig(cor.test) < \alpha, por lo que se
+  rechaza H0 por lo que el R sí existe.
+
+****** Anova
+- sig(anova) < \alpha por lo que se rechaza
+  HO por lo que el modelo sí existe.
+
 * Otras fuentes y herramientas
 ** Simulaciones
 - phet
@@ -723,6 +868,7 @@ CLOCK: [2022-07-04 Mon 11:09]--[2022-07-04 Mon 11:34] =>  0:25
   - pag 389.
 
 * Consultas al profe
+- Respecto del [[id:a08d2fa9-4dfc-4f3e-8280-1b67b760e40b][Método de Mínimos Cuadrados]].
 - ¿Los [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][supuestos]] 4 y 5 hacen referencia a la
   correlación --- o "autocorrelación" ---
   de los errores y autocorrelación
@@ -731,20 +877,18 @@ CLOCK: [2022-07-04 Mon 11:09]--[2022-07-04 Mon 11:34] =>  0:25
 - [[id:a0997225-c107-48fa-90a7-c26f46c71414][Tests y sus hipótesis]].
 
 
-- Calidad del modelo, ajuste del modelo,
-  efecto de la variable independiente y
-  valores atípicos.
-|                     |  <c>  | <c>  |
-|                     | Buena | Mala |
-| Ajuste\Construcción |       |      |
-|---------------------+-------+------|
-| Bueno               |   1   |  2   |
-| Malo                |   3   |  4   |
 
-1) Bingo.
-2) Considerar que cosas no se cumplen.
-3) Los valores atipicos pueden estar afectando mucho.
-4) word
+* Interpretación p-value
+- Aka =sig=.
+
+
+- Si =p-value= > \alpha, entonces se acepta =H0=.
+- Si =p-value= < \alpha, entonces se rechaza =H0=
+  en favor de =H1=.
+
+| =p-value=   | < | \alpha | < | =p-value=   |
+|-------------+---+--------+---+-------------|
+| Acepta =H1= |   |        |   | Acepta =H0= |
 
 * Footnotes
 
@@ -756,3 +900,4 @@ consumidor". CJG.
 # End:
 
 #  LocalWords:  curtosis autocorrelación espúrica script cedasticidad homocedasticidad homocedástico homocedástica homocedásticos homocedásticas
+#  LocalWords:  heterogéneamente
