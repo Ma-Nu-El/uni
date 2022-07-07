@@ -8,7 +8,6 @@
 - [[#introducción][Introducción]]
 - [[#pasos-para-un-modelo-bien-construido][Pasos para un modelo bien construido]]
 - [[#modelo-lineal][Modelo Lineal]]
-- [[#r-script-para-pasos-de-construcción-de-modelo][R Script para Pasos de Construcción de Modelo]]
 - [[#notas-de-la-clase][Notas de la clase]]
 - [[#otras-fuentes-y-herramientas][Otras fuentes y herramientas]]
 - [[#consultas-al-profe][Consultas al profe]]
@@ -169,28 +168,6 @@ En cuanto a [[id:38d60dbe-8e28-4cb5-8c57-7113f4027986][modelos de regresión lin
 
 
 - [[https://www.youtube.com/watch?v=G1WX5GiFSWQ][Multicollinearity (in Regression Analysis) - YouTube]]
-** Calidad de la construcción vs calidad del modelo
-
-- Un modelo bien construido procura cumplir la
-  mayor cantidad de supuestos; por ejemplo,
-  los [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][supuestos]] del modelo lineal. Un mal modelo
-  no cumple con muchos supuestos.
-- Un modelo bueno tiene una alta [[id:77f78879-51fa-4196-bdf0-15d43876b0a1][correlación]].
-
-
-A partir de esto se pueden tener 4 tipos de
-modelos:
-- Modelos buenos bien construidos.
-- Modelos buenos mal construidos.
-- Modelos malos bien construidos.
-- Modelos malos mal construidos.
-
-
-Condición de cálculo:
-- n: tamaño de la muestra.
-- k: número de parámetros.
-- n > k
-
 * Pasos para un modelo bien construido
 ** 1 Calidad del dato
 - Análisis de valores atípicos.
@@ -214,6 +191,19 @@ Condición de cálculo:
      debe construir un nuevo modelo.
 
 ** Conclusión
+- Un modelo bien construido procura cumplir la
+  mayor cantidad de supuestos; por ejemplo,
+  los [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][supuestos]] del modelo lineal. Un mal modelo
+  no cumple con muchos supuestos.
+- Un modelo bueno tiene una alta [[id:77f78879-51fa-4196-bdf0-15d43876b0a1][correlación]].
+
+
+A partir de esto se pueden tener 4 tipos de
+modelos:
+- Modelos buenos bien construidos.
+- Modelos buenos mal construidos.
+- Modelos malos bien construidos.
+- Modelos malos mal construidos.
 - Calidad del modelo, ajuste del modelo,
   efecto de la variable independiente y
   valores atípicos.
@@ -240,6 +230,13 @@ Condición de cálculo:
    un uso adecuado del modelo.
    - Qué supuestos se omiten.
 4) word.
+
+** Calidad de la construcción vs calidad del modelo
+
+Condición de cálculo:
+- n: tamaño de la muestra.
+- k: número de parámetros.
+- n > k
 
 * Modelo Lineal
 :PROPERTIES:
@@ -271,11 +268,23 @@ Condición de cálculo:
      independientes que están en función
      de otras variables independientes.
    - [[id:9e9a0919-8748-423d-9d9f-8ddaf1819b77][Linealidad, co-linealidad y multi-co-linealidad]].
-** R script de pasos para Modelo Lineal Simple
-*** Paso 2: Construcción del modelo lineal simple
-:PROPERTIES:
-:ID:       db95037a-1538-4991-92f7-5b0170f5baa0
-:END:
+** Herramientas para ejecución de los pasos
+*** Preámbulo: Importación de los datos
+
+:  datos <- origen_de_los_datos
+:  y <- datos$variable_dependiente
+:  x <- datos$variable_independiente
+
+*** Paso 1: Análisis de Valores Atípicos
+
+- =R=
+:  descripY(datos,y)
+- Plot:
+  - =Residuals vs Leverage=
+    - Entrega información acerca de
+       valores atípicos.
+
+*** Paso 2: Construcción del Modelo
 
 :  mod1 <- lm(y~x,datos)
 :  plot(x,y)
@@ -288,15 +297,21 @@ Condición de cálculo:
 **** 1 Promedio de los errores = 0
 
 : mean(mod1$residuals)
+- =H0=: media igual a cero.
+- =H1=: media distinta de cero.
 
 **** 2 Varianza de los errores minima:
 - Justificación de [[id:a08d2fa9-4dfc-4f3e-8280-1b67b760e40b][Método de Mínimos Cuadrados]].
 **** 3 Errores con comportamiento normal
 : shapiro.test(mod1$residuals)
-- Todos los test de la libreria =nortest=.
-- =HO= es que los errores se comportan normalmente,
-  por lo que en este caso, para cumplir el
-  supuesto nos sirve un =p-value= menor a \alpha.
+- y todos los test de la librería =nortest=.
+- =HO=: los errores se comportan normalmente.
+
+
+- Plot: =Normal Q-Q=
+    - Comportamiento normal de los pares de datos.
+    - En el contexto de la prueba, se refiere
+      al comportamiento normal de los errores.
 
 **** 4 Independencia de los errores:
 : plot(mod1$fitted.values,mod1$residuals)
@@ -308,19 +323,30 @@ Condición de cálculo:
   encontrar un patrón que no
   tiene verdadero sentido.
 
+
+- Plot: =Residuals vs Fitted=
+  - Errores vs estimaciones.
+- Analiza la independencia de los errores.
+- No debería haber patrones para declarar
+  independencia de los errores.
+  - Si hay algún patrón, entonces
+    probablemente hay dependencia entre
+    los errores.
+- La línea roja es solo una tendencia;
+  no arroja información en cuanto a la
+  independencia de los errores.
+
 **** 5 Autocorrelación = 0
+
 : dwtest(mod1)
-- como en supuesto 3, para este
-  caso libreria =AER=.
-- =HO=:
+- y todos los test de la librería =AER=.
+- =H0= : Autocorrelación igual a cero.
+- =H1= : Autocorrelación distinta de cero.
 
 **** 6 Homocedasticidad de los errores
 : bptest(mod1)
-- =H0=: Errores homocedásticos.
-  - Para cumplir con el supuesto,
-    nos sirve un =p-value=.
-- =H1=: Errores heterocedasticos.
-
+- =H0= : Errores dispersos homogéneamente.
+- =H1= : Errores dispersos no homogéneamente.
 
 - Requiere de un =B0=, por lo que si
   eliminamos el =B0= podemos ocupar
@@ -335,71 +361,6 @@ Condición de cálculo:
   en algún momento, es probable la
   heterocedasticidad.
 
-**** 7 Multicolinealidad:
-- Como estamos trabajando con una variable,
-  este punto no aplica.
-*** Paso 4: Evaluar modelo
-1) Correlación: R
-   : pearson
-   - todas continuas
-   : spearman
-   - una discreta u ordinal
-     - (generalmente la independiente)
-   : \Tau de Kendall
-   - dos discretas u ordinales
-   : V de Cramer
-   - ordinales
-   : \Chi -cuadrado
-   - nominal
-2) Varianza
-   : anova(mod1)
-3) R^2 y R^2_{ajustado}
-   : summary(mod1)
-4) Parámetros (B_i)
-   - \(B_{i}\) = 0 \iff significa que se
-     debe construir un nuevo modelo.
-
-** Método de Mínimos Cuadrados Ordinarios (MMCO)
-:PROPERTIES:
-:ID:       a08d2fa9-4dfc-4f3e-8280-1b67b760e40b
-:END:
-- ¿Relación con varianza y el supuesto 2?
-- El método de mínimos cuadrados se utiliza
-  para obtener una recta que aproxime
-  el comportamiento de pares de datos.
-  Por lo tanto, al estar obteniendo esta
-  recta con los pasos enseñados por el
-  profesor, estamos implícitamente
-  aplicando el método de mínimos cuadrados y,
-  por lo tanto, asegurando el [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][supuesto]] 2.
-- [[https://www.youtube.com/watch?v=gUdU6BgnJ2c][Método de Mínimos cuadrados - YouTube]]
-- [[https://www.youtube.com/watch?v=k964_uNn3l0][Regresión Lineal y Mínimos Cuadrados Ordinarios | DotCSV - YouTube]]
-
-** Plots su interpretación
-:PROPERTIES:
-:ID:       4fbef882-7269-4f63-b12f-8dc05d47cb2a
-:END:
-*** Residuals vs Fitted
-- Errores vs estimaciones.
-
-
-- Analiza la independencia de los errores.
-- No debería haber patrones para declarar
-  independencia de los errores.
-  - Si hay algún patrón, entonces
-    probablemente hay dependencia entre
-    los errores.
-- La línea roja es solo una tendencia;
-  no arroja información en cuanto a la
-  independencia de los errores.
-
-*** Normal Q-Q
-
-- Comportamiento normal de los pares de datos.
-- En el contexto de la prueba, se refiere
-  al comportamiento normal de los errores.
-
-*** Scale-Location
 
 : bptest(mod1)
 - Si =mod1= es un modelo lineal, entonces el
@@ -419,15 +380,114 @@ Condición de cálculo:
   en algún momento, es probable la
   heterocedasticidad.
 
-*** Residuals vs Leverage
+**** 7 Multicolinealidad:
+- Como estamos trabajando con una variable,
+  este punto no aplica.
+*** Paso 4: Evaluar modelo
+**** Acerca de
+1) R^2 y R^2_{ajustado}
+   : summary(mod1)
+2) Parámetros (B_i)
+   - \(B_{i}\) = 0 \iff significa que se
+     debe construir un nuevo modelo.
+
+**** Correlación =R=: =cor.test=
+: cor.test(y,x,method="pearson")
+- =H0= : Correlación igual a cero.
+- =H1= : Correlación distinta de cero.
+
+**** Varianza
+
+: anova(mod1)
+
+- =H0=: el modelo no existe.
+- =H1=: el modelo sí existe.
+- =Pr(F)=p-value=
+- =meansq(residuals)= = sigma2_err
+
+**** Parametros
+- =H0=: los =B_i= no existen.
+- =H1=: los =B_i= sí existen.
+
+
+: summary(mod1)
+- =Intercept= es la fila del =B0=.
+- =x= es la fila del =B1=.
+- =Pr(t)= es el =p-value= de =B0= y =B1= donde
+  la hipótesis nula es que ambos son cero.
+  - Si =B0=0= entonces se propone un modelo nuevo.
+  - Si =B1=0= entonces la variable independiente no
+    explica el comportamiento de la dependiente.
+
+** Método de Mínimos Cuadrados Ordinarios (MMCO)
+:PROPERTIES:
+:ID:       a08d2fa9-4dfc-4f3e-8280-1b67b760e40b
+:END:
+- ¿Relación con varianza y el supuesto 2?
+- El método de mínimos cuadrados se utiliza
+  para obtener una recta que aproxime
+  el comportamiento de pares de datos.
+  Por lo tanto, al estar obteniendo esta
+  recta con los pasos enseñados por el
+  profesor, estamos implícitamente
+  aplicando el método de mínimos cuadrados y,
+  por lo tanto, asegurando el [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][supuesto]] 2.
+- [[https://www.youtube.com/watch?v=gUdU6BgnJ2c][Método de Mínimos cuadrados - YouTube]]
+- [[https://www.youtube.com/watch?v=k964_uNn3l0][Regresión Lineal y Mínimos Cuadrados Ordinarios | DotCSV - YouTube]]
+
+** DONE Plots su interpretación
+:PROPERTIES:
+:ID:       4fbef882-7269-4f63-b12f-8dc05d47cb2a
+:END:
+*** DONE Residuals vs Fitted
+- Errores vs estimaciones.
+
+
+- Analiza la independencia de los errores.
+- No debería haber patrones para declarar
+  independencia de los errores.
+  - Si hay algún patrón, entonces
+    probablemente hay dependencia entre
+    los errores.
+- La línea roja es solo una tendencia;
+  no arroja información en cuanto a la
+  independencia de los errores.
+
+*** DONE Normal Q-Q
+
+- Comportamiento normal de los pares de datos.
+- En el contexto de la prueba, se refiere
+  al comportamiento normal de los errores.
+
+*** DONE Scale-Location
+
+: bptest(mod1)
+- Si =mod1= es un modelo lineal, entonces el
+  gráfico =Scale-Location= describe la
+  homocedasticidad de los errores.
+- Requiere de un =B0=, por lo que si
+  eliminamos el =B0= podemos ocupar
+  el gráfico 3 del =plot(mod1)=.
+  =Scale-Location=.
+- Cuando el gráfico se abre, es probable
+  la heterocedasticidad de los errores.
+- Si se mantiene en una manga, entonces
+  es homocedástico, independiente de la
+  forma de la mango.
+- Idealmente una manga con diámetro constante.
+- Aunque no se abra, si el diámetro aumenta
+  en algún momento, es probable la
+  heterocedasticidad.
+
+*** DONE Residuals vs Leverage
 - Entrega información acerca de valores atípicos.
-** Tests y sus hipótesis
+** DONE Tests y sus hipótesis
 :PROPERTIES:
 :ID:       a0997225-c107-48fa-90a7-c26f46c71414
 :END:
-*** paso 3: Análisis de supuestos
+*** DONE paso 3: Análisis de supuestos
 - [[id:806ba6ae-fb8c-47cb-9635-8433a4b40d80][Supuestos para la realización de un modelo RLM (RLS)]]
-**** supuesto 3: =shapiro.test=
+**** DONE supuesto 3: =shapiro.test=
 : shapiro.test(mod1$residuals)
 - =H0= : Los errores se comportan normalmente.
 - =H1= : Los errores no se comportan normalmente.
@@ -436,77 +496,27 @@ Por lo tanto, si:
   - entonces
 - =p-value= < \alpha.
   - entonces
-**** supuesto 5: =dwtest=
+**** DONE supuesto 5: =dwtest=
 : dwtest(mod1)
 - =H0= : Autocorrelación igual a cero.
 - =H1= : Autocorrelación distinta de cero.
-Por lo tanto, si:
-- =p-value= \geq \alpha
-  - entonces
-- =p-value= < \alpha.
-  - entonces
-**** supuesto 6: =bptest=
+**** DONE supuesto 6: =bptest=
 - =H0= : Errores dispersos homogéneamente.
 - =H1= : Errores dispersos no homogéneamente.
-Por lo tanto, si:
-- =p-value= \geq \alpha
-  - entonces
-- =p-value= < \alpha.
-  - entonces
-*** paso 4: Evaluar el modelo
+*** DONE paso 4: Evaluar el modelo
 - [[id:ab1dc4ae-fd1a-4010-a65d-8228cecf71a9][4 Evaluar el modelo]]
-**** Correlación R: =cor.test=
+**** DONE Correlación R: =cor.test=
 : cor.test(y,x,method="pearson")
 - =H0= : Correlación igual a cero.
 - =H1= : Correlación distinta de cero.
-**** Anova
+**** DONE Anova
 - =H0=: el modelo no existe.
 - =H1=: el modelo sí existe.
-**** R2 y R2a
-- Los =H0= están implícitos en sig(cor.test).
 
-**** Parámetros
+**** DONE Parámetros
 - =H0=: los =B_i= no existen.
 - =H1=: los =B_i= sí existen.
 
-* R Script para Pasos de Construcción de Modelo
-*** Preámbulo: Importación de los datos
-:  datos <- origen_de_los_datos
-:  y <- datos$variable_dependiente
-:  x <- datos$variable_independiente
-
-*** Paso 1: Análisis de valores atípicos
-:  descripY(datos,y)
-
-*** Paso 2: Construcción de Modelo
-- [[id:db95037a-1538-4991-92f7-5b0170f5baa0][Ejemplo Modelo Lineal Simple]]
-*** Paso 3: Análisis de Supuestos
-- [[id:332bc450-66e3-432c-add9-4b02b2e202f1][Ejemplo Modelo Lineal Simple]]
-*** Paso 4: Evaluar Modelo
-:PROPERTIES:
-:ID:       343a9520-a34d-425f-94ba-819cda3e675f
-:END:
-**** =R= de correlación
-
-: cor.test(y,x,method="pearson")
-
-**** Varianza
-
-: anova(mod1)
-
-| =Pr(F)=p-value=                  | H0: modelo no existe. |
-| =meansq(residuals)= = sigma2_err | H1: modelo existe.    |
-
-**** Determinación (R^{2} y R^{2}_{aj})
-
-: summary(mod1)
-- =Intercept= es la columna del =B0=.
-- =x= es la columna del =B1=.
-- =Pr(t)= es el =p-value= de cada uno donde
-  el =H0= es =B_i= = =0= con =i=(0,1)=.
-- Si =B0=0= entonces se propone un modelo nuevo.
-- Si =B1=0= entonces la variable independiente no
-  explica el comportamiento de la dependiente.
 * Notas de la clase
 ** Scripts usados
 *** para la materia
@@ -875,7 +885,6 @@ Preguntas tipo prueba.
   de la variable independiente respectivamente?
 - [[id:4fbef882-7269-4f63-b12f-8dc05d47cb2a][Plots su interpretación]].
 - [[id:a0997225-c107-48fa-90a7-c26f46c71414][Tests y sus hipótesis]].
-
 
 
 * Interpretación p-value
