@@ -485,7 +485,7 @@ CLOSED: [2022-07-03 Sun 01:38] SCHEDULED: <2022-07-01 Fri 12:00-13:00>
 :LOGBOOK:
 - State "DONE"       from "TODO"       [2022-07-03 Sun 01:38]
 :END:
-** TODO Semana 16 [6/11][54%]
+** TODO Semana 16 [10/11][90%]
 *** CANCELED Sistemas Estocásticos
 CLOSED: [2022-06-14 Tue 13:45] SCHEDULED: <2022-07-04 Mon 08:30-10:40>
 :LOGBOOK:
@@ -516,16 +516,28 @@ CLOSED: [2022-07-05 Tue 19:47] SCHEDULED: <2022-07-05 Tue 16:50-19:00>
 :LOGBOOK:
 - State "DONE"       from "TODO"       [2022-07-05 Tue 19:47]
 :END:
-*** TODO Ayudantía Proba
-SCHEDULED: <2022-07-06 Wed 14:30-16:30>
-*** TODO Gestión de RRHH
-SCHEDULED: <2022-07-07 Thu 08:30-10:40>
-*** TODO Comunicación de Datos
-SCHEDULED: <2022-07-07 Thu 09:00-10:30>
+*** CANCELED Ayudantía Proba
+CLOSED: [2022-07-07 Thu 18:44] SCHEDULED: <2022-07-06 Wed 14:30-16:30>
+:LOGBOOK:
+- State "CANCELED"   from "TODO"       [2022-07-07 Thu 18:44]
+:END:
+*** DONE Gestión de RRHH
+CLOSED: [2022-07-07 Thu 18:41] SCHEDULED: <2022-07-07 Thu 08:30-10:40>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-07-07 Thu 18:41]
+:END:
+*** CANCELED Comunicación de Datos
+CLOSED: [2022-07-07 Thu 18:44] SCHEDULED: <2022-07-07 Thu 09:00-10:30>
+:LOGBOOK:
+- State "CANCELED"   from "TODO"       [2022-07-07 Thu 18:44]
+:END:
 *** TODO Probabilidad
 SCHEDULED: <2022-07-08 Fri 08:30-10:40>
-*** TODO Arquitectura de Comp
-SCHEDULED: <2022-07-08 Fri 12:00-13:00>
+*** CANCELED Arquitectura de Comp
+CLOSED: [2022-07-07 Thu 19:27] SCHEDULED: <2022-07-08 Fri 12:00-13:00>
+:LOGBOOK:
+- State "CANCELED"   from "TODO"       [2022-07-07 Thu 19:27]
+:END:
 * Evaluaciones
 ** Arquitectura de Computadores
 *** DONE taller 1
@@ -653,7 +665,7 @@ CLOSED: [2022-06-18 Sat 14:19] SCHEDULED: <2022-07-25 Mon>
 :END:
 
 *** TODO Trabajo de redes
-SCHEDULED: <2022-07-06 Wed 12:00>
+SCHEDULED: <2022-07-08 Fri 13:00>
 - En cualquier momento antes del fin de semestre.
 ** Probabilidad y Estadística
 *** DONE prueba 1 (25%)
