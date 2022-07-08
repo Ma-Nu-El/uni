@@ -11,7 +11,6 @@
 - [[#notas-de-la-clase][Notas de la clase]]
 - [[#otras-fuentes-y-herramientas][Otras fuentes y herramientas]]
 - [[#consultas-al-profe][Consultas al profe]]
-- [[#interpretación-p-value][Interpretación p-value]]
 - [[#footnotes][Footnotes]]
 
 * Introducción
@@ -19,6 +18,18 @@
 - [[https://latexdraw.com/linear-regression-in-latex-using-tikz/][Linear Regression in LaTeX using TikZ - TikZBlog]]
 - [[https://tex.stackexchange.com/questions/119179/how-to-add-a-regression-line-to-randomly-generated-points-using-pgfplots-in-tikz][How to add a regression line to randomly generated points using pgfplots in Tikz? - TeX - LaTeX Stack Exchange]]
 ** Conceptos
+*** p-value
+- Aka =sig=.
+
+
+- Si =p-value= > \alpha, entonces se acepta =H0=.
+- Si =p-value= < \alpha, entonces se rechaza =H0=
+  en favor de =H1=.
+
+| =p-value=   | < | \alpha | < | =p-value=   |
+|-------------+---+--------+---+-------------|
+| Acepta =H1= |   |        |   | Acepta =H0= |
+
 *** Correlación (R) y autocorrelación
 :PROPERTIES:
 :ID:       3619bdff-fc4c-42b2-ac89-5f01fde991ea
@@ -465,6 +476,69 @@ Condición de cálculo:
 - =Intercept= es la fila del =B0=.
 - =x= es la fila del =B1=.
 - =Pr(t)= es el =p-value= de =B0= y =B1=.
+**** Tabla
+
+|-----------+-------------------------------------|
+| Preámbulo | Importar datos                      |
+|-----------+-------------------------------------|
+| Paso 1    | Análisis de Valores Atípicos        |
+|           |                                     |
+|           | =descripY(datos,y)=.                |
+|           | plot: =Residuals vs Leverage=.      |
+|           |                                     |
+|-----------+-------------------------------------|
+| Paso 2    | Construcción del Modelo             |
+|           |                                     |
+|           | =mod1 <- lm(y~x,datos)=.            |
+|           | =plot(x,y)=.                        |
+|           | plot: =Residuals vs Leverage=.      |
+|-----------+-------------------------------------|
+| Paso 3    | Análisis de Supuestos               |
+|           |                                     |
+| sup1      | Media errores igual a cero          |
+|           | =mean(mod1$residuals)=.             |
+|           | =H0=: media errores = cero.         |
+|           |                                     |
+| sup2      | Varianza Errores Mínima             |
+|           | Justificación MMC.                  |
+|           |                                     |
+| sup3      | Errores Normales                    |
+|           | =shapiro.test(mod1$residuals)=.     |
+|           | =HO=: errores normales.             |
+|           | plot: =Normal Q-Q=.                 |
+|           |                                     |
+| sup4      | Errores Independientes              |
+|           | plot: =Residuals vs Fitted=.        |
+|           | No patrón -> Independencia.         |
+|           |                                     |
+| sup5      | No autocorrelación                  |
+|           | =dwtest(mod1)=.                     |
+|           | =H0= : Autocorrelación = cero.      |
+|           |                                     |
+| sup6      | Homocedasticidad Errores            |
+|           | =bptest(mod1)=.                     |
+|           | =H0=: Se cumple homocedasticidad.   |
+|           | plot: =Scale-Location=.             |
+|           | Manga diám cte -> prob cumple =HO=. |
+|           |                                     |
+|-----------+-------------------------------------|
+
+|------------+------------------------------------|
+| Paso 4     | Evaluar Modelo                     |
+|            |                                    |
+| R          | Correlación                        |
+|            | =cor.test(y,x,method ="pearson")=. |
+|            | =H0=: =R=0=.                       |
+|            |                                    |
+| Anova      | Varianza                           |
+|            | =anova(mod1)=.                     |
+|            | =H0=: modelo no existe.            |
+|            |                                    |
+| Parámetros | Evaluación del Modelo              |
+|            | =summary(mod1)=.                   |
+|            | =H0=: los =B_i= no existen.        |
+|------------+------------------------------------|
+
 ** Método de Mínimos Cuadrados Ordinarios (MMCO)
 :PROPERTIES:
 :ID:       a08d2fa9-4dfc-4f3e-8280-1b67b760e40b
@@ -776,10 +850,12 @@ summary(model01)
 
 *** Cantidad de estrellas y significancia
 
-- 1: \alpha < 0.001
-- 2: \alpha < 0.01
-- 3: \alpha < 0.05
-- 0: \alpha < 1
+|       | <l>   |    <c>    | <l>   |
+| =***= | 0     | =p-value= | 0.001 |
+| =**=  | 0.001 | =p-value= | 0.01  |
+| =*=   | 0.01  | =p-value= | 0.05  |
+| =.=   | 0.05  | =p-value= | 0.1   |
+| ={ }= | 0.1   | =p-value= | 1     |
 
 
 - Mientras más estrellas, "más menor" que \alpha.
@@ -932,18 +1008,6 @@ Preguntas tipo prueba.
 - [[id:4fbef882-7269-4f63-b12f-8dc05d47cb2a][Plots su interpretación]].
 - [[id:a0997225-c107-48fa-90a7-c26f46c71414][Tests y sus hipótesis]].
 
-
-* Interpretación p-value
-- Aka =sig=.
-
-
-- Si =p-value= > \alpha, entonces se acepta =H0=.
-- Si =p-value= < \alpha, entonces se rechaza =H0=
-  en favor de =H1=.
-
-| =p-value=   | < | \alpha | < | =p-value=   |
-|-------------+---+--------+---+-------------|
-| Acepta =H1= |   |        |   | Acepta =H0= |
 
 * Footnotes
 
