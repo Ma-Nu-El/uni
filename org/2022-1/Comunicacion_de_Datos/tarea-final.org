@@ -1,0 +1,38 @@
+#+TITLE: Tarea Final
+#+LANGUAGE: es
+#+LATEX_HEADER:\usepackage[spanish]{babel}
+
+* Tarea
+
+- Diseñar red:
+- Se deben comunicar el Depto. de Matemáticas,
+  Biblioteca, DCI/DIIS.
+- Debes identificar el tipo de red (LAN, MAN, WAN)
+  y su topografía (Bus, Anillo, Estrella, Árbol).
+- Además deberás diseñar la red de uno de los
+  laboratorios del DIIS. (identificando lo
+  mismo que en la actividad anterior)
+
+* Fuentes
+- [[https://www.youtube.com/results?search_query=lan+man+wan+packet+tracer][lan man wan packet tracer - YouTube]]
+- [[https://www.youtube.com/watch?v=IFoGmpCdIUQ][Creación de redes LAN MAN y WAN en packet tracer - YouTube]]
+- [[https://www.youtube.com/watch?v=ELnhsxrhd8g][Tutorial para realizar una Red LAN, MAN y WAN en packet tracer - YouTube]]
+- [[https://www.youtube.com/watch?v=hmSqtaZFdMk][Como configurar un router en packet tracer (Conexion de Router a Switch) - YouTube]]
+
+
+* Desarrollo
+
+- LAN: Local Area Network.
+- MAN: Metropolitan Area Network.
+- WAN: Wide Area Network.
+
+
+Entre el Departamento de Matemáticas, Biblioteca
+y DCI/DIIS se debe crear una red de tipo WAN y
+su topología puede ser de tipo árbol.
+
+* Local variables :noexport:
+
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
