@@ -8,7 +8,7 @@ CLOSED: [2022-07-11 Mon 23:34] SCHEDULED: <2022-07-08 Fri>
 :LOGBOOK:
 - State "DONE"       from              [2022-07-11 Mon 23:34]
 :END:
-* Semanas [14/16][87%] :lecture:
+* Semanas [16/16][100%] :lecture:
 ** DONE Semana 1
 ** DONE Semana 2
 ** DONE Semana 3
@@ -432,7 +432,7 @@ CLOSED: [2022-06-18 Sat 14:17] SCHEDULED: <2022-06-24 Fri 12:00-13:00>
 :LOGBOOK:
 - State "CANCELED"   from "TODO"       [2022-06-18 Sat 14:17]
 :END:
-** TODO Semana 15 [11/11][100%]
+** DONE Semana 15 [11/11][100%]
 *** CANCELED Sistemas Estocásticos
 CLOSED: [2022-06-14 Tue 13:45] SCHEDULED: <2022-06-27 Mon 08:30-10:40>
 :LOGBOOK:
@@ -488,7 +488,7 @@ CLOSED: [2022-07-03 Sun 01:38] SCHEDULED: <2022-07-01 Fri 12:00-13:00>
 :LOGBOOK:
 - State "DONE"       from "TODO"       [2022-07-03 Sun 01:38]
 :END:
-** TODO Semana 16 [11/11][100%]
+** DONE Semana 16 [11/11][100%]
 *** CANCELED Sistemas Estocásticos
 CLOSED: [2022-06-14 Tue 13:45] SCHEDULED: <2022-07-04 Mon 08:30-10:40>
 :LOGBOOK:
@@ -598,12 +598,13 @@ CLOSED: [2022-07-11 Mon 23:35] SCHEDULED: <2022-07-11 Mon>
 :LOGBOOK:
 - State "NEXT"       from "TODO"       [2022-07-04 Mon 20:25]
 :END:
-*** NEXT Exámenes de repeticiónn
-SCHEDULED: <2022-07-25 Mon>
+*** DONE Exámenes de repeticiónn
+CLOSED: [2022-07-28 Thu 00:40] SCHEDULED: <2022-07-25 Mon>
 :PROPERTIES:
 :TRIGGER:  chain-siblings(NEXT)
 :END:
 :LOGBOOK:
+- State "DONE"       from "NEXT"       [2022-07-28 Thu 00:40]
 - State "NEXT"       from "TODO"       [2022-07-11 Mon 23:35]
 :END:
 ** Comunicación de Datos
