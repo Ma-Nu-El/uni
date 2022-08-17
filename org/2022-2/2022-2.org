@@ -1,8 +1,11 @@
 #+TITLE: 2022-2
 #+FILETAGS: :university:
 
-* Start 2022-2
-SCHEDULED: <2022-08-16 Tue>
+* DONE Start 2022-2
+CLOSED: [2022-08-17 Wed 00:30] SCHEDULED: <2022-08-16 Tue>
+:LOGBOOK:
+- State "DONE"       from              [2022-08-17 Wed 00:30]
+:END:
 
 * End 2022-2
 SCHEDULED: <2022-12-09 Fri>
