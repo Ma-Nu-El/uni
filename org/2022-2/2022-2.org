@@ -10,6 +10,41 @@ CLOSED: [2022-08-17 Wed 00:30] SCHEDULED: <2022-08-16 Tue>
 * End 2022-2
 SCHEDULED: <2022-12-09 Fri>
 
+* Semanas [1/17][5%] :lecture:
+** DONE Semana 1
+SCHEDULED: <2022-08-19 Fri>
+** TODO Semana 2
+SCHEDULED: <2022-08-26 Fri>
+** TODO Semana 3
+SCHEDULED: <2022-09-02 Fri>
+** TODO Semana 4
+SCHEDULED: <2022-09-09 Fri>
+** TODO Semana 5
+SCHEDULED: <2022-09-16 Fri>
+** TODO Semana 6
+SCHEDULED: <2022-09-23 Fri>
+** TODO Semana 7
+SCHEDULED: <2022-09-30 Fri>
+** TODO Semana 8
+SCHEDULED: <2022-10-07 Fri>
+** TODO Semana 9
+SCHEDULED: <2022-10-14 Fri>
+** TODO Semana 10
+SCHEDULED: <2022-10-21 Fri>
+** TODO Semana 11
+SCHEDULED: <2022-10-28 Fri>
+** TODO Semana 12
+SCHEDULED: <2022-11-04 Fri>
+** TODO Semana 13
+SCHEDULED: <2022-11-11 Fri>
+** TODO Semana 14
+SCHEDULED: <2022-11-18 Fri>
+** TODO Semana 15
+SCHEDULED: <2022-11-25 Fri>
+** TODO Semana 16
+SCHEDULED: <2022-12-02 Fri>
+** TODO Semana 17
+SCHEDULED: <2022-12-09 Fri>
 * Local variables :noexport:
 # Local Variables:
 # ispell-local-dictionary: "espanol"
