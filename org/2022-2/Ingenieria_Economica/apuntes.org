@@ -34,28 +34,21 @@
 
 ** [2022-08-23 Tue] Clase 1
 - [2022-08-23 Tue 15:51]
-
-
-- "Lo gratis --- ausencia de esfuerzo --- no existe.
-  Cuando yo pido que algo sea gratis,
-  estoy pidiendo que otro me pague la cuenta."
-- "No importa de que color sea el gato, con tal
-  de que cace ratones."
-  - Deng Xia Ping.
-- "Costo de oportunidad: valor que tienen mis
-  recursos en su mejor uso alternativo de igual
-  riesgo al cual estoy renunciando."
-
-
-- Concepto de "demagogia".
-- Encuesta CADEM de la semana pasada:
-  rango etáreo vs Apruebo y Rechazo.
-
-
+  - "Lo gratis --- ausencia de esfuerzo --- no existe.
+    Cuando yo pido que algo sea gratis,
+    estoy pidiendo que otro me pague la cuenta."
+  - "No importa de que color sea el gato, con tal
+    de que cace ratones."
+    - Deng Xia Ping.
+  - "Costo de oportunidad: valor que tienen mis
+    recursos en su mejor uso alternativo de igual
+    riesgo al cual estoy renunciando."
+- [2022-08-23 Tue 15:55]
+  - Concepto de "demagogia".
+  - Encuesta CADEM de la semana pasada:
+    rango etáreo vs Apruebo y Rechazo.
 - [2022-08-23 Tue 16:00]
-- ¿Qué significa tener un derecho?
-
-
+  - ¿Qué significa tener un derecho?
 - [2022-08-23 Tue 16:09]
   - Discriminar: tratar de forma diferente a
     lo diferente.
@@ -63,23 +56,25 @@
     arbitraria.
   - Depende del contexto y cada situación
     es diferente.
-
-
 - [2022-08-23 Tue 16:33]
   - Excedente vs utilidad?
   - Empresas con y sin fines de lucro.
     - Definición empresa.
   - Utilidades antes de impuestos.
   - Empresa o no empresa, lucro o no lucro.
-
-
 - [2022-08-23 Tue 16:37]
-  - Código del trabajo, código
-    de régimen administrativo.
-
-
+  - Código del trabajo,
+  - Código de régimen administrativo.
 - [2022-08-23 Tue 16:37]
   - Concepto de neo-liberalismo.
+    - La participación del estado en la
+      actividad económica debe ser lo más
+      pequeña posible, pero no inexistente.
+    - Se debería limitar a dos cosas:
+      - Rol regulador.
+      - Rol subsidiario.
+    - En Chile, las empresas estatales son cajas
+      de pago de favores políticos.
 
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
