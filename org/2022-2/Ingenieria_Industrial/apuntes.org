@@ -51,6 +51,31 @@
 
 - Crear soluciones vs optimizar soluciones.
 
+
+- [2022-08-23 Tue 11:38]
+  - Identificación de público objetivo,
+    objetivos generales, específicos y limitaciones.
+- [2022-08-23 Tue 11:38]
+  - Diagrama de Ishikawa.
+  - [[https://blog.hubspot.es/sales/diagrama-ishikawa][Qué es el diagrama de Ishikawa, cómo crearlo y ejemplos]]
+  - [[https://worldofwork.io/2019/03/fishbone-analysis-ishikawa-diagram/][The Fishbone Analysis Tool (Ishikawa Diagram): A Simple Intro - The World of Work Project]]
+- [2022-08-23 Tue 11:40]
+  - Principio de Pareto.
+  - [[https://www.reddit.com/r/explainlikeimfive/comments/7zeatk/eli5_can_someone_please_explain_what_pareto/][ELI5: Can someone please explain what Pareto principle is and how it helps in decision making? : explainlikeimfive]]
+- [2022-08-23 Tue 11:44]
+  - Carta GANTT.
+  - [[https://www.reddit.com/r/projectmanagement/comments/7vm2qg/how_do_i_use_a_gantt_chart/][How do i USE a gantt chart? : projectmanagement]]
+- [2022-08-23 Tue 11:44]
+  - Diagrama PERT.
+  - [[https://www.reddit.com/r/projectmanagement/comments/o2zp7v/pert_diagram_on_excel/][PERT DIAGRAM ON EXCEL : projectmanagement]]
+- [2022-08-23 Tue 11:46]
+  - Ley de Murphy.
+  - [[https://www.reddit.com/r/explainlikeimfive/comments/60y6i2/eli5_murphys_law/][ELI5: Murphy's Law : explainlikeimfive]]
+- [2022-08-23 Tue 11:49]
+  - Cosas que hace un industrial.
+  - Certificaciones ISO.
+  - Para todo hay una normativa: usarla.
+
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
 # - Then =org-clone-subtree-with-time-shift= and repeat

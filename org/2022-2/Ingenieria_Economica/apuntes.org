@@ -1,0 +1,100 @@
+#+INCLUDE: "~/org/uni/org/config.org"
+#+FILETAGS: :university:
+
+
+* TOC :TOC_2:noexport:
+- [[#clases][Clases]]
+  - [[#about][About]]
+  - [[#inactive-timestamp-clase-x-nombre-ramo-abrev][[inactive timestamp] Clase X <nombre ramo abrev>]]
+  - [[#2022-08-23-tue-clase-1][[2022-08-23 Tue] Clase 1]]
+- [[#ayudantías][Ayudantías]]
+  - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
+- [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
+
+* Clases :lecture:
+** About
+- Copia el contenido de "Clases" en "asignatura.org"
+- Pegalo en esta sección
+- Elimina el dia, dejando las clases únicamente
+- Selecciona visualmente las clases
+  + Tambien puedes seleccionar el contenido del heading "Clases", es lo mismo.
+    - Se hace con =v i R=: "visual inside R"
+      + La R hace referencia al contenido interior de un heading
+- =org-sort= alpha
+
+
+- Asi deberias tener luego las clases ordenadas por numero de clase
+- Mientras que en "asignatura.org" estaran ordenadas por el dia
+** [inactive timestamp] Clase X <nombre ramo abrev>
+- [log] link to "asignatura.org" by ID
+- =org-timer-start=
+
+
+< your_notes >
+
+** [2022-08-23 Tue] Clase 1
+- [2022-08-23 Tue 15:51]
+
+
+- "Lo gratis --- ausencia de esfuerzo --- no existe.
+  Cuando yo pido que algo sea gratis,
+  estoy pidiendo que otro me pague la cuenta."
+- "No importa de que color sea el gato, con tal
+  de que cace ratones."
+  - Deng Xia Ping.
+- "Costo de oportunidad: valor que tienen mis
+  recursos en su mejor uso alternativo de igual
+  riesgo al cual estoy renunciando."
+
+
+- Concepto de "demagogia".
+- Encuesta CADEM de la semana pasada:
+  rango etáreo vs Apruebo y Rechazo.
+
+
+- [2022-08-23 Tue 16:00]
+- ¿Qué significa tener un derecho?
+
+
+- [2022-08-23 Tue 16:09]
+  - Discriminar: tratar de forma diferente a
+    lo diferente.
+  - Discriminación objetiva vs subjetiva o
+    arbitraria.
+  - Depende del contexto y cada situación
+    es diferente.
+
+
+- [2022-08-23 Tue 16:33]
+  - Excedente vs utilidad?
+  - Empresas con y sin fines de lucro.
+    - Definición empresa.
+  - Utilidades antes de impuestos.
+  - Empresa o no empresa, lucro o no lucro.
+
+
+- [2022-08-23 Tue 16:37]
+  - Código del trabajo, código
+    de régimen administrativo.
+
+
+- [2022-08-23 Tue 16:37]
+  - Concepto de neo-liberalismo.
+
+* Ayudantías :assistantship:
+** inactive-time-stamp clase x
+# - Then =org-clone-subtree-with-time-shift= and repeat
+- log link by ID
+- =org-timer-start=
+
+
+< your_notes >
+
+* Resúmenes para evaluaciones
+- link-to-resumen-eval1.org
+- link-to-resumen-eval2.org
+- link-to-resumen-eval3.org
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
