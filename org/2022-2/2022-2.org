@@ -45,6 +45,33 @@ SCHEDULED: <2022-11-25 Fri>
 SCHEDULED: <2022-12-02 Fri>
 ** TODO Semana 17
 SCHEDULED: <2022-12-09 Fri>
+* Evaluaciones
+** Electivo
+** Ingeniería Económica
+** Procesos de Manufactura
+*** prueba1 (T50)
+SCHEDULED: <2022-10-05 Wed>
+- 5 octubre
+*** prueba2 (T50)
+SCHEDULED: <2022-12-14 Wed>
+- 14 diciembre
+*** informe (P35)
+SCHEDULED: <2022-12-01 Thu>
+- 1 diciembre
+*** exposición (P30)
+SCHEDULED: <2022-12-06 Tue>
+- 6 diciembre
+** Ingeniería Industrial
+*** informe (T30)
+SCHEDULED: <2022-09-15 Thu>
+- 15 septiembre
+*** informe (T30)
+SCHEDULED: <2022-10-28 Fri>
+- 28 octubre
+*** exposición (T40)
+SCHEDULED: <2022-12-07 Wed>
+- 7 diciembre
+** Tecnología y servicios de internet
 * Local variables :noexport:
 # Local Variables:
 # ispell-local-dictionary: "espanol"
