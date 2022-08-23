@@ -40,7 +40,10 @@
   - Revoluciones industriales.
   - Guerras.
   - Linea de producción vs una sola persona.
+  - Produccion en serie.
 
+
+- Que hace un ingeniero?
 - Que hace un ingeniero industrial?
 - Ingeniero industrial vs regular?
 - Ingeniero industrial vs civil?
