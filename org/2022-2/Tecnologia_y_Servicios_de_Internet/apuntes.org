@@ -1,0 +1,95 @@
+#+INCLUDE: "~/org/uni/org/config.org"
+#+FILETAGS: :university:
+
+
+* TOC :TOC_2:noexport:
+- [[#clases][Clases]]
+  - [[#about][About]]
+  - [[#inactive-timestamp-clase-x-nombre-ramo-abrev][[inactive timestamp] Clase X <nombre ramo abrev>]]
+  - [[#2022-08-24-wed-clase][[2022-08-24 Wed] Clase]]
+- [[#ayudantías][Ayudantías]]
+  - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
+- [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
+
+* Clases :lecture:
+** About
+- Copia el contenido de "Clases" en "asignatura.org"
+- Pegalo en esta sección
+- Elimina el dia, dejando las clases únicamente
+- Selecciona visualmente las clases
+  + Tambien puedes seleccionar el contenido del heading "Clases", es lo mismo.
+    - Se hace con =v i R=: "visual inside R"
+      + La R hace referencia al contenido interior de un heading
+- =org-sort= alpha
+
+
+- Asi deberias tener luego las clases ordenadas por numero de clase
+- Mientras que en "asignatura.org" estaran ordenadas por el dia
+** [inactive timestamp] Clase X <nombre ramo abrev>
+- [log] link to "asignatura.org" by ID
+- =org-timer-start=
+
+
+< your_notes >
+
+** [2022-08-24 Wed] Clase
+- [2022-08-24 Wed 14:45]
+
+
+- [2022-08-24 Wed 14:45] Taxonomía de Flynn
+  - Siglas:
+    - S: single
+    - M: multiple
+    - I: instruction
+    - D: data
+  - SISD
+    - Microcontroladores, sensores.
+  - SIMD
+  - MISD
+    - El más raro de todos.
+  - MIMD
+    - Smartphones, laptops.
+- [2022-08-24 Wed 15:09] Cloud computing.
+- [2022-08-24 Wed 15:14] Consultas
+  - Consultas: modelo de negocio de Linux
+    --- aparte de fundaciones y donaciones ---
+    e impacto de ARM?
+- [2022-08-24 Wed 15:20] Modelo Cliente-Servidor
+- [2022-08-24 Wed 15:35] DDoS Attack live
+  - [[https://www.digitalattackmap.com/][Digital Attack Map]]
+  - Simulado, nadie puede manipular el
+    internet completo; es imposible.
+  - DDoS vs DoS?
+  - [[https://threatmap.checkpoint.com/][Live Cyber Threat Map | Check Point]]
+  - Cables continentales, sub-oceánicos.
+    - [[https://www.submarinecablemap.com/][Submarine Cable Map]]
+  - StarLink
+- [2022-08-24 Wed 15:42] Man in the middle attack (MITM)
+- [2022-08-24 Wed 15:43] Modelo Peer to peer
+  - Cliente y al mismo tiempo servidor
+    - Ejemplo: torrent.
+  - Todas las ventajas de cliente-servidor son
+    las desventajas del peer-to-peer, y las
+    desventajas del cliente-servidor son las
+    ventajas del peer-to-peer.
+- [2022-08-24 Wed 15:45] No ver
+  - Sci-hub
+  - Libgen
+
+* Ayudantías :assistantship:
+** inactive-time-stamp clase x
+# - Then =org-clone-subtree-with-time-shift= and repeat
+- log link by ID
+- =org-timer-start=
+
+
+< your_notes >
+
+* Resúmenes para evaluaciones
+- link-to-resumen-eval1.org
+- link-to-resumen-eval2.org
+- link-to-resumen-eval3.org
+* Local variables :noexport:
+# Local Variables:
+# ispell-local-dictionary: "espanol"
+# End:
