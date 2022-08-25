@@ -7,6 +7,7 @@
   - [[#about][About]]
   - [[#inactive-timestamp-clase-x-nombre-ramo-abrev][[inactive timestamp] Clase X <nombre ramo abrev>]]
   - [[#2022-08-23-tue-clase-1][[2022-08-23 Tue] Clase 1]]
+  - [[#2022-08-25-thu-clase-2][[2022-08-25 Thu] Clase 2]]
 - [[#ayudantías][Ayudantías]]
   - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
 - [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
@@ -76,6 +77,99 @@
     - En Chile, las empresas estatales son cajas
       de pago de favores políticos.
 
+** [2022-08-25 Thu] Clase 2
+- [2022-08-25 Thu 16:58]
+
+*** notas
+- [2022-08-25 Thu 16:58] Costo de oportunidad.
+  - Concepto económico, no contable.
+  - Riqueza económica = Ingreso - Costo de Oportunidad.
+    - Me pagan 10,000, renunciando a otros 10,000.
+    - Si tengo una opción que me ofrece 10,000 y otra
+      que me ofrece lo mismo, pero eligiendo una
+      estoy renunciando a la otra --- son mutuamente
+      excluyentes --- mi riqueza económica es
+      cero.
+- [2022-08-25 Thu 17:06] Materia de asignatura.
+  - Decisiones de inversión en el ámbito privado.
+    - ¿Qué es una inversión?
+      - "Un sacrificio que yo hago hoy con el
+        objeto de tener beneficio a futuro."
+      - Por esencia, las inversiones son
+        riesgosas.
+      - Ejemplo: ahorrar.
+      - Aprender inglés en una inversión muy rentable.
+      - Profesiones destinadas a morir:
+        - Todas aquellas donde las decisiones son
+          obvias o lógicas: son programables y
+          automatizables.
+        - Todo lo lógico es programable.
+      - Inversión: aprender cosas que todavía
+        no son automatizables: habilidades
+        creativas.
+- [2022-08-25 Thu 17:26] Riesgo
+  - Concepto de Expectativa.
+    - Su relación con el pasado.
+      - Pasado cercano y futuro cercano.
+        - Auto-correlación.
+  - Concepto de Calidad.
+- [2022-08-25 Thu 17:34] Certeza
+  - Lo contrario del riesgo.
+  - Tiene valor.
+  - Crisis 82-83 Chile, dólar.
+  - Las noticias economicas antes se anunciaban
+    el viernes en la tarde.
+- [2022-08-25 Thu 17:40] ¿Qué es una pérdida?
+  - Es real cuando se materializa, es distinto
+    de lo virtual.
+- [2022-08-25 Thu 17:07] Paréntesis
+  - Habilidades blandas.
+    - Responsabilidad.
+    - Asertividad.
+      - Defender mis derechos sin menoscabar a
+        los demás.
+    - Resiliencia.
+- [2022-08-25 Thu 17:22] Paréntesis
+  - Origen ansiedad, angustia, depresión, etc:
+    pensamientos negativos.
+    - Ejemplo:
+      - Animo de los vendedores tempraneros.
+      - Charlas rotacionales en las empresas.
+- [2022-08-25 Thu 17:49] Ciclos de inversión pública
+  - Ligados principalmente a los
+    ciclos de elecciones políticas.
+    - Los estudios muestran que en realidad
+      no surten efecto, al igual que la franja
+      electoral no afecta la decisión de voto.
+- [2022-08-25 Thu 17:50] Paréntesis
+  - ¿Por que la educación superior tiene
+    opciones de gratuidad y los servicios para
+    los adultos mayores no?
+    - ¿Quién grita más fuerte? Los estudiantes
+      universitarios o los abuelos?
+- [2022-08-25 Thu 17:52] Modelos de comportamiento
+  - Definición de economía: conjunto infinito
+    de necesidades y conjunto limitado de recursos.
+  - Se busca maximizar el bienestar.
+  - ¿Qué es el bienestar? Es estar mejor.
+    Puede o no puede estar asociado
+    a sensaciones agradables.
+- [2022-08-25 Thu 17:55] Paréntesis
+  - No compren ropa en aliexpress o por
+    internet en general.
+- [2022-08-25 Thu 18:06] Paréntesis
+
+*** Teoría de la Utilidad
+- Decisiones inter-temporales.
+- Obligaciones de hacer y no hacer.
+
+
+- Bienestar vs utilidad: forma de U invertida.
+  - Hasta cierto punto el consumo aumenta
+    el bienestar, luego lo disminuye.
+    - Ejemplo: comer.
+- Costo = Sacrificio.
+
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
 # - Then =org-clone-subtree-with-time-shift= and repeat
@@ -93,3 +187,5 @@
 # Local Variables:
 # ispell-local-dictionary: "espanol"
 # End:
+
+#  LocalWords:  automatizables Asertividad Resiliencia
