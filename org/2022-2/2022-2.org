@@ -10,11 +10,14 @@ CLOSED: [2022-08-17 Wed 00:30] SCHEDULED: <2022-08-16 Tue>
 * End 2022-2
 SCHEDULED: <2022-12-09 Fri>
 
-* Semanas [1/17][5%] :lecture:
+* Semanas [2/17][11%] :lecture:
 ** DONE Semana 1
 SCHEDULED: <2022-08-19 Fri>
-** TODO Semana 2
-SCHEDULED: <2022-08-26 Fri>
+** DONE Semana 2
+CLOSED: [2022-08-30 Tue 08:44] SCHEDULED: <2022-08-26 Fri>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-08-30 Tue 08:44]
+:END:
 ** TODO Semana 3
 SCHEDULED: <2022-09-02 Fri>
 ** TODO Semana 4
