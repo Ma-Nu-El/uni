@@ -51,6 +51,12 @@ SCHEDULED: <2022-12-09 Fri>
 * Evaluaciones
 ** Electivo
 ** Ingeniería Económica
+*** prueba1 (T50)
+SCHEDULED: <2022-10-26 Wed>
+- 26 octubre
+*** prueba2 (T50)
+SCHEDULED: <2022-11-08 Tue>
+- 8 noviembre
 ** Procesos de Manufactura
 *** prueba1 (T50)
 SCHEDULED: <2022-10-05 Wed>

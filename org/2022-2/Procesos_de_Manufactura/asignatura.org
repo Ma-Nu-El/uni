@@ -78,27 +78,26 @@
 |----------+------|
 * Clases y apuntes
 ** Relacionado
-
-- Estimad@s estudiantes,
+*** Estimad@s estudiantes,
 
   Bienvenidos al curso de Procesos de manufactura, soy el profesor Erardo Leal y les guiare a través de la asignatura este semestre. A continuación pueden revisar el programa de asignatura para enterarse de los principales temas que veremos durante el curso y algunas generalidades sobre las evaluaciones.
 
   Esta es una asignatura de especialidad de ingeniería industrial que se imparte desde el Área de manufactura del Departamento de Ingeniería Mecánica.
 
-- *DESCRIPCIÓN DE LA ASIGNATURA.*
+*** DESCRIPCIÓN DE LA ASIGNATURA.
 
   Corresponde a una asignatura teórico - práctico, curso en el que se entregaran los principios y fundamentos que permitan analizar y proponer métodos de manufactura para sistemas productivos, en los que se tengan que analizar tecnologías, materiales y proceso dirigidos a la optimización de la producción que exige la empresa y el mercado global. Teniendo en cuenta los aspectos de creación, mejoramiento de procesos, productos e implementación de empresas del área de la manufactura.
 
--  *COMPETENCIA GENÉRICA DESARROLLADA EN EL CURSO.*
+*** COMPETENCIA GENÉRICA DESARROLLADA EN EL CURSO.
 
-  Trabajo en equipo, aprender a aprender.
+- Trabajo en equipo, aprender a aprender.
 
--  *COMPETENCIAS DE TITULACIÓN DESARROLLADAS EN EL CURSO*
+*** COMPETENCIAS DE TITULACIÓN DESARROLLADAS EN EL CURSO
 
   - Participar en la presentación de trabajos originales y gestión de actividades de desarrollo personal y profesional como elemento para la auto comprensión de su posición en el mundo globalizado.
   - Evaluar la conducta propia en una dimensión personal y profesional con mirada crítica y responsabilidad social y profesional frente a las acciones que se realicen y las decisiones que se tomen para contribuir a resguardar la calidad de vida y el desarrollo sustentable.
 
-- *RESULTADOS DE APRENDIZAJE*
+*** RESULTADOS DE APRENDIZAJE
 
   - Identificar las principales problemáticas que se abordan en el campo de los Procesos productivos
   - Analizar los sistemas de desarrollo productivo desde el punto de vista de la planificación y el control de la producción.
@@ -107,21 +106,20 @@
   - Reconocer las diferentes potencialidades de los integrantes de un equipo de trabajo.
   - Identificar debilidades y fortalezas personales en la comprensión de las temáticas.
 
-- *CONTENIDOS*
+*** CONTENIDOS
+**** Unidad 1: Introducción
 
-- Unidad 1: Introducción
+- Qué es manufactura.
+- Procesos de Manufactura.
+- Materiales y Manufactura.
 
-  - Que es manufactura
-  - Procesos de Manufactura
-  - Materiales y Manufactura
+**** Unidad 2: Propiedades de los Materiales, Atributos y Fenómenos Relacionados
 
-- Unidad 2: Propiedades de los Materiales, Atributos y Fenómenos Relacionados
+- Naturaleza de los materiales.
+- Propiedades Mecánicas.
+- Dimensiones Tolerancias y Superficies.
 
-  - Naturaleza de los materiales
-  - Propiedades Mecánicas
-  - Dimensiones Tolerancias y Superficies
-
-- Unidad 3: Ingeniería de Materiales
+**** Unidad 3: Ingeniería de Materiales
 
   - Metales
   - Tratamientos Térmicos
@@ -129,20 +127,20 @@
   - Polímeros
   - Materiales Compuestos
 
-- Unidad 4: Fundición, Moldeo y Procesos Relacionados
+**** Unidad 4: Fundición, Moldeo y Procesos Relacionados
 
   - Fundamentos de Fundición
   - Procesos de Fundición para metales
   - Procesos de Forma para Plásticos
 
-- Unidad 5: Conformado de Metales y Trabajo de la Chapa
+**** Unidad 5: Conformado de Metales y Trabajo de la Chapa
 
   - Fundamentos de conformado de Metales
   - Deformación pro compresión en el trabajo de los metales
   - Análisis de Procesos de conformado
   - Trabajo de la Chapa en frío y en caliente: Cizallado, Doblado, Embutido
 
-- Unidad 6: Procesos por Remoción de Metal
+**** Unidad 6: Procesos por Remoción de Metal
 
   - Teoría del mecanizado de Metales
   - Tecnología de corte de las Herramientas
@@ -152,20 +150,20 @@
   - Mecanizado no Tradicional
   - Costos de Producción
 
-- Unidad 7: Uniones y Procesos de Ensamble
+**** Unidad 7: Uniones y Procesos de Ensamble
 
   - Fundamentos de Soldadura
   - Procesos de soldadura
   - Costos de soldadura
 
-- Unidad 8: Automatización y Sistemas de Producción
+**** Unidad 8: Automatización y Sistemas de Producción
 
-  - Producción en Línea e Intermitente
-  - Automatización Programable
-  - Tecnología de Control Numérico
-  - Análisis de sistemas de posicionamiento en NC
-  - Sistemas CAD - CAM - CNC
-  - Aplicaciones de Control Numérico
+- Producción en Línea e Intermitente.
+- Automatización Programable.
+- Tecnología de Control Numérico.
+- Análisis de sistemas de posicionamiento en NC.
+- Sistemas CAD - CAM - CNC.
+- Aplicaciones de Control Numérico.
 
 ** Clases :lecture:
 *** Martes

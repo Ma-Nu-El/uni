@@ -4,12 +4,14 @@
 
 * TOC :TOC_2:noexport:
 - [[#clases][Clases]]
+  - [[#ejemplo][Ejemplo]]
   - [[#inactive-timestamp-clase-x-nombre-ramo-abrev][[inactive timestamp] Clase X <nombre ramo abrev>]]
 - [[#ayudantías][Ayudantías]]
   - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
 - [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
 
 * Clases :lecture:
+** Ejemplo
 - Copia el contenido de "Clases" en "asignatura.org"
 - Pegalo en esta sección
 - Elimina el dia, dejando las clases únicamente
