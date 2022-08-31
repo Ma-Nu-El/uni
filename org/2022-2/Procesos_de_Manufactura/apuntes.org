@@ -6,6 +6,7 @@
 - [[#clases][Clases]]
   - [[#about][About]]
   - [[#inactive-timestamp-clase-x-nombre-ramo-abrev][[inactive timestamp] Clase X <nombre ramo abrev>]]
+  - [[#2022-08-31-wed-clase][[2022-08-31 Wed] Clase]]
 - [[#ayudantías][Ayudantías]]
   - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
 - [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
@@ -31,6 +32,9 @@
 
 < your_notes >
 
+** [2022-08-31 Wed] Clase
+- Curva esfuerzo-deformación.
+  - Resistencia de materiales.
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
 # - Then =org-clone-subtree-with-time-shift= and repeat
