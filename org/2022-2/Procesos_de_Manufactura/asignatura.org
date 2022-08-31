@@ -71,11 +71,17 @@
 | Teléfono | +569                     |
 |----------+--------------------------|
 - Ayudante
-|----------+------|
-| Nombre   |      |
-| E-mail   |      |
-| Teléfono | +569 |
-|----------+------|
+|----------+-----------------|
+| Nombre   | Rolando Morales |
+| E-mail   |                 |
+| Teléfono |            +569 |
+|----------+-----------------|
+- Ayudante
+|----------+-------------|
+| Nombre   | Sofia Varas |
+| E-mail   |             |
+| Teléfono |        +569 |
+|----------+-------------|
 * Clases y apuntes
 ** Relacionado
 *** Estimad@s estudiantes,
@@ -183,6 +189,8 @@ scheduled ...
 
 - Then =org-clone-subtree-with-time-shift= and repeat
 ** Ayudantías :assistantship:
+- Lunes 17:00-18:00
+- Miercoles 11:00-12:00
 * Preguntas primera clase
 - [ ] Pruebas
   + [ ] sincrónicas o asincrónicas?
