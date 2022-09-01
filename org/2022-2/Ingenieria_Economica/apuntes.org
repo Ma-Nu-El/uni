@@ -199,6 +199,9 @@
 *** Materia
 
 **** ¿Qué es la ingeniería económica?
+- Aprender a discernir como invertir mejor
+  tus fondos o capital, es decir,
+  sirve para decidir una elección frente a otra.
 - Aprender a como invertir los recursos.
 
 **** Concepto de costo de oportunidad
@@ -208,6 +211,7 @@
 - Pasado cierto nivel de consumo, un bien
   se empieza a comportar por un mal.
 **** Curva de indiferencia
+
 - Conjunto de canastas que me generan la
   misma utilidad.
 - Las curvas de utilidad son exclusivas de
@@ -216,15 +220,16 @@
     cruzan.
 - El consumo siempre es positivo: no puede
   comer "-1" barra de chocolate.
+
 **** Definición de interés
 - El pago por el uso del dinero ajeno.
 
 ***** Interés simple vs compuesto
 
-- El simple es costo inicial mas interes sobre
+- El simple es costo inicial más interés sobre
   costo inicial.
 - El compuesto es costo del periodo actual
-  mas el interes del costo del periodo anterior.
+  más el interés del costo del periodo anterior.
 
 En el compuesto se va capitalizando el
 interés del periodo anterior.
@@ -233,20 +238,23 @@ interés del periodo anterior.
 
 #+begin_src R :session :results output
 vi<-100000
-interes<-0.03
-periodos<-0:6
+interes<-0.02
+periodos<-0:3
 vf_simple<-vi*((1+interes*periodos))
+vf_compuesto<-vi*((1+interes)^periodos)
+####
 print("Interes Simple")
-round(vf_simple)
+vf_simple
 print("Interes Compuesto")
 round(vf_compuesto)
 #+end_src
 
 #+RESULTS:
 : [1] "Interes Simple"
-: [1] 100000 103000 106000 109000 112000 115000 118000
+: [1] 100000 102000 104000 106000
 : [1] "Interes Compuesto"
-: [1] 100000 103000 106090 109273 112551 115927 119405
+: [1] 100000 102000 104040 106121
+
 
 * Resúmenes para evaluaciones
 - link-to-resumen-eval1.org
