@@ -71,11 +71,12 @@
 | Teléfono | +569 |
 |----------+------|
 - Ayudante
-|----------+------|
-| Nombre   |      |
-| E-mail   |      |
-| Teléfono | +569 |
-|----------+------|
+|----------+---------------|
+| Nombre   | Sofia Paredes |
+| E-mail   |               |
+| Teléfono |          +569 |
+|----------+---------------|
+- ICI-M
 * Clases y apuntes
 ** Relacionado
 ** Clases :lecture:
