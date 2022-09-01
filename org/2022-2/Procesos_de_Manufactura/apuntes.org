@@ -35,6 +35,25 @@
 ** [2022-08-31 Wed] Clase
 - Curva esfuerzo-deformación.
   - Resistencia de materiales.
+  - En diseño les interesa la parte elástica,
+    en este ramo les interesa la parte plástica.
+
+
+- Esfuerzos:
+  - Tensión.
+  - Compresión.
+  - Corte.
+
+
+- Deformación ingenieril.
+- Ley de Hooke.
+  - Solo válida en la parte elástica del
+    gráfico esfuerzo-deformación.
+
+
+- Ductilidad: capacidad de un material
+  de deformarse plásticamente sin romperse.
+
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
 # - Then =org-clone-subtree-with-time-shift= and repeat
