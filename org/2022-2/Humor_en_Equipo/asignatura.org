@@ -22,6 +22,12 @@
 - link to subject's sillabus.
   + must be located in ~/myDrive/uni/202x-x/SUBJECT/programa.pdf
 * Horario
+- Módulo 1
+  - Lunes 14:30-16:30
+- Módulo 2
+  - Lunes 18:00-20:00
+- Módulo 3
+  - Martes 15:45-17:45
 * Calendario
 |  <c>  |       <c>        |  <c>   | <l>                                     |  <c>   |  <c>   |   <c>    |
 |-------+------------------+--------+-----------------------------------------+--------+--------+----------|
@@ -65,17 +71,17 @@
 - links a libros, videos, etc.
 * Contacto
 - Profesor
-|----------+------|
-| Nombre   |      |
-| E-mail   |      |
-| Teléfono | +569 |
-|----------+------|
+|----------+----------------------------|
+| Nombre   | Karina Santos              |
+| E-mail   | [[mailto:karina.santos@ufrontera.cl][karina.santos@ufrontera.cl]] |
+| Teléfono | +569                       |
+|----------+----------------------------|
 - Ayudante
-|----------+------|
-| Nombre   |      |
-| E-mail   |      |
-| Teléfono | +569 |
-|----------+------|
+|----------+--------------------------|
+| Nombre   | Wakolza Landero          |
+| E-mail   | [[mailto:w.landero01@ufrontera.cl][w.landero01@ufrontera.cl]] |
+| Teléfono | +569                     |
+|----------+--------------------------|
 * Clases y apuntes
 ** Relacionado
 ** Clases :lecture:
