@@ -1,15 +1,6 @@
 #+TITLE: 2022-2
 #+FILETAGS: :university:
 
-* DONE Start 2022-2
-CLOSED: [2022-08-17 Wed 00:30] SCHEDULED: <2022-08-16 Tue>
-:LOGBOOK:
-- State "DONE"       from              [2022-08-17 Wed 00:30]
-:END:
-
-* End 2022-2
-SCHEDULED: <2022-12-09 Fri>
-
 * Semanas [3/17][17%] :lecture:
 ** DONE Semana 1
 SCHEDULED: <2022-08-19 Fri>
@@ -85,12 +76,19 @@ SCHEDULED: <2022-12-07 Wed>
 - 7 diciembre
 ** Tecnología y servicios de internet
 * Agenda
+** DONE Start 2022-2
+CLOSED: [2022-08-17 Wed 00:30] SCHEDULED: <2022-08-16 Tue>
+:LOGBOOK:
+- State "DONE"       from              [2022-08-17 Wed 00:30]
+:END:
 ** Start University Recess
 SCHEDULED: <2022-10-11 Tue>
 - 11 oct
 ** End University Recess
 SCHEDULED: <2022-10-14 Fri>
 - 14 oct
+** End 2022-2
+SCHEDULED: <2022-12-09 Fri>
 ** Start University Recess
 SCHEDULED: <2022-12-26 Mon>
 ** End University Recess
