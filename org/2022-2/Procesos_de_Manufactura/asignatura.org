@@ -4,13 +4,13 @@
 * TOC :TOC_2:noexport:
 - [[#programa][Programa]]
 - [[#horario][Horario]]
+  - [[#ayudantía][Ayudantía]]
 - [[#calendario][Calendario]]
 - [[#evaluación][Evaluación]]
   - [[#relacionado][Relacionado]]
   - [[#teórico-ab][Teórico ab%]]
   - [[#práctico-cd][Práctico cd%]]
 - [[#links][Links]]
-- [[#recursos][Recursos]]
 - [[#contacto][Contacto]]
 - [[#clases-y-apuntes][Clases y apuntes]]
   - [[#relacionado-1][Relacionado]]
@@ -22,6 +22,9 @@
 - link to subject's sillabus.
   + must be located in ~/myDrive/uni/202x-x/SUBJECT/programa.pdf
 * Horario
+** Ayudantía
+- Lunes 17:00-18:00
+- Miercoles 11:00-12:00
 * Calendario
 |  <c>  |       <c>        |  <c>   | <l>                                     |  <c>   |  <c>   |   <c>    |
 |-------+------------------+--------+-----------------------------------------+--------+--------+----------|
@@ -61,8 +64,6 @@
 - link to whatsapp group
 - recorded lectures
 - etc
-* Recursos
-- links a libros, videos, etc.
 * Contacto
 - Profesor
 |----------+--------------------------|
@@ -189,8 +190,6 @@ scheduled ...
 
 - Then =org-clone-subtree-with-time-shift= and repeat
 ** Ayudantías :assistantship:
-- Lunes 17:00-18:00
-- Miercoles 11:00-12:00
 * Preguntas primera clase
 - [ ] Pruebas
   + [ ] sincrónicas o asincrónicas?

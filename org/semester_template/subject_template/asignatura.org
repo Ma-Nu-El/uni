@@ -9,8 +9,8 @@
   - [[#relacionado][Relacionado]]
   - [[#teórico-ab][Teórico ab%]]
   - [[#práctico-cd][Práctico cd%]]
-- [[#links][Links]]
-- [[#recursos][Recursos]]
+- [[#contact-links][Contact links]]
+- [[#resources-links][Resources links]]
 - [[#contacto][Contacto]]
 - [[#clases-y-apuntes][Clases y apuntes]]
   - [[#relacionado-1][Relacionado]]
@@ -55,14 +55,10 @@
 ** Relacionado
 ** Teórico ab%
 ** Práctico cd%
-* Links
-- (links only)
-- zoom link
-- link to whatsapp group
-- recorded lectures
-- etc
-* Recursos
-- links a libros, videos, etc.
+* Contact links
+- Whatsapp, zoom, discord, etc.
+* Resources links
+- Books, videos, etc.
 * Contacto
 - Profesor
 |----------+------|
