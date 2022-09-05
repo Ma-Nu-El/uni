@@ -4,6 +4,7 @@
 * TOC :TOC_2:noexport:
 - [[#programa][Programa]]
 - [[#horario][Horario]]
+  - [[#cátedra][Cátedra]]
 - [[#calendario][Calendario]]
 - [[#evaluación][Evaluación]]
   - [[#relacionado][Relacionado]]
@@ -22,6 +23,7 @@
 - link to subject's sillabus.
   + must be located in ~/myDrive/uni/202x-x/SUBJECT/programa.pdf
 * Horario
+** Cátedra
 - Módulo 1
   - Lunes 14:30-16:30
 - Módulo 2

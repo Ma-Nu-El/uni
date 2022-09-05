@@ -4,6 +4,7 @@
 * TOC :TOC_2:noexport:
 - [[#programa][Programa]]
 - [[#horario][Horario]]
+  - [[#ayudantía][Ayudantía]]
 - [[#calendario][Calendario]]
 - [[#evaluación][Evaluación]]
   - [[#relacionado][Relacionado]]
@@ -22,6 +23,10 @@
 - link to subject's sillabus.
   + must be located in ~/myDrive/uni/202x-x/SUBJECT/programa.pdf
 * Horario
+** Ayudantía
+- Jueves, 19:00-20:00, via Zoom.
+  - https://meet.google.com/hip-xhtk-ekg
+
 * Calendario
 |  <c>  |       <c>        |  <c>   | <l>                                     |  <c>   |  <c>   |   <c>    |
 |-------+------------------+--------+-----------------------------------------+--------+--------+----------|

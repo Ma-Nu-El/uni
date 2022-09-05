@@ -4,6 +4,8 @@
 * TOC :TOC_2:noexport:
 - [[#programa][Programa]]
 - [[#horario][Horario]]
+  - [[#cátedra][Cátedra]]
+  - [[#ayudantía][Ayudantía]]
 - [[#calendario][Calendario]]
 - [[#evaluación][Evaluación]]
   - [[#relacionado][Relacionado]]
@@ -22,6 +24,10 @@
 - link to subject's sillabus.
   + must be located in ~/myDrive/uni/202x-x/SUBJECT/programa.pdf
 * Horario
+** Cátedra
+** Ayudantía
+- Jueves, 11:00-12:00, RA1002.
+
 * Calendario
 |  <c>  |       <c>        |  <c>   | <l>                                     |  <c>   |  <c>   |   <c>    |
 |-------+------------------+--------+-----------------------------------------+--------+--------+----------|
