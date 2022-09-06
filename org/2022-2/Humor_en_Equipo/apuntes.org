@@ -7,6 +7,7 @@
   - [[#about][About]]
   - [[#inactive-timestamp-clase-x-nombre-ramo-abrev][[inactive timestamp] Clase X <nombre ramo abrev>]]
   - [[#2022-08-29-mon-clase][[2022-08-29 Mon] Clase]]
+  - [[#2022-09-05-mon-equipo][[2022-09-05 Mon] Equipo]]
 - [[#ayudantías][Ayudantías]]
   - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
 - [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
@@ -35,6 +36,46 @@
 ** [2022-08-29 Mon] Clase
 - [2022-08-29 Mon 18:23]
 *** Lo cómico vs humorístico
+
+** [2022-09-05 Mon] Equipo
+- [2022-09-05 Mon 19:25]
+
+
+1) Como te llamas? Que estudias? De donde eres?
+2) Cual es tu pasatiempo favorito?
+3) Que musica te gusta?
+4) Quien es la persona (o animal) mas importante
+   para ti? Por que?
+5) Senala dos caracteristicas que te
+   representen/identifiquen.
+6) Como ha sido tu vida en pandemia?
+7) Pregunta libre de cada uno.
+8) Pregunta libre de cada uno.
+
+
+1) Manuel Fuica. ICI-I. Villarrica.
+2) Padel.
+3) Jazz.
+4) Mi mama porque me da apoyo emocional y
+   económico.
+5) 2 partes:
+   1) La gente cree que soy quebrado y
+      serio pero en realidad solo no
+      estoy forzandome a caerle bien a los demas.
+      Que no sea risueño no significa que
+      sea altanero o soberbio.
+   2) Aburro cuando explico cosas.
+6) Mi vida durante pandemia fue bastante agradable.
+   La presencialidad bajó mi estándar de calidad
+   de vida porque ahora tengo que gastar
+   mas recursos viviendo solo en temuco y no
+   se me da tener muchos amigos.
+7) Que crees que te esta jodiendo mas
+   la salud mental?
+   Redes sociales? Videojuegos? Drogas?
+   Carrete en general? Soledad ? Porno? Mala alimentación?
+   Malos hábitos de sueno? Television basura en general?
+8) Tangananica o tanganana?
 
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x

@@ -8,7 +8,8 @@
   - [[#inactive-timestamp-clase-x-nombre-ramo-abrev][[inactive timestamp] Clase X <nombre ramo abrev>]]
   - [[#2022-08-23-tue-clase-1][[2022-08-23 Tue] Clase 1]]
   - [[#2022-08-25-thu-clase-2][[2022-08-25 Thu] Clase 2]]
-  - [[#2022-09-01-thu-clase-3][[2022-09-01 Thu] Clase 3]]
+  - [[#2022-09-01-thu-clase-4][[2022-09-01 Thu] Clase 4]]
+  - [[#2022-09-06-tue-clase-5][[2022-09-06 Tue] Clase 5]]
 - [[#ayudantías][Ayudantías]]
   - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
   - [[#2022-09-01-thu-ayudantía-1][[2022-09-01 Thu] Ayudantía 1]]
@@ -172,7 +173,7 @@
     - Ejemplo: comer.
 - Costo = Sacrificio.
 
-** [2022-09-01 Thu] Clase 3
+** [2022-09-01 Thu] Clase 4
 - [2022-09-01 Thu 16:53]
 
 
@@ -204,6 +205,104 @@
   - M=10,000
   - Px=100
   - Py=200
+
+
+- Ecuación restricción presupuestal:
+
+
+\begin{align*}
+  y=
+    \left(
+      \frac{M}{P_y} - \frac{P_x}{P_y} \cdot x
+    \right)
+\end{align*}
+
+*** Resp (key=resp) :crypt:
+-----BEGIN PGP MESSAGE-----
+
+jA0EBwMC7pTulLbWgQvp0kcBcPr4bmiIoEL8cL70Wp4q0LywJ5fNED7ysWjL+bJg
+M0tMOxzBVQIMetebxYOacsKGr1gG7cywk7OsrPiP2G2mC27OK/y97Q==
+=dJPj
+-----END PGP MESSAGE-----
+
+** [2022-09-06 Tue] Clase 5
+- [2022-09-06 Tue 16:03]
+
+
+- "Vale más un peso hoy día que después."
+- Compensasiones por consumo diferido.
+  - Sacrifico hoy, con condición de una
+    bonificación futura.
+- Introducción a las Matemáticas Financieras.
+  - Las salidas se anotan entre paréntesis.
+
+
+- El mes comercial tiene 30 días.
+- El año comercial tiene 360 dias.
+
+
+- Concepto: tasa de interés es el precio unitario
+  por utilizar el dinero en un lapso.
+  - El interés se mide en porcentaje por
+    unidad de tiempo.
+
+- Los bancos son intermediarios financieros.
+  - Al igual que un corredor de propiedades.
+  - Uno de los más regulados pues
+    un error en este rubro tiene un efecto
+    multiplicador muy grande.
+  - Un error por parte del banco implica
+    una pérdida para sus clientes, no el banco.
+
+
+#+begin_src R :session :results output
+vi<-10000
+interes<-0.03
+periodos<-0:3
+vf_simple<-vi*((1+interes*periodos))
+vf_compuesto<-vi*((1+interes)^periodos)
+####
+print("Inicial")
+vi
+print("Tasa de interes")
+interes
+print("Periodos")
+periodos
+print("Pago en Simple")
+vf_simple
+print("Interes simple")
+vf_simple-vi
+print("Total")
+sum(vf_simple-vi)
+print("Pago en Compuesto")
+round(vf_compuesto)
+print("Interes compuesto")
+round(vf_compuesto)-vi
+print("Total")
+sum(round(vf_compuesto)-vi)
+#+end_src
+
+#+RESULTS:
+#+begin_example
+[1] "Inicial"
+[1] 10000
+[1] "Tasa de interes"
+[1] 0.03
+[1] "Periodos"
+[1] 0 1 2 3
+[1] "Pago en Simple"
+[1] 10000 10300 10600 10900
+[1] "Interes simple"
+[1]   0 300 600 900
+[1] "Total"
+[1] 1800
+[1] "Pago en Compuesto"
+[1] 10000 10300 10609 10927
+[1] "Interes compuesto"
+[1]   0 300 609 927
+[1] "Total"
+[1] 1836
+#+end_example
 
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
