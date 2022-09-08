@@ -7,6 +7,7 @@
   - [[#about][About]]
   - [[#inactive-timestamp-clase-x-nombre-ramo-abrev][[inactive timestamp] Clase X <nombre ramo abrev>]]
   - [[#2022-08-24-wed-clase][[2022-08-24 Wed] Clase]]
+  - [[#2022-09-08-thu-apuntes][[2022-09-08 Thu] apuntes]]
 - [[#ayudantías][Ayudantías]]
   - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
 - [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
@@ -75,6 +76,11 @@
 - [2022-08-24 Wed 15:45] No ver
   - Sci-hub
   - Libgen
+
+** [2022-09-08 Thu] apuntes
+
+- [[https://medium.com/tech-lounge/how-to-install-ubuntu-on-mac-using-virtualbox-3a26515aa869][How to install Ubuntu on Mac using VirtualBox | by Muniba Talha | Tech Lounge | Medium]]
+- [[https://leemendelowitz.github.io/blog/ubuntu-server-virtualbox.html][Ubuntu Server Virtual Machine with SSH using VirtualBox on Mac OS X // Lee On Coding // My blog about coding and stuff.]]
 
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
