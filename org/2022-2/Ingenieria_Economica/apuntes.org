@@ -257,9 +257,9 @@ M0tMOxzBVQIMetebxYOacsKGr1gG7cywk7OsrPiP2G2mC27OK/y97Q==
 
 
 #+begin_src R :session :results output
-vi<-1
-interes<-0.04
-periodos<-0:2
+vi<-500000
+interes<-0.0085
+periodos<-48
 vf_simple<-vi*((1+interes*periodos))
 vf_compuesto<-vi*((1+interes)^periodos)
 ####
@@ -286,23 +286,23 @@ sum(round(vf_compuesto)-vi)
 #+RESULTS:
 #+begin_example
 [1] "Inicial"
-[1] 1
+[1] 5e+05
 [1] "Tasa de interes"
-[1] 0.04
+[1] 0.0085
 [1] "Periodos"
-[1] 0 1 2
+[1] 48
 [1] "Pago en Simple"
-[1] 1.00 1.04 1.08
+[1] 704000
 [1] "Interes simple"
-[1] 0.00 0.04 0.08
+[1] 204000
 [1] "Total"
-[1] 0.12
+[1] 204000
 [1] "Pago en Compuesto"
-[1] 1 1 1
+[1] 750608
 [1] "Interes compuesto"
-[1] 0 0 0
+[1] 250608
 [1] "Total"
-[1] 0
+[1] 250608
 #+end_example
 
 - Concepto de media geométrica.
@@ -365,7 +365,6 @@ sum(round(vf_compuesto)-vi)
 
 #+RESULTS:
 : [1] 970873.8
-
 
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
