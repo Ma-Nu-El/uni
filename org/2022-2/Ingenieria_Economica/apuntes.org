@@ -11,6 +11,7 @@
   - [[#2022-09-01-thu-clase-4][[2022-09-01 Thu] Clase 4]]
   - [[#2022-09-06-tue-clase-5][[2022-09-06 Tue] Clase 5]]
   - [[#2022-09-08-thu-clase-6][[2022-09-08 Thu] Clase 6]]
+  - [[#2022-09-13-tue-clase-7][[2022-09-13 Tue] Clase 7]]
 - [[#ayudantías][Ayudantías]]
   - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
   - [[#2022-09-01-thu-ayudantía-1][[2022-09-01 Thu] Ayudantía 1]]
@@ -337,11 +338,11 @@ sum(round(vf_compuesto)-vi)
 - Riqueza futura:
   - Lo máximo que puedo consumir mañana
     con tal de no consumir nada hoy.
-- Riqueza futura = sueldo futuro + deuda.
+- Riqueza futura = sueldo futuro + ahorro.
 - W1=Y1 + (Y0*(1+r))
 
 
-- Proxima clase.
+- Próxima clase.
 - Restricción presupuestal inter-temporal.
 
 ** [2022-09-08 Thu] Clase 6
@@ -365,6 +366,16 @@ sum(round(vf_compuesto)-vi)
 
 #+RESULTS:
 : [1] 970873.8
+
+** [2022-09-13 Tue] Clase 7
+
+- Restricción presupuestal inter-temporal.
+- Se valora más el ingreso presente que el
+  futuro. De ahí el concepto de interés.
+- Diferencia entre ahorro e inversión.
+  - Ambos son sacrificios de bienes presentes.
+- Diferencia entre tasa de interés e interés.
+  - Tasa de interés: precio.
 
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
