@@ -70,7 +70,7 @@ SCHEDULED: <2022-12-06 Tue>
 ** Ingeniería Industrial
 *** informe (T30)
 SCHEDULED: <2022-09-15 Thu>
-- 15 septiembre
+- 15-16 septiembre
 *** informe (T30)
 SCHEDULED: <2022-10-28 Fri>
 - 28 octubre
@@ -78,6 +78,8 @@ SCHEDULED: <2022-10-28 Fri>
 SCHEDULED: <2022-12-07 Wed>
 - 7 diciembre
 ** Tecnología y servicios de internet
+*** actividad SO y minecraft
+SCHEDULED: <2022-09-15 Thu 23:59>
 * Agenda
 ** DONE Start 2022-2
 CLOSED: [2022-08-17 Wed 00:30] SCHEDULED: <2022-08-16 Tue>
