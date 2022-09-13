@@ -377,6 +377,28 @@ sum(round(vf_compuesto)-vi)
 - Diferencia entre tasa de interés e interés.
   - Tasa de interés: precio.
 
+
+- Restricción Presupuestaria Inter-temporal (RPI):
+  Son las distintas combinaciones de consumo
+  presente y consumo futuro que me permite mi
+  patrón de ingreso y la tasa de interés de mercado.
+- ¿Qué ocurre y por qué con las riquezas ante
+  las variaciones en la tasa de interés?
+  - Relacionarlo con el consumo, el ahorro
+    y el endeudamiento.
+    - Aumentar el consumo presente implica
+      el aumento en el endeudamiento.
+    - Aumentar el consumo futuro implica
+      disminuir el consumo presente.
+  - Baja el interés, aumenta la inversión?
+  - Sube el interés, disminuye la inversión?
+- [[https://www.investopedia.com/terms/i/invertedyieldcurve.asp][Inverted Yield Curve: Definition, What It Can Tell Investors, and Examples]]
+- [[https://www.investopedia.com/ask/answers/12/inflation-interest-rate-relationship.asp][Inflation & Interest Rates Relationship Explained]]
+
+
+- Titulo: curvas de indiferencia inter-temporal
+  y óptimo del consumo inter-temporal.
+
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
 # - Then =org-clone-subtree-with-time-shift= and repeat
