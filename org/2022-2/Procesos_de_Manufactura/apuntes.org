@@ -3,15 +3,11 @@
 
 
 * TOC :TOC_2:noexport:
-- [[#clases][Clases]]
-  - [[#about][About]]
-  - [[#inactive-timestamp-clase-x-nombre-ramo-abrev][[inactive timestamp] Clase X <nombre ramo abrev>]]
-  - [[#2022-08-31-wed-clase][[2022-08-31 Wed] Clase]]
 - [[#ayudantías][Ayudantías]]
   - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
-- [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
+  - [[#2022-09-14-wed-ayudantía-1][[2022-09-14 Wed] Ayudantía 1]]
 
-* Clases :lecture:
+* Clases :lecture:noexport:
 ** About
 - Copia el contenido de "Clases" en "asignatura.org"
 - Pegalo en esta sección
@@ -63,7 +59,27 @@
 
 < your_notes >
 
-* Resúmenes para evaluaciones
+** [2022-09-14 Wed] Ayudantía 1
+
+- Esfuerzo de Fluencia:
+  \begin{align*}
+    \sigma=\frac{F}{A_{0}}
+  \end{align*}
+
+
+- Ley de Hooke:
+  \begin{align*}
+    \sigma=E \cdot e
+  \end{align*}
+  - \(E\) módulo de elasticidad.
+  - \(e\) deformación.
+    - \( \frac{L-L_{0}}{L_{0}} \)
+- Esfuerzo último:
+  \begin{align*}
+    TS=\frac{t_{max}}{A_{0}}
+  \end{align*}
+
+* Resúmenes para evaluaciones :noexport:
 - [[file:varios/resumen_taller1.org][varios/resumen_taller1.org]]
 - link-to-resumen-eval2.org
 - link-to-resumen-eval3.org
