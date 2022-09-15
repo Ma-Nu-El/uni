@@ -264,7 +264,7 @@ periodos<-48
 vf_simple<-vi*((1+interes*periodos))
 vf_compuesto<-vi*((1+interes)^periodos)
 ####
-print("Inicial")
+print("Monto Inicial")
 vi
 print("Tasa de interes")
 interes
