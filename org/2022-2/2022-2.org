@@ -1,7 +1,7 @@
 #+TITLE: 2022-2
 #+FILETAGS: :university:
 
-* Semanas [4/17][23%] :lecture:
+* Semanas [5/17][29%] :lecture:
 ** DONE Semana 1
 SCHEDULED: <2022-08-19 Fri>
 ** DONE Semana 2
@@ -19,8 +19,11 @@ CLOSED: [2022-09-12 Mon 12:24] SCHEDULED: <2022-09-09 Fri>
 :LOGBOOK:
 - State "DONE"       from "TODO"       [2022-09-12 Mon 12:24]
 :END:
-** TODO Semana 5
-SCHEDULED: <2022-09-16 Fri>
+** DONE Semana 5
+CLOSED: [2022-09-20 Tue 12:52] SCHEDULED: <2022-09-16 Fri>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2022-09-20 Tue 12:52]
+:END:
 ** TODO Semana 6
 SCHEDULED: <2022-09-23 Fri>
 ** TODO Semana 7

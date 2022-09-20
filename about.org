@@ -21,3 +21,33 @@ The docs/ folder exists to make use of GitHub Pages.
 
 * See the project at:
   https://ma-nu-el.github.io/uni/
+* Test
+
+#+begin_src R :session :results output
+# cargar libreria
+library(scales)
+# definir variables
+# opcion 1
+anio_academico<-180000*10
+enero_febrero<-140000*2
+opcion1<-anio_academico+enero_febrero
+# opcion 2
+anio_academico<-180000*10
+enero_febrero<-120000*2
+opcion2<-anio_academico+enero_febrero
+diferencia<-opcion1-opcion2
+# calcular total
+## total<-opcion1
+print("diferencia")
+dollar(diferencia) # formateado lindo
+# imprimir en pantalla
+print("total a pagar")
+dollar(total) # formateado lindo
+## total # crudo
+#+end_src
+
+#+RESULTS:
+: [1] "diferencia"
+: [1] "$40,000"
+: [1] "total a pagar"
+: [1] "$2,040,000"
