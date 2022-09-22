@@ -3,21 +3,12 @@
 
 
 * TOC :TOC_2:noexport:
-- [[#clases][Clases]]
-  - [[#about][About]]
-  - [[#inactive-timestamp-clase-x-nombre-ramo-abrev][[inactive timestamp] Clase X <nombre ramo abrev>]]
-  - [[#2022-08-23-tue-clase-1][[2022-08-23 Tue] Clase 1]]
-  - [[#2022-08-25-thu-clase-2][[2022-08-25 Thu] Clase 2]]
-  - [[#2022-09-01-thu-clase-4][[2022-09-01 Thu] Clase 4]]
-  - [[#2022-09-06-tue-clase-5][[2022-09-06 Tue] Clase 5]]
-  - [[#2022-09-08-thu-clase-6][[2022-09-08 Thu] Clase 6]]
-  - [[#2022-09-13-tue-clase-7][[2022-09-13 Tue] Clase 7]]
 - [[#ayudantías][Ayudantías]]
   - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
-  - [[#2022-09-01-thu-ayudantía-1][[2022-09-01 Thu] Ayudantía 1]]
+  - [[#2022-09-22-thu-ayudantía-2][[2022-09-22 Thu] Ayudantía 2]]
 - [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
 
-* Clases :lecture:
+* Clases :lecture:noexport:
 ** About
 - Copia el contenido de "Clases" en "asignatura.org"
 - Pegalo en esta sección
@@ -191,7 +182,7 @@
       cada persona saldría del supermercado
       con una canasta diferente.
 - Pendiente de la curva de restricción presupuestaria:
-  Tasa marginal de substitución de mercado.
+  Tasa Marginal de Substitución de Mercado.
   - Tasa a la cual el mercado me permite sustituir
     un bien por otro.
   - En el óptimo: la tasa a la cual yo deseo
@@ -408,7 +399,7 @@ sum(round(vf_compuesto)-vi)
 
 < your_notes >
 
-** [2022-09-01 Thu] Ayudantía 1
+** [2022-09-01 Thu] Ayudantía 1 :noexport:
 *** Introducción
 - Ayudantía una semana.
 - Taller en otra.
@@ -483,6 +474,79 @@ round(vf_compuesto)
 : [1] "Interes Compuesto"
 : [1] 100000 102000 104040 106121
 
+** [2022-09-22 Thu] Ayudantía 2
+- [2022-09-22 Thu 11:04]
+
+
+- Restricción presupuestal inter-temporal:
+  "Cantidad de canastas de bienes y servicios que
+  el mercado me permite adquirir dado el precio
+  del mercado y mi presupuesto. Es decir
+  yo puedo comprar según el dinero que tengo."
+
+
+La pendiente de la recta es \(\frac{- P_x}{P_y}\)
+
+- M: ingreso total disponible.
+- P_x: precio hoy
+- P_y: precio futuro
+- x: consumo hoy
+- y: consumo futuro
+
+
+- Ingresos:
+  \[ M = P_x \cdot x + P_y \cdot y \]
+- Ecuación de restricción presupuestal:
+  \[ y = \frac{M}{P_y} - \frac{P_x}{P_y} \cdot x \]
+- Tasa Marginal Sustitución de Mercado (TMSM)
+  \[ TMSM = \frac{- P_x}{P_y} \]
+- Óptimo del consumidor:
+  \[ max\ U(x,y) \]
+  - sujeto a restricción presupuestal:
+    \[x*,y*]
+- Curva de indiferencia
+  - pendiente=tasa marginal de sustitución
+    \[ TMS = \frac{- UM_{gx}}{UM_{gy}}\]
+
+
+El óptimo: cuando la \( TMSM = TMS \)
+\[ \frac{-P_x}{P_y} = \frac{- UM_{gx}}{UM_{gy}} \]
+
+
+|     <c>      |      <c>      |
+| La que puedo | La que quiero |
+|--------------+---------------|
+|     TMSM     |      TMS      |
+
+
+Ejemplo taller:
+U(x,y)=x^{1/2} \cdot y^{1/2}
+- P_x=100
+- P_y=300
+- M=1000
+
+
+1) Valores de (x,y) tal que \exists máximo
+   bienestar.
+2) Valor bienestar máximo:
+   \[ \frac{- P_x}{P_y} = \frac{- UM_{gx}}{UM_{gy}} \]
+
+
+\begin{align*}
+
+UM_{mx}&=\frac{\partial U}{\partial x} \\
+= &\frac{\partial U}{\partial x}= y^{1/2} \cdot 1/2 \cdot x^{1/2} \\
+= &1/2 \frac{y^{1/2}}{x^{1/2}}=1/2 \frac{y}{x}^{1/2}\\
+UM_{gy} &= \frac{\partial U}{\partial y} = 1/2 \frac{x^{1/2}}{y^{1/2}} \\
+&= 1/2 \frac{x}{y} \\
+1/3&=y/x \\
+x&=3y \\
+x=5 \\
+y=10/6=5/3 \\
+U(5,5/3)=\frac{5}{\sqrt{3}} \\
+\end{align*}
+
+
 * Resúmenes para evaluaciones
 - link-to-resumen-eval1.org
 - link-to-resumen-eval2.org
@@ -492,4 +556,4 @@ round(vf_compuesto)
 # ispell-local-dictionary: "espanol"
 # End:
 
-#  LocalWords:  automatizables Asertividad Resiliencia
+#  LocalWords:  automatizables Asertividad Resiliencia presupuestal

@@ -83,6 +83,7 @@
 | Teléfono |          +569 |
 |----------+---------------|
 - ICI-M
+  - DIM, Transferencia tecnologica.
 * Clases y apuntes
 ** Relacionado
 ** Clases :lecture:

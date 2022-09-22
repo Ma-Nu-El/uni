@@ -8,6 +8,7 @@
   - [[#inactive-timestamp-clase-x-nombre-ramo-abrev][[inactive timestamp] Clase X <nombre ramo abrev>]]
   - [[#2022-08-24-wed-clase][[2022-08-24 Wed] Clase]]
   - [[#2022-09-08-thu-apuntes][[2022-09-08 Thu] apuntes]]
+  - [[#2022-09-22-thu-ssh-y-tarea-de-lampwordpress][[2022-09-22 Thu] ssh y tarea de LAMP+Wordpress]]
 - [[#ayudantías][Ayudantías]]
   - [[#inactive-time-stamp-clase-x][inactive-time-stamp clase x]]
 - [[#resúmenes-para-evaluaciones][Resúmenes para evaluaciones]]
@@ -81,6 +82,20 @@
 
 - [[https://medium.com/tech-lounge/how-to-install-ubuntu-on-mac-using-virtualbox-3a26515aa869][How to install Ubuntu on Mac using VirtualBox | by Muniba Talha | Tech Lounge | Medium]]
 - [[https://leemendelowitz.github.io/blog/ubuntu-server-virtualbox.html][Ubuntu Server Virtual Machine with SSH using VirtualBox on Mac OS X // Lee On Coding // My blog about coding and stuff.]]
+
+** [2022-09-22 Thu] ssh y tarea de LAMP+Wordpress
+
+- Set virtualbox
+  | ssh | TCP | 127.0.0.1 | 1111 | 10.0.1.15 | 22 |
+  | web | TCP | 127.0.0.1 | 2222 | 10.0.1.15 | 80 |
+- Then you can visit your apache server located
+  in your virtual machine from your local
+  GUI web browser via http://127.0.0.1:2222/
+  - As long as the server is running in
+    the virtual machine in the first place.
+  - You can visit it from the virtual machine
+    itself via =lynx localhost:80=.
+
 
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
