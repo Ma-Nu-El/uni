@@ -381,14 +381,24 @@ sum(round(vf_compuesto)-vi)
       el aumento en el endeudamiento.
     - Aumentar el consumo futuro implica
       disminuir el consumo presente.
-  - Baja el interés, aumenta la inversión?
-  - Sube el interés, disminuye la inversión?
+  - Baja el interés, aumenta la inversión.
+  - Sube el interés, disminuye la inversión.
 - [[https://www.investopedia.com/terms/i/invertedyieldcurve.asp][Inverted Yield Curve: Definition, What It Can Tell Investors, and Examples]]
 - [[https://www.investopedia.com/ask/answers/12/inflation-interest-rate-relationship.asp][Inflation & Interest Rates Relationship Explained]]
 
 
-- Titulo: curvas de indiferencia inter-temporal
+- Título: curvas de indiferencia inter-temporal
   y óptimo del consumo inter-temporal.
+
+** [2022-09-22 Thu] Clase 9
+- [2022-09-22 Thu 16:58]
+
+
+- En el gráfico de curva de indiferencia
+  inter-temporal y consumo intertemporal.
+  ¿Qué pasa con el bienestar cuando varia la
+  tasa de interés?
+  - Sube tasa -> deudor y acreedor.
 
 * Ayudantías :assistantship:
 ** inactive-time-stamp clase x
@@ -488,10 +498,10 @@ round(vf_compuesto)
 La pendiente de la recta es \(\frac{- P_x}{P_y}\)
 
 - M: ingreso total disponible.
-- P_x: precio hoy
-- P_y: precio futuro
-- x: consumo hoy
-- y: consumo futuro
+- P_x: precio hoy.
+- P_y: precio futuro.
+- x: consumo hoy.
+- y: consumo futuro.
 
 
 - Ingresos:
@@ -545,7 +555,6 @@ x=5 \\
 y=10/6=5/3 \\
 U(5,5/3)=\frac{5}{\sqrt{3}} \\
 \end{align*}
-
 
 * Resúmenes para evaluaciones
 - link-to-resumen-eval1.org
